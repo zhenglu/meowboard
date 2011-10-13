@@ -1,0 +1,216 @@
+\section{/home/www/ulysses/webclient/scripts/window/window.js File Reference}
+\label{window_2window_8js}\index{/home/www/ulysses/webclient/scripts/window/window.js@{/home/www/ulysses/webclient/scripts/window/window.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf WINDOW\_\-NewWindow} (WinSize, Div, DivButtons, Title)
+\item 
+function {\bf WINDOW\_\-ChangeFocus} (WindowObj)
+\item 
+function {\bf WINDOW\_\-RemoveWindow} (WindowObj)
+\item 
+function {\bf WINDOW\_\-Alert} (Title, Text)
+\item 
+function {\bf WINDOW\_\-Confirm} (Title, Text, Button1, Button2)
+\item 
+function {\bf WINDOW\_\-Challenge} (User, Rating, GameParameters, MatchId)
+\item 
+function {\bf WINDOW\_\-CreateRoom} ()
+\item 
+function {\bf WINDOW\_\-CancelRoom} ()
+\item 
+function {\bf WINDOW\_\-Invite} (User)
+\item 
+function {\bf WINDOW\_\-SearchUser} ()
+\item 
+function {\bf WINDOW\_\-SearchUserResult} (UserList)
+\item 
+function {\bf WINDOW\_\-Profile} (Profile)
+\item 
+function {\bf WINDOW\_\-ProfileConfirm} (Profile)
+\item 
+function {\bf WINDOW\_\-ProfileImage} ()
+\item 
+function {\bf WINDOW\_\-OldGame} (Id)
+\item 
+function {\bf WINDOW\_\-OldGameSearch} ()
+\item 
+function {\bf WINDOW\_\-UnbanUser} ()
+\item 
+function {\bf WINDOW\_\-BanUser} (Username)
+\item 
+function {\bf WINDOW\_\-KickUser} (Username)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{window/window.js@{window/window.js}!WINDOW\_\-Alert@{WINDOW\_\-Alert}}
+\index{WINDOW\_\-Alert@{WINDOW\_\-Alert}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-Alert ( {\em Title}, \/   {\em Text})}\label{window_2window_8js_a1b10eccd2c596a7a41b95bc3a55c851}
+
+
+
+
+References UTILS\_\-AddListener(), WINDOW\_\-CreateAlert(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().
+
+Referenced by ADMIN\_\-HandleAdminNotification(), CHAT\_\-HandleAnnounceMessage(), CHAT\_\-OpenChat(), GAME\_\-End(), GAME\_\-HandleAdjourn(), GAME\_\-HandleCancel(), GAME\_\-HandleDraw(), GAME\_\-RemoveGame(), IMAGE\_\-B64Img(), INTERFACE\_\-AddOldGameResult(), INTERFACE\_\-CreateTop(), INTERFACE\_\-RemoveGame(), INTERFACE\_\-SetSearchButton(), INTERFACE\_\-ShowCreateRoomWindow(), INTERFACE\_\-ShowGameRoomList(), OLDGAME\_\-LoadGameHistory(), and ROOM\_\-ExitRoom().\index{window/window.js@{window/window.js}!WINDOW\_\-BanUser@{WINDOW\_\-BanUser}}
+\index{WINDOW\_\-BanUser@{WINDOW\_\-BanUser}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-BanUser ( {\em Username})}\label{window_2window_8js_5eb3c3f409de48353b62792ae5f3e10c}
+
+
+
+
+References INTERFACE\_\-BanUserWindow(), UTILS\_\-AddListener(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().
+
+Referenced by CONTACT\_\-ShowUserMenu().\index{window/window.js@{window/window.js}!WINDOW\_\-CancelRoom@{WINDOW\_\-CancelRoom}}
+\index{WINDOW\_\-CancelRoom@{WINDOW\_\-CancelRoom}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-CancelRoom ()}\label{window_2window_8js_03cf2ff49b3e97f239cdb0eb00189f75}
+
+
+
+
+References INTERFACE\_\-ShowCancelRoomWindow(), UTILS\_\-AddListener(), UTILS\_\-GetText(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().\index{window/window.js@{window/window.js}!WINDOW\_\-Challenge@{WINDOW\_\-Challenge}}
+\index{WINDOW\_\-Challenge@{WINDOW\_\-Challenge}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-Challenge ( {\em User}, \/   {\em Rating}, \/   {\em GameParameters}, \/   {\em MatchId})}\label{window_2window_8js_fce69c99efa3a722eba86a87121ae114}
+
+
+
+
+References GAME\_\-DeclineChallenge(), INTERFACE\_\-ShowChallengeWindow(), MainData, UTILS\_\-AddListener(), UTILS\_\-GetText(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().
+
+Referenced by CONTACT\_\-ShowUserMenu(), and GAME\_\-HandleOffer().\index{window/window.js@{window/window.js}!WINDOW\_\-ChangeFocus@{WINDOW\_\-ChangeFocus}}
+\index{WINDOW\_\-ChangeFocus@{WINDOW\_\-ChangeFocus}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-ChangeFocus ( {\em WindowObj})}\label{window_2window_8js_350ad94a4dacfeb72ee42df746f19cf2}
+
+
+
+
+References MainData, and WindowObj().
+
+Referenced by WINDOW\_\-NewWindow().\index{window/window.js@{window/window.js}!WINDOW\_\-Confirm@{WINDOW\_\-Confirm}}
+\index{WINDOW\_\-Confirm@{WINDOW\_\-Confirm}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-Confirm ( {\em Title}, \/   {\em Text}, \/   {\em Button1}, \/   {\em Button2})}\label{window_2window_8js_cf8bd95031baaa8a5b88de2cc0848015}
+
+
+
+
+References UTILS\_\-AddListener(), WINDOW\_\-CreateConfirm(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().
+
+Referenced by CONTACT\_\-ReceiveSubscribe(), CONTACT\_\-ShowUserMenu(), GAME\_\-HandleAdjourn(), GAME\_\-HandleCancel(), GAME\_\-HandleDraw(), and GAME\_\-SendResign().\index{window/window.js@{window/window.js}!WINDOW\_\-CreateRoom@{WINDOW\_\-CreateRoom}}
+\index{WINDOW\_\-CreateRoom@{WINDOW\_\-CreateRoom}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-CreateRoom ()}\label{window_2window_8js_b4a012d4090056d8eb763793e32bc5b5}
+
+
+
+
+References INTERFACE\_\-ShowCreateRoomWindow(), UTILS\_\-AddListener(), UTILS\_\-GetText(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().
+
+Referenced by INTERFACE\_\-ShowRoomMenu().\index{window/window.js@{window/window.js}!WINDOW\_\-Invite@{WINDOW\_\-Invite}}
+\index{WINDOW\_\-Invite@{WINDOW\_\-Invite}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-Invite ( {\em User})}\label{window_2window_8js_a0b254ab6a166342fef8e2ff561e155d}
+
+
+
+
+References UTILS\_\-AddListener(), UTILS\_\-GetText(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().\index{window/window.js@{window/window.js}!WINDOW\_\-KickUser@{WINDOW\_\-KickUser}}
+\index{WINDOW\_\-KickUser@{WINDOW\_\-KickUser}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-KickUser ( {\em Username})}\label{window_2window_8js_3290d97c970c392b43ddb909ff4215d4}
+
+
+
+
+References INTERFACE\_\-KickUserWindow(), UTILS\_\-AddListener(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().
+
+Referenced by CONTACT\_\-ShowUserMenu().\index{window/window.js@{window/window.js}!WINDOW\_\-NewWindow@{WINDOW\_\-NewWindow}}
+\index{WINDOW\_\-NewWindow@{WINDOW\_\-NewWindow}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-NewWindow ( {\em WinSize}, \/   {\em Div}, \/   {\em DivButtons}, \/   {\em Title})}\label{window_2window_8js_ab201d1f7f6d972025e93c498a852ff8}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Control Windows 
+
+References MainData, UTILS\_\-AddListener(), WINDOW\_\-ChangeFocus(), and WindowObj().
+
+Referenced by WINDOW\_\-Alert(), WINDOW\_\-BanUser(), WINDOW\_\-CancelRoom(), WINDOW\_\-Challenge(), WINDOW\_\-Confirm(), WINDOW\_\-CreateRoom(), WINDOW\_\-Invite(), WINDOW\_\-KickUser(), WINDOW\_\-OldGame(), WINDOW\_\-OldGameSearch(), WINDOW\_\-Profile(), WINDOW\_\-ProfileConfirm(), WINDOW\_\-ProfileImage(), WINDOW\_\-SearchUser(), WINDOW\_\-SearchUserResult(), and WINDOW\_\-UnbanUser().\index{window/window.js@{window/window.js}!WINDOW\_\-OldGame@{WINDOW\_\-OldGame}}
+\index{WINDOW\_\-OldGame@{WINDOW\_\-OldGame}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-OldGame ( {\em Id})}\label{window_2window_8js_76f9685e2f3edd1a2ac62bd9f921da86}
+
+
+
+
+References INTERFACE\_\-ShowOldGameWindow(), OLDGAME\_\-CloseWindow(), UTILS\_\-AddListener(), UTILS\_\-GetText(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().
+
+Referenced by OLDGAME\_\-OpenOldGameWindow().\index{window/window.js@{window/window.js}!WINDOW\_\-OldGameSearch@{WINDOW\_\-OldGameSearch}}
+\index{WINDOW\_\-OldGameSearch@{WINDOW\_\-OldGameSearch}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-OldGameSearch ()}\label{window_2window_8js_cb65f4ab22f79c8778aa45561d67eab0}
+
+
+
+
+References UTILS\_\-AddListener(), UTILS\_\-GetText(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().\index{window/window.js@{window/window.js}!WINDOW\_\-Profile@{WINDOW\_\-Profile}}
+\index{WINDOW\_\-Profile@{WINDOW\_\-Profile}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-Profile ( {\em Profile})}\label{window_2window_8js_200e97ff4969f4c9092c6ac314e06c1e}
+
+
+
+
+References INTERFACE\_\-ShowProfileWindow(), PROFILE\_\-RemoveProfile(), UTILS\_\-AddListener(), UTILS\_\-GetText(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().
+
+Referenced by PROFILE\_\-StartProfile().\index{window/window.js@{window/window.js}!WINDOW\_\-ProfileConfirm@{WINDOW\_\-ProfileConfirm}}
+\index{WINDOW\_\-ProfileConfirm@{WINDOW\_\-ProfileConfirm}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-ProfileConfirm ( {\em Profile})}\label{window_2window_8js_4372845882cf8427672379e1e923adef}
+
+
+
+
+References INTERFACE\_\-ShowProfileConfirmWindow(), UTILS\_\-AddListener(), UTILS\_\-GetText(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().\index{window/window.js@{window/window.js}!WINDOW\_\-ProfileImage@{WINDOW\_\-ProfileImage}}
+\index{WINDOW\_\-ProfileImage@{WINDOW\_\-ProfileImage}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-ProfileImage ()}\label{window_2window_8js_1c42b15fa0a4e852e46304ee51b506a8}
+
+
+
+
+References UTILS\_\-AddListener(), UTILS\_\-GetText(), WINDOW\_\-CreateImageSend(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{window/window.js@{window/window.js}!WINDOW\_\-RemoveWindow@{WINDOW\_\-RemoveWindow}}
+\index{WINDOW\_\-RemoveWindow@{WINDOW\_\-RemoveWindow}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-RemoveWindow ( {\em WindowObj})}\label{window_2window_8js_f8f27008b4a8fe544068dc7db513ce47}
+
+
+
+
+References MainData, and WindowObj().
+
+Referenced by GAME\_\-HandleDecline(), WINDOW\_\-Alert(), WINDOW\_\-BanUser(), WINDOW\_\-CancelRoom(), WINDOW\_\-Challenge(), WINDOW\_\-Confirm(), WINDOW\_\-CreateRoom(), WINDOW\_\-Invite(), WINDOW\_\-KickUser(), WINDOW\_\-OldGame(), WINDOW\_\-OldGameSearch(), WINDOW\_\-Profile(), WINDOW\_\-ProfileConfirm(), WINDOW\_\-ProfileImage(), WINDOW\_\-SearchUser(), WINDOW\_\-SearchUserResult(), and WINDOW\_\-UnbanUser().\index{window/window.js@{window/window.js}!WINDOW\_\-SearchUser@{WINDOW\_\-SearchUser}}
+\index{WINDOW\_\-SearchUser@{WINDOW\_\-SearchUser}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-SearchUser ()}\label{window_2window_8js_c12a5400ad4c700cfc149d03ae412c47}
+
+
+
+
+References INTERFACE\_\-ShowSearchUserWindow(), UTILS\_\-AddListener(), UTILS\_\-GetText(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().
+
+Referenced by INTERFACE\_\-CreateContactContent(), INTERFACE\_\-CreateOnlineContent(), and INTERFACE\_\-CreateTop().\index{window/window.js@{window/window.js}!WINDOW\_\-SearchUserResult@{WINDOW\_\-SearchUserResult}}
+\index{WINDOW\_\-SearchUserResult@{WINDOW\_\-SearchUserResult}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-SearchUserResult ( {\em UserList})}\label{window_2window_8js_6d03922beae5db1603fa1f2d195e4610}
+
+
+
+
+References INTERFACE\_\-ShowSearchUserResultWindow(), UTILS\_\-AddListener(), UTILS\_\-GetText(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().
+
+Referenced by CONTACT\_\-HandleSearchUser().\index{window/window.js@{window/window.js}!WINDOW\_\-UnbanUser@{WINDOW\_\-UnbanUser}}
+\index{WINDOW\_\-UnbanUser@{WINDOW\_\-UnbanUser}!window/window.js@{window/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-UnbanUser ()}\label{window_2window_8js_a6de30616a652bce072098f4e3ff5ca7}
+
+
+
+
+References INTERFACE\_\-UnbanUserWindow(), UTILS\_\-AddListener(), WINDOW\_\-NewWindow(), WINDOW\_\-RemoveWindow(), and WindowObj().
+
+Referenced by INTERFACE\_\-CreateTop().

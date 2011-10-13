@@ -1,0 +1,1612 @@
+\section{/home/www/ulysses/webclient/scripts/data/data.js File Reference}
+\label{data_8js}\index{/home/www/ulysses/webclient/scripts/data/data.js@{/home/www/ulysses/webclient/scripts/data/data.js}}
+Class definition for main data structure. 
+
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf DATA} (ConfFile, LangFile)
+\item 
+function {\bf DATA\_\-AddUser} (Username, Status, Subs, Group)
+\begin{CompactList}\small\item\em Add user to user list. \item\end{CompactList}\item 
+function {\bf DATA\_\-DelUser} (Username)
+\begin{CompactList}\small\item\em Delete user from user list. \item\end{CompactList}\item 
+function {\bf DATA\_\-FindUser} (Username)
+\begin{CompactList}\small\item\em Find user in user list. \item\end{CompactList}\item 
+function {\bf DATA\_\-FindNextUser} (Username, Status)
+\begin{CompactList}\small\item\em Find next user in user list. \item\end{CompactList}\item 
+function {\bf DATA\_\-IsContact} (Username)
+\begin{CompactList}\small\item\em Is 'Username' in your contact list? \item\end{CompactList}\item 
+function {\bf DATA\_\-GetStatus} (Username)
+\begin{CompactList}\small\item\em Get User status. \item\end{CompactList}\item 
+function {\bf DATA\_\-GetRating} (Username)
+\begin{CompactList}\small\item\em Get the User's rating. \item\end{CompactList}\item 
+function {\bf DATA\_\-GetType} (Username)
+\begin{CompactList}\small\item\em Get the User's type. \item\end{CompactList}\item 
+function {\bf DATA\_\-SetDefault} (Username)
+\begin{CompactList}\small\item\em Set default values to use. \item\end{CompactList}\item 
+function {\bf DATA\_\-SetUserStatus} (Username, NewStatus)
+\begin{CompactList}\small\item\em Change the user's status. \item\end{CompactList}\item 
+function {\bf DATA\_\-SetSubs} (Username, NewSubs)
+\begin{CompactList}\small\item\em Change the user's subscription. \item\end{CompactList}\item 
+function {\bf DATA\_\-SetType} (Username, NewType)
+\begin{CompactList}\small\item\em Change user's type. \item\end{CompactList}\item 
+function {\bf DATA\_\-SetRating} (Username, Category, Rating)
+\begin{CompactList}\small\item\em Change user's rating. \item\end{CompactList}\item 
+function {\bf DATA\_\-SortUserByNick} ()
+\begin{CompactList}\small\item\em Sort Userlist into ascending or descending order. \item\end{CompactList}\item 
+function {\bf DATA\_\-SortUserByRating} ()
+\begin{CompactList}\small\item\em Sort Userlist into descending order by Rating selected in interface. \item\end{CompactList}\item 
+function {\bf DATA\_\-AddRoom} (RoomName, MsgTo, Role, Affiliation, RoomObj)
+\begin{CompactList}\small\item\em Create new room in room list. \item\end{CompactList}\item 
+function {\bf DATA\_\-DelRoom} (RoomName)
+\begin{CompactList}\small\item\em Delete a room in room list. \item\end{CompactList}\item 
+function {\bf DATA\_\-FindRoom} (RoomName)
+\begin{CompactList}\small\item\em Find room in room list. \item\end{CompactList}\item 
+function {\bf DATA\_\-SetRoom} (RoomName, From, Affiliation, Role)
+\begin{CompactList}\small\item\em Set from, affiliation and role in 'RoomName' structure. \item\end{CompactList}\item 
+function {\bf DATA\_\-AddUserInRoom} (RoomName, Username, Status, Type, Role, Affiliation)
+\begin{CompactList}\small\item\em Add user in user list of a room. \item\end{CompactList}\item 
+function {\bf DATA\_\-FindUserInRoom} (RoomName, Username)
+\begin{CompactList}\small\item\em Find user in user list of a room. \item\end{CompactList}\item 
+function {\bf DATA\_\-FindNextUserInRoom} (RoomName, Username)
+\begin{CompactList}\small\item\em Find next user in room user list. \item\end{CompactList}\item 
+function {\bf DATA\_\-SetUserAttrInRoom} (RoomName, Username, Status, Role, Affiliation)
+\begin{CompactList}\small\item\em Set user attibutes in 'RoomName'. \item\end{CompactList}\item 
+function {\bf DATA\_\-DelUserInRoom} (RoomName, Username)
+\begin{CompactList}\small\item\em Delete user from user list of a room. \item\end{CompactList}\item 
+function {\bf DATA\_\-GetUserRatingInRoom} (RoomName, Username, Category)
+\begin{CompactList}\small\item\em Get user's rating. \item\end{CompactList}\item 
+function {\bf DATA\_\-SortUserByNickInRoom} (RoomName)
+\begin{CompactList}\small\item\em Sort Userlist from Room into ascending or descending order. \item\end{CompactList}\item 
+function {\bf DATA\_\-SortUserByRatingInRoom} (RoomName)
+\begin{CompactList}\small\item\em Sort Userlist from Room into descending order by Rating. \item\end{CompactList}\item 
+function {\bf DATA\_\-GetRoom} (RoomName)
+\begin{CompactList}\small\item\em Get room from room list. \item\end{CompactList}\item 
+function {\bf DATA\_\-AddChat} (Username, Status)
+\begin{CompactList}\small\item\em Add a chat in interface structure, with the other user name and his status. \item\end{CompactList}\item 
+function {\bf DATA\_\-RemoveChat} (Username)
+\begin{CompactList}\small\item\em Remove a chat with the user given from the structure. \item\end{CompactList}\item 
+function {\bf DATA\_\-FindChat} (Username)
+\begin{CompactList}\small\item\em Find a chat with the user's name. \item\end{CompactList}\item 
+function {\bf DATA\_\-AddChallenge} (Username, Id, Challenger)
+\begin{CompactList}\small\item\em Add a challenge in 'ChallengeList'. \item\end{CompactList}\item 
+function {\bf DATA\_\-RemoveChallenge} (Username)
+\begin{CompactList}\small\item\em Remove a challenge in 'ChallengeList'. \item\end{CompactList}\item 
+function {\bf DATA\_\-RemoveChallengeById} (ID)
+\item 
+function {\bf DATA\_\-ClearChallenges} ()
+\begin{CompactList}\small\item\em Remove all challenges in 'ChallengeList'. \item\end{CompactList}\item 
+function {\bf DATA\_\-FindChallenge} (Username)
+\begin{CompactList}\small\item\em Find a challenge in 'ChallengeList'. \item\end{CompactList}\item 
+function {\bf DATA\_\-FindChallengeById} (ID)
+\begin{CompactList}\small\item\em Find a challenge by ID in 'ChallengeList'. \item\end{CompactList}\item 
+function {\bf DATA\_\-AddChallengeWindow} (Id, WindowObj)
+\begin{CompactList}\small\item\em Add a Challenge window on structure. \item\end{CompactList}\item 
+function {\bf DATA\_\-SetCurrentGame} (Game)
+\begin{CompactList}\small\item\em Set current game. \item\end{CompactList}\item 
+function {\bf DATA\_\-AddGame} (Id, Player1, Player2, Color, GameDiv)
+\begin{CompactList}\small\item\em Add a game in 'GameList'. \item\end{CompactList}\item 
+function {\bf DATA\_\-RemoveGame} (Id)
+\begin{CompactList}\small\item\em Remove a game in 'GameList' by game id. \item\end{CompactList}\item 
+function {\bf DATA\_\-FindGame} (Id)
+\begin{CompactList}\small\item\em Find game in 'GameList' by game id. \item\end{CompactList}\item 
+function {\bf DATA\_\-AddGameMove} (BoardArray, Move, ShortMove, PWTime, PBTime, Turn)
+\begin{CompactList}\small\item\em Add a move in 'GameList[x].Moves'. \item\end{CompactList}\item 
+function {\bf DATA\_\-SetTurnGame} (TurnColor)
+\begin{CompactList}\small\item\em Set true, if is the player's turn. \item\end{CompactList}\item 
+function {\bf DATA\_\-GetGame} (Id)
+\begin{CompactList}\small\item\em Search for a game in GameList. \item\end{CompactList}\item 
+function {\bf DATA\_\-GetOldGame} (Id)
+\begin{CompactList}\small\item\em Search for a game in OldGameList. \item\end{CompactList}\item 
+function {\bf DATA\_\-GetOponent} (GameID)
+\begin{CompactList}\small\item\em Return the oponent's name. \item\end{CompactList}\item 
+function {\bf DATA\_\-SetCurrentOldGame} (Game)
+\begin{CompactList}\small\item\em Set current oldgame. \item\end{CompactList}\item 
+function {\bf DATA\_\-AddOldGame} (PWName, PBName, Color, GameDiv)
+\begin{CompactList}\small\item\em Add a oldgame in 'OldGameList'. \item\end{CompactList}\item 
+function {\bf DATA\_\-RemoveOldGame} (Id)
+\begin{CompactList}\small\item\em Remove a game in 'OldGameList' by game id. \item\end{CompactList}\item 
+function {\bf DATA\_\-PushGameToOldGame} (GameObj)
+\begin{CompactList}\small\item\em Set an old game as the current old game. \item\end{CompactList}\item 
+function {\bf DATA\_\-AddSearchGameInfo} (Id, Elements, User)
+\begin{CompactList}\small\item\em Add search game window parameters. \item\end{CompactList}\item 
+function {\bf DATA\_\-RemoveSearchGameInfo} (Id)
+\begin{CompactList}\small\item\em Remove search game window. \item\end{CompactList}\item 
+function {\bf DATA\_\-FindSearchGameInfo} (Id)
+\begin{CompactList}\small\item\em Find search game window. \item\end{CompactList}\item 
+function {\bf DATA\_\-GetSearchGameInfo} (Id)
+\item 
+function {\bf DATA\_\-AddWindow} (WindowObj)
+\item 
+function {\bf DATA\_\-ChangeWindowFocus} (WindowObj)
+\item 
+function {\bf DATA\_\-RemoveWindow} (WindowObj)
+\item 
+function {\bf DATA\_\-FindWindow} (WindowObj)
+\item 
+function {\bf DATA\_\-AddProfile} (Jid, Username, ProfileWindow)
+\item 
+function {\bf DATA\_\-FindProfile} (Jid)
+\item 
+function {\bf DATA\_\-RemoveProfile} (Jid)
+\item 
+function {\bf DATA\_\-GetProfile} (Jid)
+\item 
+function {\bf DATA\_\-SetMyProfile} (Username, FullName, Desc, ImgType, Img64)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+{\bf DATA} prototype {\bf AddUser} = DATA\_\-AddUser
+\item 
+{\bf DATA} prototype {\bf DelUser} = DATA\_\-DelUser
+\item 
+{\bf DATA} prototype {\bf FindUser} = DATA\_\-FindUser
+\item 
+{\bf DATA} prototype {\bf FindNextUser} = DATA\_\-FindNextUser
+\item 
+{\bf DATA} prototype {\bf IsContact} = DATA\_\-IsContact
+\item 
+{\bf DATA} prototype {\bf GetStatus} = DATA\_\-GetStatus
+\item 
+{\bf DATA} prototype {\bf GetRating} = DATA\_\-GetRating
+\item 
+{\bf DATA} prototype {\bf GetType} = DATA\_\-GetType
+\item 
+{\bf DATA} prototype {\bf SetDefault} = DATA\_\-SetDefault
+\item 
+{\bf DATA} prototype {\bf SetUserStatus} = DATA\_\-SetUserStatus
+\item 
+{\bf DATA} prototype {\bf SetSubs} = DATA\_\-SetSubs
+\item 
+{\bf DATA} prototype {\bf SetRating} = DATA\_\-SetRating
+\item 
+{\bf DATA} prototype {\bf SetType} = DATA\_\-SetType
+\item 
+{\bf DATA} prototype {\bf SortUserByNick} = DATA\_\-SortUserByNick
+\item 
+{\bf DATA} prototype {\bf SortUserByRating} = DATA\_\-SortUserByRating
+\item 
+{\bf DATA} prototype {\bf AddRoom} = DATA\_\-AddRoom
+\item 
+{\bf DATA} prototype {\bf DelRoom} = DATA\_\-DelRoom
+\item 
+{\bf DATA} prototype {\bf FindRoom} = DATA\_\-FindRoom
+\item 
+{\bf DATA} prototype {\bf SetRoom} = DATA\_\-SetRoom
+\item 
+{\bf DATA} prototype {\bf AddUserInRoom} = DATA\_\-AddUserInRoom
+\item 
+{\bf DATA} prototype {\bf FindUserInRoom} = DATA\_\-FindUserInRoom
+\item 
+{\bf DATA} prototype {\bf FindNextUserInRoom} = DATA\_\-FindNextUserInRoom
+\item 
+{\bf DATA} prototype {\bf SetUserAttrInRoom} = DATA\_\-SetUserAttrInRoom
+\item 
+{\bf DATA} prototype {\bf DelUserInRoom} = DATA\_\-DelUserInRoom
+\item 
+{\bf DATA} prototype {\bf GetUserRatingInRoom} = DATA\_\-GetUserRatingInRoom
+\item 
+{\bf DATA} prototype {\bf GetRoom} = DATA\_\-GetRoom
+\item 
+{\bf DATA} prototype {\bf SortUserByNickInRoom} = DATA\_\-SortUserByNickInRoom
+\item 
+{\bf DATA} prototype {\bf SortUserByRatingInRoom} = DATA\_\-SortUserByRatingInRoom
+\item 
+{\bf DATA} prototype {\bf AddChat} = DATA\_\-AddChat
+\item 
+{\bf DATA} prototype {\bf RemoveChat} = DATA\_\-RemoveChat
+\item 
+{\bf DATA} prototype {\bf FindChat} = DATA\_\-FindChat
+\item 
+{\bf DATA} prototype {\bf AddChallenge} = DATA\_\-AddChallenge
+\item 
+{\bf DATA} prototype {\bf RemoveChallenge} = DATA\_\-RemoveChallenge
+\item 
+{\bf DATA} prototype {\bf RemoveChallengeById} = DATA\_\-RemoveChallengeById
+\item 
+{\bf DATA} prototype {\bf FindChallenge} = DATA\_\-FindChallenge
+\item 
+{\bf DATA} prototype {\bf FindChallengeById} = DATA\_\-FindChallengeById
+\item 
+{\bf DATA} prototype {\bf ClearChallenges} = DATA\_\-ClearChallenges
+\item 
+{\bf DATA} prototype {\bf AddChallengeWindow} = DATA\_\-AddChallengeWindow
+\item 
+{\bf DATA} prototype {\bf AddGame} = DATA\_\-AddGame
+\item 
+{\bf DATA} prototype {\bf RemoveGame} = DATA\_\-RemoveGame
+\item 
+{\bf DATA} prototype {\bf FindGame} = DATA\_\-FindGame
+\item 
+{\bf DATA} prototype {\bf AddGameMove} = DATA\_\-AddGameMove
+\item 
+{\bf DATA} prototype {\bf SetCurrentGame} = DATA\_\-SetCurrentGame
+\item 
+{\bf DATA} prototype {\bf SetTurn} = DATA\_\-SetTurnGame
+\item 
+{\bf DATA} prototype {\bf AddOldGame} = DATA\_\-AddOldGame
+\item 
+{\bf DATA} prototype {\bf RemoveOldGame} = DATA\_\-RemoveOldGame
+\item 
+{\bf DATA} prototype {\bf SetCurrentOldGame} = DATA\_\-SetCurrentOldGame
+\item 
+{\bf DATA} prototype {\bf PushOldGame} = DATA\_\-PushGameToOldGame
+\item 
+{\bf DATA} prototype {\bf GetOldGame} = DATA\_\-GetOldGame
+\item 
+{\bf DATA} prototype {\bf GetGame} = DATA\_\-GetGame
+\item 
+{\bf DATA} prototype {\bf GetOponent} = DATA\_\-GetOponent
+\item 
+{\bf DATA} prototype {\bf AddSearchGameInfo} = DATA\_\-AddSearchGameInfo
+\item 
+{\bf DATA} prototype {\bf RemoveSearchGameInfo} = DATA\_\-RemoveSearchGameInfo
+\item 
+{\bf DATA} prototype {\bf FindSearchGameInfo} = DATA\_\-FindSearchGameInfo
+\item 
+{\bf DATA} prototype {\bf GetSearchGameInfo} = DATA\_\-GetSearchGameInfo
+\item 
+{\bf DATA} prototype {\bf AddWindow} = DATA\_\-AddWindow
+\item 
+{\bf DATA} prototype {\bf RemoveWindow} = DATA\_\-RemoveWindow
+\item 
+{\bf DATA} prototype {\bf ChangeWindowFocus} = DATA\_\-ChangeWindowFocus
+\item 
+{\bf DATA} prototype {\bf FindWindow} = DATA\_\-FindWindow
+\item 
+{\bf DATA} prototype {\bf AddProfile} = DATA\_\-AddProfile
+\item 
+{\bf DATA} prototype {\bf RemoveProfile} = DATA\_\-RemoveProfile
+\item 
+{\bf DATA} prototype {\bf FindProfile} = DATA\_\-FindProfile
+\item 
+{\bf DATA} prototype {\bf GetProfile} = DATA\_\-GetProfile
+\item 
+{\bf DATA} prototype {\bf SetMyProfile} = DATA\_\-SetMyProfile
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Class definition for main data structure. 
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software
+
+Read the config file (scripts/data/conf.xml) and load all data structure 
+
+\subsection{Function Documentation}
+\index{data.js@{data.js}!DATA@{DATA}}
+\index{DATA@{DATA}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function {\bf DATA} ( {\em ConfFile}, \/   {\em LangFile})}\label{data_8js_361b43fc67220d3ca0c490b12ee3b200}
+
+
+
+
+\doxyref{DATA}{p.}{classDATA} STRUCTURE 
+
+References DATA\_\-SetConsts(), UTILS\_\-GetTag(), UTILS\_\-IdentifyBrowser(), and UTILS\_\-OpenXMLFile().
+
+Referenced by START\_\-ChangeLanguage(), and START\_\-StartPage().\index{data.js@{data.js}!DATA\_\-AddChallenge@{DATA\_\-AddChallenge}}
+\index{DATA\_\-AddChallenge@{DATA\_\-AddChallenge}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-AddChallenge ( {\em Username}, \/   {\em Id}, \/   {\em Challenger})}\label{data_8js_dbf7f18f407d7eff2512a06d9320ffb7}
+
+
+Add a challenge in 'ChallengeList'. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]The oponent \item[{\em Id}]Challenge ID \item[{\em Challenger}]The challenge challenger \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses Bonfim \end{Desc}
+\begin{Desc}
+\item[Returns:]Boolean \end{Desc}
+\index{data.js@{data.js}!DATA\_\-AddChallengeWindow@{DATA\_\-AddChallengeWindow}}
+\index{DATA\_\-AddChallengeWindow@{DATA\_\-AddChallengeWindow}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-AddChallengeWindow ( {\em Id}, \/   {\em WindowObj})}\label{data_8js_3e85d498eb6cf1254cd4dfa7f2322779}
+
+
+Add a Challenge window on structure. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Id}]Challenge id \item[{\em WindowObj}]Window Object shown on interface \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses Bonfim \end{Desc}
+\begin{Desc}
+\item[Returns:]null \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindChallengeById}{p.}{data_8js_71f8401aafbfef573579b6cb537a9b92} \end{Desc}
+
+
+References WindowObj().\index{data.js@{data.js}!DATA\_\-AddChat@{DATA\_\-AddChat}}
+\index{DATA\_\-AddChat@{DATA\_\-AddChat}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-AddChat ( {\em Username}, \/   {\em Status})}\label{data_8js_7f8e8e6918f655aa535de84bf2d707e8}
+
+
+Add a chat in interface structure, with the other user name and his status. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]The user that you are chating with \item[{\em Status}]User's current status \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses Bonfim \end{Desc}
+\begin{Desc}
+\item[Returns:]Boolean \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindChat}{p.}{data_8js_58950d5edeeeae863c1156414abbab48} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-AddGame@{DATA\_\-AddGame}}
+\index{DATA\_\-AddGame@{DATA\_\-AddGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-AddGame ( {\em Id}, \/   {\em Player1}, \/   {\em Player2}, \/   {\em Color}, \/   {\em GameDiv})}\label{data_8js_2bea5d76c58060f752da507b43a045fc}
+
+
+Add a game in 'GameList'. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Id}]Game Id \item[{\em Player1}]Player name \item[{\em Player2}]Player name \item[{\em Color}]Your color on game \item[{\em GameDiv}]Interface information \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Sugimoto \end{Desc}
+\begin{Desc}
+\item[Returns:]New Game structure \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-SetCurrentGame}{p.}{data_8js_1efcf962fe027bc83d68f6a4b5523ab8} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-AddGameMove@{DATA\_\-AddGameMove}}
+\index{DATA\_\-AddGameMove@{DATA\_\-AddGameMove}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-AddGameMove ( {\em BoardArray}, \/   {\em Move}, \/   {\em ShortMove}, \/   {\em PWTime}, \/   {\em PBTime}, \/   {\em Turn})}\label{data_8js_d6457a928adeddabff859a70c5f1e660}
+
+
+Add a move in 'GameList[x].Moves'. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em BoardArray}]Board Array \item[{\em Move}]Board after move \item[{\em ShortMove}]The move \item[{\em PWTime}]White player time \item[{\em PBTime}]Balck player time \item[{\em Turn}]Who did the move \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Sugimoto \end{Desc}
+\begin{Desc}
+\item[Returns:]null \end{Desc}
+\index{data.js@{data.js}!DATA\_\-AddOldGame@{DATA\_\-AddOldGame}}
+\index{DATA\_\-AddOldGame@{DATA\_\-AddOldGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-AddOldGame ( {\em PWName}, \/   {\em PBName}, \/   {\em Color}, \/   {\em GameDiv})}\label{data_8js_0d29841048c796e99524c917dd550c37}
+
+
+Add a oldgame in 'OldGameList'. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em PWName}]White player's name \item[{\em PBName}]Black player's name \item[{\em Color}]Your color on game \item[{\em GameDiv}]Div structure \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Sugimoto \end{Desc}
+\begin{Desc}
+\item[Returns:]null \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-SetCurrentOldGame}{p.}{data_8js_594d3ab1ebf90e7a99244b47e43d5f70} \end{Desc}
+
+
+References MainData.\index{data.js@{data.js}!DATA\_\-AddProfile@{DATA\_\-AddProfile}}
+\index{DATA\_\-AddProfile@{DATA\_\-AddProfile}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-AddProfile ( {\em Jid}, \/   {\em Username}, \/   {\em ProfileWindow})}\label{data_8js_ee207c1e28457f70465381a6342e4216}
+
+
+\index{data.js@{data.js}!DATA\_\-AddRoom@{DATA\_\-AddRoom}}
+\index{DATA\_\-AddRoom@{DATA\_\-AddRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-AddRoom ( {\em RoomName}, \/   {\em MsgTo}, \/   {\em Role}, \/   {\em Affiliation}, \/   {\em RoomObj})}\label{data_8js_024a7987d8e68ed8b1e2264f9a0f01bf}
+
+
+Create new room in room list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em RoomName}]New room's name \item[{\em MsgTo}]Where the messages will be send \item[{\em Role}]Your role in room \item[{\em Affiliation}]Your affiliation in room \item[{\em RoomObj}]Room object, used to control the interface \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Pedro Eugenio \end{Desc}
+\begin{Desc}
+\item[Returns:]The new room object \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindRoom}{p.}{data_8js_846f66a20d558d81dbc167fab524798f} \end{Desc}
+
+
+References RoomObj().\index{data.js@{data.js}!DATA\_\-AddSearchGameInfo@{DATA\_\-AddSearchGameInfo}}
+\index{DATA\_\-AddSearchGameInfo@{DATA\_\-AddSearchGameInfo}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-AddSearchGameInfo ( {\em Id}, \/   {\em Elements}, \/   {\em User})}\label{data_8js_405f2fb91266a8e3bf4050a0c535c28a}
+
+
+Add search game window parameters. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Id}]Game ID \item[{\em Elements}]\item[{\em User}]Username \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{data.js@{data.js}!DATA\_\-AddUser@{DATA\_\-AddUser}}
+\index{DATA\_\-AddUser@{DATA\_\-AddUser}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-AddUser ( {\em Username}, \/   {\em Status}, \/   {\em Subs}, \/   {\em Group})}\label{data_8js_ac52d0a30af892139865877d53ac4e08}
+
+
+Add user to user list. 
+
+Search the user in DATA.UserList, if the user wasn't found, add the user in the list with a blank photo and a empty rating.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]The user's name to add in structure \item[{\em Status}]The user's status \item[{\em Subs}]User's subscription \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses Bonfim \end{Desc}
+\begin{Desc}
+\item[Returns:]false - User already on list, true otherwise \end{Desc}
+\index{data.js@{data.js}!DATA\_\-AddUserInRoom@{DATA\_\-AddUserInRoom}}
+\index{DATA\_\-AddUserInRoom@{DATA\_\-AddUserInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-AddUserInRoom ( {\em RoomName}, \/   {\em Username}, \/   {\em Status}, \/   {\em Type}, \/   {\em Role}, \/   {\em Affiliation})}\label{data_8js_dbb8bd79c61ccaf802ee49fa1b8945cc}
+
+
+Add user in user list of a room. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em RoomName}]Room name \item[{\em Username}]The new user \item[{\em Status}]New user's status \item[{\em Type}]New user's type \item[{\em Role}]New user's role \item[{\em Affiliation}]New user's affiliation \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Pedro Eugenio \end{Desc}
+\begin{Desc}
+\item[Returns:]true \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindRoom}{p.}{data_8js_846f66a20d558d81dbc167fab524798f} \doxyref{DATA\_\-FindUser}{p.}{data_8js_5cae909e817833cba1e376ffed8e5a3a} \end{Desc}
+
+
+References FindUserInRoom.\index{data.js@{data.js}!DATA\_\-AddWindow@{DATA\_\-AddWindow}}
+\index{DATA\_\-AddWindow@{DATA\_\-AddWindow}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-AddWindow ( {\em WindowObj})}\label{data_8js_bf928cb36d59c8490789e7765691675d}
+
+
+Add a WindowObject in WindowList 
+
+References WindowObj().\index{data.js@{data.js}!DATA\_\-ChangeWindowFocus@{DATA\_\-ChangeWindowFocus}}
+\index{DATA\_\-ChangeWindowFocus@{DATA\_\-ChangeWindowFocus}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-ChangeWindowFocus ( {\em WindowObj})}\label{data_8js_69ba35101b6535378b6b610a4a6a1c0f}
+
+
+Set Window Object Focus 
+
+References WindowObj().\index{data.js@{data.js}!DATA\_\-ClearChallenges@{DATA\_\-ClearChallenges}}
+\index{DATA\_\-ClearChallenges@{DATA\_\-ClearChallenges}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-ClearChallenges ()}\label{data_8js_f71b1ba2eecb295710352b2c02413027}
+
+
+Remove all challenges in 'ChallengeList'. 
+
+\begin{Desc}
+\item[Author:]Ulysses Bonfim \end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\index{data.js@{data.js}!DATA\_\-DelRoom@{DATA\_\-DelRoom}}
+\index{DATA\_\-DelRoom@{DATA\_\-DelRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-DelRoom ( {\em RoomName})}\label{data_8js_b42b314219343b3be3737ceb8ca86569}
+
+
+Delete a room in room list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em RoomName}]Room name to remove \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Pedro Eugenio \end{Desc}
+\begin{Desc}
+\item[Returns:]Boolean \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindRoom}{p.}{data_8js_846f66a20d558d81dbc167fab524798f} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-DelUser@{DATA\_\-DelUser}}
+\index{DATA\_\-DelUser@{DATA\_\-DelUser}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-DelUser ( {\em Username})}\label{data_8js_6b8c5bbb94662420f5b927a41523524c}
+
+
+Delete user from user list. 
+
+Search and remove the user of DATA.UserList
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]User's name to remove of structure \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Pedro \end{Desc}
+\begin{Desc}
+\item[Returns:]null if user is not on your list, true otherwise \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindUser}{p.}{data_8js_5cae909e817833cba1e376ffed8e5a3a} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-DelUserInRoom@{DATA\_\-DelUserInRoom}}
+\index{DATA\_\-DelUserInRoom@{DATA\_\-DelUserInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-DelUserInRoom ( {\em RoomName}, \/   {\em Username})}\label{data_8js_48e5246fb9a534acaa9d5a3f813a3b2a}
+
+
+Delete user from user list of a room. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em RoomName}]Room name \item[{\em Username}]User to remove \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]Boolean \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindRoom}{p.}{data_8js_846f66a20d558d81dbc167fab524798f} \doxyref{DATA\_\-FindUserInRoom}{p.}{data_8js_d7eba175029e4b575073ab8a854022a6} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-FindChallenge@{DATA\_\-FindChallenge}}
+\index{DATA\_\-FindChallenge@{DATA\_\-FindChallenge}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-FindChallenge ( {\em Username})}\label{data_8js_fc1c394d5530e07406660048bd10bcab}
+
+
+Find a challenge in 'ChallengeList'. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]Challenge opponent \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses Bonfim \end{Desc}
+\begin{Desc}
+\item[Returns:]Boolean \end{Desc}
+\index{data.js@{data.js}!DATA\_\-FindChallengeById@{DATA\_\-FindChallengeById}}
+\index{DATA\_\-FindChallengeById@{DATA\_\-FindChallengeById}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-FindChallengeById ( {\em ID})}\label{data_8js_71f8401aafbfef573579b6cb537a9b92}
+
+
+Find a challenge by ID in 'ChallengeList'. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]Challenge opponent \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses Bonfim \end{Desc}
+\begin{Desc}
+\item[Returns:]Challenge list index or null (user not found) \end{Desc}
+\index{data.js@{data.js}!DATA\_\-FindChat@{DATA\_\-FindChat}}
+\index{DATA\_\-FindChat@{DATA\_\-FindChat}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-FindChat ( {\em Username})}\label{data_8js_58950d5edeeeae863c1156414abbab48}
+
+
+Find a chat with the user's name. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]The user that you are chating with \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses Bonfim \end{Desc}
+\begin{Desc}
+\item[Returns:]interger the position of the chat in structure \end{Desc}
+\index{data.js@{data.js}!DATA\_\-FindGame@{DATA\_\-FindGame}}
+\index{DATA\_\-FindGame@{DATA\_\-FindGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-FindGame ( {\em Id})}\label{data_8js_2724b74cf9d7bab0cb467c478adb0440}
+
+
+Find game in 'GameList' by game id. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Id}]Game Id \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Sugimoto \end{Desc}
+\begin{Desc}
+\item[Returns:]Game index \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindGame}{p.}{data_8js_2724b74cf9d7bab0cb467c478adb0440} \doxyref{DATA\_\-SetCurrentGame}{p.}{data_8js_1efcf962fe027bc83d68f6a4b5523ab8} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-FindNextUser@{DATA\_\-FindNextUser}}
+\index{DATA\_\-FindNextUser@{DATA\_\-FindNextUser}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-FindNextUser ( {\em Username}, \/   {\em Status})}\label{data_8js_f30bf926593f7c73a54e17ba5d07b84d}
+
+
+Find next user in user list. 
+
+\begin{Desc}
+\item[{\bf Deprecated}]\end{Desc}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]Base user to search the next \item[{\em Status}]Status of user to search the next \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]The struct user founded, null otherwise \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindUser}{p.}{data_8js_5cae909e817833cba1e376ffed8e5a3a} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-FindNextUserInRoom@{DATA\_\-FindNextUserInRoom}}
+\index{DATA\_\-FindNextUserInRoom@{DATA\_\-FindNextUserInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-FindNextUserInRoom ( {\em RoomName}, \/   {\em Username})}\label{data_8js_2671a5f62e32b36e867eec11d1d0d905}
+
+
+Find next user in room user list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em RoomName}]Name of room to search the next user \item[{\em Username}]Base user to search the next \item[{\em Status}]Status of user to search the next \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]Next user's position \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindRoom}{p.}{data_8js_846f66a20d558d81dbc167fab524798f} \doxyref{DATA\_\-FindUserInRoom}{p.}{data_8js_d7eba175029e4b575073ab8a854022a6} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-FindProfile@{DATA\_\-FindProfile}}
+\index{DATA\_\-FindProfile@{DATA\_\-FindProfile}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-FindProfile ( {\em Jid})}\label{data_8js_928edf5857825576635f1cb7c08daf25}
+
+
+\index{data.js@{data.js}!DATA\_\-FindRoom@{DATA\_\-FindRoom}}
+\index{DATA\_\-FindRoom@{DATA\_\-FindRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-FindRoom ( {\em RoomName})}\label{data_8js_846f66a20d558d81dbc167fab524798f}
+
+
+Find room in room list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em RoomName}]Room name to remove \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Pedro Eugenio \end{Desc}
+\begin{Desc}
+\item[Returns:]Room structure founded or null \end{Desc}
+\index{data.js@{data.js}!DATA\_\-FindSearchGameInfo@{DATA\_\-FindSearchGameInfo}}
+\index{DATA\_\-FindSearchGameInfo@{DATA\_\-FindSearchGameInfo}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-FindSearchGameInfo ( {\em Id})}\label{data_8js_f41fc4cb77ddaa4e24e75ab611644aea}
+
+
+Find search game window. 
+
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]Game's position \end{Desc}
+\index{data.js@{data.js}!DATA\_\-FindUser@{DATA\_\-FindUser}}
+\index{DATA\_\-FindUser@{DATA\_\-FindUser}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-FindUser ( {\em Username})}\label{data_8js_5cae909e817833cba1e376ffed8e5a3a}
+
+
+Find user in user list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]User's name to search \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Pedro \end{Desc}
+\begin{Desc}
+\item[Returns:]null if user is not on your list, the structure User otherwise \end{Desc}
+\index{data.js@{data.js}!DATA\_\-FindUserInRoom@{DATA\_\-FindUserInRoom}}
+\index{DATA\_\-FindUserInRoom@{DATA\_\-FindUserInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-FindUserInRoom ( {\em RoomName}, \/   {\em Username})}\label{data_8js_d7eba175029e4b575073ab8a854022a6}
+
+
+Find user in user list of a room. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em RoomName}]Room to search \item[{\em Username}]User to find \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Pedro Eugenio \end{Desc}
+\begin{Desc}
+\item[Returns:]User's position on Room UserList vector, or null, if not found \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindRoom}{p.}{data_8js_846f66a20d558d81dbc167fab524798f} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-FindWindow@{DATA\_\-FindWindow}}
+\index{DATA\_\-FindWindow@{DATA\_\-FindWindow}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-FindWindow ( {\em WindowObj})}\label{data_8js_914db06d50b0ff5a262601fd30cd6cdc}
+
+
+Private method used to find Window Object posiiton in WindowList 
+
+References WindowObj().\index{data.js@{data.js}!DATA\_\-GetGame@{DATA\_\-GetGame}}
+\index{DATA\_\-GetGame@{DATA\_\-GetGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-GetGame ( {\em Id})}\label{data_8js_368d50ab92c1981cfa0d903e0c073a6e}
+
+
+Search for a game in GameList. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Id}]Game Id \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Sugimoto \end{Desc}
+\begin{Desc}
+\item[Returns:]The game structure \end{Desc}
+\index{data.js@{data.js}!DATA\_\-GetOldGame@{DATA\_\-GetOldGame}}
+\index{DATA\_\-GetOldGame@{DATA\_\-GetOldGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-GetOldGame ( {\em Id})}\label{data_8js_4aa8fc4e98221c56c19a24dc4f141369}
+
+
+Search for a game in OldGameList. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Id}]Game Id \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Sugimoto \end{Desc}
+\begin{Desc}
+\item[Returns:]The game structure \end{Desc}
+\index{data.js@{data.js}!DATA\_\-GetOponent@{DATA\_\-GetOponent}}
+\index{DATA\_\-GetOponent@{DATA\_\-GetOponent}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-GetOponent ( {\em GameID})}\label{data_8js_ff30d6eebf252f6bf10ccf61ee2d4d3f}
+
+
+Return the oponent's name. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameId}]Game Id \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Sugimoto \end{Desc}
+\begin{Desc}
+\item[Returns:]Opponent's name \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-GetGame}{p.}{data_8js_368d50ab92c1981cfa0d903e0c073a6e} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-GetProfile@{DATA\_\-GetProfile}}
+\index{DATA\_\-GetProfile@{DATA\_\-GetProfile}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-GetProfile ( {\em Jid})}\label{data_8js_281c760834fdc55ac4f7322d67d1252c}
+
+
+\index{data.js@{data.js}!DATA\_\-GetRating@{DATA\_\-GetRating}}
+\index{DATA\_\-GetRating@{DATA\_\-GetRating}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-GetRating ( {\em Username})}\label{data_8js_911d02b1a2ca2109dcd1d78ae993ebc6}
+
+
+Get the User's rating. 
+
+Get the user's rating (in a structure, with all types of reating) on chess server.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]User name to search \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]If the user is not on your list and the RoomList, false. Else return the user's rating in a structure. \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindUser}{p.}{data_8js_5cae909e817833cba1e376ffed8e5a3a} \doxyref{DATA\_\-FindUserInRoom}{p.}{data_8js_d7eba175029e4b575073ab8a854022a6} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-GetRoom@{DATA\_\-GetRoom}}
+\index{DATA\_\-GetRoom@{DATA\_\-GetRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-GetRoom ( {\em RoomName})}\label{data_8js_275719f8427ec698005ad11b4a450bae}
+
+
+Get room from room list. 
+
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]Boolean \end{Desc}
+\begin{Desc}
+\item[See also:]DATA\_\-FindRooom \end{Desc}
+\index{data.js@{data.js}!DATA\_\-GetSearchGameInfo@{DATA\_\-GetSearchGameInfo}}
+\index{DATA\_\-GetSearchGameInfo@{DATA\_\-GetSearchGameInfo}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-GetSearchGameInfo ( {\em Id})}\label{data_8js_e2f623d3529456a442b44403d1f4a452}
+
+
+\index{data.js@{data.js}!DATA\_\-GetStatus@{DATA\_\-GetStatus}}
+\index{DATA\_\-GetStatus@{DATA\_\-GetStatus}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-GetStatus ( {\em Username})}\label{data_8js_222bbae556d8ede4a791806cd0bafc75}
+
+
+Get User status. 
+
+Get the user status on jabber. If the given user is not on your list, then search through the RoomList.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]User name to search \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]If the user is not on your list and the RoomList, false. Else return the user status. \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindUser}{p.}{data_8js_5cae909e817833cba1e376ffed8e5a3a} \doxyref{DATA\_\-FindUserInRoom}{p.}{data_8js_d7eba175029e4b575073ab8a854022a6} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-GetType@{DATA\_\-GetType}}
+\index{DATA\_\-GetType@{DATA\_\-GetType}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-GetType ( {\em Username})}\label{data_8js_30fe84cc8de73f5b82fdfcb745245535}
+
+
+Get the User's type. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]User name to search \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]If the user is not on your list and the RoomList, false. Else return the user's type. \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindUser}{p.}{data_8js_5cae909e817833cba1e376ffed8e5a3a} \doxyref{DATA\_\-FindUserInRoom}{p.}{data_8js_d7eba175029e4b575073ab8a854022a6} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-GetUserRatingInRoom@{DATA\_\-GetUserRatingInRoom}}
+\index{DATA\_\-GetUserRatingInRoom@{DATA\_\-GetUserRatingInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-GetUserRatingInRoom ( {\em RoomName}, \/   {\em Username}, \/   {\em Category})}\label{data_8js_c2bdd135933b9f5c5404d3f85204e84f}
+
+
+Get user's rating. 
+
+Return Category's Rating from Username in Room (Based on fact that's all online users are connected to 'geral' room
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em RoomName}]Room name \item[{\em Username}]User name \item[{\em Category}]Category which rating will be returned \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]Rating's value \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindRoom}{p.}{data_8js_846f66a20d558d81dbc167fab524798f} DATA\_\-FinUserInRoom \end{Desc}
+
+
+References FindUserInRoom.\index{data.js@{data.js}!DATA\_\-IsContact@{DATA\_\-IsContact}}
+\index{DATA\_\-IsContact@{DATA\_\-IsContact}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-IsContact ( {\em Username})}\label{data_8js_29868cd626350fd2d65901369e3f4287}
+
+
+Is 'Username' in your contact list? 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]User name to search \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]Boolean \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindUser}{p.}{data_8js_5cae909e817833cba1e376ffed8e5a3a} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-PushGameToOldGame@{DATA\_\-PushGameToOldGame}}
+\index{DATA\_\-PushGameToOldGame@{DATA\_\-PushGameToOldGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-PushGameToOldGame ( {\em GameObj})}\label{data_8js_6cf569873c371817862c78e2814beb35}
+
+
+Set an old game as the current old game. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameObj}]The old game object \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Sugimoto \end{Desc}
+\begin{Desc}
+\item[Returns:]Game's position on OldGameList \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-SetCurrentOldGame}{p.}{data_8js_594d3ab1ebf90e7a99244b47e43d5f70} \end{Desc}
+
+
+References MainData.\index{data.js@{data.js}!DATA\_\-RemoveChallenge@{DATA\_\-RemoveChallenge}}
+\index{DATA\_\-RemoveChallenge@{DATA\_\-RemoveChallenge}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-RemoveChallenge ( {\em Username})}\label{data_8js_c0c5005ba705464fe04079662e1b0750}
+
+
+Remove a challenge in 'ChallengeList'. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]The oponent \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses Bonfim \end{Desc}
+\begin{Desc}
+\item[Returns:]Boolean \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindChallenge}{p.}{data_8js_fc1c394d5530e07406660048bd10bcab} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-RemoveChallengeById@{DATA\_\-RemoveChallengeById}}
+\index{DATA\_\-RemoveChallengeById@{DATA\_\-RemoveChallengeById}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-RemoveChallengeById ( {\em ID})}\label{data_8js_19361e953fd3731bdfda92d7187c519a}
+
+
+Remove a challenge by ID in 'ChallengeList' \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em ID}]Challenge ID \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses Bonfim \end{Desc}
+\begin{Desc}
+\item[Returns:]Boolean \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindChallengeById}{p.}{data_8js_71f8401aafbfef573579b6cb537a9b92} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-RemoveChat@{DATA\_\-RemoveChat}}
+\index{DATA\_\-RemoveChat@{DATA\_\-RemoveChat}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-RemoveChat ( {\em Username})}\label{data_8js_3df3248871c65f1d1094f14fbc6b6eac}
+
+
+Remove a chat with the user given from the structure. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]The user that the chat will be removed \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses Bonfim \end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindChat}{p.}{data_8js_58950d5edeeeae863c1156414abbab48} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-RemoveGame@{DATA\_\-RemoveGame}}
+\index{DATA\_\-RemoveGame@{DATA\_\-RemoveGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-RemoveGame ( {\em Id})}\label{data_8js_d2a4b6f6301f3eb93107582f147a5405}
+
+
+Remove a game in 'GameList' by game id. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Id}]Game Id \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Sugimoto \end{Desc}
+\begin{Desc}
+\item[Returns:]Removed Game structure \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindGame}{p.}{data_8js_2724b74cf9d7bab0cb467c478adb0440} \doxyref{DATA\_\-SetCurrentGame}{p.}{data_8js_1efcf962fe027bc83d68f6a4b5523ab8} \end{Desc}
+
+
+References MainData.\index{data.js@{data.js}!DATA\_\-RemoveOldGame@{DATA\_\-RemoveOldGame}}
+\index{DATA\_\-RemoveOldGame@{DATA\_\-RemoveOldGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-RemoveOldGame ( {\em Id})}\label{data_8js_d31f0ce0b91b8f5b00107a0151897ef3}
+
+
+Remove a game in 'OldGameList' by game id. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Id}]The Game Id \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Sugimoto \end{Desc}
+\begin{Desc}
+\item[Returns:]The game removed object \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-SetCurrentOldGame}{p.}{data_8js_594d3ab1ebf90e7a99244b47e43d5f70} \end{Desc}
+
+
+References MainData.\index{data.js@{data.js}!DATA\_\-RemoveProfile@{DATA\_\-RemoveProfile}}
+\index{DATA\_\-RemoveProfile@{DATA\_\-RemoveProfile}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-RemoveProfile ( {\em Jid})}\label{data_8js_c552851da391c35ec6ba1c870c3df088}
+
+
+\index{data.js@{data.js}!DATA\_\-RemoveSearchGameInfo@{DATA\_\-RemoveSearchGameInfo}}
+\index{DATA\_\-RemoveSearchGameInfo@{DATA\_\-RemoveSearchGameInfo}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-RemoveSearchGameInfo ( {\em Id})}\label{data_8js_efd64d376f48a09b100598608bd8e7d3}
+
+
+Remove search game window. 
+
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{data.js@{data.js}!DATA\_\-RemoveWindow@{DATA\_\-RemoveWindow}}
+\index{DATA\_\-RemoveWindow@{DATA\_\-RemoveWindow}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-RemoveWindow ( {\em WindowObj})}\label{data_8js_787aa38eac88a543ca8ec40aff3c0502}
+
+
+Remove a Window Object from WindowList 
+
+References WindowObj().\index{data.js@{data.js}!DATA\_\-SetCurrentGame@{DATA\_\-SetCurrentGame}}
+\index{DATA\_\-SetCurrentGame@{DATA\_\-SetCurrentGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-SetCurrentGame ( {\em Game})}\label{data_8js_1efcf962fe027bc83d68f6a4b5523ab8}
+
+
+Set current game. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Game}]Game to set \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Sugimoto \end{Desc}
+\begin{Desc}
+\item[Returns:]null \end{Desc}
+\index{data.js@{data.js}!DATA\_\-SetCurrentOldGame@{DATA\_\-SetCurrentOldGame}}
+\index{DATA\_\-SetCurrentOldGame@{DATA\_\-SetCurrentOldGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-SetCurrentOldGame ( {\em Game})}\label{data_8js_594d3ab1ebf90e7a99244b47e43d5f70}
+
+
+Set current oldgame. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Game}]Game structure \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Sugimoto \end{Desc}
+\begin{Desc}
+\item[Returns:]null \end{Desc}
+\index{data.js@{data.js}!DATA\_\-SetDefault@{DATA\_\-SetDefault}}
+\index{DATA\_\-SetDefault@{DATA\_\-SetDefault}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-SetDefault ( {\em Username})}\label{data_8js_ff6113821178eee7df0ec435f6cfd29d}
+
+
+Set default values to use. 
+
+Set \char`\"{}user\char`\"{} to DATA.Type and 0 to rating types.
+
+\begin{Desc}
+\item[Author:]Pedro Eugenio \end{Desc}
+\index{data.js@{data.js}!DATA\_\-SetMyProfile@{DATA\_\-SetMyProfile}}
+\index{DATA\_\-SetMyProfile@{DATA\_\-SetMyProfile}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-SetMyProfile ( {\em Username}, \/   {\em FullName}, \/   {\em Desc}, \/   {\em ImgType}, \/   {\em Img64})}\label{data_8js_9cfdf0db4b619ad5773a97006d769e6b}
+
+
+\index{data.js@{data.js}!DATA\_\-SetRating@{DATA\_\-SetRating}}
+\index{DATA\_\-SetRating@{DATA\_\-SetRating}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-SetRating ( {\em Username}, \/   {\em Category}, \/   {\em Rating})}\label{data_8js_116170a27ffe69b808236749b518bc57}
+
+
+Change user's rating. 
+
+Search in your contact list and in all rooms that the user is, and change his/her rating.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]User name \item[{\em Category}]Category of rating \item[{\em Rating}]The new rating value \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]true \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindUser}{p.}{data_8js_5cae909e817833cba1e376ffed8e5a3a} \doxyref{DATA\_\-FindUserInRoom}{p.}{data_8js_d7eba175029e4b575073ab8a854022a6} \doxyref{UTILS\_\-Capitalize}{p.}{utils_8js_fc57b525e3ad6bff0fb72ff91bd877ef} \end{Desc}
+
+
+References MainData, and UTILS\_\-Capitalize().\index{data.js@{data.js}!DATA\_\-SetRoom@{DATA\_\-SetRoom}}
+\index{DATA\_\-SetRoom@{DATA\_\-SetRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-SetRoom ( {\em RoomName}, \/   {\em From}, \/   {\em Affiliation}, \/   {\em Role})}\label{data_8js_fcbe0852789a1276ab840dfedbb2e065}
+
+
+Set from, affiliation and role in 'RoomName' structure. 
+
+Only for interface user
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em RoomName}]Room name \item[{\em From}]Where the messages will be send \item[{\em Affiliation}]New room's affiliation \item[{\em Role}]New room's role \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Pedro Eugenio \end{Desc}
+\begin{Desc}
+\item[Returns:]null, if the room doesn't exist, true otherwise \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindRoom}{p.}{data_8js_846f66a20d558d81dbc167fab524798f} \end{Desc}
+
+
+References MainData.\index{data.js@{data.js}!DATA\_\-SetSubs@{DATA\_\-SetSubs}}
+\index{DATA\_\-SetSubs@{DATA\_\-SetSubs}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-SetSubs ( {\em Username}, \/   {\em NewSubs})}\label{data_8js_36f98cdcb861cf875f74c31e66fa6326}
+
+
+Change the user's subscription. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]User name \item[{\em NewSubs}]New Username subscriptioon \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses Bonfim \end{Desc}
+\begin{Desc}
+\item[Returns:]false if the user is not on your list, true otherwise \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindUser}{p.}{data_8js_5cae909e817833cba1e376ffed8e5a3a} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-SetTurnGame@{DATA\_\-SetTurnGame}}
+\index{DATA\_\-SetTurnGame@{DATA\_\-SetTurnGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-SetTurnGame ( {\em TurnColor})}\label{data_8js_883deeafb5351581e0e2f5f36e496374}
+
+
+Set true, if is the player's turn. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em TurnColor}]The round color \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Sugimoto \end{Desc}
+\begin{Desc}
+\item[Returns:]Boolean \end{Desc}
+\index{data.js@{data.js}!DATA\_\-SetType@{DATA\_\-SetType}}
+\index{DATA\_\-SetType@{DATA\_\-SetType}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-SetType ( {\em Username}, \/   {\em NewType})}\label{data_8js_b4605a9d53be74f8eab011b2d475bbd4}
+
+
+Change user's type. 
+
+Search in your contact list and in all rooms that the user is, and change his/her status. If the given username is your own name, change on \doxyref{DATA}{p.}{classDATA} the user type.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]User name \item[{\em NewType}]New Username Type \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]true \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindUser}{p.}{data_8js_5cae909e817833cba1e376ffed8e5a3a} \doxyref{DATA\_\-FindUserInRoom}{p.}{data_8js_d7eba175029e4b575073ab8a854022a6} \end{Desc}
+
+
+References MainData.\index{data.js@{data.js}!DATA\_\-SetUserAttrInRoom@{DATA\_\-SetUserAttrInRoom}}
+\index{DATA\_\-SetUserAttrInRoom@{DATA\_\-SetUserAttrInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-SetUserAttrInRoom ( {\em RoomName}, \/   {\em Username}, \/   {\em Status}, \/   {\em Role}, \/   {\em Affiliation})}\label{data_8js_8d8140851da0bab895ee728f75046b8d}
+
+
+Set user attibutes in 'RoomName'. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em RoomName}]Room to set attribute \item[{\em Username}]Base user to set \item[{\em Status}]New user's status \item[{\em Role}]New user's Role \item[{\em Affiliation}]New user's Affiliation \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]Boolean \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindRoom}{p.}{data_8js_846f66a20d558d81dbc167fab524798f} \doxyref{DATA\_\-FindUserInRoom}{p.}{data_8js_d7eba175029e4b575073ab8a854022a6} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-SetUserStatus@{DATA\_\-SetUserStatus}}
+\index{DATA\_\-SetUserStatus@{DATA\_\-SetUserStatus}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-SetUserStatus ( {\em Username}, \/   {\em NewStatus})}\label{data_8js_bc76a39936d75f14dbdd0fc9c11f64bd}
+
+
+Change the user's status. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]User name \item[{\em NewStatus}]New Username status \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]false if the user is not on your list, true otherwise \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindUser}{p.}{data_8js_5cae909e817833cba1e376ffed8e5a3a} \end{Desc}
+\index{data.js@{data.js}!DATA\_\-SortUserByNick@{DATA\_\-SortUserByNick}}
+\index{DATA\_\-SortUserByNick@{DATA\_\-SortUserByNick}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-SortUserByNick ()}\label{data_8js_ea3dee05c62db4ee088f72be2ccafd71}
+
+
+Sort Userlist into ascending or descending order. 
+
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\begin{Desc}
+\item[See also:]UTILS\_\-SortByUsernameAsc UTILS\_\-SortByUsernameDsc \end{Desc}
+\index{data.js@{data.js}!DATA\_\-SortUserByNickInRoom@{DATA\_\-SortUserByNickInRoom}}
+\index{DATA\_\-SortUserByNickInRoom@{DATA\_\-SortUserByNickInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-SortUserByNickInRoom ( {\em RoomName})}\label{data_8js_350a8e07b89c2b2e18c2d9aaecbe4b1c}
+
+
+Sort Userlist from Room into ascending or descending order. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em RoomName}]Room to sort \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]Boolean \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindRoom}{p.}{data_8js_846f66a20d558d81dbc167fab524798f} UTILS\_\-SortByUsernameAsc UTILS\_\-SortByUsernameDsc \end{Desc}
+\index{data.js@{data.js}!DATA\_\-SortUserByRating@{DATA\_\-SortUserByRating}}
+\index{DATA\_\-SortUserByRating@{DATA\_\-SortUserByRating}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-SortUserByRating ()}\label{data_8js_fdece2b7557f03066679ce7f0e2cbc56}
+
+
+Sort Userlist into descending order by Rating selected in interface. 
+
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\begin{Desc}
+\item[See also:]UTILS\_\-SortByRatingDsc \end{Desc}
+\index{data.js@{data.js}!DATA\_\-SortUserByRatingInRoom@{DATA\_\-SortUserByRatingInRoom}}
+\index{DATA\_\-SortUserByRatingInRoom@{DATA\_\-SortUserByRatingInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function DATA\_\-SortUserByRatingInRoom ( {\em RoomName})}\label{data_8js_be2a15b73d555bce7584647b6e75f749}
+
+
+Sort Userlist from Room into descending order by Rating. 
+
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+\begin{Desc}
+\item[Returns:]Boolean \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{DATA\_\-FindRoom}{p.}{data_8js_846f66a20d558d81dbc167fab524798f} UTILS\_\-SortByUsernameDsc \end{Desc}
+
+
+\subsection{Variable Documentation}
+\index{data.js@{data.js}!AddChallenge@{AddChallenge}}
+\index{AddChallenge@{AddChallenge}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf AddChallenge} = DATA\_\-AddChallenge}\label{data_8js_963dc392aa726beb0141890254099543}
+
+
+\index{data.js@{data.js}!AddChallengeWindow@{AddChallengeWindow}}
+\index{AddChallengeWindow@{AddChallengeWindow}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf AddChallengeWindow} = DATA\_\-AddChallengeWindow}\label{data_8js_75758b3fbc26090c3f1cf1583e84fa5b}
+
+
+\index{data.js@{data.js}!AddChat@{AddChat}}
+\index{AddChat@{AddChat}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf AddChat} = DATA\_\-AddChat}\label{data_8js_9b2235e20ac841c81d0013e934a31324}
+
+
+\index{data.js@{data.js}!AddGame@{AddGame}}
+\index{AddGame@{AddGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf AddGame} = DATA\_\-AddGame}\label{data_8js_9f1cb31dab6db19db7b329a6a23d688b}
+
+
+\index{data.js@{data.js}!AddGameMove@{AddGameMove}}
+\index{AddGameMove@{AddGameMove}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf AddGameMove} = DATA\_\-AddGameMove}\label{data_8js_0c6649fd20031b04264da1ca4021e310}
+
+
+\index{data.js@{data.js}!AddOldGame@{AddOldGame}}
+\index{AddOldGame@{AddOldGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf AddOldGame} = DATA\_\-AddOldGame}\label{data_8js_603b4e67c73b5ddd83e7ee8c2ede9824}
+
+
+\index{data.js@{data.js}!AddProfile@{AddProfile}}
+\index{AddProfile@{AddProfile}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf AddProfile} = DATA\_\-AddProfile}\label{data_8js_54a1f2b70bf76f5d384d3c20aed5f681}
+
+
+\index{data.js@{data.js}!AddRoom@{AddRoom}}
+\index{AddRoom@{AddRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf AddRoom} = DATA\_\-AddRoom}\label{data_8js_7f20befe090785308e276b1bce90eae6}
+
+
+\index{data.js@{data.js}!AddSearchGameInfo@{AddSearchGameInfo}}
+\index{AddSearchGameInfo@{AddSearchGameInfo}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf AddSearchGameInfo} = DATA\_\-AddSearchGameInfo}\label{data_8js_117e7ddbacb6fbf2d1ca13b277987a6a}
+
+
+\index{data.js@{data.js}!AddUser@{AddUser}}
+\index{AddUser@{AddUser}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf AddUser} = DATA\_\-AddUser}\label{data_8js_5d681509d8f52ccbe566dbee53780e5c}
+
+
+\index{data.js@{data.js}!AddUserInRoom@{AddUserInRoom}}
+\index{AddUserInRoom@{AddUserInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf AddUserInRoom} = DATA\_\-AddUserInRoom}\label{data_8js_a6410dd48125a1b3e07d927afcb268d8}
+
+
+\index{data.js@{data.js}!AddWindow@{AddWindow}}
+\index{AddWindow@{AddWindow}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf AddWindow} = DATA\_\-AddWindow}\label{data_8js_77ca07abf82bea590a13b724a3921ba7}
+
+
+\index{data.js@{data.js}!ChangeWindowFocus@{ChangeWindowFocus}}
+\index{ChangeWindowFocus@{ChangeWindowFocus}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf ChangeWindowFocus} = DATA\_\-ChangeWindowFocus}\label{data_8js_1845f610fdbeff6d8da5e93a442f3797}
+
+
+\index{data.js@{data.js}!ClearChallenges@{ClearChallenges}}
+\index{ClearChallenges@{ClearChallenges}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf ClearChallenges} = DATA\_\-ClearChallenges}\label{data_8js_0e396849ac3850c66c2a1bf9eb7bbc81}
+
+
+\index{data.js@{data.js}!DelRoom@{DelRoom}}
+\index{DelRoom@{DelRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf DelRoom} = DATA\_\-DelRoom}\label{data_8js_4ec2b67fbb556c532ee15e88dac16bd6}
+
+
+\index{data.js@{data.js}!DelUser@{DelUser}}
+\index{DelUser@{DelUser}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf DelUser} = DATA\_\-DelUser}\label{data_8js_41412e881b6044673b584974537867a5}
+
+
+\index{data.js@{data.js}!DelUserInRoom@{DelUserInRoom}}
+\index{DelUserInRoom@{DelUserInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf DelUserInRoom} = DATA\_\-DelUserInRoom}\label{data_8js_066406b25e099eb6a4294ecbd63e16ca}
+
+
+\index{data.js@{data.js}!FindChallenge@{FindChallenge}}
+\index{FindChallenge@{FindChallenge}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf FindChallenge} = DATA\_\-FindChallenge}\label{data_8js_c9ba9f6baf44735242bdd14ad1ce5e2d}
+
+
+\index{data.js@{data.js}!FindChallengeById@{FindChallengeById}}
+\index{FindChallengeById@{FindChallengeById}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf FindChallengeById} = DATA\_\-FindChallengeById}\label{data_8js_4209dd1c3c7ad3a98b5aaba167fd2f91}
+
+
+\index{data.js@{data.js}!FindChat@{FindChat}}
+\index{FindChat@{FindChat}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf FindChat} = DATA\_\-FindChat}\label{data_8js_f3bf92a0622ff65516928dc8acadf602}
+
+
+\index{data.js@{data.js}!FindGame@{FindGame}}
+\index{FindGame@{FindGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf FindGame} = DATA\_\-FindGame}\label{data_8js_dcb32003f88746f5e2acd6b3ac2553f5}
+
+
+\index{data.js@{data.js}!FindNextUser@{FindNextUser}}
+\index{FindNextUser@{FindNextUser}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf FindNextUser} = DATA\_\-FindNextUser}\label{data_8js_d8d28e6713bbaa375c74a63107c3290c}
+
+
+\index{data.js@{data.js}!FindNextUserInRoom@{FindNextUserInRoom}}
+\index{FindNextUserInRoom@{FindNextUserInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf FindNextUserInRoom} = DATA\_\-FindNextUserInRoom}\label{data_8js_2dfd515e8bdcb99168adf78c674e19dc}
+
+
+\index{data.js@{data.js}!FindProfile@{FindProfile}}
+\index{FindProfile@{FindProfile}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf FindProfile} = DATA\_\-FindProfile}\label{data_8js_d115d6053aa7dc9550e2b0c7d4c5d685}
+
+
+\index{data.js@{data.js}!FindRoom@{FindRoom}}
+\index{FindRoom@{FindRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf FindRoom} = DATA\_\-FindRoom}\label{data_8js_e3913ae92e66d7b4d4b51c4e681ddc1f}
+
+
+\index{data.js@{data.js}!FindSearchGameInfo@{FindSearchGameInfo}}
+\index{FindSearchGameInfo@{FindSearchGameInfo}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf FindSearchGameInfo} = DATA\_\-FindSearchGameInfo}\label{data_8js_a8ba07b8db905494f046c398c00892da}
+
+
+\index{data.js@{data.js}!FindUser@{FindUser}}
+\index{FindUser@{FindUser}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf FindUser} = DATA\_\-FindUser}\label{data_8js_70edb5bea76beed0caaf1b93e673bc7e}
+
+
+\index{data.js@{data.js}!FindUserInRoom@{FindUserInRoom}}
+\index{FindUserInRoom@{FindUserInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf FindUserInRoom} = DATA\_\-FindUserInRoom}\label{data_8js_150d399f0e886c782141d67d9d4f231c}
+
+
+
+
+Referenced by DATA\_\-AddUserInRoom(), and DATA\_\-GetUserRatingInRoom().\index{data.js@{data.js}!FindWindow@{FindWindow}}
+\index{FindWindow@{FindWindow}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf FindWindow} = DATA\_\-FindWindow}\label{data_8js_104e5485d1f7eb6c1e3f8663dbb41f9e}
+
+
+\index{data.js@{data.js}!GetGame@{GetGame}}
+\index{GetGame@{GetGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf GetGame} = DATA\_\-GetGame}\label{data_8js_09c4e462782117fb319f47e827f841f6}
+
+
+\index{data.js@{data.js}!GetOldGame@{GetOldGame}}
+\index{GetOldGame@{GetOldGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf GetOldGame} = DATA\_\-GetOldGame}\label{data_8js_d998543c8c2ac413c7a0571178c3280c}
+
+
+\index{data.js@{data.js}!GetOponent@{GetOponent}}
+\index{GetOponent@{GetOponent}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf GetOponent} = DATA\_\-GetOponent}\label{data_8js_f3a85fdb9349cad1388c77977f4e0fe4}
+
+
+\index{data.js@{data.js}!GetProfile@{GetProfile}}
+\index{GetProfile@{GetProfile}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf GetProfile} = DATA\_\-GetProfile}\label{data_8js_ffe39e2bac577ec9db81ecc54da6735f}
+
+
+\index{data.js@{data.js}!GetRating@{GetRating}}
+\index{GetRating@{GetRating}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf GetRating} = DATA\_\-GetRating}\label{data_8js_141bddd7a61355a3bc49aad594170b39}
+
+
+\index{data.js@{data.js}!GetRoom@{GetRoom}}
+\index{GetRoom@{GetRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf GetRoom} = DATA\_\-GetRoom}\label{data_8js_44e2006469d46018abaf19908565e588}
+
+
+\index{data.js@{data.js}!GetSearchGameInfo@{GetSearchGameInfo}}
+\index{GetSearchGameInfo@{GetSearchGameInfo}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf GetSearchGameInfo} = DATA\_\-GetSearchGameInfo}\label{data_8js_619f2e5d3463cff6b5411ea37a675e7a}
+
+
+\index{data.js@{data.js}!GetStatus@{GetStatus}}
+\index{GetStatus@{GetStatus}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf GetStatus} = DATA\_\-GetStatus}\label{data_8js_00e7349963cb21ef4f2f3a2a72e0b06c}
+
+
+\index{data.js@{data.js}!GetType@{GetType}}
+\index{GetType@{GetType}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf GetType} = DATA\_\-GetType}\label{data_8js_5ca73d32ec05688bcbb008336da823aa}
+
+
+\index{data.js@{data.js}!GetUserRatingInRoom@{GetUserRatingInRoom}}
+\index{GetUserRatingInRoom@{GetUserRatingInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf GetUserRatingInRoom} = DATA\_\-GetUserRatingInRoom}\label{data_8js_5fadad67ce0c264576756254b05ce865}
+
+
+\index{data.js@{data.js}!IsContact@{IsContact}}
+\index{IsContact@{IsContact}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf IsContact} = DATA\_\-IsContact}\label{data_8js_6d7ddce0a6878381f8c2d0bf4f9c82f5}
+
+
+\index{data.js@{data.js}!PushOldGame@{PushOldGame}}
+\index{PushOldGame@{PushOldGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf PushOldGame} = DATA\_\-PushGameToOldGame}\label{data_8js_2d3defde2c10b4713ccdafdd7b55f29d}
+
+
+\index{data.js@{data.js}!RemoveChallenge@{RemoveChallenge}}
+\index{RemoveChallenge@{RemoveChallenge}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf RemoveChallenge} = DATA\_\-RemoveChallenge}\label{data_8js_1795d29d5a10fddc145cf1b259649477}
+
+
+\index{data.js@{data.js}!RemoveChallengeById@{RemoveChallengeById}}
+\index{RemoveChallengeById@{RemoveChallengeById}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf RemoveChallengeById} = DATA\_\-RemoveChallengeById}\label{data_8js_5b8130b659edf5ac924bddc4ba4277e2}
+
+
+\index{data.js@{data.js}!RemoveChat@{RemoveChat}}
+\index{RemoveChat@{RemoveChat}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf RemoveChat} = DATA\_\-RemoveChat}\label{data_8js_1b0dde8770dbb775343f48b1093ae61f}
+
+
+\index{data.js@{data.js}!RemoveGame@{RemoveGame}}
+\index{RemoveGame@{RemoveGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf RemoveGame} = DATA\_\-RemoveGame}\label{data_8js_373b1078dc4d64ad4d6c8869fe4d27ec}
+
+
+\index{data.js@{data.js}!RemoveOldGame@{RemoveOldGame}}
+\index{RemoveOldGame@{RemoveOldGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf RemoveOldGame} = DATA\_\-RemoveOldGame}\label{data_8js_4d2cbd86653e159091821627091cb4a9}
+
+
+\index{data.js@{data.js}!RemoveProfile@{RemoveProfile}}
+\index{RemoveProfile@{RemoveProfile}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf RemoveProfile} = DATA\_\-RemoveProfile}\label{data_8js_6a3ba5535dec6ba5b6a2b6b3d2a44663}
+
+
+\index{data.js@{data.js}!RemoveSearchGameInfo@{RemoveSearchGameInfo}}
+\index{RemoveSearchGameInfo@{RemoveSearchGameInfo}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf RemoveSearchGameInfo} = DATA\_\-RemoveSearchGameInfo}\label{data_8js_0ad3b0d18595660514512c50b0a86ba3}
+
+
+\index{data.js@{data.js}!RemoveWindow@{RemoveWindow}}
+\index{RemoveWindow@{RemoveWindow}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf RemoveWindow} = DATA\_\-RemoveWindow}\label{data_8js_2cb401dcb9e13f64ecdb8104036b7cc3}
+
+
+\index{data.js@{data.js}!SetCurrentGame@{SetCurrentGame}}
+\index{SetCurrentGame@{SetCurrentGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf SetCurrentGame} = DATA\_\-SetCurrentGame}\label{data_8js_44cfeb5eb7789446b7b7dc37f5c5a19a}
+
+
+\index{data.js@{data.js}!SetCurrentOldGame@{SetCurrentOldGame}}
+\index{SetCurrentOldGame@{SetCurrentOldGame}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf SetCurrentOldGame} = DATA\_\-SetCurrentOldGame}\label{data_8js_e0a6410a4e8c5ee29ca70cb2aa37a5e2}
+
+
+\index{data.js@{data.js}!SetDefault@{SetDefault}}
+\index{SetDefault@{SetDefault}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf SetDefault} = DATA\_\-SetDefault}\label{data_8js_52154c5daf247df1bb15e0e869f415a1}
+
+
+\index{data.js@{data.js}!SetMyProfile@{SetMyProfile}}
+\index{SetMyProfile@{SetMyProfile}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf SetMyProfile} = DATA\_\-SetMyProfile}\label{data_8js_5c684f09a96c2a40c3a47115f484f9d8}
+
+
+\index{data.js@{data.js}!SetRating@{SetRating}}
+\index{SetRating@{SetRating}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf SetRating} = DATA\_\-SetRating}\label{data_8js_144fc07d558ff9c5f25da7fcddeecdd8}
+
+
+\index{data.js@{data.js}!SetRoom@{SetRoom}}
+\index{SetRoom@{SetRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf SetRoom} = DATA\_\-SetRoom}\label{data_8js_9e146b047c6fd3220cc7d30c6f05ac09}
+
+
+\index{data.js@{data.js}!SetSubs@{SetSubs}}
+\index{SetSubs@{SetSubs}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf SetSubs} = DATA\_\-SetSubs}\label{data_8js_90ec704e30c29b4ca0aabd6b2afb4cac}
+
+
+\index{data.js@{data.js}!SetTurn@{SetTurn}}
+\index{SetTurn@{SetTurn}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf SetTurn} = DATA\_\-SetTurnGame}\label{data_8js_5df564d563de829f46e1afb9e89a91d7}
+
+
+\index{data.js@{data.js}!SetType@{SetType}}
+\index{SetType@{SetType}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf SetType} = DATA\_\-SetType}\label{data_8js_074c3b9222fd257b210fc460b247de8a}
+
+
+\index{data.js@{data.js}!SetUserAttrInRoom@{SetUserAttrInRoom}}
+\index{SetUserAttrInRoom@{SetUserAttrInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf SetUserAttrInRoom} = DATA\_\-SetUserAttrInRoom}\label{data_8js_041434213b9d202899ab94232946b6d9}
+
+
+\index{data.js@{data.js}!SetUserStatus@{SetUserStatus}}
+\index{SetUserStatus@{SetUserStatus}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf SetUserStatus} = DATA\_\-SetUserStatus}\label{data_8js_88e5d8e2e54373c55792fbc3d6dff085}
+
+
+\index{data.js@{data.js}!SortUserByNick@{SortUserByNick}}
+\index{SortUserByNick@{SortUserByNick}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf SortUserByNick} = DATA\_\-SortUserByNick}\label{data_8js_2121790e2969700bff6c00008f5aa06f}
+
+
+\index{data.js@{data.js}!SortUserByNickInRoom@{SortUserByNickInRoom}}
+\index{SortUserByNickInRoom@{SortUserByNickInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf SortUserByNickInRoom} = DATA\_\-SortUserByNickInRoom}\label{data_8js_0f303ea62acf91ff22761b78451535e8}
+
+
+\index{data.js@{data.js}!SortUserByRating@{SortUserByRating}}
+\index{SortUserByRating@{SortUserByRating}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf SortUserByRating} = DATA\_\-SortUserByRating}\label{data_8js_723989d26e0debf6cad18be3c9887725}
+
+
+\index{data.js@{data.js}!SortUserByRatingInRoom@{SortUserByRatingInRoom}}
+\index{SortUserByRatingInRoom@{SortUserByRatingInRoom}!data.js@{data.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA} prototype {\bf SortUserByRatingInRoom} = DATA\_\-SortUserByRatingInRoom}\label{data_8js_e9934995824c1e638a826f6f7ab22dfd}
+
+

@@ -1,0 +1,31 @@
+body {
+	font-family		: arial, sans-serif, Trebuchet MS;
+	/*Active hover property to IE*/
+	behavior:		: url("../css/csshover2.htc");
+}
+
+#LoginDiv p{
+	font-size		: 12px;	
+	font-weight		: normal;
+}
+
+#LoginDiv #FormDiv #checkbox {
+	border : 0px none;
+}
+
+#LoadDiv h1{
+	background		: url("../images/ie/logo.gif") no-repeat;
+	margin			: 10px 0px 30px 0px;
+}
+
+#LoadDiv .grey_ball{
+	background		: url("../images/ie/login/bola_cinza.gif") no-repeat;
+}
+
+#LoadDiv .green_ball{
+	background		: url("../images/ie/login/bola_verde.gif") no-repeat;
+}
+
+#LoadDiv #BarBorder{
+	overflow		: hidden;
+}

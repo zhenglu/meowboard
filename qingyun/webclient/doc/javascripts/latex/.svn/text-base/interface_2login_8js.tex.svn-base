@@ -1,0 +1,91 @@
+\section{/home/www/ulysses/webclient/scripts/interface/login.js File Reference}
+\label{interface_2login_8js}\index{/home/www/ulysses/webclient/scripts/interface/login.js@{/home/www/ulysses/webclient/scripts/interface/login.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf INTERFACE\_\-StartLogin} (Lang)
+\item 
+function {\bf INTERFACE\_\-EndLogin} ()
+\item 
+function {\bf INTERFACE\_\-CreateLanguage} ()
+\item 
+function {\bf INTERFACE\_\-CreateLangItem} (Lang, Name)
+\item 
+function {\bf INTERFACE\_\-LoginVerticalAlignMiddle} ()
+\begin{CompactList}\small\item\em Align main div in middle. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{interface/login.js@{interface/login.js}!INTERFACE\_\-CreateLangItem@{INTERFACE\_\-CreateLangItem}}
+\index{INTERFACE\_\-CreateLangItem@{INTERFACE\_\-CreateLangItem}!interface/login.js@{interface/login.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateLangItem ( {\em Lang}, \/   {\em Name})\hspace{0.3cm}{\tt  [private]}}\label{interface_2login_8js_4ba00e3764bd3e83ef908d5edd43d993}
+
+
+Create language links
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Lang}]is language (i.e.: en\_\-US, pt\_\-BR, zh\_\-CN,...) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]List item \end{Desc}
+
+
+References START\_\-ChangeLanguage(), UTILS\_\-Capitalize(), and UTILS\_\-CreateElement().
+
+Referenced by INTERFACE\_\-CreateLanguage().\index{interface/login.js@{interface/login.js}!INTERFACE\_\-CreateLanguage@{INTERFACE\_\-CreateLanguage}}
+\index{INTERFACE\_\-CreateLanguage@{INTERFACE\_\-CreateLanguage}!interface/login.js@{interface/login.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateLanguage ()}\label{interface_2login_8js_279f5cc233f1ef13bd5a2ec50a63254b}
+
+
+Remove login screen
+
+\begin{Desc}
+\item[Returns:]Div elements with tags \end{Desc}
+
+
+References INTERFACE\_\-CreateLangItem(), UTILS\_\-CreateElement(), UTILS\_\-GetNodeText(), and UTILS\_\-OpenXMLFile().
+
+Referenced by INTERFACE\_\-StartLogin().\index{interface/login.js@{interface/login.js}!INTERFACE\_\-EndLogin@{INTERFACE\_\-EndLogin}}
+\index{INTERFACE\_\-EndLogin@{INTERFACE\_\-EndLogin}!interface/login.js@{interface/login.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-EndLogin ()}\label{interface_2login_8js_3848d3b3123f0fd40ec010833f8f89a8}
+
+
+Remove login screen
+
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+
+
+Referenced by LOGIN\_\-EndLogin(), and START\_\-ChangeLanguage().\index{interface/login.js@{interface/login.js}!INTERFACE\_\-LoginVerticalAlignMiddle@{INTERFACE\_\-LoginVerticalAlignMiddle}}
+\index{INTERFACE\_\-LoginVerticalAlignMiddle@{INTERFACE\_\-LoginVerticalAlignMiddle}!interface/login.js@{interface/login.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-LoginVerticalAlignMiddle ()}\label{interface_2login_8js_6b90c74538273942ad883632f6f035cd}
+
+
+Align main div in middle. 
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by INTERFACE\_\-StartLogin().\index{interface/login.js@{interface/login.js}!INTERFACE\_\-StartLogin@{INTERFACE\_\-StartLogin}}
+\index{INTERFACE\_\-StartLogin@{INTERFACE\_\-StartLogin}!interface/login.js@{interface/login.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-StartLogin ( {\em Lang})}\label{interface_2login_8js_919f0023df1f957bd2a395217df85f0f}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Shows login screen to user Global object that stores all data needed by interface Create elements and show login screen to user
+
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+
+
+References INTERFACE\_\-CreateLanguage(), INTERFACE\_\-LoginVerticalAlignMiddle(), LOGIN\_\-Login(), MainData, UTILS\_\-AddListener(), UTILS\_\-CreateElement(), UTILS\_\-GetText(), UTILS\_\-ReadCookie(), and UTILS\_\-ReturnEvent().
+
+Referenced by START\_\-ChangeLanguage(), and START\_\-StartPage().

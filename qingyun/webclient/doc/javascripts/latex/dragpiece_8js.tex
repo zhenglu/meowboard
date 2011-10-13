@@ -1,0 +1,48 @@
+\section{/home/www/ulysses/webclient/scripts/utils/dragpiece.js File Reference}
+\label{dragpiece_8js}\index{/home/www/ulysses/webclient/scripts/utils/dragpiece.js@{/home/www/ulysses/webclient/scripts/utils/dragpiece.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf UTILS\_\-StartDragPiece} (Obj, Size, event)
+\item 
+function {\bf UTILS\_\-GetMouseCoords} (ev)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+var {\bf OldPos}
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{dragpiece.js@{dragpiece.js}!UTILS\_\-GetMouseCoords@{UTILS\_\-GetMouseCoords}}
+\index{UTILS\_\-GetMouseCoords@{UTILS\_\-GetMouseCoords}!dragpiece.js@{dragpiece.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function UTILS\_\-GetMouseCoords ( {\em ev})}\label{dragpiece_8js_d87f2f47e68578008de810783d30ad5f}
+
+
+Return mouse coords 
+
+Referenced by UTILS\_\-StartDragPiece(), and UTILS\_\-StartDragWindow().\index{dragpiece.js@{dragpiece.js}!UTILS\_\-StartDragPiece@{UTILS\_\-StartDragPiece}}
+\index{UTILS\_\-StartDragPiece@{UTILS\_\-StartDragPiece}!dragpiece.js@{dragpiece.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function UTILS\_\-StartDragPiece ( {\em Obj}, \/   {\em Size}, \/   {\em event})}\label{dragpiece_8js_04cec6183bea27a600df0cd7429e6551}
+
+
+Start drag a piece when click or click and hold button a button over a piece. If click for second time, when click without hold button, then release piece and send move to server. If click and hold button was set and release the button drop piece and send move to server; 
+
+References GAME\_\-SendMove(), MainData, OldPos, UTILS\_\-GetMouseCoords(), and UTILS\_\-GetOffset().
+
+Referenced by INTERFACE\_\-NewPiece().
+
+\subsection{Variable Documentation}
+\index{dragpiece.js@{dragpiece.js}!OldPos@{OldPos}}
+\index{OldPos@{OldPos}!dragpiece.js@{dragpiece.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}var {\bf OldPos}}\label{dragpiece_8js_a1074f79c7c3df2d20071d0f71647ce9}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. Drag board pieces 
+
+Referenced by UTILS\_\-StartDragPiece(), and UTILS\_\-StartDragWindow().

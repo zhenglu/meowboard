@@ -1,0 +1,123 @@
+#Main #Left {
+	float			: left;
+	width			: 200px;
+	padding-left		: 2px;			
+}
+
+/* User information div */
+#Main #Left #User {
+	width			: 200px;
+	border			: 2px solid #216778;
+	background-color	: #FFF;
+	display			: table;
+	height			: 70px;	
+}
+
+#Main #Left #User img {
+	float			: left;
+	margin			: 4px;
+	width			: 50px;
+	height			: 60px;
+}
+
+#Main #Left #User #UserInf {
+	float			: right;
+	margin-top		: 8px;
+	width			: 125px;
+}
+
+#Main #Left #User p {
+	margin-top		: 5px;
+	padding-bottom : 5px;
+}
+
+#Main #Left #User span {
+	font-size		: 10px;
+	color			: #216778;
+	cursor			: pointer;
+	font-style		: italic;
+	border-bottom		: 1px solid #216778;
+}
+
+#Main #Left #User span:hover {
+	color			: #FFA200;
+	border-bottom		: 1px solid #FFA200;
+}
+
+#Main #Left #User h2 {
+	font-weight		: bold;
+	font-size		: 12px;
+	color			: #FFA200;
+}
+
+#Main #Left #User select {
+	width			: 95px;
+	font-size		: 10px;
+	color			: #FFA200;
+	border			: 1px solid #FFA200;
+}
+
+#Main #Left #User option {
+	text-indent		: 18px;
+	margin			: 1px;
+	height			: 17px;
+}
+
+/*
+#Main #Left #User hr {
+	height			: 1px;
+	background-color	: #FFA200;
+	border			: 0px;
+	margin			: 1mm 0mm 1mm 0mm;
+	width			: 73%;
+}
+*/
+/* order by rating or nick */
+/*
+#Main #Left #order_nick, 
+#Main #Left .order_rating,
+#Main #Left .order_rating_selec {
+	font-size		: 11px
+	color			: #216778;
+	cursor			: pointer;
+	border-bottom:	1px solid
+}
+
+#Main #Left .order_rating,
+#Main #Left .order_rating_selec {
+	position		: absolute;
+	width			: 29mm;
+	right			: 3px;
+	border			: 1px solid #FFA200;
+	text-align		:right;
+}
+
+#Main #Left .option_selected {
+	color			: #FFA200 !important;
+}
+
+#Main #Left .option_not_selected {
+	color			: #216778;
+}
+
+#Main #Left .order_rating_selec {
+	color			: #FFA200 !important;
+}
+
+#Main #Left .order_selec {
+	font-weight		: bold !important;
+	color			: #FFA200 !important;
+}
+
+*/
+
+/* Group names */
+#Main #Left label {
+	display			: block;
+	font-weight		: bold;
+	font-size		: 12px;
+	color			: #216778;
+	margin			: 4px 0px 2px 0px;
+}
+
+

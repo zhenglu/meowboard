@@ -1,0 +1,54 @@
+\section{/home/www/ulysses/webclient/scripts/interface/challenge.js File Reference}
+\label{interface_2challenge_8js}\index{/home/www/ulysses/webclient/scripts/interface/challenge.js@{/home/www/ulysses/webclient/scripts/interface/challenge.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf INTERFACE\_\-ShowChallengeWindow} (Oponent, Rating, GameParameters, MatchId)
+\item 
+function {\bf INTERFACE\_\-HideChallengeList} ()
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{interface/challenge.js@{interface/challenge.js}!INTERFACE\_\-HideChallengeList@{INTERFACE\_\-HideChallengeList}}
+\index{INTERFACE\_\-HideChallengeList@{INTERFACE\_\-HideChallengeList}!interface/challenge.js@{interface/challenge.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-HideChallengeList ()}\label{interface_2challenge_8js_a3ad69e789fdb70c4189fead695ac104}
+
+
+Hide challenge list menu
+
+\begin{Desc}
+\item[Returns:]bool \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowChallengeMenu().\index{interface/challenge.js@{interface/challenge.js}!INTERFACE\_\-ShowChallengeWindow@{INTERFACE\_\-ShowChallengeWindow}}
+\index{INTERFACE\_\-ShowChallengeWindow@{INTERFACE\_\-ShowChallengeWindow}!interface/challenge.js@{interface/challenge.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowChallengeWindow ( {\em Oponent}, \/   {\em Rating}, \/   {\em GameParameters}, \/   {\em MatchId})}\label{interface_2challenge_8js_c4a8722d93d6a5237c04441ac76e831f}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Create elements to challenge invite or challenge offer
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Oponent}]Oponent's nickname \item[{\em Rating}]Oponent's current rating \item[{\em GameParameters}]Object that contains the game parameters of a received challenge \item[{\em MatchId}]Id of Match \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Div; Array \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{WINDOW\_\-Challenge()}{p.}{window_2window_8js_fce69c99efa3a722eba86a87121ae114}; \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Kiyoshi Simizu Yorinori \end{Desc}
+
+
+References CHAT\_\-OpenChat(), GAME\_\-AcceptChallenge(), GAME\_\-DeclineChallenge(), GAME\_\-SendChallenge(), MainData, UTILS\_\-CreateElement(), and UTILS\_\-GetText().
+
+Referenced by WINDOW\_\-Challenge().

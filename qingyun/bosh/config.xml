@@ -1,0 +1,15 @@
+<jbind>
+    <bind
+        jabber_port='5222' 
+        session_timeout='60000'
+        default_request_timeout='20000'
+    />
+    <http_server
+        port='8082'
+    />
+    <log
+        filename='log/bosh.log'
+        verbose='INFO'
+        rotate_size='200M'
+    />
+</jbind>

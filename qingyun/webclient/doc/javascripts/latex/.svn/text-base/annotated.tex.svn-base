@@ -1,0 +1,5 @@
+\section{Data Structures}
+Here are the data structures with brief descriptions:\begin{CompactList}
+\item\contentsline{section}{{\bf DATA} (Main data sctructure )}{\pageref{classDATA}}{}
+\item\contentsline{section}{{\bf UserListObj} (User list object that contais pointer to HTML elements, some methods to add/remove/update user, show/hide list and show/hide sort options; )}{\pageref{classUserListObj}}{}
+\end{CompactList}

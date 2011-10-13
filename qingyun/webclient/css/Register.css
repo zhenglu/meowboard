@@ -1,0 +1,142 @@
+*{
+	padding			: 0px;
+	margin			: 0px;
+}
+
+body {
+	background		:transparent url(../images/fundo_interface.png) repeat-x scroll 0%;
+	margin			: 0px;
+	min-height		: 500px;
+}
+
+#MainDiv {
+	background		: transparent url(../images/register/register_box_fundo.png) repeat-x scroll 0% 50%;
+	width			: 500px;
+	border			: 2px solid  #FFA200;
+	padding			: 10px 30px 30px 30px;
+	position		: relative;
+	top			: 50px;
+	left			: 50%;
+	margin-left		: -250px;
+	padding			: 20px 30px 20px 30px;
+	/*
+	height			:280px;
+	*/
+}
+
+#MainDiv #FormDiv {
+	width			: 500px;
+}
+
+#MainDiv .italic{
+	font-style		: italic;
+	padding			: 0px 0px 10px 0px;
+	text-align		: center;
+	font-size		: 10px;
+}
+
+#MainDiv p{
+	color			: #216778;
+	font-size		: 12px;
+	font-size-adjust	: none;
+	font-stretch		: normal;
+	font-variant		: normal;
+	line-height		: normal;
+	padding			: 10px 0px;
+	width			: 500px;
+	/*
+	height			:10px;
+	*/
+
+}
+
+#MainDiv h1{
+	color			: #216778;
+	font-size		: 18px;
+	height			: 20px;
+	font-size-adjust	: none;
+	font-stretch		: normal;
+	font-variant		: normal;
+	line-height		: normal;
+	text-align		: center;
+	font-weight     	: bold;
+}
+
+#MainDiv b{
+	width			: 160px;
+	font-family		: verdana;
+	font-weight     	: bold;
+	font-size		: 12px;
+	border          	: 1px ;
+	float			: left;
+	text-align		: right;
+	margin-right		: 5px;
+}
+
+input {
+	font-size		: 11px;
+	font-size-adjust	: none;
+	font-stretch		: normal;
+	font-style		: normal;
+	font-variant		: normal;
+	font-weight		: normal;
+	line-height		: normal;
+	/*
+	margin-right		: 10px;
+	padding			: 1px;
+	*/
+}
+
+.enter {
+	cursor			: pointer;
+	width			: 70px;
+	height			: 18px;
+	color			: #FFF;
+	border 			: 0px;
+	font-style		: bold;
+	background-image	: url(../images/register/botaoconfirmar.png) ;
+	position		: relative;
+	left			: 180px;
+}
+
+.enter:hover {
+	background-image	: url(../images/register/sobrebotaoconfirmar.png) ;
+}
+
+.name{
+	width           	:220px;
+	border			:1px solid #216778;
+}
+
+.nik{
+
+	width           	:220px;
+	border			:1px solid #216778;
+}
+
+.mail{
+	width  		        :220px;
+	border			:1px solid #216778;
+}
+
+.pwd{
+	width           	:220px;
+	border			:1px solid #216778;
+}
+
+.mitalic{
+	font-style		: italic;
+	font-size		: 10px;
+	font-weight 		: normal;
+}
+
+.special{
+	position		:relative;
+	/*
+	height			:20px;	
+	margin-left		:-75px;
+	float          		:left;
+	left			:50%;
+	*/
+}
+

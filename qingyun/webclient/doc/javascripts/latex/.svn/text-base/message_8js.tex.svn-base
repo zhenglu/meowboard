@@ -1,0 +1,594 @@
+\section{/home/www/ulysses/webclient/scripts/xmpp\_\-messages/message.js File Reference}
+\label{message_8js}\index{/home/www/ulysses/webclient/scripts/xmpp\_\-messages/message.js@{/home/www/ulysses/webclient/scripts/xmpp\_\-messages/message.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf MESSAGE\_\-MakeXMPP} (Msg, Type)
+\item 
+function {\bf MESSAGE\_\-Wait} ()
+\item 
+function {\bf MESSAGE\_\-StartConnection} ()
+\item 
+function {\bf MESSAGE\_\-EndConnection} ()
+\item 
+function {\bf MESSAGE\_\-SendUsername} ()
+\item 
+function {\bf MESSAGE\_\-SendPasswd} ()
+\item 
+function {\bf MESSAGE\_\-UserList} ()
+\item 
+function {\bf MESSAGE\_\-RoomList} ()
+\item 
+function {\bf MESSAGE\_\-Presence} (To)
+\item 
+function {\bf MESSAGE\_\-ChangeStatus} (NewStatus, RoomName)
+\item 
+function {\bf MESSAGE\_\-Unavailable} (RoomName)
+\item 
+function {\bf MESSAGE\_\-Chat} (To, Message)
+\item 
+function {\bf MESSAGE\_\-GroupChat} (To, Message)
+\item 
+function {\bf MESSAGE\_\-Info} (User)
+\item 
+function {\bf MESSAGE\_\-InfoProfile} (User)
+\item 
+function {\bf MESSAGE\_\-UserListInfo} ()
+\item 
+function {\bf MESSAGE\_\-Invite} (To)
+\item 
+function {\bf MESSAGE\_\-InviteAccept} (To)
+\item 
+function {\bf MESSAGE\_\-InviteDeny} (To)
+\item 
+function {\bf MESSAGE\_\-RemoveContact} (User)
+\item 
+function {\bf MESSAGE\_\-Challenge} (Category, Rated, Players, GameID)
+\item 
+function {\bf MESSAGE\_\-ChallengeAccept} (ChallengeID)
+\item 
+function {\bf MESSAGE\_\-ChallengeDecline} (ChallengeID)
+\item 
+function {\bf MESSAGE\_\-GameRoomList} ()
+\item 
+function {\bf MESSAGE\_\-GameRoomInfoList} (Room)
+\item 
+function {\bf MESSAGE\_\-GameMove} (Move, GameID)
+\item 
+function {\bf MESSAGE\_\-GameRequestDraw} (GameID)
+\item 
+function {\bf MESSAGE\_\-GameRequestCancel} (GameID)
+\item 
+function {\bf MESSAGE\_\-GameRequestAdjourn} (GameID)
+\item 
+function {\bf MESSAGE\_\-GameResign} (GameID)
+\item 
+function {\bf MESSAGE\_\-GameRequests} (Action, GameID)
+\item 
+function {\bf MESSAGE\_\-GameDrawAccept} (RoomID)
+\item 
+function {\bf MESSAGE\_\-GameDrawDeny} (RoomID)
+\item 
+function {\bf MESSAGE\_\-GameCancelAccept} (RoomID)
+\item 
+function {\bf MESSAGE\_\-GameCancelDeny} (RoomID)
+\item 
+function {\bf MESSAGE\_\-GameAdjournAccept} (RoomID)
+\item 
+function {\bf MESSAGE\_\-GameAdjournDeny} (RoomID)
+\item 
+function {\bf MESSAGE\_\-GameResponse} (Action, RoomID, Response)
+\item 
+function {\bf MESSAGE\_\-SearchUser} (Username, Option)
+\item 
+function {\bf MESSAGE\_\-KickUserRoom} (Room, To, Role, Reason)
+\item 
+function {\bf MESSAGE\_\-KickUser} (Username, Reason)
+\begin{CompactList}\small\item\em Message to kick a user from jabber. \item\end{CompactList}\item 
+function {\bf MESSAGE\_\-BanUser} (Username, Reason)
+\begin{CompactList}\small\item\em Message to ban a user from jabber. \item\end{CompactList}\item 
+function {\bf MESSAGE\_\-UnbanUser} (Username, Reason)
+\begin{CompactList}\small\item\em Message to unban a user from jabber. \item\end{CompactList}\item 
+function {\bf MESSAGE\_\-GetProfile} (Username, Id)
+\item 
+function {\bf MESSAGE\_\-SetProfile} (Username, FullName, Desc, ImgType, Img64)
+\item 
+function {\bf MESSAGE\_\-GetOldGames} (Id, Jid1, Jid2, NumGames, Offset, Color, To, From)
+\item 
+function {\bf MESSAGE\_\-FetchOldGame} (OldGameId)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{message.js@{message.js}!MESSAGE\_\-BanUser@{MESSAGE\_\-BanUser}}
+\index{MESSAGE\_\-BanUser@{MESSAGE\_\-BanUser}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-BanUser ( {\em Username}, \/   {\em Reason})}\label{message_8js_39fee462e2b3bd9e308e56f977ac1277}
+
+
+Message to ban a user from jabber. 
+
+Create message to ban user from jabber.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]User's name \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Suguimoto \end{Desc}
+
+
+Referenced by ADMIN\_\-BanUser().\index{message.js@{message.js}!MESSAGE\_\-Challenge@{MESSAGE\_\-Challenge}}
+\index{MESSAGE\_\-Challenge@{MESSAGE\_\-Challenge}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-Challenge ( {\em Category}, \/   {\em Rated}, \/   {\em Players}, \/   {\em GameID})}\label{message_8js_8c65b17964ae0922f86b646e3c41e4ca}
+
+
+Send a Challenge message
+
+Should be extended to support Bughouse with more two players. The Player's structure has the following fields:\begin{itemize}
+\item Name\item Color\item Inc\item Time\end{itemize}
+
+
+The 'Color' field must content just the first letter 
+
+References MainData.
+
+Referenced by GAME\_\-SendChallenge().\index{message.js@{message.js}!MESSAGE\_\-ChallengeAccept@{MESSAGE\_\-ChallengeAccept}}
+\index{MESSAGE\_\-ChallengeAccept@{MESSAGE\_\-ChallengeAccept}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-ChallengeAccept ( {\em ChallengeID})}\label{message_8js_b117674f09b9b6995025849ecb244911}
+
+
+Accept a challange 
+
+References MainData.
+
+Referenced by GAME\_\-AcceptChallenge().\index{message.js@{message.js}!MESSAGE\_\-ChallengeDecline@{MESSAGE\_\-ChallengeDecline}}
+\index{MESSAGE\_\-ChallengeDecline@{MESSAGE\_\-ChallengeDecline}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-ChallengeDecline ( {\em ChallengeID})}\label{message_8js_0c419de4ae9cb41e2f41500b2fc8539b}
+
+
+Decline a challange 
+
+References MainData.
+
+Referenced by GAME\_\-DeclineChallenge().\index{message.js@{message.js}!MESSAGE\_\-ChangeStatus@{MESSAGE\_\-ChangeStatus}}
+\index{MESSAGE\_\-ChangeStatus@{MESSAGE\_\-ChangeStatus}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-ChangeStatus ( {\em NewStatus}, \/   {\em RoomName})}\label{message_8js_9ff04c171b60310cde9893678ce48e31}
+
+
+Change Status 
+
+References MainData.
+
+Referenced by CONTACT\_\-ChangeStatus(), and GAME\_\-HandleAccept().\index{message.js@{message.js}!MESSAGE\_\-Chat@{MESSAGE\_\-Chat}}
+\index{MESSAGE\_\-Chat@{MESSAGE\_\-Chat}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-Chat ( {\em To}, \/   {\em Message})}\label{message_8js_b3979c65a74441123f88ed7b5d2eb8c1}
+
+
+Create a chat message 
+
+References MainData.
+
+Referenced by CHAT\_\-SendMessage().\index{message.js@{message.js}!MESSAGE\_\-EndConnection@{MESSAGE\_\-EndConnection}}
+\index{MESSAGE\_\-EndConnection@{MESSAGE\_\-EndConnection}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-EndConnection ()}\label{message_8js_3fd9a8193832b0c71dbdeb600cd02764}
+
+
+End connection 
+
+References MainData.
+
+Referenced by LOGIN\_\-Logout().\index{message.js@{message.js}!MESSAGE\_\-FetchOldGame@{MESSAGE\_\-FetchOldGame}}
+\index{MESSAGE\_\-FetchOldGame@{MESSAGE\_\-FetchOldGame}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-FetchOldGame ( {\em OldGameId})}\label{message_8js_5110bb74988f8fde9525ce39ced0672c}
+
+
+
+
+Referenced by INTERFACE\_\-AddOldGameResult().\index{message.js@{message.js}!MESSAGE\_\-GameAdjournAccept@{MESSAGE\_\-GameAdjournAccept}}
+\index{MESSAGE\_\-GameAdjournAccept@{MESSAGE\_\-GameAdjournAccept}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GameAdjournAccept ( {\em RoomID})}\label{message_8js_8b381df696df7d21f8ea5f5e376e31f8}
+
+
+Make a adjourn accept 
+
+References MESSAGE\_\-GameResponse().
+
+Referenced by GAME\_\-HandleAdjourn().\index{message.js@{message.js}!MESSAGE\_\-GameAdjournDeny@{MESSAGE\_\-GameAdjournDeny}}
+\index{MESSAGE\_\-GameAdjournDeny@{MESSAGE\_\-GameAdjournDeny}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GameAdjournDeny ( {\em RoomID})}\label{message_8js_14580b4c57d3e172dcf959820faf197d}
+
+
+Make a adjourn deny 
+
+References MESSAGE\_\-GameResponse().
+
+Referenced by GAME\_\-HandleAdjourn().\index{message.js@{message.js}!MESSAGE\_\-GameCancelAccept@{MESSAGE\_\-GameCancelAccept}}
+\index{MESSAGE\_\-GameCancelAccept@{MESSAGE\_\-GameCancelAccept}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GameCancelAccept ( {\em RoomID})}\label{message_8js_bb057173ce79341fe097454605fc91f5}
+
+
+Make a cancel accept 
+
+References MESSAGE\_\-GameResponse().
+
+Referenced by GAME\_\-HandleCancel().\index{message.js@{message.js}!MESSAGE\_\-GameCancelDeny@{MESSAGE\_\-GameCancelDeny}}
+\index{MESSAGE\_\-GameCancelDeny@{MESSAGE\_\-GameCancelDeny}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GameCancelDeny ( {\em RoomID})}\label{message_8js_82ba1874ebac44cc0a4335b6a14af02c}
+
+
+Make a cancel deny 
+
+References MESSAGE\_\-GameResponse().
+
+Referenced by GAME\_\-HandleCancel().\index{message.js@{message.js}!MESSAGE\_\-GameDrawAccept@{MESSAGE\_\-GameDrawAccept}}
+\index{MESSAGE\_\-GameDrawAccept@{MESSAGE\_\-GameDrawAccept}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GameDrawAccept ( {\em RoomID})}\label{message_8js_72376309f74ef7d9db91698e016d1c75}
+
+
+Make a draw accept 
+
+References MESSAGE\_\-GameResponse().
+
+Referenced by GAME\_\-HandleDraw().\index{message.js@{message.js}!MESSAGE\_\-GameDrawDeny@{MESSAGE\_\-GameDrawDeny}}
+\index{MESSAGE\_\-GameDrawDeny@{MESSAGE\_\-GameDrawDeny}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GameDrawDeny ( {\em RoomID})}\label{message_8js_2e307f6378c69387891df3229b562ee6}
+
+
+Make a draw deny 
+
+References MESSAGE\_\-GameResponse().
+
+Referenced by GAME\_\-HandleDraw().\index{message.js@{message.js}!MESSAGE\_\-GameMove@{MESSAGE\_\-GameMove}}
+\index{MESSAGE\_\-GameMove@{MESSAGE\_\-GameMove}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GameMove ( {\em Move}, \/   {\em GameID})}\label{message_8js_cb116c57f840093d35b53b874918d594}
+
+
+Send a game moviment 
+
+References MainData.
+
+Referenced by GAME\_\-SendMove().\index{message.js@{message.js}!MESSAGE\_\-GameRequestAdjourn@{MESSAGE\_\-GameRequestAdjourn}}
+\index{MESSAGE\_\-GameRequestAdjourn@{MESSAGE\_\-GameRequestAdjourn}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GameRequestAdjourn ( {\em GameID})}\label{message_8js_235e0d28f2b35b8d957c34dbd887a080}
+
+
+Make a adjourn request 
+
+References MESSAGE\_\-GameRequests().
+
+Referenced by GAME\_\-SendAdjourn().\index{message.js@{message.js}!MESSAGE\_\-GameRequestCancel@{MESSAGE\_\-GameRequestCancel}}
+\index{MESSAGE\_\-GameRequestCancel@{MESSAGE\_\-GameRequestCancel}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GameRequestCancel ( {\em GameID})}\label{message_8js_e57513b17c82c43bd2dcd6fc29df4c39}
+
+
+Make a cancel request 
+
+References MESSAGE\_\-GameRequests().
+
+Referenced by GAME\_\-SendCancel().\index{message.js@{message.js}!MESSAGE\_\-GameRequestDraw@{MESSAGE\_\-GameRequestDraw}}
+\index{MESSAGE\_\-GameRequestDraw@{MESSAGE\_\-GameRequestDraw}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GameRequestDraw ( {\em GameID})}\label{message_8js_b679a2a5fef5e42e10c96d2ab998be89}
+
+
+Make a draw request 
+
+References MESSAGE\_\-GameRequests().
+
+Referenced by GAME\_\-SendDraw().\index{message.js@{message.js}!MESSAGE\_\-GameRequests@{MESSAGE\_\-GameRequests}}
+\index{MESSAGE\_\-GameRequests@{MESSAGE\_\-GameRequests}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GameRequests ( {\em Action}, \/   {\em GameID})}\label{message_8js_de3312d721855b900f6aab37cf50dc0f}
+
+
+Create the game requests messages 
+
+References MainData.
+
+Referenced by MESSAGE\_\-GameRequestAdjourn(), MESSAGE\_\-GameRequestCancel(), MESSAGE\_\-GameRequestDraw(), and MESSAGE\_\-GameResign().\index{message.js@{message.js}!MESSAGE\_\-GameResign@{MESSAGE\_\-GameResign}}
+\index{MESSAGE\_\-GameResign@{MESSAGE\_\-GameResign}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GameResign ( {\em GameID})}\label{message_8js_881abd486d12e2add61b68c3f24b61cc}
+
+
+Make a resign message 
+
+References MESSAGE\_\-GameRequests().
+
+Referenced by GAME\_\-SendResign().\index{message.js@{message.js}!MESSAGE\_\-GameResponse@{MESSAGE\_\-GameResponse}}
+\index{MESSAGE\_\-GameResponse@{MESSAGE\_\-GameResponse}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GameResponse ( {\em Action}, \/   {\em RoomID}, \/   {\em Response})}\label{message_8js_c60664d645a5606c7b3cc1b7e9574a54}
+
+
+Create the game response messages 
+
+References MainData.
+
+Referenced by MESSAGE\_\-GameAdjournAccept(), MESSAGE\_\-GameAdjournDeny(), MESSAGE\_\-GameCancelAccept(), MESSAGE\_\-GameCancelDeny(), MESSAGE\_\-GameDrawAccept(), and MESSAGE\_\-GameDrawDeny().\index{message.js@{message.js}!MESSAGE\_\-GameRoomInfoList@{MESSAGE\_\-GameRoomInfoList}}
+\index{MESSAGE\_\-GameRoomInfoList@{MESSAGE\_\-GameRoomInfoList}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GameRoomInfoList ( {\em Room})}\label{message_8js_dd6b44b9bff1e4a0e0bb6b7231a43495}
+
+
+Get the list information of all games been played
+
+\begin{Desc}
+\item[Returns:]XMPP with iq to get all games been played with respective info \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References MainData.
+
+Referenced by ROOM\_\-HandleGameRoomList().\index{message.js@{message.js}!MESSAGE\_\-GameRoomList@{MESSAGE\_\-GameRoomList}}
+\index{MESSAGE\_\-GameRoomList@{MESSAGE\_\-GameRoomList}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GameRoomList ()}\label{message_8js_873a668f45ffa58e81aeb1a7073add17}
+
+
+Get the list of all games been played
+
+\begin{Desc}
+\item[Returns:]XMPP with iq to get all games been played \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+References MainData.
+
+Referenced by ROOM\_\-ShowGameRoomList().\index{message.js@{message.js}!MESSAGE\_\-GetOldGames@{MESSAGE\_\-GetOldGames}}
+\index{MESSAGE\_\-GetOldGames@{MESSAGE\_\-GetOldGames}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GetOldGames ( {\em Id}, \/   {\em Jid1}, \/   {\em Jid2}, \/   {\em NumGames}, \/   {\em Offset}, \/   {\em Color}, \/   {\em To}, \/   {\em From})}\label{message_8js_a79486f0b21d18c02627efae77438930}
+
+
+
+
+Referenced by INTERFACE\_\-SetNextButton(), INTERFACE\_\-SetPrevButton(), INTERFACE\_\-SetSearchButton(), and OLDGAME\_\-OpenOldGameWindow().\index{message.js@{message.js}!MESSAGE\_\-GetProfile@{MESSAGE\_\-GetProfile}}
+\index{MESSAGE\_\-GetProfile@{MESSAGE\_\-GetProfile}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GetProfile ( {\em Username}, \/   {\em Id})}\label{message_8js_2928ced3ca9dd98762c75a408effff70}
+
+
+
+
+Referenced by CONNECTION\_\-ConnectJabber(), GAME\_\-StartGame(), GAME\_\-StartObserverGame(), OLDGAME\_\-StartOldGame(), PROFILE\_\-SaveMyProfile(), and PROFILE\_\-StartProfile().\index{message.js@{message.js}!MESSAGE\_\-GroupChat@{MESSAGE\_\-GroupChat}}
+\index{MESSAGE\_\-GroupChat@{MESSAGE\_\-GroupChat}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-GroupChat ( {\em To}, \/   {\em Message})}\label{message_8js_c3a5f3886e2464a3b19a2a7e84377409}
+
+
+Create a groupchat message 
+
+References MainData.
+
+Referenced by ROOM\_\-SendMessage().\index{message.js@{message.js}!MESSAGE\_\-Info@{MESSAGE\_\-Info}}
+\index{MESSAGE\_\-Info@{MESSAGE\_\-Info}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-Info ( {\em User})}\label{message_8js_9f2082d232bc6a1b397b938b75076d79}
+
+
+Message to get users ratings
+
+\begin{Desc}
+\item[{\bf Deprecated}]\end{Desc}
+
+
+References MainData.
+
+Referenced by CONTACT\_\-ReceiveSubscribed(), and ROOM\_\-AddUser().\index{message.js@{message.js}!MESSAGE\_\-InfoProfile@{MESSAGE\_\-InfoProfile}}
+\index{MESSAGE\_\-InfoProfile@{MESSAGE\_\-InfoProfile}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-InfoProfile ( {\em User})}\label{message_8js_0f77d2437c9ea785addf3af0cabe7ad3}
+
+
+Message to get users ratings profile 
+
+References MainData.
+
+Referenced by PROFILE\_\-StartProfile().\index{message.js@{message.js}!MESSAGE\_\-Invite@{MESSAGE\_\-Invite}}
+\index{MESSAGE\_\-Invite@{MESSAGE\_\-Invite}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-Invite ( {\em To})}\label{message_8js_8196fc17784a1cbe57b15374489e968a}
+
+
+Send a invite to user 
+
+References MainData.
+
+Referenced by CONTACT\_\-InviteUser(), and CONTACT\_\-ReceiveSubscribe().\index{message.js@{message.js}!MESSAGE\_\-InviteAccept@{MESSAGE\_\-InviteAccept}}
+\index{MESSAGE\_\-InviteAccept@{MESSAGE\_\-InviteAccept}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-InviteAccept ( {\em To})}\label{message_8js_38c20265261147a3daef7ddee50e5d03}
+
+
+Send a subscribed to user 
+
+References MainData.
+
+Referenced by CONTACT\_\-HandleUserList(), and CONTACT\_\-ReceiveSubscribe().\index{message.js@{message.js}!MESSAGE\_\-InviteDeny@{MESSAGE\_\-InviteDeny}}
+\index{MESSAGE\_\-InviteDeny@{MESSAGE\_\-InviteDeny}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-InviteDeny ( {\em To})}\label{message_8js_be68b85a09b1c0a76b90176932599018}
+
+
+Send a unsubscribed to user 
+
+References MainData.
+
+Referenced by CONTACT\_\-ReceiveSubscribe().\index{message.js@{message.js}!MESSAGE\_\-KickUser@{MESSAGE\_\-KickUser}}
+\index{MESSAGE\_\-KickUser@{MESSAGE\_\-KickUser}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-KickUser ( {\em Username}, \/   {\em Reason})}\label{message_8js_95846811122fe413726bb66df200f60e}
+
+
+Message to kick a user from jabber. 
+
+Create message to kick user from jabber.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]User's name \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Suguimoto \end{Desc}
+
+
+Referenced by ADMIN\_\-KickUser().\index{message.js@{message.js}!MESSAGE\_\-KickUserRoom@{MESSAGE\_\-KickUserRoom}}
+\index{MESSAGE\_\-KickUserRoom@{MESSAGE\_\-KickUserRoom}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-KickUserRoom ( {\em Room}, \/   {\em To}, \/   {\em Role}, \/   {\em Reason})}\label{message_8js_7fb936c7e483ba2350e7e2bcbca6e004}
+
+
+Moderator kicks an accupant
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Room}]The room that the target user is \item[{\em To}]Nick name of the target user in room \item[{\em Role}]User's privilege in room \item[{\em Reason}]Why the user will be kicked \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]string \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+\index{message.js@{message.js}!MESSAGE\_\-MakeXMPP@{MESSAGE\_\-MakeXMPP}}
+\index{MESSAGE\_\-MakeXMPP@{MESSAGE\_\-MakeXMPP}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-MakeXMPP ( {\em Msg}, \/   {\em Type})}\label{message_8js_286e2167db6e477a382e18b22db20030}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Create xmpp messages Append xmpp body to messages 
+
+References MainData.
+
+Referenced by CONNECTION\_\-SendJabber().\index{message.js@{message.js}!MESSAGE\_\-Presence@{MESSAGE\_\-Presence}}
+\index{MESSAGE\_\-Presence@{MESSAGE\_\-Presence}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-Presence ( {\em To})}\label{message_8js_3bb7bb18332a004726dfb10110751f60}
+
+
+If 'To' isn't passed, send your presence to jabber, otherwise send presence to 'To' 
+
+References MainData.
+
+Referenced by CONNECTION\_\-ConnectJabber(), INTERFACE\_\-ShowCreateRoomWindow(), INTERFACE\_\-ShowGameRoomList(), ROOM\_\-EnterRoom(), and ROOM\_\-EnterRoomGame().\index{message.js@{message.js}!MESSAGE\_\-RemoveContact@{MESSAGE\_\-RemoveContact}}
+\index{MESSAGE\_\-RemoveContact@{MESSAGE\_\-RemoveContact}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-RemoveContact ( {\em User})}\label{message_8js_5b29bed72344c0159f083aa66131b4f3}
+
+
+Remove user from yout contact list 
+
+References MainData.
+
+Referenced by CONTACT\_\-ReceiveUnsubscribed(), and CONTACT\_\-RemoveUser().\index{message.js@{message.js}!MESSAGE\_\-RoomList@{MESSAGE\_\-RoomList}}
+\index{MESSAGE\_\-RoomList@{MESSAGE\_\-RoomList}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-RoomList ()}\label{message_8js_ef360931a5464a8943d5c54e307f471e}
+
+
+Ask room list to jabber 
+
+References MainData.
+
+Referenced by ROOM\_\-ShowRoomList().\index{message.js@{message.js}!MESSAGE\_\-SearchUser@{MESSAGE\_\-SearchUser}}
+\index{MESSAGE\_\-SearchUser@{MESSAGE\_\-SearchUser}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-SearchUser ( {\em Username}, \/   {\em Option})}\label{message_8js_0dc7d04f4adad7682abfd5f8d2ea2065}
+
+
+Make search user message
+
+\begin{Desc}
+\item[Returns:]String with search user message \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Kiyoshi Simizu Yorinori\end{Desc}
+function \doxyref{MESSAGE\_\-SearchUser()}{p.}{message_8js_0dc7d04f4adad7682abfd5f8d2ea2065} \{ var XMPP;
+
+XMPP = \char`\"{}$<$iq type='get' to='\char`\"{}+MainData.SearchComponent+\char`\"{}.\char`\"{}+MainData.Host+\char`\"{}' id='\char`\"{}+MainData.Const.IQ\_\-ID\_\-SearchUser+\char`\"{}'$>$$<$query xmlns=\char`\"{}jabber:iq:search\char`\"{}$>$$<$/iq$>$\char`\"{};
+
+return MESSAGE\_\-MakeXMPP(XMPP); \}
+
+/$\ast$$\ast$
+
+Make search user message
+
+\begin{Desc}
+\item[Returns:]String with search user message \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Kiyoshi Simizu Yorinori \end{Desc}
+\index{message.js@{message.js}!MESSAGE\_\-SendPasswd@{MESSAGE\_\-SendPasswd}}
+\index{MESSAGE\_\-SendPasswd@{MESSAGE\_\-SendPasswd}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-SendPasswd ()}\label{message_8js_38edc1faa161a94261c9889be9695322}
+
+
+Send password to jabber 
+
+References MainData.
+
+Referenced by CONNECTION\_\-ConnectJabber().\index{message.js@{message.js}!MESSAGE\_\-SendUsername@{MESSAGE\_\-SendUsername}}
+\index{MESSAGE\_\-SendUsername@{MESSAGE\_\-SendUsername}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-SendUsername ()}\label{message_8js_0fe67255634f10aace8677f3c0032407}
+
+
+Send username to jabber 
+
+References MainData.
+
+Referenced by CONNECTION\_\-ConnectJabber().\index{message.js@{message.js}!MESSAGE\_\-SetProfile@{MESSAGE\_\-SetProfile}}
+\index{MESSAGE\_\-SetProfile@{MESSAGE\_\-SetProfile}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-SetProfile ( {\em Username}, \/   {\em FullName}, \/   {\em Desc}, \/   {\em ImgType}, \/   {\em Img64})}\label{message_8js_71574c53190de54b8f5af49ec0962647}
+
+
+
+
+Referenced by PROFILE\_\-CreateProfile(), and PROFILE\_\-SaveMyProfile().\index{message.js@{message.js}!MESSAGE\_\-StartConnection@{MESSAGE\_\-StartConnection}}
+\index{MESSAGE\_\-StartConnection@{MESSAGE\_\-StartConnection}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-StartConnection ()}\label{message_8js_aedc2d2c40817924ec72ddfac77802c3}
+
+
+Get an SID from bind 
+
+References MainData.
+
+Referenced by CONNECTION\_\-ConnectJabber().\index{message.js@{message.js}!MESSAGE\_\-Unavailable@{MESSAGE\_\-Unavailable}}
+\index{MESSAGE\_\-Unavailable@{MESSAGE\_\-Unavailable}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-Unavailable ( {\em RoomName})}\label{message_8js_6162db70b1ce3069a5e90a5dabdfd6ae}
+
+
+Set offline on jabber or exit a room 
+
+References MainData.
+
+Referenced by GAME\_\-StartGame(), and ROOM\_\-ExitRoom().\index{message.js@{message.js}!MESSAGE\_\-UnbanUser@{MESSAGE\_\-UnbanUser}}
+\index{MESSAGE\_\-UnbanUser@{MESSAGE\_\-UnbanUser}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-UnbanUser ( {\em Username}, \/   {\em Reason})}\label{message_8js_52c33b07805ba6e270643bff9cf121e8}
+
+
+Message to unban a user from jabber. 
+
+Create message to unban user from jabber.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]User's name \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Suguimoto \end{Desc}
+
+
+Referenced by ADMIN\_\-UnbanUser().\index{message.js@{message.js}!MESSAGE\_\-UserList@{MESSAGE\_\-UserList}}
+\index{MESSAGE\_\-UserList@{MESSAGE\_\-UserList}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-UserList ()}\label{message_8js_3eb5826c67297b03256070aa19f775af}
+
+
+Ask contact list to jabber 
+
+References MainData.
+
+Referenced by CONNECTION\_\-ConnectJabber().\index{message.js@{message.js}!MESSAGE\_\-UserListInfo@{MESSAGE\_\-UserListInfo}}
+\index{MESSAGE\_\-UserListInfo@{MESSAGE\_\-UserListInfo}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-UserListInfo ()}\label{message_8js_fff25f98e5b417a89047a6d3759b4dbc}
+
+
+Message to get users ratings 
+
+References MainData.
+
+Referenced by CONNECTION\_\-ConnectJabber().\index{message.js@{message.js}!MESSAGE\_\-Wait@{MESSAGE\_\-Wait}}
+\index{MESSAGE\_\-Wait@{MESSAGE\_\-Wait}!message.js@{message.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function MESSAGE\_\-Wait ()}\label{message_8js_3c7e3da01d208b95bf9cfffc85d79dd8}
+
+
+Make a wait message 
+
+Referenced by CONNECTION\_\-ReceiveConnection(), and CONNECTION\_\-ReceiveXml().

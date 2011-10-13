@@ -1,0 +1,341 @@
+/*Left.css*/
+/*
+#Main #Left #User{
+	margin-left		: 0.5mm;
+	margin-top		: 0.5mm;
+}
+#Main #Left #User img{
+	margin			: 0.5mm;
+}
+
+*/
+
+/******************************/
+/*Top.css*/
+/******************************/
+
+#Top{
+}
+
+#Top h1{
+	background		: url("../images/ie/logo.gif") no-repeat;
+	margin			: 4px 4px 4px 18px;
+}
+
+#Top .icons li {
+	margin			: 4px 0px 0px 30px;
+}
+
+/*
+#Top .icons{
+	left			: 73mm;
+	width			: 68mm;
+}
+
+
+*/
+#Top .icons .adjourn_game {
+	background              : url('../images/ie/adjourn_game.gif') no-repeat;
+}
+
+#Top .icons .search_game {
+	background              : url('../images/ie/search_game.gif') no-repeat;
+}
+
+#Top .icons .search_user {
+	background              : url('../images/ie/search_user.gif') no-repeat;
+}
+
+#Top .icons .news {
+	background              : url('../images/ie/news.gif') no-repeat;
+}
+
+#Top .icons .preferences {
+	background              : url('../images/ie/preferences.gif') no-repeat;
+}
+
+#Top .icons .help {
+	background              : url('../images/ie/help.gif') no-repeat;
+}
+
+#Top .icons .exit {
+	background              : url('../images/ie/exit.gif') no-repeat;
+}
+
+#Top #TopMenu{
+	right			: 0px;
+	/*
+	width			: 140.5mm;
+	height			: 20.5mm;
+	*/
+}
+
+/******************************/
+/* Room.css */
+/******************************/
+#Main #Left #Rooms .Room {
+	width 			: 204px;
+}
+
+#Main #Left #Rooms #RoomList {
+	width			: 204px;
+}
+#Main #Left #Rooms #RoomList li {
+	width			: 89px;
+}
+
+#Main #Left #Rooms #RoomList .room_arrow{
+	height			: 20px;
+}
+
+#Rooms div .UserList table{
+    width           : 140px;
+}
+
+#Rooms div .UserList td{
+    width           : 75px;
+}
+
+#Rooms div .UserList td.rating{
+    width           : 40px;
+}
+
+#Rooms div .UserList,
+#Main #Left #Rooms .Room #EmoticonDiv, 
+#Main #Left #Rooms #RoomListMenu {
+	left : 205px;
+}
+
+/******************************/
+/* Challenge.css */
+/******************************/
+#ChallengeDiv #Layer1Div {
+	margin-bottom		: 60px;
+}
+
+#ChallengeDiv #ButtonsDiv {
+	padding-top : 30px;
+	width 			: 300px;
+}
+
+/*Contacts.css*/
+/*
+#Main #Left #Contact #Contacts table{
+	width			: 43.5mm;
+}
+*/
+
+#Main #Left #Contact #ContactTitle {
+	left 			: 0px;
+}
+
+#Main #Left #Contact #ContactTitle li {
+	padding			: 3px 0px 3px 4px; 
+	width			: 98px;
+}
+
+#Main #Left #Contact #ContactInside ,
+#Main #Left #Contact #ContactOnline {
+	width			: 102%;
+}
+
+/******************************/
+/* available */
+/******************************/
+#Main #Left #User{
+	width			: 204px;
+}
+
+#Main #Left .user_available {
+	background              : url('../images/ie/user_available.gif') no-repeat;
+}
+
+/* unavailable */
+#Main #Left .user_unavailable {
+	background              : url('../images/ie/user_unavailable.gif') no-repeat;
+}
+
+/* away */
+#Main #Left .user_away {
+	background              : url('../images/ie/user_away.gif') no-repeat;
+}
+
+/* busy */
+#Main #Left .user_busy {
+	background              : url('../images/ie/user_busy.gif') no-repeat;
+}
+
+/* playing */
+#Main #Left .user_playing {
+	background              : url('../images/ie/user_playing.gif') no-repeat;
+}
+
+/* offline */
+#Main #Left .user_offline {
+	background              : url('../images/ie/user_offline.gif') no-repeat;
+}
+
+/* admin */
+
+/* available */
+#Main #Left .admin_available {
+	background              : url('../images/ie/admin_available.gif') no-repeat;
+}
+
+/* unavailable */
+#Main #Left .admin_unavailable {
+	background              : url('../images/ie/admin_unavailable.gif') no-repeat;
+}
+
+/* away */
+#Main #Left .admin_away {
+	background              : url('../images/ie/admin_away.gif') no-repeat;
+}
+
+/* busy */
+#Main #Left .admin_busy {
+	background              : url('../images/ie/admin_busy.gif') no-repeat;
+}
+
+/* playing */
+#Main #Left .admin_playing {
+	background              : url('../images/ie/admin_playing.gif') no-repeat;
+}
+
+/* offline */
+#Main #Left .admin_offline {
+	background              : url('../images/ie/admin_offline.gif') no-repeat;
+}
+
+/* teacher */
+
+/* available */
+#Main #Left .teacher_available {
+	background              : url('../images/ie/teacher_available.gif') no-repeat;
+}
+
+/* unavailable */
+#Main #Left .teacher_unavailable {
+	background              : url('../images/ie/teacher_unavailable.gif') no-repeat;
+}
+
+/* away */
+#Main #Left .teacher_away {
+	background              : url('../images/ie/teacher_away.gif') no-repeat;
+}
+
+/* busy */
+#Main #Left .teacher_busy {
+	background              : url('../images/ie/teacher_busy.gif') no-repeat;
+}
+
+/* playing */
+#Main #Left .teacher_playing {
+	background              : url('../images/ie/teacher_playing.gif') no-repeat;
+}
+
+/* offline */
+#Main #Left .teacher_offline {
+	background              : url('../images/ie/teacher_offline.gif') no-repeat;
+}
+
+/* robot */
+
+/* available */
+#Main #Left .robot_available {
+	background              : url('../images/ie/robot_available.gif') no-repeat;
+}
+
+/* offline */
+#Main #Left .robot_offline {
+	background              : url('../images/ie/robot_offline.gif') no-repeat;
+}
+
+
+
+
+/******************************/
+/*Board.css*/
+/******************************/
+
+#PhotoDiv #PWPawn{
+	background-image	: url("../images/ie/pieces/wpawn.gif");
+}
+
+#PhotoDiv #PBPawn{
+	background-image	: url("../images/ie/pieces/bpawn.gif");
+}
+
+#InfoTab1.oldgame{
+	width			: 175px;
+}
+
+/*
+#GameOptionsDiv select{
+	height			: 5mm;
+}
+*/
+
+/******************************/
+/*Chat.css*/
+/******************************/
+
+#Chat {
+	right			:	0px;
+	width			: 100%;
+	width: expression( document.body.clientWidth < 801 ? "800px" : "auto");
+	min-width			: 800px; 
+/*	background-color : blue; */
+}
+
+/* chat list **/
+#Chat #ChatList {	
+/*	width			: 83%;*/
+	width: expression( document.body.clientWidth < 581 ? "580px" : "auto");
+	min-width			: 580px; 
+/*	background-color: red; */
+}
+#Chat #ChatList li {
+	width : 24%;
+}
+
+#Chat #ChatList li #ChatTitleDiv {
+	width : 100%;
+}
+
+#Chat #ChatList {	
+	margin-left : 212px;
+	height			: 175px;
+}
+
+#Chat .minimize {
+	padding-top		: 4px;
+	padding-right		: 15px;
+	width 			: 15px;
+	height			: 3px;
+}
+
+#Chat .maximize {
+	padding-right		: 16px;
+	padding-top		: 1px;
+	width 			: 15px;
+	height			: 7px;
+}
+/******************************/
+/* Window.css */
+/******************************/
+#SubWindowBox{
+	overflow		: hidden;
+}
+
+#AnnounceDiv #Layer2Div {
+	padding-top : 15px;
+}
+
+#ProfileDiv #WhoDiv #CounterDiv {
+	padding-left	: 20px; 
+}
+
+#OldGamesDiv #FormDiv {
+	padding-bottom : 20px;
+}

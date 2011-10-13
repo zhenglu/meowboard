@@ -1,0 +1,70 @@
+\section{/home/www/ulysses/webclient/scripts/contact/invite.js File Reference}
+\label{invite_8js}\index{/home/www/ulysses/webclient/scripts/contact/invite.js@{/home/www/ulysses/webclient/scripts/contact/invite.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf CONTACT\_\-InviteUser} (Username)
+\item 
+function {\bf CONTACT\_\-RemoveUser} (Username)
+\item 
+function {\bf CONTACT\_\-ReceiveSubscribe} (Username)
+\item 
+function {\bf CONTACT\_\-ReceiveSubscribed} (Username)
+\item 
+function {\bf CONTACT\_\-ReceiveUnsubscribed} (Username)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{invite.js@{invite.js}!CONTACT\_\-InviteUser@{CONTACT\_\-InviteUser}}
+\index{CONTACT\_\-InviteUser@{CONTACT\_\-InviteUser}!invite.js@{invite.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-InviteUser ( {\em Username})}\label{invite_8js_87665c122ac1865b648f6c897cdaa6ab}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Functions to add a user in your contact list Send a invite message to 'Username' 
+
+References CONNECTION\_\-SendJabber(), MainData, and MESSAGE\_\-Invite().
+
+Referenced by CONTACT\_\-ShowUserMenu().\index{invite.js@{invite.js}!CONTACT\_\-ReceiveSubscribe@{CONTACT\_\-ReceiveSubscribe}}
+\index{CONTACT\_\-ReceiveSubscribe@{CONTACT\_\-ReceiveSubscribe}!invite.js@{invite.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-ReceiveSubscribe ( {\em Username})}\label{invite_8js_4faf39656bf14608ddb5a9be8c9f4918}
+
+
+User has received a subscribe message 
+
+References CONNECTION\_\-SendJabber(), CONTACT\_\-InsertUser(), MainData, MESSAGE\_\-Invite(), MESSAGE\_\-InviteAccept(), MESSAGE\_\-InviteDeny(), UTILS\_\-Capitalize(), UTILS\_\-GetText(), and WINDOW\_\-Confirm().
+
+Referenced by CONTACT\_\-HandleUserPresence().\index{invite.js@{invite.js}!CONTACT\_\-ReceiveSubscribed@{CONTACT\_\-ReceiveSubscribed}}
+\index{CONTACT\_\-ReceiveSubscribed@{CONTACT\_\-ReceiveSubscribed}!invite.js@{invite.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-ReceiveSubscribed ( {\em Username})}\label{invite_8js_ecd90dc0768cd5cb226d362239963a56}
+
+
+User has received a subscribed message 
+
+References CONTACT\_\-InsertUser(), MainData, and MESSAGE\_\-Info().
+
+Referenced by CONTACT\_\-HandleUserPresence().\index{invite.js@{invite.js}!CONTACT\_\-ReceiveUnsubscribed@{CONTACT\_\-ReceiveUnsubscribed}}
+\index{CONTACT\_\-ReceiveUnsubscribed@{CONTACT\_\-ReceiveUnsubscribed}!invite.js@{invite.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-ReceiveUnsubscribed ( {\em Username})}\label{invite_8js_aa0fa0af2b65fc5353c7d385a0ba0907}
+
+
+User has received a unsubscribed message 
+
+References CONTACT\_\-SetUserStatus(), MainData, and MESSAGE\_\-RemoveContact().
+
+Referenced by CONTACT\_\-HandleUserPresence().\index{invite.js@{invite.js}!CONTACT\_\-RemoveUser@{CONTACT\_\-RemoveUser}}
+\index{CONTACT\_\-RemoveUser@{CONTACT\_\-RemoveUser}!invite.js@{invite.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-RemoveUser ( {\em Username})}\label{invite_8js_a6e9a955731970ad128a5a766060d73a}
+
+
+Remove user form your list 
+
+References CONNECTION\_\-SendJabber(), MainData, and MESSAGE\_\-RemoveContact().
+
+Referenced by CONTACT\_\-ShowUserMenu().

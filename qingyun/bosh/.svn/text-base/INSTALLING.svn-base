@@ -1,0 +1,39 @@
+--- Bosh ---
+
+Tihs is a imlementation of the BOSH protocol specified by XEP-0124.
+It is not very compliant but it is a stable one.
+Note that is is still in development and it is unstable, use it at your
+own risk.
+Suggestion, bug reports and contributions are all welcome.
+
+--- Compilling bosh ---
+
+To compile this code you need the following libraries:
+
+- iksemel >= 1.2
+
+You can edit the file makefile.config to set some flags passed
+to the compiler if you need. Then just hit make.
+
+--- Setting up the web server ---
+
+You can use any web server, but I have tested this software with apache only
+adn I'll explain how to set this up with apache.
+All you need to do is to tell apache to forward a given address to a port that
+the bosh will listen.
+
+Say you want to redirect http://localhost/jabber to localhost:8082 you have to add
+the following lines to apache.conf:
+
+ProxyPass /jabber http://localhost:8082
+ProxyPassReverse /jabber http://localhost:8082
+
+You must enable the proxy module too, if it isn't already.
+
+--- Setting up bosh ---
+
+The only requirement is that you set the port that the
+bosh must listen to by editing the config.xml.
+The other options can be left unmodified.
+
+Now we are done, just run the bosh.

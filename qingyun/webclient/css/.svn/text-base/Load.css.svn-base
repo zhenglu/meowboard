@@ -1,0 +1,74 @@
+#LoadDiv {
+	width			: 300px;
+	height			: 265px;
+	border			: 2px solid #FFA200;
+	position		: relative;
+	top				: 80px;
+	left 			: 50%;
+	margin-left		: -150px;
+	background		: url('../images/login/login_box_fundo.gif') repeat-x;
+	padding			: 20px 30px;
+	text-align		: center;
+}
+
+/* Logo chessd */
+#LoadDiv h1 {
+	width			: 138px;
+	height			: 91px;
+	text-indent		: -9999px;
+	overflow		: hidden;
+	background		: url('../images/logo.png') no-repeat;
+	margin			: 10px 0mm 30px 90px;
+}
+
+#LoadDiv h3 {
+	font-weight		: bold;
+	font-size		: 14px;
+	color			: #216778;
+	margin-bottom		: 30px;
+}
+
+#LoadDiv p {
+	font-style		: italic;
+	font-size		: 12px;
+	color			: #216778;
+	margin-bottom		: 15px;
+}
+
+#LoadDiv ul {
+	margin-left		: 21mm;
+}
+
+/* Gray Ball */
+#LoadDiv .grey_ball {
+	float			: left;
+	list-style		: none;	
+	width			: 9px;
+	height			: 9px;
+	background		: url('../images/login/bola_cinza.png') no-repeat;
+	margin			: 10px;
+}
+
+/* Green Ball */
+#LoadDiv .green_ball {
+	float			: left;
+	list-style		: none;	
+	width			: 9px;
+	height			: 9px;
+	background		: url('../images/login/bola_verde.png') no-repeat;
+	margin			: 10px;
+}
+
+#LoadDiv #BarBorder{
+	width			: 300px;
+	height			: 15px;
+	border			: 1px solid #216778;
+	text-align		: left;
+	margin			: 30px 0px;
+}
+
+#LoadDiv #Bar{
+	background		: url('../images/loadbkg.png') repeat-X;
+	height			: 15px;
+	width			: 0px;
+}

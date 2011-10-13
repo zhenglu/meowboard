@@ -1,0 +1,44 @@
+/**
+*	Games window
+*/
+
+#DrawDiv,
+#AbortDiv, 
+#ResignDiv,
+#AdjournDiv,
+#CheckmateDiv {
+	padding-top	:	10px;
+	text-align	: center;
+	position		: relative;
+}
+
+#DrawDiv #TextDiv span, 
+#TimeDiv #TextDiv span, 
+#AbortDiv #TextDiv span, 
+#ResignDiv #TextDiv span,
+#AdjournDiv #TextDiv span,
+#CheckmateDiv #TextDiv span {
+	font-size 	: 12px;
+	font-weight	:	bold;
+	color				: #216778;
+}
+
+#DrawDiv #ButtonsDiv,
+#TimeDiv #ButtonsDiv,
+#AbortDiv #ButtonsDiv, 
+#ResignDiv #ButtonsDiv,
+#AdjournDiv #ButtonsDiv,
+#CheckmateDiv #ButtonsDiv {
+	padding-top : 20px;
+	text-align	: center;
+	position		: relative;
+}
+
+#DrawDiv #ButtonsDiv .button ,
+#TimeDiv #ButtonsDiv .button ,
+#AbortDiv #ButtonsDiv .button, 
+#ResignDiv #ButtonsDiv .button,
+#AdjournDiv #ButtonsDiv .button,
+#CheckmateDiv #ButtonsDiv .button {
+	bottom			:	5px;
+}

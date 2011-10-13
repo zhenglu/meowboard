@@ -1,0 +1,91 @@
+\section{/home/www/ulysses/webclient/scripts/utils/images.js File Reference}
+\label{images_8js}\index{/home/www/ulysses/webclient/scripts/utils/images.js@{/home/www/ulysses/webclient/scripts/utils/images.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf IMAGE\_\-CreateFormToEncode} (FormId, Action)
+\item 
+function {\bf IMAGE\_\-ImageDecode} (ImgSrc)
+\item 
+function {\bf IMAGE\_\-ImageEncode} (FormId)
+\item 
+function {\bf IMAGE\_\-B64Img} (Image, Type)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{images.js@{images.js}!IMAGE\_\-B64Img@{IMAGE\_\-B64Img}}
+\index{IMAGE\_\-B64Img@{IMAGE\_\-B64Img}!images.js@{images.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function IMAGE\_\-B64Img ( {\em Image}, \/   {\em Type})}\label{images_8js_e730395a6a27983187763699aca61c27}
+
+
+When image is loaded this function is called
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Image}]is the image base 64 \item[{\em Type}]is the image type \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Fabiano and Rubens \end{Desc}
+
+
+References MainData, UTILS\_\-GetText(), and WINDOW\_\-Alert().\index{images.js@{images.js}!IMAGE\_\-CreateFormToEncode@{IMAGE\_\-CreateFormToEncode}}
+\index{IMAGE\_\-CreateFormToEncode@{IMAGE\_\-CreateFormToEncode}!images.js@{images.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function IMAGE\_\-CreateFormToEncode ( {\em FormId}, \/   {\em Action})}\label{images_8js_e981c582022ac7fdd9ada65e763adde8}
+
+
+This file contais all function used to decode/encode images to base64 Create input file to user
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em FormId}]is Form identificator \item[{\em Action}]is script source \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Form HTML element \end{Desc}
+\begin{Desc}
+\item[Author:]Fabiano and Rubens \end{Desc}
+
+
+Referenced by WINDOW\_\-CreateImageSend().\index{images.js@{images.js}!IMAGE\_\-ImageDecode@{IMAGE\_\-ImageDecode}}
+\index{IMAGE\_\-ImageDecode@{IMAGE\_\-ImageDecode}!images.js@{images.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function IMAGE\_\-ImageDecode ( {\em ImgSrc})}\label{images_8js_b30c8fcfb236ffef982f2f2426dbd315}
+
+
+This function is used to show image base64 in IE6
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em ImgSrc}]is the image source in base64 Firefox standart \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Image base64 in IE Format \end{Desc}
+\begin{Desc}
+\item[Author:]Fabiano and Rubens \end{Desc}
+
+
+References MainData.
+
+Referenced by INTERFACE\_\-ProfileSetUserImg(), INTERFACE\_\-SetBPhoto(), INTERFACE\_\-SetUserImage(), and INTERFACE\_\-SetWPhoto().\index{images.js@{images.js}!IMAGE\_\-ImageEncode@{IMAGE\_\-ImageEncode}}
+\index{IMAGE\_\-ImageEncode@{IMAGE\_\-ImageEncode}!images.js@{images.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function IMAGE\_\-ImageEncode ( {\em FormId})}\label{images_8js_98f95c69487bf844901b854912bd62de}
+
+
+This function get image and convert to base64
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em FormId}]is Form identificator \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Fabiano and Rubens \end{Desc}
+
+
+Referenced by WINDOW\_\-CreateImageSend().

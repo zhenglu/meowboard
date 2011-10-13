@@ -1,0 +1,134 @@
+Padrões dos Códigos em Javascript - Xadrez C3SL
+Equipe Xadrez - C3SL 2007
+Última atualização - %%date(%c)
+
+%! Target : html
+%! Encoding(html): utf-8
+%! Style : css/Main.css
+
+----------------------------------------------
+
+Aqui será descrito os padrões usados no código Javascript da interface Web.
+
+Padrões:
+- Editor padrão: VI ou VIM;
+- TUDO em inglês,
+- Todos os comandos terminam ";",
+
+- Função:
+ - Nome da função no formato: MODULE_FunctionName(),
+ - Parametros de função com a primeira letra em maíusculo: FunctionName(Pname1, Pname2),
+ - Abrir com "{" na linha seguinte a declaração da função e fechar com "}" uma linha após o último comando,
+ - Variáveis locais com a primeira letra de cada palavra maiúsculo,
+ - Return sem parenteses: return value,
+ - Declarar as váriáveis por primeiro, pode ocorrer atribuições simples,
+
+- Comentários:
+ - Colocar em todos os arquivos o cabeçalho GPL,
+ - Colocar uma descrição sobre o arquivo após o cabeçalho GPL,
+ - Toda função tem que ter uma descrição, o valor retornado e se é público ou privado (ver exemplo),
+ - Colocar comentário sobre as características das funçoes, exemplo funções que manipulam dados na interface.
+
+- If, while:
+ - As condições tem que estar entre parenteses. Se houver mais de uma condição, colocar cada uma entre parenteses.
+ - Sempre coloca chaves para indicar os comandos. Abrir com "{" após a condição do if/while e fechar com "}" após o último comando, mantendo a edentação(?).
+
+- Switch/Case:
+ - 
+
+
+Cabeçalho GPL:
+```
+/**
+* CHESSD - WebClient
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* C3SL - Center for Scientific Computing and Free Software
+*/
+```
+
+
+
+Descrição do arquivo:
+```
+/**
+* Description of this file.
+*/
+```
+
+
+Função:
+```
+/**
+* Description of function
+*
+* @return type
+* @public or @private
+*/
+function MODULE_FunctionName(ParamName1, ParamName2)
+{
+	var VarTest0 = "valor";
+	var VarTest1 = MODULE_Function();
+	var VarTest2 = 0;
+
+	var VarTest3, VarTest4, VarTest5;
+	var RetValue = "";
+	var i;
+
+
+	// Always use '{' and '}'
+	if ((VarTest0 == "") && (VarTest1 == "a"))
+	{
+		// Comands
+	}
+	else
+	{
+		// Comands
+	}
+
+	while (1)
+	{
+
+	}
+
+	// Comments
+	for (i = 0; i < 5; i++)
+	{
+
+
+	}
+
+	switch (i)
+	{
+		case 1:
+			alert(i);
+			break;
+
+		case 2:
+			alert(i);
+			break;
+
+		default:
+			break;
+	}
+
+
+	return RetValue;
+}
+```
+
+Indicar características das funções:
+```
+/**********************************
+* FUNCTIONS - DATA STRUCT
+***********************************/
+```

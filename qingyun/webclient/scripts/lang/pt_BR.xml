@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language name="pt_BR">
+	<general>
+		<general_title>Xadrez Livre - O melhor lugar para jogar Xadrez na Internet</general_title>
+		<general_name>ChessD</general_name>
+	</general>
+	<utils>
+		<not_implemented_title>Não implementada</not_implemented_title>
+		<not_implemented>Funcionalidade ainda não implementada para esta versão.</not_implemented>
+		<server_offline_title>Servidor offline</server_offline_title>
+		<server_offline>O servidor foi desligado</server_offline>
+	</utils>
+	<window>
+		<window_yes>Sim</window_yes>
+		<window_no>Não</window_no>
+		<window_ok>Ok</window_ok>
+		<window_close>Fechar</window_close>
+		<window_save>Salvar</window_save>
+		<window_accept>Aceitar</window_accept>
+		<window_cancel>Cancelar</window_cancel>
+		<window_decline>Recusar</window_decline>
+		<window_search>Buscar</window_search>
+		<window_character>Caractere(s): %s</window_character>
+	</window>
+	<login>
+		<login_title>Seja bem-vindo ao Xadrez Livre! O servidor mais moderno para jogos de xadrez online totalmente de graça!</login_title>
+		<login_text1>Aqui você pode jogar xadrez com outros usuários ou com robôs, além de interagir com os demais usuários através das salas de bate-papo. Para isso você não precisa instalar nenhum outro programa, basta fazer seu cadastro no link ao lado, entrar e jogar!</login_text1>
+		<login_text2>Este servidor faz parte do projeto "Apoio Computacional ao Ensino de Xadrez nas Escolas". Para saber mais sobre o projeto acesse </login_text2>
+		<login_text3><![CDATA[Recomendamos o uso do navegador <a href='http://www.firefox.com'>Firefox</a> para garantir o melhor funcionamento do servidor. Se você não tem a versão mais nova <a href='http://www.firefox.com'>clique aqui para baixá-la</a>.]]></login_text3>
+		<login_footer>Bom Divertimento!</login_footer>
+		<login_remember_pass>Lembrar senha</login_remember_pass>
+		<login_signin>Cadastro rápido</login_signin>
+		<login_user>Login</login_user>
+		<login_passwd>Senha</login_passwd>
+		<login_server_down>Servidor fora do ar. Tente novamente mais tarde.</login_server_down>
+		<login_connection_refused>Servidor de mensagens indisponível no momento. Tente novamente mais tarde.</login_connection_refused>
+		<login_invalid_user>Usuário ou senha inválidos.</login_invalid_user>
+		<login_banned_user>Usuário banido.</login_banned_user>
+		<login_lost_connection>Conexão perdida.</login_lost_connection>
+		<login_load_wait>Aguarde...</login_load_wait>
+		<login_load_start>Iniciando carregador...</login_load_start>
+		<login_load_scripts>Carregando scripts...</login_load_scripts>
+		<login_load_css>Carregando css...</login_load_css>
+		<login_load_images>Carregando imagens...</login_load_images>
+		<login_load_user_list>Carregando lista de usuários...</login_load_user_list>
+		<login_validate_user>Usuário inválido</login_validate_user>
+		<login_connection_closed>Conexão perdida. Tente novamente.</login_connection_closed>
+		<login_connection_start>Abrindo Conexão...</login_connection_start>
+		<login_connection_user>Verificando usuário...</login_connection_user>
+		<login_connection_passwd>Verificando senha...</login_connection_passwd>
+		<login_server_not_founded>Servidor não encontrado.</login_server_not_founded>
+	</login>
+	<menu>
+		<menu_adjourn>Adjudicar</menu_adjourn>
+		<menu_search_game>Buscar Partida</menu_search_game>
+		<menu_search_user>Buscar Usuário</menu_search_user>
+		<menu_news>Notícias</menu_news>
+		<menu_preferences>Preferências</menu_preferences>
+		<menu_help>Ajuda</menu_help>
+		<menu_exit>Sair</menu_exit>
+		<menu_current_games>Partidas em Andamento</menu_current_games>
+		<menu_challenges>Desafios</menu_challenges>
+		<menu_tourneys>Torneios</menu_tourneys>
+		<menu_rooms>Salas</menu_rooms>
+		<menu_history>Histórico</menu_history>
+		<menu_loading>Carregando...</menu_loading>
+		<menu_no_games>Não há partidas em andamento.</menu_no_games>
+	</menu>
+	<contact>
+		<contact_contacts>Contatos</contact_contacts>
+		<contact_online>Online</contact_online>
+		<contact_offline>Offline</contact_offline>
+		<contact_order_nick>Apelido</contact_order_nick>
+		<contact_order_rating>Rating</contact_order_rating>
+		<contact_invite>Adicionar usuário</contact_invite>
+		<contact_invite_text>%s adicionou você como contato, deseja aceitar?</contact_invite_text>
+		<contact_remove_title>Remover Usuário</contact_remove_title>
+		<contact_remove_text>Tem certeza que deseja remover %s da sua lista?</contact_remove_text>
+		<contact_search_user>Buscar usuário</contact_search_user>
+		<contact_user_t>Usuário:</contact_user_t>
+		<contact_no_user_found>Nenhum usuário encontrado</contact_no_user_found>
+		<contact_user_found>Usuários encontrados:</contact_user_found>
+		<contact_user>Usuário</contact_user>
+		<contact_teacher>Professor</contact_teacher>
+		<contact_admin>Administrador</contact_admin>
+		<contact_robot>Robô</contact_robot>
+		<contact_search_by>Buscar por:</contact_search_by>
+		<contact_by_name>Nome</contact_by_name>
+		<contact_by_user>Apelido</contact_by_user>
+		<contact_both>Ambos</contact_both>
+		<contact_change_profile>Alterar meu perfil</contact_change_profile>
+		<contact_loading>Carregando lista de contatos...</contact_loading>
+		<contact_online_loading>Carregando lista de usuários online...</contact_online_loading>
+		<contact_default_group>Amigos</contact_default_group>
+	</contact>
+	<chat>
+		<chat_warning>Atenção</chat_warning>
+		<chat_max_exceeded>Máximo %i chats abertos</chat_max_exceeded>
+	</chat>
+	<room>
+		<room_default>Geral</room_default>
+		<room_contacts>Contatos</room_contacts>
+		<room_all>Online</room_all>
+		<room_order_nick>Apelido</room_order_nick>
+		<room_order_rating>Rating</room_order_rating>
+		<room_create_room>Criar sala</room_create_room>
+		<room_create_rooms>Criar salas</room_create_rooms>
+		<room_cancel_room>Cancelar sala</room_cancel_room>
+		<room_name>Nome: </room_name>
+		<room_description>Descrição: </room_description>
+		<room_create>Criar</room_create>
+		<room_cancel_text>Realmente deseja cancelar a criação desta sala?</room_cancel_text>
+		<room_error>Erro na criação de sala</room_error>
+		<room_invalid_name>Nome inválido para sala.</room_invalid_name>
+		<room_invalid_length>Tamanho máximo de 30 caracteres.</room_invalid_length>
+		<room_show_user_list>Ver usuários da sala</room_show_user_list>
+		<room_hide_user_list>Ocultar usuários da sala</room_hide_user_list>
+		<room_counter>caractere(s)</room_counter>
+		<room_loading>Carregando sala...</room_loading>
+		<room_error_message_length>Número máximo de caracteres excedido(%s)</room_error_message_length>
+	</room>
+	<group>
+		<group_default>Amigos</group_default>
+	</group>
+	<status>
+		<status_offline>offline</status_offline>
+		<status_available>disponível</status_available>
+		<status_unavailable>indisponível</status_unavailable>
+		<status_busy>ocupado</status_busy>
+		<status_away>ausente</status_away>
+		<status_playing>jogando</status_playing>
+	</status>
+	<usermenu>
+		<usermenu_send_message>Conversar</usermenu_send_message>
+		<usermenu_send_offlinemessage>Deixar recado</usermenu_send_offlinemessage>
+		<usermenu_match>Convidar para jogar</usermenu_match>
+		<usermenu_add_contact>Adicionar aos contatos</usermenu_add_contact>
+		<usermenu_remove_contact>Remover contato</usermenu_remove_contact>
+		<usermenu_view_profile>Ver perfil e informações</usermenu_view_profile>
+		<usermenu_disconnect_user>Desconectar usuário</usermenu_disconnect_user>
+		<usermenu_ban>Banir</usermenu_ban>
+		<usermenu_mute>Amordaçar</usermenu_mute>
+		<usermenu_abusive>Abusivo</usermenu_abusive>
+	</usermenu>
+	<error>
+		<error_disconnected>Perdeu contato com o servidor. Favor reconectar.</error_disconnected>
+	</error>
+	<challenge>
+		<challenge_title_invite>Convidar para jogar</challenge_title_invite>
+		<challenge_title_offer>Convite para jogar</challenge_title_offer>
+		<challenge_information>convidou para jogar uma partida com as seguintes características:</challenge_information>
+		<challenge_my_pieces>Minhas peças:</challenge_my_pieces>
+		<challenge_op_pieces>Suas peças:</challenge_op_pieces>
+		<challenge_time_label>Tempo da partida:</challenge_time_label>
+		<challenge_category>Categoria de jogo:</challenge_category>
+		<challenge_inc_label>Incremento:</challenge_inc_label>
+		<challenge_time_label_min>min</challenge_time_label_min>
+		<challenge_inc_label_seg>seg</challenge_inc_label_seg>
+		<challenge_rating>Valendo rating</challenge_rating>
+		<challenge_private>Partida privada</challenge_private>
+		<challenge_invite>Convidar</challenge_invite>
+		<challenge_chat>Abrir chat</challenge_chat>
+		<challenge_new_parameters>Redesafiar</challenge_new_parameters>
+		<challenge_no_time>Sem tempo</challenge_no_time>
+		<challenge_color_auto>Automática</challenge_color_auto>
+		<challenge_auto_flag>Auto-flag</challenge_auto_flag>
+
+		<challenge_menu_match_title>Meus desafios</challenge_menu_match_title>
+		<challenge_menu_announce_title>Desafios anunciados</challenge_menu_announce_title>
+		<challenge_menu_announce>Anunciar partida</challenge_menu_announce>
+		<challenge_menu_postpone_title>Partidas adiadas</challenge_menu_postpone_title>
+		<challenge_menu_no_match>Não há desafios feitos.</challenge_menu_no_match>
+		<challenge_menu_no_announce>Não há partidas anunciadas.</challenge_menu_no_announce>
+		<challenge_menu_no_postpone>Não há partidas adiadas.</challenge_menu_no_postpone>
+		<challenge_offer_user_offline>Você está desconectado do servidor de xadrez. Connecte novamente na página para ficar online.</challenge_offer_user_offline>
+		<challenge_offer_opponent_offline>Oponente está jogando ou está desconectado do servidor de xadrez.</challenge_offer_opponent_offline>
+		<challenge_error>Erro ao desafiar</challenge_error>
+		<challenge_announce_match>Anunciar</challenge_announce_match>
+		<challenge_menu_loading_announce>Carregando partidas anunciadas...</challenge_menu_loading_announce>
+	</challenge>
+	<announce>
+		<announce_title>Anunciar partida</announce_title>
+		<announce_rating_interval>Limite de rating:</announce_rating_interval>
+		<announce_min_rating_example>Ex:1000</announce_min_rating_example>
+		<announce_max_rating_example>Ex:2300</announce_max_rating_example>
+		<announce_pieces>Peças:</announce_pieces>
+		<announce_error_title>Erro ao anunciar partida</announce_error_title>
+		<announce_invalid_min_rating>Valor de rating mínimo incorreto. Ex: 0000</announce_invalid_min_rating>
+		<announce_invalid_min_rating>Valor de rating máximo incorreto. Ex: 2349</announce_invalid_min_rating>
+		<announce_invalid_interval>Intervalo de rating incorreto. O valor mínimo deve ser menor que o valor máximo.</announce_invalid_interval>
+		<announce_accept_error>Erro ao aceitar partida anunciada</announce_accept_error>
+		<announce_non_exist>Partida anunciada foi cancelada ou removida.</announce_non_exist>
+	</announce>
+	<game>
+		<game_draw>Requisição de empate</game_draw>
+		<game_draw_text>%s requisitou empate, deseja aceitar?</game_draw_text>
+		<game_draw_denied>%s recusou sua requisição de empate.</game_draw_denied>
+		<game_end_game>Fim de jogo</game_end_game>
+		<game_resign_text>%s desistiu da partida.</game_resign_text>
+		<game_adjourn>Adiar partida</game_adjourn>
+		<game_adjourn_text>%s deseja adiar a partida, deseja aceitar?</game_adjourn_text>
+		<game_adjourn_denied>%s recusou sua requisição de adiamento.</game_adjourn_denied>
+		<game_abort>Encerrar partida</game_abort>
+		<game_abort_text>%s deseja cancelar a partida, deseja aceitar?</game_abort_text>
+		<game_abort_denied>%s recusou sua requisição de cancelamento da partida.</game_abort_denied>
+		<game_resign>Desistir da partida</game_resign>
+		<game_resign_confirm>Deseja desistir da partida?</game_resign_confirm>
+		<game_checkmatew_text>Parabéns! Você ganhou de %s por xeque-mate.</game_checkmatew_text>
+		<game_checkmatel_text>Você perdeu para %s por xeque-mate.</game_checkmatel_text>
+		<game_timew_text>Você ganhou de %s por tempo.</game_timew_text>
+		<game_timel_text>O seu tempo acabou. Você perdeu para %s.</game_timel_text>
+		<game_remove_game>Você não pode fechar um jogo em andamento</game_remove_game>
+		<game_remove_game_title>Atenção</game_remove_game_title>
+
+		<game_canceled>O jogo foi cancelado.</game_canceled>
+
+		<game_options>Opções</game_options>
+		<game_moves>Lances</game_moves>
+		<game_send_draw>Propor empate</game_send_draw>
+		<game_send_resign>Desistir</game_send_resign>
+		<game_send_cancel>Propor cancelamento</game_send_cancel>
+		<game_send_adjourn>Propor adiamento</game_send_adjourn>
+		<game_give_time>Dar mais tempo ao adversário</game_give_time>
+		<game_pawn_promotion>Promoção do peão</game_pawn_promotion>
+		<game_promotion_queen>Dama</game_promotion_queen>
+		<game_promotion_rook>Torre</game_promotion_rook>
+		<game_promotion_bishop>Bispo</game_promotion_bishop>
+		<game_promotion_knight>Cavalo</game_promotion_knight>
+
+		<game_observer_alert>Você não pode observar uma nova partida enquanto estiver jogando ou observando uma partida.</game_observer_alert>
+		<game_observer_alert_title>Aviso</game_observer_alert_title>
+
+		<game_white_pawn>Peão Branco</game_white_pawn>
+		<game_white_rook>Torre Branca</game_white_rook>
+		<game_white_horse>Cavalo Branco</game_white_horse>
+		<game_white_elephant>Bispo Branco</game_white_elephant>
+		<game_white_cannon>Rainha Branca</game_white_cannon>
+		<game_white_king>Rei Branco</game_white_king>
+		<game_white_advisor>Red Advisor</game_white_advisor>
+
+		<game_black_pawn>Peão Preto</game_black_pawn>
+		<game_black_rook>Torre Preta</game_black_rook>
+		<game_black_horse>Cavalo Preto</game_black_horse>
+		<game_black_elephant>Bispo Preto</game_black_elephant>
+		<game_black_cannon>Rainha Preta</game_black_cannon>
+		<game_black_king>Rei Preto</game_black_king>
+		<game_black_advisor>Black Advisor</game_black_advisor>
+
+		<game_button_first>Início</game_button_first>
+		<game_button_prev>Anterior</game_button_prev>
+		<game_button_next>Próximo</game_button_next>
+		<game_button_last>Fim</game_button_last>
+
+		<game_oldgame_alert>Você não pode ver um jogo antigo enquanto estiver jogando ou observando uma partida.</game_oldgame_alert>
+
+		<game_result_white-timeover>O tempo das brancas acabou</game_result_white-timeover>
+		<game_result_black-timeover>O tempo das pretas acabou</game_result_black-timeover>
+		<game_result_white-mated>As brancas ganharam por xeque-mate</game_result_white-mated>
+		<game_result_black-mated>As pretas ganharam por xeque-mate</game_result_black-mated>
+		<game_result_white-resigned>As brancas desistiram da partida</game_result_white-resigned>
+		<game_result_black-resigned>As pretas desistiram da partida</game_result_black-resigned>
+		<game_result_draw-agreement>Os jogadores concordaram em um empate</game_result_draw-agreement>
+		<game_result_stalemate>Empate por afogamento</game_result_stalemate>
+		<game_result_draw-repetition>Empate por repetição de posição</game_result_draw-repetition>
+		<game_result_draw-fifty-moves>Empate pela regra dos 50 lances</game_result_draw-fifty-moves>
+		<game_result_draw-impossible-mate>Empate por insuficiência de material</game_result_draw-impossible-mate>
+		<game_result_draw-timeover>O tempo dos dois jogadores acabaram</game_result_draw-timeover>
+		<game_result_canceled-agreement>Os jogadores concordaram em cancelar a partida</game_result_canceled-agreement>
+		<game_result_canceled-timed-out>A partida foi cancelada por inatividade</game_result_canceled-timed-out>
+		<game_result_adjourned-agreement>Os jogadores concordaram em adiar a partida</game_result_adjourned-agreement>
+		<game_result_adjourned-shutdown>A partida foi adiada porque o servidor está sendo desligado</game_result_adjourned-shutdown>
+		<game_result_white-wo>As brancas ganharam por W.O.</game_result_white-wo>
+		<game_result_black-wo>As pretas ganharam por W.O.</game_result_black-wo>
+		<game_result_closed>A partida acabou. No entando o resultado não foi mostrado na tela.</game_result_closed>
+		<game_loading_move>Carregando movimento...</game_loading_move>
+		<game_white_player_leave>Jogador branco saiu da partida. Caso ele não volte dentro de alguns minutos o jogador preto irá vencer.</game_white_player_leave>
+		<game_black_player_leave>Jogador preto saiu da partida. Caso ele não volte dentro de alguns minutos o jogador branco irá vencer.</game_black_player_leave>
+	</game>
+	<profile>
+		<profile_window>Perfil e Informações</profile_window>
+		<profile_name>Nome: </profile_name>
+		<profile_nick>Apelido: </profile_nick>
+		<profile_whoami>Quem sou: </profile_whoami>
+		<profile_level>Nível do usuário: </profile_level>
+		<profile_group>Grupo: </profile_group>
+		<profile_type>Titulação: </profile_type>
+		<profile_online_time>Tempo online: </profile_online_time>
+		<profile_total_time>Tempo acumulado: </profile_total_time>
+		<profile_category>Categoria</profile_category>
+		<profile_current_rating>Rating Atual</profile_current_rating>
+		<profile_best_rating>Maior Rating</profile_best_rating>
+		<profile_record_date>Data do Record</profile_record_date>
+		<profile_games_number>No. de Partidas</profile_games_number>
+		<profile_win>Vitórias</profile_win>
+		<profile_draw>Empates</profile_draw>
+		<profile_lose>Derrotas</profile_lose>
+		<profile_edit_photo>Editar imagem</profile_edit_photo>
+		<profile_old_games1>Minhas partidas</profile_old_games1>
+		<profile_old_games2>Partidas de</profile_old_games2>
+		<profile_save>Salvar alterações</profile_save>
+		<profile_discard>Fechar sem salvar</profile_discard>
+		<profile_save_close>Salvar e fechar</profile_save_close>
+		<profile_confirm>Você tem certeza que desejar fechar a janela sem salvar as alterações de perfil?</profile_confirm>
+		<profile_confirm_close>Confirmar fechar</profile_confirm_close>
+		<profile_change_image>Selecione a foto</profile_change_image>
+		<profile_change_image_title>Mudar foto</profile_change_image_title>
+		<profile_load_error>Erro</profile_load_error>
+		<profile_load_error_title>Não foi possível carregar a foto</profile_load_error_title>
+		<profile_year>a</profile_year>
+		<profile_month>m</profile_month>
+		<profile_day>d</profile_day>
+		<profile_error>Erro ao salvar o perfil</profile_error>
+		<profile_desc_limit>A descrição pode ter no máximo 200 caracteres.</profile_desc_limit>
+	</profile>
+	<register>
+		<register_inf>Por favor, preencha as informações abaixo para criar sua conta no Xadrez Livre.</register_inf>
+		<register_title>Cadastro</register_title>
+		<register_login>Login </register_login>
+		<register_max_char>(máx. 14 caracteres)</register_max_char>
+		<register_user_inf>Usar somente caracteres minúsculos, números, sem espaços, '-', '.' e '_' </register_user_inf>
+		<register_mail1>E-mail </register_mail1>
+		<register_mail2>(opcional)</register_mail2>
+		<register_mail_inf>Permite recuperar sua senha em caso de esquecimento.</register_mail_inf>
+		<register_passwd>Senha:</register_passwd>
+		<register_passwd_confirm1>Senha </register_passwd_confirm1>
+		<register_passwd_confirm2>(confirmação)</register_passwd_confirm2>
+		<register_bt_confirm>Cadastrar</register_bt_confirm>
+		<register_invalid_user_name>Nome de usuário inválido</register_invalid_user_name>
+		<register_invalid_user_name_len>O Login deve possuir no máximo 14 caracteres.</register_invalid_user_name_len>
+		<register_invalid_mail>E-mail inválido</register_invalid_mail>
+		<register_invalid_password>Senha não confere</register_invalid_password>
+		<register_error_409>Usuário já cadastrado</register_error_409>
+		<register_sucess_message>Usuário cadastrado com sucesso</register_sucess_message>
+	</register>
+	<oldgame>
+		<oldgame_title>Partidas antigas</oldgame_title>
+		<oldgame_my_games>Minhas partidas</oldgame_my_games>
+		<oldgame_other_games>Partidas de outros usuários</oldgame_other_games>
+		<oldgame_player1>Jogador 1:</oldgame_player1>
+		<oldgame_pieces>Peças:</oldgame_pieces>
+		<oldgame_both>Qualquer</oldgame_both>
+		<oldgame_player2>Jogador 2:</oldgame_player2>
+		<oldgame_date_form>Data:</oldgame_date_form>
+		<oldgame_from>de:</oldgame_from>
+		<oldgame_to>a:</oldgame_to>
+		<oldgame_new_search>Nova Busca</oldgame_new_search>
+		<oldgame_search_result>Resultados encontrados:</oldgame_search_result>
+		<oldgame_no_result>Nenhum resultado encontrado.</oldgame_no_result>
+		<oldgame_player1_hd>Jogador 1</oldgame_player1_hd>
+		<oldgame_player2_hd>Jogador 2</oldgame_player2_hd>
+		<oldgame_white_hd>Brancas</oldgame_white_hd>
+		<oldgame_black_hd>Pretas</oldgame_black_hd>
+		<oldgame_category>Categoria</oldgame_category>
+		<oldgame_result>Resultado</oldgame_result>
+		<oldgame_date>Data</oldgame_date>
+		<oldgame_prev>Anteriores</oldgame_prev>
+		<oldgame_next>Próximas</oldgame_next>
+		<oldgame_format>Formato: dd/mm/aaaa</oldgame_format>
+		<oldgame_no_moves>Jogo sem movimentos feitos</oldgame_no_moves>
+		<oldgame_invalid_begin>Data inicial inválida!</oldgame_invalid_begin>
+		<oldgame_invalid_end>Data final inválida!</oldgame_invalid_end>
+		<oldgame_invalid_interval>Intervalo inválido!</oldgame_invalid_interval>
+		<oldgame_invalid_date>Data inválida!</oldgame_invalid_date>
+		<oldgame_loading>Buscando partidas antigas...</oldgame_loading>
+		<oldgame_examine>Examinar partida</oldgame_examine>
+	</oldgame>
+	<welcome>
+		<welcome_title>Bem-vindo!</welcome_title>
+		<welcome_text1>Este é o ambiente de jogo/interação do Xadrez Livre. Aqui, além de outras possibilidades, você pode:</welcome_text1>
+		<welcome_text2>Para outras informações sobre o uso do ambiente, consulte a "Ajuda" no menu superior.</welcome_text2>
+		<welcome_instruction>
+			<welcome_item><![CDATA[<b>Iniciar uma partida:</b> clique sobre um usuário do ambiente e escolha a opção "Convidar para jogar". Todos os usuários on-line do ambiente são mostrados na sala Geral. Janela encontrada na parte inferior esquerda do ambiente.]]></welcome_item>
+			<welcome_item><![CDATA[<b>Adicionar contatos:</b> sua lista de contatos encontra-se na parte superior esquerda do ambiente. Para adicionar novos contatos clique sobre um usuário na sala Geral e escolha a opção "Adicionar contato". O usuário estará em sua lista de contato, assim que ele autorizar.]]></welcome_item>
+		</welcome_instruction>
+	</welcome>
+	<admin>
+		<admin_kick_ok>Você desconectou usuário com sucesso</admin_kick_ok>
+		<admin_ban_ok>Você baniu usuário com sucesso</admin_ban_ok>
+		<admin_unban_ok>Você desbaniu usuário com sucesso</admin_unban_ok>
+		<admin_user_ban>Você foi banido.\nMotivo: </admin_user_ban>
+		<admin_user_kick>Você foi desconectado.\nMotivo: </admin_user_kick>
+
+	</admin>
+	<help>
+		<help_title>Ajuda</help_title>
+		<help_t_1>Como?</help_t_1>
+		<help_t_1_1>Jogar</help_t_1_1>
+		<help_t_1_1_1>Desafiando adversário específico</help_t_1_1_1>
+		<help_c_1_1_1><![CDATA[<p>Para convidar um usuário específico para jogar:</p><ul><li>Clique no usuário que deseja convidar e, depois, clique em “Convidar para jogar”;</li><li>Defina as condições de jogo para a partida (Cor das peças; Tempo da partida etc.)</li><li>Clique no botão "Convidar".</li></ul><br /><p>Obs.: O usuário que você convidou pode:</p><ul><li>"Aceitar" seu convite e iniciar a partida;</li><li>Redefinir as condições de jogo e te "Redesafiar";</li><li>ou "Rejeitar" seu convite para jogar.</li></ul>]]></help_c_1_1_1>
+		<help_t_1_1_2>Aceitando um convite para jogar</help_t_1_1_2>
+		<help_c_1_1_2><![CDATA[<p>Quando você é convidado para jogar uma partida, a janela de convite para jogar abre-se para você.</p><p><ul><li>Clique no botão “Aceitar” para iniciar a partida com as condições de partida definidas por quem te convidou.</li></ul><br /><p>Obs.: Caso você queira jogar com o usuário que te convidou, mas com condições diferentes, faça as alterações desejadas e clique em “Redesafiar”. Assim, as novas condições são enviadas ao usuário que te convidou e ele poderá aceitar ou recusar sua proposta.</p>]]></help_c_1_1_2>
+		<help_t_1_1_3>Anunciar uma partida</help_t_1_1_3>
+		<help_c_1_1_3><![CDATA[<p>Para anunciar uma partida</p><ul><li>Clique em “Desafios”, na Barra de contexto;</li><li>Clique em “Anunciar partida”;</li><li>Defina as condições de jogo para a partida (Cor das peças; Tempo da partida etc.)</li><li>Clique em “Anunciar”.</li></ul><br /><p> Obs.: A partida anunciada ficará na lista de partidas anunciadas. Assim, outros usuários poderão vê-la e aceitar jogá-la. As partidas são apresentadas somente para os usuários com rating dentro do intervalo definido no anúncio da partida.</p>]]></help_c_1_1_3>
+		<help_t_1_2>Buscar usuários</help_t_1_2>
+		<help_c_1_2><![CDATA[<ul><li>Clique em “Buscar usuário”, na Barra de Ferramentas;</li><li>Defina os critérios de busca;</li><li>Clique em “Buscar”.</li></ul>]]></help_c_1_2>
+		<help_t_1_3>Conversar com um usuário</help_t_1_3>
+		<help_c_1_3><![CDATA[<p>Para conversar com um usuário específico</p><ul><li>Clique no usuário que deseja conversar e, depois, clique em "Conversar";</li></ul><p>Será aberta uma janela de conversa entre vocês dois.</p><ul><li>Digite a mensagem (no campo localizado no inferior da janela de conversa);</li><li>Digite “Enter” para enviar a mensagem.</li></ul>]]></help_c_1_3>
+		<help_t_1_4>Conversar com vários usuários em uma sala</help_t_1_4>
+		<help_c_1_4><![CDATA[<p>Para conversar com vários usuários, escolha uma sala específica no menu “Salas” ou converse na sala Geral, que todos os usuários participam.</p><ul><li>Digite a mensagem (no campo localizado no inferior da janela da sala);</li><li>Digite “Enter” para enviar a mensagem para sala.</li></ul>]]></help_c_1_4>
+		<help_t_1_5>Ver ou ocultar a lista de usuários de uma sala</help_t_1_5>
+		<help_c_1_5><![CDATA[<p>A sala deve estar aberta (Veja “Como -> Entrar em uma sala”) e ativa (estar na frente das outras salas e com a barra de título laranja) para ver sua lista de usuários:</p><ul><li>Clique em “Ver usuários da sala”, se a lista de usuários não estiver oculta, ou;</li><li>Clique em “Ocultar usuários da sala”, se a lista de usuários estiver sendo exibida.</li></ul>]]></help_c_1_5>
+		<help_t_1_6>Ver perfil e informações de um usuário</help_t_1_6>
+		<help_c_1_6><![CDATA[<p>Para ver perfil e informações de um usuário</p><ul><li>Clique no usuário e, depois, clique em "Ver perfil e informações".</li></ul>]]></help_c_1_6>
+		<help_t_1_7>Adicionar um usuário na sua lista de contatos</help_t_1_7>
+		<help_c_1_7><![CDATA[<p>Para adicionar um usuário em sua lista de contatos</p><ul><li>Clique no usuário e, depois, clique em "Adicionar aos contatos".</li></ul>]]></help_c_1_7>
+		<help_t_1_8>Remover um usuário de sua lista de contatos</help_t_1_8>
+		<help_c_1_8><![CDATA[<p>Para remover um usuário de sua lista de contatos</p><ul><li>Clique em “Contatos” para ver seus contatos no Xadrez Livre;</li><li>Clique no usuário que deseja remover e, depois, clique em "Remover contato"</li></ul>]]></help_c_1_8>
+		<help_t_1_9>Alterar meu status</help_t_1_9>
+		<help_c_1_9><![CDATA[<p>Quando você se conecta ao Xadrez Livre seu status é “Disponível”. Ele é mostrado na área pessoal, logo abaixo de seu login.<p/><p>Para alterar seu status:</p><ul><li>Clique na setinha ao lado do seu status atual;</li><li>Clique no status desejado.</li></ul><br /><p>Obs.: Os status “Jogando”, "Observando" e "Examinando" são aferidos automaticamente pelo servidor. Quando um usuário já está jogando (status “Jogando”) ou está “Indisponível”, ele não pode ser convidado para jogar. Se está com status ocupado, pode jogar mas não pode conversar.</p>]]></help_c_1_9>
+		<help_t_1_10>Alterar meu perfil</help_t_1_10>
+		<help_c_1_10><![CDATA[<p>Para alterar seu perfil:</p><ul><li>Clique em “Alterar meu perfil”, na área pessoal.</li></ul>]]></help_c_1_10>
+		<help_t_1_11>Entrar em uma sala</help_t_1_11>
+		<help_c_1_11><![CDATA[<ul><li>Clique em “Salas”, na Barra de contexto;</li><li>Clique na sala que deseja entrar.</li></ul><br /><p>Obs.: A sala que você entrou ficará aberta na lateral esquerda da tela.</p>]]></help_c_1_11>
+		<help_t_1_12>Criar sala</help_t_1_12>
+		<help_c_1_12><![CDATA[<ul><li>Clique em “Salas”, na Barra de contexto;</li><li>Clique em “Criar sala”;</li><li>Digite o nome da sala;</li><li>Clique no botão “Criar”.</li></ul><br /><p>Obs.: A sala criada aparece na lateral esquerda da tela.</p>]]></help_c_1_12>
+		<help_t_1_13>Observar uma partida</help_t_1_13>
+		<help_c_1_13><![CDATA[<ul><li>Clique em “Partidas em andamento”, na Barra de contexto;</li><li>Clique na partida que deseja observar.</li></ul>]]></help_c_1_13>
+		<help_t_1_14>Buscar partidas realizadas no Xadrez livre</help_t_1_14>
+		<help_c_1_14><![CDATA[<ul><li>Clique em “Buscar partida”, na Barra de Ferramentas;</li><li>Defina os critérios de busca;</li><li>Clique em “Buscar”;</li></ul><br /><p>Obs.: Use os botões de navegação “Próximas” e “Anteriores” para ver outras partidas, caso não caibam todas as partidas encontradas em uma única janela.</p>]]></help_c_1_14>
+		<help_t_1_15>Examinar uma partida</help_t_1_15>
+		<help_c_1_15><![CDATA[<ul><li>Busque uma partida (Veja “Como -> Buscar partidas realizadas no Xadrez Livre”);</li><li>Clique na partida que deseja examinar;</li><li>Use os botões de navegação, abaixo da lista de lances, para avançar e voltar para navegar pelos lances da partida.</li></ul>]]></help_c_1_15>
+		<help_t_1_16>Obter ajuda</help_t_1_16>
+		<help_c_1_16><![CDATA[<p>Para obter ajuda:</p><ul><li>Clique em “Ajuda”, na Barra de Ferramentas.</li></ul><br /><p>Obs.: Você pode obter ajuda de duas formas: usando a estrutura “Conteúdo”, que explica detalhadamente as informações contidas nas telas do Xadrez Livre, ou usando a estrutura “Como...”, que dá dicas rápidas sobre como utilizar as principais funcionalidades do Xadrez Livre.</p>]]></help_c_1_16>
+	</help>
+</language>

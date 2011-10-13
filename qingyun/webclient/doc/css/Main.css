@@ -1,0 +1,50 @@
+h1 {
+	font			: bold 22px Trebuchet MS;
+	color			: #216778;
+}
+
+h2 {
+	font			: bold 20px Trebuchet MS;
+	color			: #216778;
+	margin-left		: 5px;
+}
+
+h3 {
+	font			: bold 18px Trebuchet MS;
+	color			: #216778;
+	margin-left		: 7px;
+}
+
+h4 {
+	font			: bold 16px Trebuchet MS;
+	color			: #216778;
+	margin-left		: 9px;
+}
+
+p {
+	font			: 13px Verdana;
+	color			: #444;
+	text-indent		: 10px;
+}
+
+hr {
+	background-color: #EEE;
+	height			: 1px;
+}
+
+ul {
+	font			: 13px Verdana;
+	color			: #444;
+	text-indent		: 10px;
+}
+
+li {
+	font			: 13px Verdana;
+	color			: #444;
+	text-indent		: 10px;
+}
+
+font {
+	font			: bold 16px Trebuchet MS;
+	color			: #216778;
+}

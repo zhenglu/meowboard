@@ -1,0 +1,729 @@
+/**
+* ESTILOS PARA O DIV DE JOGOS
+*/
+#GameDiv
+{
+	display			: table;
+	position		: relative;
+	left			: 50%;
+	margin-top		: 35px;
+	margin-right		: 0px;
+	margin-bottom		: 0px;
+	margin-left		: -260px;
+}
+
+/**
+* ESTILOS DO TABULEIRO
+*/
+
+#TBoard{
+	position		: relative;
+	float			: left;
+	border			: 3px solid #216778;
+	border-right		: 0px;
+}
+
+#Board {
+	position		: relative;
+	/*
+	height			: 80.5mm;
+	width			: 80.5mm;
+	*/
+	height			: 380px;
+	width			: 342px;
+	display			: table;
+}
+
+#Board div{
+	float			: left;
+}
+
+#Board .black {
+	background-image	: url('../images/board/square_black.png');
+}
+
+#Board .white {
+	background-image	: url('../images/board/square_white.png');
+}
+
+#Board .sqa9 {
+	background-image	: url('../images/board/sq_a_9.png');
+}
+
+#Board .sqb9 {
+	background-image	: url('../images/board/sq_b_9.png');
+}
+
+#Board .sqi9 {
+	background-image	: url('../images/board/sq_i_9.png');
+}
+
+#Board .sqd9 {
+	background-image	: url('../images/board/sq_d_9.png');
+}
+
+#Board .sqf9 {
+	background-image	: url('../images/board/sq_f_9.png');
+}
+
+#Board .sqa8 {
+	background-image	: url('../images/board/sq_a_8.png');
+}
+
+#Board .sqb8 {
+	background-image	: url('../images/board/sq_b_8.png');
+}
+
+#Board .sqi8 {
+	background-image	: url('../images/board/sq_i_8.png');
+}
+
+#Board .sqe8 {
+	background-image	: url('../images/board/sq_e_8.png');
+}
+
+#Board .sqd7 {
+	background-image	: url('../images/board/sq_d_7.png');
+}
+
+#Board .sqb7 {
+	background-image	: url('../images/board/sq_b_7.png');
+}
+
+#Board .sqf7 {
+	background-image	: url('../images/board/sq_f_7.png');
+}
+
+#Board .sqa6 {
+	background-image	: url('../images/board/sq_a_6.png');
+}
+
+#Board .sqi6 {
+	background-image	: url('../images/board/sq_i_6.png');
+}
+
+#Board .sqb5 {
+	background-image	: url('../images/board/sq_b_5.png');
+}
+
+#Board .sqb4 {
+	background-image	: url('../images/board/sq_b_4.png');
+}
+
+#Board .sqd2 {
+	background-image	: url('../images/board/sq_d_2.png');
+}
+
+#Board .sqf2 {
+	background-image	: url('../images/board/sq_f_2.png');
+}
+
+#Board .sqa0 {
+	background-image	: url('../images/board/sq_a_0.png');
+}
+
+#Board .sqd0 {
+	background-image	: url('../images/board/sq_d_0.png');
+}
+
+#Board .sqf0 {
+	background-image	: url('../images/board/sq_f_0.png');
+}
+
+#Board .sqi0 {
+	background-image	: url('../images/board/sq_i_0.png');
+}
+
+#Board .select {
+	background-image	: url('../images/board/square_select.png');
+}
+
+#Board div:hover {
+	background-image	: url('../images/board/square_select.png');
+}
+
+
+#BoardPiece{
+	position		: static;
+}
+
+/**
+* ESTILOS PARA OS INDICES DO TABULEIRO
+*/
+#IndexV {
+	position		: absolute;
+	/*
+	top			: 1mm;
+	left			: -8mm;
+	*/
+	top			: 0px;
+	left			: -35px;
+	margin-left		: 0px;
+	list-style		: none;
+}
+ 
+#IndexV li {
+	font-size		: 18px;
+	color			: #216778;
+	width			: 15px;
+	height			: 38px;
+	line-height		: 38px;
+
+	text-align		: center;
+}
+
+
+#IndexH {
+	list-style		: none;
+	/*
+	position		: absolute;
+	top			: 80mm;
+	*/
+	left			: 0px;
+	top			: 385px;
+	position		: absolute;
+	width			: 343px;
+	/*width			: 81mm;*/
+}
+
+#IndexH li {
+	list-style		: none;
+	float			: left;
+	font-size		: 18px;
+	color			: #216778;
+	width			: 38px;
+	height			: 38px;
+	text-align		: center;
+}
+
+/*
+ * GAMINFO STYLES
+ */
+
+#GameInfoDiv
+{
+	position		: relative;
+	width			: 177px;
+	height			: 304px;
+	float			: left;
+	border			: 3px solid #216778;
+	padding			: 0px 8px;
+}
+
+#GameClose {
+	position		: absolute;
+	right			: -3px;
+	/*top			: -5mm;*/
+	top			: -20px;
+	/*width			: 4mm;*/
+	width			: 16px;
+	font-weight		: bold;
+	font-size		: 10px;
+	text-align		: center;
+	background-color	: #216778;
+	color			: #FFF;
+	padding			: 2px;
+	cursor			: pointer;
+}
+
+#PhotoDiv
+{
+	position		: relative;
+	/*width			: 53mm;*/
+	width			: 170px;
+	/*height		: 30mm;*/
+	height			: 95px;;
+	font-size		: 14px;
+	color			: #216778;
+
+	padding-top		: 15px;
+	padding-right		: 10px;
+	padding-bottom		: 0px;
+	padding-left		: 10px;
+}
+
+#PhotoDiv #PWPhoto
+{
+	background-color	: #fff;
+	
+	/*
+	position		: absolute;
+	left			: 8mm;
+	top			: 5mm;
+	*/
+	width			: 50px;
+	height			: 60px;
+	border-style		: solid;
+	border-width		: 1px;
+	float			: left;
+
+	margin-left		: 5px;
+}
+
+#PhotoDiv #PBPhoto
+{
+	background-color	: #fff;
+
+	/*
+	position		: absolute;
+	right			: 8mm;
+	top			: 5mm;
+	*/
+	width			: 50px;
+	height			: 60px;
+
+	border-style		: solid;
+	border-width		: 1px;
+	float			: left;
+}
+
+
+#PhotoDiv #PWName
+{
+	position		: absolute;
+	left			: 0px;
+	bottom			: 0px;
+	margin-left		: 10px;
+}
+
+#PhotoDiv #PBName
+{
+	position		: absolute;
+	right			: 0px;
+	bottom			: 0px;
+	margin-right		: 12px;
+}
+
+#PhotoDiv #PWPawn
+{
+	background-image	: url("../images/pieces/wpawn.png");
+
+	position		: absolute;
+	/*
+	top			: 13.5mm;
+	left			: 3.5mm;
+	*/
+	top			: 55px;
+	left			: 0px;
+
+	width			: 35px;
+	height			: 35px;
+}
+#PhotoDiv #PBPawn
+{
+	background-image	: url("../images/pieces/bpawn.png");
+
+	position		: absolute;
+	/*
+	top			: 13.5mm;
+	right			: 3.5mm;
+	*/
+	top			: 55px;
+	right			: 7px;
+
+	width			: 35px;
+	height			: 35px;
+}
+
+#PhotoDiv #vs
+{
+	position		: relative;
+	/*
+	right			: 50%;
+	left			: 50%;
+	top			: 40mm;
+	*/
+	top			: 20px;
+	float			: left;
+
+	margin-left		: 20px;
+	margin-right		: 20px;
+	margin-top		: 10px;
+	margin-bottom		: 10px;
+}
+
+/*Timers*/
+#TimerDiv
+{
+
+	position		: relative;
+
+	width			: 180px;
+	height			: 35px;
+/*
+	width			: 53mm;
+	height			: 10mm;
+	border-style		: solid;
+	border-width		: 1px;
+	border-color		: #216778;
+*/
+	font-size		: 14px;
+	font-weight		: bold;
+	color			: #216778;
+}
+
+#PWTimer, #PBTimer
+{
+	background-color	: #ffeed1;
+	/*width			: 15mm;*/
+	width			: 60px;
+
+/*	position		: absolute;*/
+/*	left			: 6.5mm;*/
+/*	top			: 1mm;*/
+
+	text-align		: center;
+
+	border-style		: solid;
+	border-width		: 1px;
+	border-color		: #ffa200;
+
+	float			: left;
+
+	margin			: 6px 14px;
+}
+/*
+#PBTimer
+{
+	background-color	: #ffeed1;
+
+	width			: 15mm;
+
+	position		: absolute;
+/*	right			: 6.5mm;*/
+/*	top			: 1mm;*/
+/*
+	text-align		: center;
+
+	border-style		: solid;
+	border-width		: 1px;
+	border-color		: #ffa200;
+}
+*/
+/*GameOptions*/
+#GameOptionDiv, #MoveListDiv
+{
+	background-color	: #FFF;
+	
+	position		: absolute;
+	/*top			: 5mm;*/
+	top			: 19px;
+	left			: -1px;
+
+	/*width			: 46mm;*/
+	width			: 175px;
+	/*height		: 30mm;*/
+	height			: 115px;
+
+	border-style		: solid;
+	border-width		: 0px 1px 1px 1px;
+	border-color		: #216778;
+
+	font-size		: 11px;
+	color			: #216778;
+}
+
+#MoveListDiv{
+	position		: relative;
+	height			: 115px;
+	width			: 175px;
+}
+
+#MoveList{
+	list-style		: none;
+	/*height		: 30mm;*/
+	height			: 115px;
+	overflow		: auto;
+
+	font-weight		: normal;
+}
+
+#MoveList.oldgame{
+	/*height			: 22mm;*/
+	height			: 85px;
+	width			: 175px;
+}
+
+#MoveList li{
+	/*width			: 151px;*/
+	padding			: 0px 12px;
+	height			: 15px;
+}
+#MoveList li.black{
+	background-color	: #216778;
+	color			: #FFF;
+}
+
+#MoveList p{
+	float			: left;
+	width			: 30px;
+}
+
+#MoveList p.move{
+	width			: 52px
+}
+
+#MoveListDiv #MoveListButtons{
+	position                : absolute;
+	bottom                  : 0px;
+
+	background-color        : #FFF;
+
+	display                 : table;
+	/*width                   : 45.9mm;*/
+	width			: 175px;
+	/*height                  : 8mm;*/
+	height			: 28px;
+
+	border-style            : solid;
+	border-width            : 1px 0px 0px 0px;
+}
+
+#MoveListDiv #MoveListButtons input{
+	float                   : left;
+	/*
+	margin-left             : 6mm;
+	margin-top              : 2mm;
+	*/
+	margin-left		: 23px;
+	margin-top		: 7px;
+	border			: none;
+	width			: 14px;
+	height			: 15px;
+	cursor			: pointer;
+}
+
+#GameOptionDiv ul
+{
+	position		: relative;
+	top			: 1mm;
+	left			: 2mm;
+	bottom			: 1mm;
+	list-style		: none;
+
+	font-weight		: normal;
+}
+
+#GameOptionDiv li
+{
+	border-style		: solid;
+	border-width		: 1px;
+	border-color		: #FFF;
+
+	width			: 41mm;
+}
+
+#GameOptionDiv li:hover
+{
+	border-style		: solid;
+	border-width		: 1px;
+	border-color		: #216778;
+
+	cursor			: pointer;
+}
+
+#GameOptionDiv .press {
+	background-color: #DAF3F5;
+}
+
+#GameOptionDiv .release {
+	background-color: #FFF;
+}
+
+#GameOptionDiv li.promotion
+{
+	width			: 44mm;
+	border-style		: solid;
+	border-color		: #fff;
+	border-width		: 0px;
+}
+
+#GameOptionDiv li.promotion:hover
+{	
+	border-style		: solid;
+	border-color		: #fff;
+	border-width		: 0px;
+}
+
+#GameOptionDiv select
+{
+	margin-left		: 2px;
+
+	border-style		: solid;
+	border-width		: 1px;
+	border-color		: #216778;
+
+	font-size		: 10px;
+	color			: #216778;
+	width			: 15mm;
+
+	position		: absolute;
+	bottom			: -2px;
+}
+
+/*GameTabs*/
+
+#GameInfoTab
+{
+	position		: relative;
+/*
+	left			: 2mm;
+	right			: 2mm;
+	border-style		: solid;
+	border-width		: 1px;
+	border-color		: #216778;
+*/
+}
+
+#InfoTab
+{
+	position		: relative;
+	top			: 0px;
+	left			: 0px;
+
+	/*width			: 46mm;*/
+	width			: 175px;
+	height			: 18px;
+
+	font-size		: 12px;
+	font-weight		: bold;
+	color			: #216778;
+
+	border-style		: solid;
+	border-width		: 1px;
+	border-color		: #216778;
+}
+
+#InfoTab1
+{
+	position		: absolute;
+	left			: -1px;
+	top			: -1px;
+
+	border-style		: solid;
+	border-width		: 1px;
+	border-color		: #216778;
+
+	/*width			: 23mm;*/
+	width			: 86px;
+	/*height		: 4.7mm;*/
+	height			: 18px;
+
+	text-align		: center;
+	cursor			: pointer;
+}
+
+#InfoTab2
+{
+	position		: absolute;
+	right			: -1px;
+	top			: -1px;
+
+	border-style		: solid;
+	border-width		: 1px;
+	border-color		: #216778;
+
+	/*width			: 22.5mm;*/
+	width			: 88px;
+	/*height		: 4.7mm;*/
+	height			: 18px;
+
+	text-align		: center;
+	cursor			: pointer;
+}
+
+#InfoTab1.active, #InfoTab2.active
+{
+	background-color	: #ffeed1;
+
+	border-style		: solid;
+	border-width		: 1px;
+	border-color		: #ffa200;
+
+	color			: #ffa200;
+}
+
+#InfoTab1.oldgame{
+	/*width			: 46mm;*/
+	width			: 175px;
+}
+
+
+/*Move List Buttons*/
+#MoveListFirst{
+	background-image	: url("../images/board/first.png");
+}
+
+#MoveListFirst:hover {
+	background-image	: url("../images/board/first_active.png");
+}
+
+#MoveListPrev{
+	background-image	: url("../images/board/prev.png");
+}
+
+#MoveListPrev:hover {
+	background-image	: url("../images/board/prev_active.png");
+}
+
+#MoveListNext{
+	background-image	: url("../images/board/next.png");
+}
+
+#MoveListNext:hover {
+	background-image	: url("../images/board/next_active.png");
+}
+
+#MoveListLast{
+	background-image	: url("../images/board/last.png");
+}
+
+#MoveListLast:hover {
+	background-image	: url("../images/board/last_active.png");
+}
+
+#GameLoadingMove
+{
+	width			: 160px;
+	height			: 17px;
+
+	background-color	: #FFF;
+
+	font-size		: 12px;
+	color			: #216778;
+
+	position		: fixed;
+	bottom			: 10px;
+	left			: 50%;
+	margin-left		: -50px;
+
+	padding			: 2px 15px;
+
+	border			: 1px solid #216778;
+}
+
+#GameLeaveUser
+{
+	width			: 345px;
+	height			: 30px;
+
+	background-color	: #FFF;
+
+	font-size		: 12px;
+	color			: #216778;
+
+	position		: fixed;
+	bottom			: 30px;
+	left			: 50%;
+	margin-left		: -135px;
+
+	padding			: 2px 15px;
+
+	border			: 1px solid #216778;
+	text-align		: center;
+}
+
+#BlockBoard
+{
+	border			: 2px solid #FFA200;
+}

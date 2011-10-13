@@ -1,0 +1,249 @@
+/*CSS default*/
+
+div .UserList{
+	padding-left		: 12px;
+	padding-top		: 4px;
+	font-size		: 11px;
+	/*
+	padding-left		: 3mm;
+	padding-top		: 1mm;
+	*/
+}
+
+div .UserList .UserTable{
+	overflow-y		: auto;
+	overflow-x		: hidden;
+	margin-top		: 8px;
+	/*
+	margin-top		: 2mm;
+	*/
+}
+
+div .UserList table{
+	display			: block;
+	border-spacing		: 0px;
+	height			: 100px;
+	width			: 155px;
+	margin-top		: 8px;
+	/*
+	height			: 25mm;
+	width			: 48mm;
+	margin-top		: 2mm;
+	*/
+}
+
+div .UserList tbody{
+	display			: block;
+	width			: 150px;
+	/*
+	width			: 44mm;
+	*/
+}
+
+
+div .UserList tr{
+	text-indent		: 20px;
+	margin			: 1px 0px;
+	height			: 16px;
+	list-style		: none;
+	font-size		: 11px;
+	cursor			: pointer;
+	/*
+	text-indent		: 5mm;
+	*/
+}
+
+div .UserList tr:hover {
+	background-color	: #DAF3F5;
+}
+
+div .UserList td{
+	width			: 155px;
+	text-align		: left;
+	height 			: 17px;
+	/*
+	width			: 41mm;
+	*/
+}
+
+div .UserList td.rating{
+	width			: 8px;
+	text-align		: right;
+	/*
+	width			: 2mm;
+	*/
+}
+
+/*
+div .UserList #order_nick, 
+div .UserList .order_rating,
+div .UserList .order_rating_selec {
+	color                   : #216778;
+	cursor                  : pointer;
+	border-bottom		:  1px solid
+}
+
+div .UserList .order_rating,
+div .UserList .order_rating_selec {
+	position                : absolute;
+	width                   : 29mm;
+	right                   : 3px;
+	border                  : 1px solid #FFA200;
+	text-align              : right;
+	font-size		: 11px;
+}
+
+div .UserList .option_selected {
+	color                   : #FFA200 !important;
+}
+
+div .UserList .option_not_selected {
+	color                   : #216778;
+}
+
+div .UserList .order_rating_selec {
+	color                   : #FFA200 !important;
+}
+
+div .UserList .order_selec {
+	font-weight             : bold !important;
+	color                   : #FFA200 !important;
+}
+
+*/
+div .UserList #order_nick
+{
+	color			: #216778;
+	cursor			: pointer;
+	font-size		: 10px;
+}
+
+div .UserList #order_nick.selected
+{
+	color			: #FFA200;
+	font-weight             : bold !important;
+	border-bottom		: 1px solid #FFA200;
+}
+
+div .UserList #order_rating
+{
+	color			: #216778;
+	cursor			: pointer;
+	position                : absolute;
+	width                   : 100px;
+	right                   : 3px;
+	text-align              : left;
+	font-size		: 10px;
+	border                  : 1px solid #216778;
+	/*
+	width                   : 56%;
+	*/
+}
+
+div .UserList #order_rating.selected
+{
+	border                  : 1px solid #FFA200;
+	color			: #FFA200;
+}
+
+div .UserList #order_rating option.selected
+{
+	color			: #FFA200;
+}
+
+div .UserList #order_rating option.not_selected 
+{
+	color                   : #216778;
+}
+
+/*Contact list user list css*/
+#ContactInside .UserList{
+	padding-left		: 4px;
+	/*
+	padding-left		: 1mm;
+	*/
+}
+
+#ListDiv div .UserList table{
+	height			: 0px;
+	margin-top		: 0px;
+}
+
+#ListDiv .UserList {
+	padding-left		: 1px;
+	padding-top		: 0px;
+	/*
+	padding-left		: 1mm;
+	*/
+}
+
+
+/*Contact online user list css*/
+#ContactOnline .UserList{
+	padding-left		: 4px;
+	height			: 141px;
+	/*
+	padding-left		: 1mm;
+	height			: 37.7mm;
+	*/
+}
+
+#ContactOnline .UserTable{
+	height			: 122px;
+	/*
+	height			: 32mm;
+	*/
+}
+
+/*Room list user list css*/
+#Rooms div .UserList{
+	position		: absolute;
+	left			: 202px;
+	width			: 150px;
+
+	border			: 2px solid #216778;
+	background-color	: #FFF;
+
+	padding			: 4px 0px 4px 5px;
+
+	z-index			: 1;
+}
+
+#Rooms div .UserList table{
+	height			: 70px;
+}
+
+#Rooms div .UserList .UserTable{
+	height			: 80px;
+	/*
+	height			: 22mm;
+	*/
+}
+
+#Rooms div .UserList td{
+	width			: 95px;
+}
+
+#Rooms div .UserList td.rating{
+	width			: 8px;
+	text-indent		: 10px;
+}
+
+/**
+* USER MENU
+*/
+#UserFullNameDiv {
+	position		: absolute;
+	padding			: 4px;
+	background-color	: #FFF;
+	border			: 1px solid #216778;
+	z-index	:	2;
+}
+
+#UserFullNameDiv p {
+	font-style		: italic;
+	font-size		: 10px;
+	color			: #216778;
+	cursor			: pointer;
+	margin-bottom		: 1px;
+}

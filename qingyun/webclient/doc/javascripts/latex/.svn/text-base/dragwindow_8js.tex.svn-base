@@ -1,0 +1,37 @@
+\section{/home/www/ulysses/webclient/scripts/utils/dragwindow.js File Reference}
+\label{dragwindow_8js}\index{/home/www/ulysses/webclient/scripts/utils/dragwindow.js@{/home/www/ulysses/webclient/scripts/utils/dragwindow.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf UTILS\_\-StartDragWindow} (ev, Obj)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{dragwindow.js@{dragwindow.js}!UTILS\_\-StartDragWindow@{UTILS\_\-StartDragWindow}}
+\index{UTILS\_\-StartDragWindow@{UTILS\_\-StartDragWindow}!dragwindow.js@{dragwindow.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function UTILS\_\-StartDragWindow ( {\em ev}, \/   {\em Obj})}\label{dragwindow_8js_936119f257d49c89f33d5e50e71bf48f}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Start drag window when mouse is clicked over a element, and drop when release button.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em ev}]is event \item[{\em Obj}]is element object \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References OldPos, and UTILS\_\-GetMouseCoords().
+
+Referenced by WINDOW\_\-CreateWindow().

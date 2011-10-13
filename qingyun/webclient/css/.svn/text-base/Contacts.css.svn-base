@@ -1,0 +1,465 @@
+#Main #Left #Contact {
+	/*
+	margin-bottom		: 5%;
+	height			: 52mm;
+	*/
+	margin-bottom		: 5px;
+	border			: 2px solid #216778;
+	border-top : 0px;
+	width			: 200px;
+	height : 100%;
+	margin-top : 4px;
+}
+
+#Main #Left #Contact #ContactTitle {
+	font-weight		: bold;
+	font-size		: 11px;
+	color			: #FFF;
+	/*padding		: 1mm 0mm 0mm 0mm;*/
+	display			: block;
+	list-style		: none;
+	position		: relative;
+	/*width			: 102%;*/
+	width			: 204px;
+	left : -2px;
+	overflow : hidden;
+}
+
+#Main #Left #Contact #ContactTitle:after {
+	content:".";
+	display:block;
+	clear:both;
+	visibility:hidden;
+	height:0;
+	overflow:hidden;
+}
+
+#Main #Left #Contact #ContactTitle li {
+	background-color	: #216778;
+	cursor			: pointer;
+	float			: left;
+	height			: 14px;
+	/*
+	width			: 42%;
+	padding			: 2px 2px 2px 3mm;
+	*/
+	width			: 98px;
+	padding			: 3px 0px 2px 4px;
+	font-weight : bold;
+	overflow : hidden;
+}
+
+#Main #Left #Contact #ContactTitle span.bold {
+	font-weight : bold;
+}
+
+#Main #Left #Contact #ContactTitle li.contact_selec {
+	background-color	: #FFA200;
+}
+
+#Main #Left #Contact #UserLists {
+	width : 192px;
+}
+
+#Main #Left #Contact #ContactInside ,
+#Main #Left #Contact #ContactOnline {
+	/*
+	padding-top		: 1mm;
+	padding-left		: 2mm;
+	*/
+	padding-top		: 5px;
+	padding-left		: 8px;
+	background-color	: #FFF;
+	position		: relative;
+	width : 100%;
+	height : 100%;
+	overflow : hidden;
+}
+
+/* User list */
+/*
+#Main #Left #Contact #Contacts {
+	display			: block;
+	height			: 33mm;
+	padding-bottom		: 1mm;
+	margin-top		: 2mm;
+	overflow-y		: auto;
+	overflow-x		: hidden;
+	width			: 98%;
+}
+
+#Main #Left #Contact #Contacts table {
+	border-spacing		: 0px;
+	width			: 44mm;
+}
+*/
+
+#Main #Left #Contact label {
+	display			: block;
+	font-weight		: bold;
+	font-size		: 12px;
+	color			: #216778;
+	margin			: 4px 0px 2px 0px;
+	cursor			: pointer;
+}
+
+#Main #Left #Contact tr {
+	display			: block;
+	text-indent		: 20px;
+	width			: 160px;
+	margin			: 1px 0px;
+	font-size		: 11px;
+	color			: #000;
+	/*
+	text-indent		: 5mm;
+	width			: 42mm;
+	*/
+}
+
+#Main #Left #Contact td:hover {
+	background-color	: #DAF3F5;
+	cursor			: pointer;
+}
+
+#Main #Left #Contact td {
+	height			: 17px;
+	width			: 115px;
+	text-align		: left;
+	float		: left;
+	/*
+	width			: 76%;
+	*/
+}
+
+#Main #Left #Contact .rating {
+	width			: 8px;
+	text-align		: right;
+	/*
+	width			: 2mm;
+	*/
+}
+
+#Main #Left #Contact hr {
+	height			: 1px;
+	margin			: 2px 15px 0px 0px;
+	background-color	: #FFA200;
+	color	: #FFA200;
+	border			: 0px;
+	/*
+	margin			: 0.5mm 4mm 0mm 0mm;
+	*/
+}
+
+#Main #Left #Contact #ListDiv {
+	overflow-y		: auto;
+	overflow-x		: hidden;
+	height			: 120px;
+	/*
+	height			: 32mm;
+	*/
+}
+
+#Main #Left #Contact #ContactInside div .UserList .UserTable{
+	margin-top		: 0mm;
+}
+
+/**
+* USER STATUS
+*/
+
+/* normal user */
+
+/* available */
+#Main #Left .user_available {
+	background		: url('../images/user_available.png') no-repeat;
+}
+
+/* unavailable */
+#Main #Left .user_unavailable {
+	background		: url('../images/user_unavailable.png') no-repeat;
+}
+
+/* away */
+#Main #Left .user_away {
+	background		: url('../images/user_away.png') no-repeat;
+}
+
+/* busy */
+#Main #Left .user_busy {
+	background		: url('../images/user_busy.png') no-repeat;
+}
+
+/* playing */
+#Main #Left .user_playing {
+	background		: url('../images/user_playing.png') no-repeat;
+}
+
+/* offline */
+#Main #Left .user_offline {
+	background		: url('../images/user_offline.png') no-repeat;
+}
+
+/* admin */
+
+/* available */
+#Main #Left .admin_available {
+	background		: url('../images/admin_available.png') no-repeat;
+}
+
+/* unavailable */
+#Main #Left .admin_unavailable {
+	background		: url('../images/admin_unavailable.png') no-repeat;
+}
+
+/* away */
+#Main #Left .admin_away {
+	background		: url('../images/admin_away.png') no-repeat;
+}
+
+/* busy */
+#Main #Left .admin_busy {
+	background		: url('../images/admin_busy.png') no-repeat;
+}
+
+/* playing */
+#Main #Left .admin_playing {
+	background		: url('../images/admin_playing.png') no-repeat;
+}
+
+/* offline */
+#Main #Left .admin_offline {
+	background		: url('../images/admin_offline.png') no-repeat;
+}
+
+/* teacher */
+
+/* available */
+#Main #Left .teacher_available {
+	background		: url('../images/teacher_available.png') no-repeat;
+}
+
+/* unavailable */
+#Main #Left .teacher_unavailable {
+	background		: url('../images/teacher_unavailable.png') no-repeat;
+}
+
+/* away */
+#Main #Left .teacher_away {
+	background		: url('../images/teacher_away.png') no-repeat;
+}
+
+/* busy */
+#Main #Left .teacher_busy {
+	background		: url('../images/teacher_busy.png') no-repeat;
+}
+
+/* playing */
+#Main #Left .teacher_playing {
+	background		: url('../images/teacher_playing.png') no-repeat;
+}
+
+/* offline */
+#Main #Left .teacher_offline {
+	background		: url('../images/teacher_offline.png') no-repeat;
+}
+
+/* robot */
+
+/* available */
+#Main #Left .robot_available {
+	background		: url('../images/robot_available.png') no-repeat;
+}
+
+/* offline */
+#Main #Left .robot_offline {
+	background		: url('../images/robot_offline.png') no-repeat;
+}
+
+/* Search user */
+#Main #Left #Contact #contact_search_user {
+	border-bottom		: 1px solid #216778;
+	text-decoration		: none;
+	font-style		: italic;
+	font-size		: 10px;
+	color			: #216778;
+	cursor			: pointer;
+}
+
+#Main #Left #Contact #contact_search_user:hover {
+	color			: #FFA200;
+	border-bottom		: 1px solid #FFA200;
+}
+
+#Main #Left #Contact .contact_search_user_p {
+	text-align		: center;
+	padding-top		: 5px;
+	padding-right		: 14px;
+	padding-bottom		: 5px;
+	/*
+	padding-top		: 3%;
+	padding-right		: 7%;
+	padding-bottom		: 3%;
+	*/
+}
+
+/**
+* USER MENU
+*/
+#UserMenuDiv {
+	position		: absolute;
+	width			: 120px;
+	padding			: 4px;
+	background-color	: #FFF;
+	border			: 1px solid #216778;
+
+	z-Index			: 3;
+	/*
+	width			: 35mm;
+	padding			: 1mm;
+	*/
+}
+
+#UserMenuDiv p {
+	font-style		: italic;
+	font-size		: 10px;
+	color			: #216778;
+	cursor			: pointer;
+	margin-bottom		: 1px;
+}
+
+#UserMenuDiv p:hover {
+	background-color	: #DAF3F5;
+}
+
+#UserMenuDiv .option_disabled {
+	color			: #C0C0C0;
+}
+
+/**
+*	Invite window
+*/
+
+#InviteDiv {
+	padding-top		: 30px;
+}
+
+#InviteDiv #TextDiv span {
+	font-size 		: 11px;
+	font-weight		: normal;
+	color			: #216778;
+}
+
+#InviteDiv #TextDiv .username {
+	font-size 		: 13px;
+	font-weight		: bold;
+}
+
+#InviteDiv #ButtonsDiv {
+	padding-top 		: 30px;
+	padding-bottom 		: 5px;
+	text-align		: center;
+	position		: relative;
+}
+
+#InviteDiv #TextDiv {
+	text-align		: center;
+	position		: relative;
+}
+
+#SearchUserDiv {
+	padding-top		: 15px;
+}
+
+#SearchUserDiv span {
+	padding-top		: 20px;
+	margin-right		: 10px;
+	font-size 		: 13px;
+	font-weight		: bold;
+	color			: #216778;
+}
+
+#SearchUserDiv tr {
+	cursor			: pointer;
+	font-size 		: 12px;
+	color			: #216778;
+}
+
+#SearchUserDiv td {
+	width			: 160px;
+}
+
+#SearchUserDiv td:hover {
+	background-color	: #DAF3F5;
+	border			: 0px solid #216778;
+}
+
+#SearchUserDiv .header {
+	color			: #216778;
+}
+
+#SearchUserDiv .no_found {
+	padding-left		: 5px;
+	font-size 		: 10px;
+}
+
+#SearchUserDiv .radio {
+	border : 0px none;
+}
+
+#SearchUserDiv #TopDiv,
+#SearchUserDiv #FormDiv {
+	padding-left		: 20px;
+}
+
+#SearchUserDiv #OptionDiv {
+	padding-top	: 22px;
+	padding-left :  20px;
+}
+
+#SearchUserDiv .label {
+	margin-top		: 5px;
+	font-size		: 11px;
+	font-weight		: normal;
+}
+
+#SearchUserDiv #ListDiv {
+	text-align 		: left;
+	margin-left		: 20px;
+	width			: 90%;
+	display			: block;
+	overflow		: auto;
+	height			: 58px;
+}
+
+#SearchUserDiv input{
+	margin-top		: 5px;
+}
+
+#SearchUserDiv #ButtonsDiv .button {
+	margin-left		: 10px;
+}
+
+#SearchUserDiv #ButtonsDiv {
+	padding-top 		: 30px;
+	padding-right		: 10px;
+	text-align		: center;
+	position		: relative;
+}
+
+#contact_loading, #contact_online_loading
+{
+	width			: 125px;
+	height			: 35px;
+
+	padding			: 10px;
+
+	position		: absolute;
+	background-color	: #FFF;
+	border			: 1px solid #216778;
+
+	color			: #216778;
+	font-size		: 12px;
+
+	top			: 60px;
+	left			: 20px;
+}

@@ -1,0 +1,75 @@
+\section{/home/www/ulysses/webclient/scripts/connection/connection.js File Reference}
+\label{connection_8js}\index{/home/www/ulysses/webclient/scripts/connection/connection.js@{/home/www/ulysses/webclient/scripts/connection/connection.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf CONNECTION\_\-ConnectJabber} (XML)
+\item 
+function {\bf CONNECTION\_\-SendJabber} ()
+\item 
+function {\bf CONNECTION\_\-ReceiveConnection} ()
+\item 
+function {\bf CONNECTION\_\-ReceiveXml} ()
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{connection.js@{connection.js}!CONNECTION\_\-ConnectJabber@{CONNECTION\_\-ConnectJabber}}
+\index{CONNECTION\_\-ConnectJabber@{CONNECTION\_\-ConnectJabber}!connection.js@{connection.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONNECTION\_\-ConnectJabber ( {\em XML})}\label{connection_8js_9b036fe22f76456fd31719fe29034d7b}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Jabber Connection This file has all functions that is used to provide a connection with a Jabber Server Start connection to Jabber server
+
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), LOGIN\_\-Interface(), MainData, MESSAGE\_\-GetProfile(), MESSAGE\_\-Presence(), MESSAGE\_\-SendPasswd(), MESSAGE\_\-SendUsername(), MESSAGE\_\-StartConnection(), MESSAGE\_\-UserList(), and MESSAGE\_\-UserListInfo().
+
+Referenced by CONNECTION\_\-ReceiveConnection(), LOGIN\_\-Load4(), and LOGIN\_\-Login().\index{connection.js@{connection.js}!CONNECTION\_\-ReceiveConnection@{CONNECTION\_\-ReceiveConnection}}
+\index{CONNECTION\_\-ReceiveConnection@{CONNECTION\_\-ReceiveConnection}!connection.js@{connection.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONNECTION\_\-ReceiveConnection ()}\label{connection_8js_e88706b6f63308211b972745aa59ddb4}
+
+
+Receive Connection messages and make all steps to connect user
+
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+
+
+References CONNECTION\_\-ConnectJabber(), CONNECTION\_\-SendJabber(), LOGIN\_\-Load(), LOGIN\_\-LoginFailed(), MainData, MESSAGE\_\-Wait(), and PARSER\_\-ParseXml().
+
+Referenced by CONNECTION\_\-SendJabber().\index{connection.js@{connection.js}!CONNECTION\_\-ReceiveXml@{CONNECTION\_\-ReceiveXml}}
+\index{CONNECTION\_\-ReceiveXml@{CONNECTION\_\-ReceiveXml}!connection.js@{connection.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONNECTION\_\-ReceiveXml ()}\label{connection_8js_6ab2743e595a7e6e9c31b2ebc641c18a}
+
+
+Receive a Jabber message when user is already connected
+
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MainData, MESSAGE\_\-Wait(), PARSER\_\-ParseXml(), and UTILS\_\-GetText().
+
+Referenced by CONNECTION\_\-SendJabber().\index{connection.js@{connection.js}!CONNECTION\_\-SendJabber@{CONNECTION\_\-SendJabber}}
+\index{CONNECTION\_\-SendJabber@{CONNECTION\_\-SendJabber}!connection.js@{connection.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONNECTION\_\-SendJabber ()}\label{connection_8js_c49f7b7225ba663c90a59f9c2b7bff18}
+
+
+Send a XML post
+
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+
+
+References CONNECTION\_\-ReceiveConnection(), CONNECTION\_\-ReceiveXml(), MainData, and MESSAGE\_\-MakeXMPP().
+
+Referenced by ADMIN\_\-BanUser(), ADMIN\_\-KickUser(), ADMIN\_\-UnbanUser(), CHAT\_\-SendMessage(), CONNECTION\_\-ConnectJabber(), CONNECTION\_\-ReceiveConnection(), CONNECTION\_\-ReceiveXml(), CONTACT\_\-ChangeStatus(), CONTACT\_\-InviteUser(), CONTACT\_\-ReceiveSubscribe(), CONTACT\_\-RemoveUser(), GAME\_\-AcceptChallenge(), GAME\_\-DeclineChallenge(), GAME\_\-HandleAdjourn(), GAME\_\-HandleCancel(), GAME\_\-HandleDraw(), GAME\_\-SendAdjourn(), GAME\_\-SendCancel(), GAME\_\-SendChallenge(), GAME\_\-SendDraw(), GAME\_\-SendMove(), GAME\_\-SendResign(), GAME\_\-StartObserverGame(), INTERFACE\_\-AddOldGameResult(), INTERFACE\_\-SetNextButton(), INTERFACE\_\-SetPrevButton(), INTERFACE\_\-SetSearchButton(), INTERFACE\_\-ShowCreateRoomWindow(), INTERFACE\_\-ShowGameRoomList(), LOGIN\_\-Logout(), OLDGAME\_\-OpenOldGameWindow(), PROFILE\_\-SaveMyProfile(), PROFILE\_\-StartProfile(), ROOM\_\-EnterRoom(), ROOM\_\-EnterRoomGame(), ROOM\_\-ExitRoom(), ROOM\_\-SendMessage(), ROOM\_\-ShowGameRoomList(), and ROOM\_\-ShowRoomList().

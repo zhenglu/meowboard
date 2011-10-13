@@ -1,0 +1,53 @@
+* {
+	margin			: 0px;
+	padding			: 0px;
+	font-weight		: normal;
+}
+
+body {
+	background		: url('../images/fundo_interface.png') repeat-X;
+	/*font-family		: Trebuchet MS;*/
+	font-family		: sans-serif, Trebuchet MS, arial;
+}
+
+p, a, h1, h2, h3, h4, h5, h6, span, strong{
+	cursor			: default;
+}
+
+#Page {
+	position		: relative;
+	min-width		: 780px;
+	/*height			: 185mm;*/
+	height			: 700px;
+}
+
+#Main #Center {
+	/*
+	margin-left		: 55mm;
+	height			: 150mm;
+	*/
+
+	margin-left		: 15px;
+	height			: 550px;
+	overflow		: hidden;
+}
+
+/**
+* FULL NAME HINT
+*/
+#FullNameDiv {
+	position		: absolute;
+	padding			: 4px;
+	background-color	: #FFF;
+	border			: 1px solid #216778;
+	z-index : 2;
+}
+
+#FullNameDiv p {
+	font-style		: italic;
+	font-size		: 10px;
+	color			: #216778;
+	cursor			: pointer;
+	margin-bottom		: 1px;
+}
+

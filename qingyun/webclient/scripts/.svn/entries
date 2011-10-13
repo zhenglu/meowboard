@@ -1,0 +1,116 @@
+10
+
+dir
+17
+file:///D:/qingyun/svn/svn/webclient/scripts
+file:///D:/qingyun/svn/svn
+
+
+
+2011-04-30T13:44:46.159145Z
+15
+z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+98df983f-bf6f-40a3-83df-fae829aa3a6f
+
+load
+dir
+
+chat
+dir
+
+lang
+dir
+
+challenge
+dir
+
+register
+dir
+
+admin
+dir
+
+contact
+dir
+
+parser
+dir
+
+connection
+dir
+
+profile
+dir
+
+interface
+dir
+
+utils
+dir
+
+window
+dir
+
+login
+dir
+
+start.js
+file
+
+
+
+
+2011-05-22T05:47:29.515625Z
+2df477cccf55090302627d7418c509cb
+2011-03-07T06:38:20.748587Z
+6
+z
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3997
+
+game
+dir
+
+data
+dir
+
+xmpp_messages
+dir
+
+room
+dir
+

@@ -1,0 +1,350 @@
+\section{/home/www/ulysses/webclient/scripts/room/room.js File Reference}
+\label{room_2room_8js}\index{/home/www/ulysses/webclient/scripts/room/room.js@{/home/www/ulysses/webclient/scripts/room/room.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf ROOM\_\-HandleRoomPresence} (XML)
+\item 
+function {\bf ROOM\_\-HandleMessage} (XML)
+\item 
+function {\bf ROOM\_\-HandleRoomList} (XML)
+\item 
+function {\bf ROOM\_\-HandleGameRoomList} (XML)
+\item 
+function {\bf ROOM\_\-HandleGameRoomInfoList} (XML)
+\item 
+function {\bf ROOM\_\-HandleInfo} (XML)
+\item 
+function {\bf ROOM\_\-SendMessage} (RoomName, Message)
+\item 
+function {\bf ROOM\_\-ShowRoomList} (OffsetLeft)
+\item 
+function {\bf ROOM\_\-ShowGameRoomList} (OffsetLeft)
+\item 
+function {\bf ROOM\_\-EnterRoom} (RoomName)
+\item 
+function {\bf ROOM\_\-ExitRoom} (RoomName)
+\item 
+function {\bf ROOM\_\-EnterRoomGame} (RoomName)
+\item 
+function {\bf ROOM\_\-ShowMessage} (RoomName, From, Message, Stamp)
+\item 
+function {\bf ROOM\_\-AddUser} (RoomName, Jid, Status, Role, Affiliation)
+\item 
+function {\bf ROOM\_\-RemoveUser} (RoomName, UserName)
+\item 
+function {\bf ROOM\_\-CreateRoom} (RoomName)
+\item 
+function {\bf ROOM\_\-FocusRoom} (RoomName)
+\item 
+function {\bf ROOM\_\-RemoveRoom} (RoomName)
+\item 
+function {\bf ROOM\_\-SortUsersByNick} ()
+\item 
+function {\bf ROOM\_\-SortUsersByRating} (Category)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{room/room.js@{room/room.js}!ROOM\_\-AddUser@{ROOM\_\-AddUser}}
+\index{ROOM\_\-AddUser@{ROOM\_\-AddUser}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-AddUser ( {\em RoomName}, \/   {\em Jid}, \/   {\em Status}, \/   {\em Role}, \/   {\em Affiliation})}\label{room_2room_8js_d458a1c31c7bc15a3e6d33fb2ec66bcb}
+
+
+Insert user in room list 
+
+References MainData, and MESSAGE\_\-Info().
+
+Referenced by ROOM\_\-HandleRoomPresence().\index{room/room.js@{room/room.js}!ROOM\_\-CreateRoom@{ROOM\_\-CreateRoom}}
+\index{ROOM\_\-CreateRoom@{ROOM\_\-CreateRoom}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-CreateRoom ( {\em RoomName})}\label{room_2room_8js_f6fef7f6fb3a2e158577ab49889bb426}
+
+
+
+
+References INTERFACE\_\-CreateRoomInBar(), MainData, ROOM\_\-FocusRoom(), and RoomObj().
+
+Referenced by ROOM\_\-HandleRoomPresence().\index{room/room.js@{room/room.js}!ROOM\_\-EnterRoom@{ROOM\_\-EnterRoom}}
+\index{ROOM\_\-EnterRoom@{ROOM\_\-EnterRoom}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-EnterRoom ( {\em RoomName})}\label{room_2room_8js_bf1ecfaa126d14e1beffee4131c0f3b8}
+
+
+Send presence to a room (enter room)
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Room}]name is the name of room \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]string \char`\"{}\char`\"{} \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MainData, MESSAGE\_\-Presence(), and UTILS\_\-GetText().
+
+Referenced by INTERFACE\_\-ShowRoomList().\index{room/room.js@{room/room.js}!ROOM\_\-EnterRoomGame@{ROOM\_\-EnterRoomGame}}
+\index{ROOM\_\-EnterRoomGame@{ROOM\_\-EnterRoomGame}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-EnterRoomGame ( {\em RoomName})}\label{room_2room_8js_3f6ec5d9a44f7bc914bf2b25eb786707}
+
+
+Send presence to a room game(enter room game) 
+
+References CONNECTION\_\-SendJabber(), MainData, and MESSAGE\_\-Presence().
+
+Referenced by GAME\_\-StartObserverGame().\index{room/room.js@{room/room.js}!ROOM\_\-ExitRoom@{ROOM\_\-ExitRoom}}
+\index{ROOM\_\-ExitRoom@{ROOM\_\-ExitRoom}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-ExitRoom ( {\em RoomName})}\label{room_2room_8js_d64107f06cd835aba1e8cfe7eb256b21}
+
+
+Exit a room. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em ReturnMsg}]is a flag to return XML or send Jabber(if ReturnMsg is null) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]XMPP with presence unavailable to a room \end{Desc}
+\begin{Desc}
+\item[Author:]Pedro and Rubens \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MainData, MESSAGE\_\-Unavailable(), UTILS\_\-GetText(), and WINDOW\_\-Alert().
+
+Referenced by GAME\_\-RemoveGame(), INTERFACE\_\-CreateRoomInBar(), and OLDGAME\_\-RemoveOldGame().\index{room/room.js@{room/room.js}!ROOM\_\-FocusRoom@{ROOM\_\-FocusRoom}}
+\index{ROOM\_\-FocusRoom@{ROOM\_\-FocusRoom}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-FocusRoom ( {\em RoomName})}\label{room_2room_8js_6710c024c97239b27d3f4062572293df}
+
+
+
+
+References INTERFACE\_\-FocusRoom(), and MainData.
+
+Referenced by INTERFACE\_\-ChangeRoomListVisibility(), INTERFACE\_\-CreateRoomInBar(), INTERFACE\_\-FocusRoom(), ROOM\_\-CreateRoom(), and ROOM\_\-RemoveRoom().\index{room/room.js@{room/room.js}!ROOM\_\-HandleGameRoomInfoList@{ROOM\_\-HandleGameRoomInfoList}}
+\index{ROOM\_\-HandleGameRoomInfoList@{ROOM\_\-HandleGameRoomInfoList}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-HandleGameRoomInfoList ( {\em XML})}\label{room_2room_8js_e88940f31ea79698692d9fcbf49e04bf}
+
+
+Handle game room information. Get game room information and show in interface
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml that the server send's \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References INTERFACE\_\-ShowGameRoomList().
+
+Referenced by PARSER\_\-ParseIq().\index{room/room.js@{room/room.js}!ROOM\_\-HandleGameRoomList@{ROOM\_\-HandleGameRoomList}}
+\index{ROOM\_\-HandleGameRoomList@{ROOM\_\-HandleGameRoomList}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-HandleGameRoomList ( {\em XML})}\label{room_2room_8js_f43a3c28cfd25e8118cc5f8f469b27c3}
+
+
+Handle game room list, and resend a request for game information for each game.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml that the server send's \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+References MESSAGE\_\-GameRoomInfoList().
+
+Referenced by ROOM\_\-HandleRoomList().\index{room/room.js@{room/room.js}!ROOM\_\-HandleInfo@{ROOM\_\-HandleInfo}}
+\index{ROOM\_\-HandleInfo@{ROOM\_\-HandleInfo}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-HandleInfo ( {\em XML})}\label{room_2room_8js_b808dbbcc855d292d50a67bbdbeb5f8d}
+
+
+Handle chess user information. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]XMPP that contains users ratings and type. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Suguimoto \end{Desc}
+
+
+References MainData.
+
+Referenced by PARSER\_\-ParseIq().\index{room/room.js@{room/room.js}!ROOM\_\-HandleMessage@{ROOM\_\-HandleMessage}}
+\index{ROOM\_\-HandleMessage@{ROOM\_\-HandleMessage}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-HandleMessage ( {\em XML})}\label{room_2room_8js_b8e44c24ddafeaba9d1828af2e1ac279}
+
+
+Handle group chat messages
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml come from server with tag message \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+References ROOM\_\-ShowMessage(), and UTILS\_\-GetNodeText().
+
+Referenced by PARSER\_\-ParseChat().\index{room/room.js@{room/room.js}!ROOM\_\-HandleRoomList@{ROOM\_\-HandleRoomList}}
+\index{ROOM\_\-HandleRoomList@{ROOM\_\-HandleRoomList}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-HandleRoomList ( {\em XML})}\label{room_2room_8js_e60c68aa283c093e99208aa162fbadf4}
+
+
+Handle room list in top menu.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml that the server send's \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+References INTERFACE\_\-ShowRoomList(), MainData, ROOM\_\-HandleGameRoomList(), and UTILS\_\-GetText().
+
+Referenced by PARSER\_\-ParseIq().\index{room/room.js@{room/room.js}!ROOM\_\-HandleRoomPresence@{ROOM\_\-HandleRoomPresence}}
+\index{ROOM\_\-HandleRoomPresence@{ROOM\_\-HandleRoomPresence}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-HandleRoomPresence ( {\em XML})}\label{room_2room_8js_52799481e66372e148ff1ee3bac60618}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Room controller Handle all presence from a room;
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml come from server with tag presence \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+References INTERFACE\_\-RefreshOccupantsNumber(), MainData, ROOM\_\-AddUser(), ROOM\_\-CreateRoom(), ROOM\_\-RemoveRoom(), ROOM\_\-RemoveUser(), and UTILS\_\-GetNodeText().
+
+Referenced by PARSER\_\-ParsePresence().\index{room/room.js@{room/room.js}!ROOM\_\-RemoveRoom@{ROOM\_\-RemoveRoom}}
+\index{ROOM\_\-RemoveRoom@{ROOM\_\-RemoveRoom}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-RemoveRoom ( {\em RoomName})}\label{room_2room_8js_c30944b06d7d613f1f1d9a06f9004271}
+
+
+
+
+References INTERFACE\_\-CloseRoom(), INTERFACE\_\-CreateRoomInBar(), INTERFACE\_\-RefreshOccupantsNumber(), INTERFACE\_\-RemoveRoomFromList(), MainData, and ROOM\_\-FocusRoom().
+
+Referenced by ROOM\_\-HandleRoomPresence().\index{room/room.js@{room/room.js}!ROOM\_\-RemoveUser@{ROOM\_\-RemoveUser}}
+\index{ROOM\_\-RemoveUser@{ROOM\_\-RemoveUser}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-RemoveUser ( {\em RoomName}, \/   {\em UserName})}\label{room_2room_8js_3fe1367cac303f84c7205a72319fd60f}
+
+
+
+
+References MainData.
+
+Referenced by ROOM\_\-HandleRoomPresence().\index{room/room.js@{room/room.js}!ROOM\_\-SendMessage@{ROOM\_\-SendMessage}}
+\index{ROOM\_\-SendMessage@{ROOM\_\-SendMessage}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-SendMessage ( {\em RoomName}, \/   {\em Message})}\label{room_2room_8js_826f57caabe7d468297581a021fa17ef}
+
+
+Send a message to room;
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em RoomName}]is the room name string \item[{\em Message}]is the message that will be send \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MainData, MESSAGE\_\-GroupChat(), and UTILS\_\-ConvertChatString().
+
+Referenced by INTERFACE\_\-CreateRoom().\index{room/room.js@{room/room.js}!ROOM\_\-ShowGameRoomList@{ROOM\_\-ShowGameRoomList}}
+\index{ROOM\_\-ShowGameRoomList@{ROOM\_\-ShowGameRoomList}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-ShowGameRoomList ( {\em OffsetLeft})}\label{room_2room_8js_91d21a152f5e1de5e0414816d46e9a44}
+
+
+Get Game Room list from server and show in pop down top menu
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em offsetleft}]is the position where room menu will be show \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]ulysses \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), INTERFACE\_\-ShowGameRoomMenu(), and MESSAGE\_\-GameRoomList().
+
+Referenced by INTERFACE\_\-CreateTop().\index{room/room.js@{room/room.js}!ROOM\_\-ShowMessage@{ROOM\_\-ShowMessage}}
+\index{ROOM\_\-ShowMessage@{ROOM\_\-ShowMessage}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-ShowMessage ( {\em RoomName}, \/   {\em From}, \/   {\em Message}, \/   {\em Stamp})}\label{room_2room_8js_2f5da06839d0aeb9fc8f30ceb1009dfb}
+
+
+
+
+References MainData.
+
+Referenced by ROOM\_\-HandleMessage().\index{room/room.js@{room/room.js}!ROOM\_\-ShowRoomList@{ROOM\_\-ShowRoomList}}
+\index{ROOM\_\-ShowRoomList@{ROOM\_\-ShowRoomList}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-ShowRoomList ( {\em OffsetLeft})}\label{room_2room_8js_99678e0a267a2fa6853fe401b4b8be73}
+
+
+Get Room list from server and show in pop down in top menu
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em OffsetLeft}]is the position where room menu will be show \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), INTERFACE\_\-ShowRoomMenu(), and MESSAGE\_\-RoomList().
+
+Referenced by INTERFACE\_\-CreateTop().\index{room/room.js@{room/room.js}!ROOM\_\-SortUsersByNick@{ROOM\_\-SortUsersByNick}}
+\index{ROOM\_\-SortUsersByNick@{ROOM\_\-SortUsersByNick}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-SortUsersByNick ()}\label{room_2room_8js_bf8006e7555a26d703c26d5251381d96}
+
+
+
+
+References MainData.
+
+Referenced by RoomObj().\index{room/room.js@{room/room.js}!ROOM\_\-SortUsersByRating@{ROOM\_\-SortUsersByRating}}
+\index{ROOM\_\-SortUsersByRating@{ROOM\_\-SortUsersByRating}!room/room.js@{room/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ROOM\_\-SortUsersByRating ( {\em Category})}\label{room_2room_8js_99971ae4c58178caa43079c9214db58d}
+
+
+
+
+References MainData.
+
+Referenced by RoomObj().

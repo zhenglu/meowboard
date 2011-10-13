@@ -1,0 +1,110 @@
+;
+; xboard 4.5 Save Settings file
+;
+; This file contains the system-wide settings of XBoard, in so far they
+; deviate from the compiled-in defaults, and are not settable through menus,
+; to comfort users that have no history of xboard usage.
+; You can edit the values of options that are already set in this file,
+; or add other options that you think are convenient as defaults for all users.
+; This file is not automatically overwritten, because it redefines the
+; -saveSettingsFile to .xboardrc in the user's home directory, so that
+; user settings will be saved in a place the user has write access to.
+;
+; Looks
+;
+-internetChessServerInputBox false
+-titleInWindow false
+-showButtonBar true
+-moveHistoryUp false
+-evalGraphUp false
+-engineOutputUp false
+-monoMode false
+-flashCount 0
+-flashRate 5
+-fontSizeTolerance 4
+-pixmapDirectory ""
+-bitmapDirectory ""
+-liteBackTextureFile  "@pixmapsdir@/wood_l.xpm"
+-darkBackTextureFile  "@pixmapsdir@/wood_d.xpm"
+-overrideLineGap 1
+-highlightMoveWithArrow true
+;
+; Behavior
+;
+-soundProgram "aplay -q"
+-soundDirectory "@soundsdir@"
+-soundTell phone.wav
+-soundChallenge gong.wav
+-soundMove woodthunk.wav
+-soundIcsAlarm penalty.wav
+-pasteSelection false
+-keepLineBreaksICS false
+-timeDelay 1
+-autoDisplayComment true
+-autoDisplayTags true
+-lowTimeWarning false
+-icsAlarm false
+-icsAlarmTime 5000
+-msLoginDelay 0
+-delayBeforeQuit 0
+-delayAfterQuit 0
+;
+; PGN format & Game List
+;
+-pgnExtendedInfo true
+-saveOutOfBookInfo true
+-gameListTags "eprd"
+;
+; Engines & adjudicatons in engine-engine games
+;
+-firstChessProgram fairymax
+-secondChessProgram fairymax
+-niceEngines 0
+-polyglotDir ""
+-adapterCommand 'polyglot -noini -ec "%fcp" -ed "%fd" -uci NalimovCache=%defaultCacheSizeEGTB'
+-defaultPathEGTB "/egtb"
+-egtFormats ""
+-testClaims true
+-checkMates true
+-materialDraws true
+-trivialDraws false
+;
+; Configure the ICS text menu
+;
+-icsMenu {Give me;ptell Please give me $input;
+Avoid;ptell Please don't let him get $input;
+Q;$add a Queen $input;
+R;$add a Rook $input;
+B;$add a Bishop $input;
+N;$add a Knight $input;
+P;$add a Pawn $input;
+Dead;ptell I will be checkmated;
+MultiLine;
+set open 0
+set seek 0
+set tell 1;
+Kill;ptell I will checkmate him!;
+Who;who;
+Finger (name);finger $name;
+Players;players;
+Vars (name);vars $name;
+Games;games;
+Observe (name);observe $name;
+Sought;sought;
+Match (name);match $name;
+Tell (name);tell $name $input;
+Play (name);play $name;
+Message (name);message $name $input;
+}
+;
+; Save user settings.
+; Must be last in file to make user options prevail over system-wide settings!
+;
+-saveSettingsOnExit true
+-saveSettingsFile "~/.xboardrc"
+-settingsFile "~/.xboardrc"
+;
+; Turn -inc into a volatile option, to prevent a persistent increment >= 0 dominating a command-line -mps
+;
+-inc -1
+

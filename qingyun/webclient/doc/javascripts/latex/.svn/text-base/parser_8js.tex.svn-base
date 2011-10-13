@@ -1,0 +1,24 @@
+\section{/home/www/ulysses/webclient/scripts/parser/parser.js File Reference}
+\label{parser_8js}\index{/home/www/ulysses/webclient/scripts/parser/parser.js@{/home/www/ulysses/webclient/scripts/parser/parser.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf PARSER\_\-ParseXml} (XML)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{parser.js@{parser.js}!PARSER\_\-ParseXml@{PARSER\_\-ParseXml}}
+\index{PARSER\_\-ParseXml@{PARSER\_\-ParseXml}!parser.js@{parser.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function PARSER\_\-ParseXml ( {\em XML})}\label{parser_8js_c7931012d8fb83037a53d1c1b50d541e}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. Parse XMPP received from jabber Receive and forward XML to controllers 
+
+References LOGIN\_\-Disconnected(), MainData, PARSER\_\-ParseChat(), PARSER\_\-ParseIq(), PARSER\_\-ParsePresence(), and UTILS\_\-GetText().
+
+Referenced by CONNECTION\_\-ReceiveConnection(), and CONNECTION\_\-ReceiveXml().

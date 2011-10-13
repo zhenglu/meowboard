@@ -1,0 +1,253 @@
+\section{/home/www/ulysses/webclient/scripts/contact/contact.js File Reference}
+\label{contact_2contact_8js}\index{/home/www/ulysses/webclient/scripts/contact/contact.js@{/home/www/ulysses/webclient/scripts/contact/contact.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf CONTACT\_\-StartContact} ()
+\begin{CompactList}\small\item\em Show contact and contact online Div. \item\end{CompactList}\item 
+function {\bf CONTACT\_\-HandleOnlinePresence} (XML)
+\begin{CompactList}\small\item\em Handle presence to online list. \item\end{CompactList}\item 
+function {\bf CONTACT\_\-AddUserOnlineList} (User, Status)
+\begin{CompactList}\small\item\em Add user in the online list. \item\end{CompactList}\item 
+function {\bf CONTACT\_\-OnlineSortUserByNick} ()
+\begin{CompactList}\small\item\em Sort online list by nick name. \item\end{CompactList}\item 
+function {\bf CONTACT\_\-OnlineSortUserByRating} (Category)
+\begin{CompactList}\small\item\em Sort online list by rating category. \item\end{CompactList}\item 
+function {\bf CONTACT\_\-HandleUserList} (XML)
+\begin{CompactList}\small\item\em Handle user contact list. \item\end{CompactList}\item 
+function {\bf CONTACT\_\-HandleUserPresence} (XML)
+\begin{CompactList}\small\item\em Handle a user presence. \item\end{CompactList}\item 
+function {\bf CONTACT\_\-InsertUser} (User, Status, Subs, Group)
+\begin{CompactList}\small\item\em Add user in contact list. \item\end{CompactList}\item 
+function {\bf CONTACT\_\-ShowUserMenu} (Obj, Username)
+\begin{CompactList}\small\item\em Show user menu options. \item\end{CompactList}\item 
+function {\bf CONTACT\_\-LoadUserContactList} ()
+\begin{CompactList}\small\item\em Load contact list in interface. \item\end{CompactList}\item 
+function {\bf CONTACT\_\-SortUsersByNick} ()
+\begin{CompactList}\small\item\em Sort user contact list by nick name. \item\end{CompactList}\item 
+function {\bf CONTACT\_\-SortUsersByRating} (Category)
+\begin{CompactList}\small\item\em Sort user contact list by rating category. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{contact/contact.js@{contact/contact.js}!CONTACT\_\-AddUserOnlineList@{CONTACT\_\-AddUserOnlineList}}
+\index{CONTACT\_\-AddUserOnlineList@{CONTACT\_\-AddUserOnlineList}!contact/contact.js@{contact/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-AddUserOnlineList ( {\em User}, \/   {\em Status})}\label{contact_2contact_8js_923066d8fe9825e4746a6e1bf009638b}
+
+
+Add user in the online list. 
+
+Add a user with status in online list.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em User}]Username \item[{\em Status}]User's status\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Suguimoto \end{Desc}
+
+
+References MainData.\index{contact/contact.js@{contact/contact.js}!CONTACT\_\-HandleOnlinePresence@{CONTACT\_\-HandleOnlinePresence}}
+\index{CONTACT\_\-HandleOnlinePresence@{CONTACT\_\-HandleOnlinePresence}!contact/contact.js@{contact/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-HandleOnlinePresence ( {\em XML})}\label{contact_2contact_8js_ef24a5571c8d51edee883a40a13a3160}
+
+
+Handle presence to online list. 
+
+Handle all presence from online list (General room);
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml come from server with tag presence\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses Bonfim \end{Desc}
+
+
+References MainData.
+
+Referenced by PARSER\_\-ParsePresence().\index{contact/contact.js@{contact/contact.js}!CONTACT\_\-HandleUserList@{CONTACT\_\-HandleUserList}}
+\index{CONTACT\_\-HandleUserList@{CONTACT\_\-HandleUserList}!contact/contact.js@{contact/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-HandleUserList ( {\em XML})}\label{contact_2contact_8js_0fc9dd46f6e48c722cc884197efe6bd9}
+
+
+Handle user contact list. 
+
+Handle user list received from jabber with yours contacts.
+
+\begin{Desc}
+\item[Returns:]string\end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses Bonfim \end{Desc}
+
+
+References CONTACT\_\-InsertUser(), MainData, MESSAGE\_\-InviteAccept(), and UTILS\_\-GetNodeText().
+
+Referenced by PARSER\_\-ParseIq().\index{contact/contact.js@{contact/contact.js}!CONTACT\_\-HandleUserPresence@{CONTACT\_\-HandleUserPresence}}
+\index{CONTACT\_\-HandleUserPresence@{CONTACT\_\-HandleUserPresence}!contact/contact.js@{contact/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-HandleUserPresence ( {\em XML})}\label{contact_2contact_8js_53500c8e9abf607022b79c6b131e2f39}
+
+
+Handle a user presence. 
+
+Handle user presence for accept or decline invite to contact list and user status.
+
+\begin{Desc}
+\item[Returns:]string\end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses Bonfim \end{Desc}
+
+
+References CONTACT\_\-ReceiveSubscribe(), CONTACT\_\-ReceiveSubscribed(), CONTACT\_\-ReceiveUnsubscribed(), CONTACT\_\-SetUserStatus(), and UTILS\_\-GetNodeText().
+
+Referenced by PARSER\_\-ParsePresence().\index{contact/contact.js@{contact/contact.js}!CONTACT\_\-InsertUser@{CONTACT\_\-InsertUser}}
+\index{CONTACT\_\-InsertUser@{CONTACT\_\-InsertUser}!contact/contact.js@{contact/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-InsertUser ( {\em User}, \/   {\em Status}, \/   {\em Subs}, \/   {\em Group})}\label{contact_2contact_8js_307d923a511f95f254126e584827242d}
+
+
+Add user in contact list. 
+
+Add user in MainData contact list, sort and show this user in interface.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em User}]User's name \item[{\em Status}]User's status \item[{\em Subs}]User's subscribe status \item[{\em Group}]User's group in contact list \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Pedro Rocha \end{Desc}
+
+
+References MainData.
+
+Referenced by CONTACT\_\-HandleUserList(), CONTACT\_\-ReceiveSubscribe(), and CONTACT\_\-ReceiveSubscribed().\index{contact/contact.js@{contact/contact.js}!CONTACT\_\-LoadUserContactList@{CONTACT\_\-LoadUserContactList}}
+\index{CONTACT\_\-LoadUserContactList@{CONTACT\_\-LoadUserContactList}!contact/contact.js@{contact/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-LoadUserContactList ()}\label{contact_2contact_8js_09fbaeeba27deedb01dc1180a27e46da}
+
+
+Load contact list in interface. 
+
+Load user contact list in interface.
+
+\begin{Desc}
+\item[Author:]Rubens Suguimoto \end{Desc}
+
+
+References MainData.
+
+Referenced by LOGIN\_\-Interface().\index{contact/contact.js@{contact/contact.js}!CONTACT\_\-OnlineSortUserByNick@{CONTACT\_\-OnlineSortUserByNick}}
+\index{CONTACT\_\-OnlineSortUserByNick@{CONTACT\_\-OnlineSortUserByNick}!contact/contact.js@{contact/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-OnlineSortUserByNick ()}\label{contact_2contact_8js_af3bb8e020d07f69253b31798574c815}
+
+
+Sort online list by nick name. 
+
+Sort on line user list by nick name. Sort in MainData and for each user in MainData online user, remove and insert it.
+
+\begin{Desc}
+\item[Author:]Rubens Suguimoto \end{Desc}
+
+
+References MainData.
+
+Referenced by ContactOnlineObj().\index{contact/contact.js@{contact/contact.js}!CONTACT\_\-OnlineSortUserByRating@{CONTACT\_\-OnlineSortUserByRating}}
+\index{CONTACT\_\-OnlineSortUserByRating@{CONTACT\_\-OnlineSortUserByRating}!contact/contact.js@{contact/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-OnlineSortUserByRating ( {\em Category})}\label{contact_2contact_8js_08656f305260fc7b007b5e5f4bbb79b0}
+
+
+Sort online list by rating category. 
+
+Sort on line user list by rating. Sort in MainData and for each user in MainData online user, remove and insert it.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Category}]Chess game category\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Suguimoto \end{Desc}
+
+
+References MainData.
+
+Referenced by ContactOnlineObj().\index{contact/contact.js@{contact/contact.js}!CONTACT\_\-ShowUserMenu@{CONTACT\_\-ShowUserMenu}}
+\index{CONTACT\_\-ShowUserMenu@{CONTACT\_\-ShowUserMenu}!contact/contact.js@{contact/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-ShowUserMenu ( {\em Obj}, \/   {\em Username})}\label{contact_2contact_8js_8c339eb1f5ab5660dde74ee3c92061d3}
+
+
+Show user menu options. 
+
+Show user menu to send private message, match, view profile, etc.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Obj}]Object with menu options and functions \item[{\em Username}]User's name\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Pedro Rocha \end{Desc}
+
+
+Setting options 
+
+References CHAT\_\-OpenChat(), CONTACT\_\-InviteUser(), CONTACT\_\-RemoveUser(), INTERFACE\_\-HideUserMenu(), INTERFACE\_\-ShowUserMenu(), MainData, PROFILE\_\-StartProfile(), UTILS\_\-AddListener(), UTILS\_\-GetText(), UTILS\_\-RemoveListener(), WINDOW\_\-BanUser(), WINDOW\_\-Challenge(), WINDOW\_\-Confirm(), and WINDOW\_\-KickUser().
+
+Referenced by INTERFACE\_\-CreateUser(), and INTERFACE\_\-CreateUserElement().\index{contact/contact.js@{contact/contact.js}!CONTACT\_\-SortUsersByNick@{CONTACT\_\-SortUsersByNick}}
+\index{CONTACT\_\-SortUsersByNick@{CONTACT\_\-SortUsersByNick}!contact/contact.js@{contact/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-SortUsersByNick ()}\label{contact_2contact_8js_34963449ceb0259a67715775cbfb7a29}
+
+
+Sort user contact list by nick name. 
+
+Sort user online list by nick name. Sort in MainData and for each user in MainData online user, remove and insert it.
+
+\begin{Desc}
+\item[Author:]Rubens Suguimoto and Danilo Yorinori \end{Desc}
+
+
+References MainData.
+
+Referenced by ContactObj().\index{contact/contact.js@{contact/contact.js}!CONTACT\_\-SortUsersByRating@{CONTACT\_\-SortUsersByRating}}
+\index{CONTACT\_\-SortUsersByRating@{CONTACT\_\-SortUsersByRating}!contact/contact.js@{contact/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-SortUsersByRating ( {\em Category})}\label{contact_2contact_8js_f855d90db2e8ebda598e0afedcf80966}
+
+
+Sort user contact list by rating category. 
+
+Sort user contact list by rating. Sort in MainData and for each user in MainData online user, remove and insert it.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Category}]Chess game category\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Rubens Suguimoto and Danilo Yorinori \end{Desc}
+
+
+References MainData.
+
+Referenced by ContactObj().\index{contact/contact.js@{contact/contact.js}!CONTACT\_\-StartContact@{CONTACT\_\-StartContact}}
+\index{CONTACT\_\-StartContact@{CONTACT\_\-StartContact}!contact/contact.js@{contact/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-StartContact ()}\label{contact_2contact_8js_d0ea952bb7a333603cc57116886eba83}
+
+
+Show contact and contact online Div. 
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Handle contacts and user status Create contact list object and contact online list object. Hide contact list and show online list.
+
+\begin{Desc}
+\item[Author:]Rubens Suguimoto \end{Desc}
+
+
+References ContactObj(), ContactOnlineObj(), and MainData.
+
+Referenced by LOGIN\_\-Interface().

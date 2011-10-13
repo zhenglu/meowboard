@@ -1,0 +1,71 @@
+\section{/home/www/ulysses/webclient/scripts/interface/top.js File Reference}
+\label{top_8js}\index{/home/www/ulysses/webclient/scripts/interface/top.js@{/home/www/ulysses/webclient/scripts/interface/top.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf INTERFACE\_\-CreateTop} ()
+\item 
+function {\bf INTERFACE\_\-ShowRoomMenu} (OffsetLeft)
+\item 
+function {\bf INTERFACE\_\-ShowGameRoomMenu} (OffsetLeft)
+\item 
+function {\bf INTERFACE\_\-ShowChallengeMenu} (OffsetLeft)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{top.js@{top.js}!INTERFACE\_\-CreateTop@{INTERFACE\_\-CreateTop}}
+\index{INTERFACE\_\-CreateTop@{INTERFACE\_\-CreateTop}!top.js@{top.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateTop ()}\label{top_8js_7034ccdf621d6b7a724a8bf3111d0766}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Create element of top of the screen 
+
+References INTERFACE\_\-ShowChallengeMenu(), LOGIN\_\-Logout(), MainData, OLDGAME\_\-OpenOldGameWindow(), ROOM\_\-ShowGameRoomList(), ROOM\_\-ShowRoomList(), UTILS\_\-AddListener(), UTILS\_\-CreateElement(), UTILS\_\-GetOffset(), UTILS\_\-GetText(), WINDOW\_\-Alert(), WINDOW\_\-SearchUser(), and WINDOW\_\-UnbanUser().
+
+Referenced by INTERFACE\_\-CreateInterface().\index{top.js@{top.js}!INTERFACE\_\-ShowChallengeMenu@{INTERFACE\_\-ShowChallengeMenu}}
+\index{INTERFACE\_\-ShowChallengeMenu@{INTERFACE\_\-ShowChallengeMenu}!top.js@{top.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowChallengeMenu ( {\em OffsetLeft})}\label{top_8js_4a2634613f8d378615b0967050e30297}
+
+
+Show challange menu
+
+\begin{Desc}
+\item[Returns:]bool \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+References INTERFACE\_\-HideChallengeList(), MainData, UTILS\_\-AddListener(), UTILS\_\-CreateElement(), and UTILS\_\-RemoveListener().
+
+Referenced by INTERFACE\_\-CreateTop().\index{top.js@{top.js}!INTERFACE\_\-ShowGameRoomMenu@{INTERFACE\_\-ShowGameRoomMenu}}
+\index{INTERFACE\_\-ShowGameRoomMenu@{INTERFACE\_\-ShowGameRoomMenu}!top.js@{top.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowGameRoomMenu ( {\em OffsetLeft})}\label{top_8js_6df828b2936677969fe5c468bb601934}
+
+
+Show rooms menu \begin{Desc}
+\item[See also:]room/room.js: \doxyref{ROOM\_\-HandleGameRoomInfoList}{p.}{room_2room_8js_e88940f31ea79698692d9fcbf49e04bf} to load list itens \end{Desc}
+\begin{Desc}
+\item[Returns:]bool \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+References INTERFACE\_\-HideGameRoomList(), UTILS\_\-AddListener(), UTILS\_\-CreateElement(), and UTILS\_\-RemoveListener().
+
+Referenced by ROOM\_\-ShowGameRoomList().\index{top.js@{top.js}!INTERFACE\_\-ShowRoomMenu@{INTERFACE\_\-ShowRoomMenu}}
+\index{INTERFACE\_\-ShowRoomMenu@{INTERFACE\_\-ShowRoomMenu}!top.js@{top.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowRoomMenu ( {\em OffsetLeft})}\label{top_8js_194afa7a5c60a7fad4c5433c61cb6c06}
+
+
+Show rooms menu 
+
+References INTERFACE\_\-HideRoomList(), UTILS\_\-AddListener(), UTILS\_\-CreateElement(), UTILS\_\-GetText(), UTILS\_\-RemoveListener(), and WINDOW\_\-CreateRoom().
+
+Referenced by ROOM\_\-ShowRoomList().

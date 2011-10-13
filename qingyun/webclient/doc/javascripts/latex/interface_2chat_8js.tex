@@ -1,0 +1,113 @@
+\section{/home/www/ulysses/webclient/scripts/interface/chat.js File Reference}
+\label{interface_2chat_8js}\index{/home/www/ulysses/webclient/scripts/interface/chat.js@{/home/www/ulysses/webclient/scripts/interface/chat.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf INTERFACE\_\-ShowChatMessage} (Username, Message, YourMessage)
+\item 
+function {\bf INTERFACE\_\-OpenChat} (Username, Status)
+\item 
+function {\bf INTERFACE\_\-ShowChat} (Item, Hide)
+\item 
+function {\bf INTERFACE\_\-HideChat} (Item, Hide)
+\item 
+function {\bf INTERFACE\_\-CloseChat} (Username)
+\item 
+function {\bf INTERFACE\_\-FocusChat} (Username)
+\item 
+function {\bf INTERFACE\_\-UnfocusChat} (Username)
+\item 
+function {\bf INTERFACE\_\-ChatListPositioning} ()
+\item 
+function {\bf INTERFACE\_\-CreateChat} (Username, Status)
+\item 
+function {\bf INTERFACE\_\-CreateChatList} ()
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{interface/chat.js@{interface/chat.js}!INTERFACE\_\-ChatListPositioning@{INTERFACE\_\-ChatListPositioning}}
+\index{INTERFACE\_\-ChatListPositioning@{INTERFACE\_\-ChatListPositioning}!interface/chat.js@{interface/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ChatListPositioning ()}\label{interface_2chat_8js_8600a0a0ad2bb77b2d940b7c28df89b1}
+
+
+Positioning chat list 
+
+Referenced by INTERFACE\_\-CreateChatList().\index{interface/chat.js@{interface/chat.js}!INTERFACE\_\-CloseChat@{INTERFACE\_\-CloseChat}}
+\index{INTERFACE\_\-CloseChat@{INTERFACE\_\-CloseChat}!interface/chat.js@{interface/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CloseChat ( {\em Username})}\label{interface_2chat_8js_8f22c348bf7dbd72744f837b10e71bd7}
+
+
+Close a chat 
+
+Referenced by CHAT\_\-CloseChat().\index{interface/chat.js@{interface/chat.js}!INTERFACE\_\-CreateChat@{INTERFACE\_\-CreateChat}}
+\index{INTERFACE\_\-CreateChat@{INTERFACE\_\-CreateChat}!interface/chat.js@{interface/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateChat ( {\em Username}, \/   {\em Status})}\label{interface_2chat_8js_6279b9b14ce99b228218bf232c0b6dee}
+
+
+Create chat elements 
+
+References CHAT\_\-ChangeChatState(), CHAT\_\-CloseChat(), CHAT\_\-SendMessage(), INTERFACE\_\-ShowChat(), UTILS\_\-CreateElement(), and UTILS\_\-ReturnKeyCode().
+
+Referenced by INTERFACE\_\-OpenChat().\index{interface/chat.js@{interface/chat.js}!INTERFACE\_\-CreateChatList@{INTERFACE\_\-CreateChatList}}
+\index{INTERFACE\_\-CreateChatList@{INTERFACE\_\-CreateChatList}!interface/chat.js@{interface/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateChatList ()}\label{interface_2chat_8js_ca21f0f567fc5a0eb6fc537becd06645}
+
+
+Create chat list elements 
+
+References INTERFACE\_\-ChatListPositioning(), and UTILS\_\-CreateElement().
+
+Referenced by INTERFACE\_\-CreateInterface().\index{interface/chat.js@{interface/chat.js}!INTERFACE\_\-FocusChat@{INTERFACE\_\-FocusChat}}
+\index{INTERFACE\_\-FocusChat@{INTERFACE\_\-FocusChat}!interface/chat.js@{interface/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-FocusChat ( {\em Username})}\label{interface_2chat_8js_a25a4e173b22af1e74ae638c975e3843}
+
+
+Giving focus to a chat window 
+
+Referenced by CHAT\_\-ReceiveMessage().\index{interface/chat.js@{interface/chat.js}!INTERFACE\_\-HideChat@{INTERFACE\_\-HideChat}}
+\index{INTERFACE\_\-HideChat@{INTERFACE\_\-HideChat}!interface/chat.js@{interface/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-HideChat ( {\em Item}, \/   {\em Hide})}\label{interface_2chat_8js_fec3d8b5a1b9146130114d4cf1605563}
+
+
+Hide chat window 
+
+Referenced by CHAT\_\-ChangeChatState().\index{interface/chat.js@{interface/chat.js}!INTERFACE\_\-OpenChat@{INTERFACE\_\-OpenChat}}
+\index{INTERFACE\_\-OpenChat@{INTERFACE\_\-OpenChat}!interface/chat.js@{interface/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-OpenChat ( {\em Username}, \/   {\em Status})}\label{interface_2chat_8js_296f3af1c7fa6f84c8ddf45716a3f912}
+
+
+Create chat elements 
+
+References INTERFACE\_\-CreateChat().
+
+Referenced by CHAT\_\-OpenChat().\index{interface/chat.js@{interface/chat.js}!INTERFACE\_\-ShowChat@{INTERFACE\_\-ShowChat}}
+\index{INTERFACE\_\-ShowChat@{INTERFACE\_\-ShowChat}!interface/chat.js@{interface/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowChat ( {\em Item}, \/   {\em Hide})}\label{interface_2chat_8js_4dc091e0f91f0af40209ed8f28ef73e9}
+
+
+Show chat window 
+
+Referenced by CHAT\_\-ChangeChatState(), and INTERFACE\_\-CreateChat().\index{interface/chat.js@{interface/chat.js}!INTERFACE\_\-ShowChatMessage@{INTERFACE\_\-ShowChatMessage}}
+\index{INTERFACE\_\-ShowChatMessage@{INTERFACE\_\-ShowChatMessage}!interface/chat.js@{interface/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowChatMessage ( {\em Username}, \/   {\em Message}, \/   {\em YourMessage})}\label{interface_2chat_8js_fbf145fc38745b8f43c56cfa837b742c}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Interface function for chat Show a message in a open chat 
+
+References MainData, UTILS\_\-CreateElement(), and UTILS\_\-GetTime().
+
+Referenced by CHAT\_\-ReceiveMessage(), and CHAT\_\-SendMessage().\index{interface/chat.js@{interface/chat.js}!INTERFACE\_\-UnfocusChat@{INTERFACE\_\-UnfocusChat}}
+\index{INTERFACE\_\-UnfocusChat@{INTERFACE\_\-UnfocusChat}!interface/chat.js@{interface/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-UnfocusChat ( {\em Username})}\label{interface_2chat_8js_930b9731933e8829afbca7f6d2131f80}
+
+
+Remove focus of a chat window 
+
+Referenced by CHAT\_\-ChangeChatState().

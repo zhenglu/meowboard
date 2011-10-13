@@ -1,0 +1,10 @@
+1 first compile /robot to create libgloox.
+  make install /robot, so that libgloox.so can be found.
+2 copy /usr/local/lib/libgloox.so.8 to /etc/lib/libgloox.so.8
+then ./xboard.
+
+winboard compile:
+如果有一个错误说，没找到sound/ding1.wav.
+需要重新设定一下路径，
+menu project->build options->search directories->resource compiler
+重新设定一下resource的路径。

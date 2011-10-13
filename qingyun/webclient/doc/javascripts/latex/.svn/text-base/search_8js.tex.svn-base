@@ -1,0 +1,37 @@
+\section{/home/www/ulysses/webclient/scripts/contact/search.js File Reference}
+\label{search_8js}\index{/home/www/ulysses/webclient/scripts/contact/search.js@{/home/www/ulysses/webclient/scripts/contact/search.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf CONTACT\_\-HandleSearchUser} (XML)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{search.js@{search.js}!CONTACT\_\-HandleSearchUser@{CONTACT\_\-HandleSearchUser}}
+\index{CONTACT\_\-HandleSearchUser@{CONTACT\_\-HandleSearchUser}!search.js@{search.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-HandleSearchUser ( {\em XML})}\label{search_8js_43d314141fd72107038df2203e912d3a}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Handle search user Handle search user
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]XML received from jabber server \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo \end{Desc}
+
+
+References UTILS\_\-GetNodeText(), and WINDOW\_\-SearchUserResult().
+
+Referenced by PARSER\_\-ParseIq().

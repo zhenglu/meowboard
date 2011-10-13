@@ -1,0 +1,152 @@
+#WindowBox{
+	/*left			: 40%;*/
+	float			: left;
+	/*top				: 50mm;*/
+	/*padding			: 0 5mm 6mm 5mm;*/
+	position	: absolute;	
+}
+
+#TitleBar.focus{
+	border-color	: #ffa200;
+	background-image: url('../images/window_title_bg.png');
+}
+
+#TitleBar{
+	background-repeat		: repeat-x;
+	background-image		: none;
+	background-color		: #216778;
+	width				: 100px;
+	height				: 21px;
+	position			: relative;
+	/*left		: 2px;*/
+
+	border-style			: solid;
+	border-width			: 0px 2px 0px 2px;
+	border-color			: #216778;
+
+	font-weight			: bold;
+	font-size			: 13px;
+	color				: #FFF;
+	text-align			: center;
+}
+
+#TitleBar #Close{
+	position	: absolute;
+	right		: 5px;
+	top				: 2px;
+	cursor	: pointer;
+	font-weight			: bold;
+}
+
+#TitleBar #Title{
+	font-weight			: bold;
+	position	: relative;
+	top				: 2px;
+}
+
+
+#SubWindowBox.focus{
+	border-color	: #ffa200;
+}
+
+#SubWindowBox{
+	border-style	: solid;
+	border-width	: 0px 2px 2px 2px;
+	border-color	: #216778;
+	background		: url('../images/window_content_bg.png') repeat-X;
+	background-color: #FFFFFF;
+}
+
+#SubWindowBox #Content{
+	position		: relative;
+}
+
+#WindowBox .button {
+	padding-bottom	: 5px;
+	border					: 0px;
+	font-weight			: bold;
+	font-size			: 10px;
+	color						: #FFF;
+	cursor					: pointer;
+	margin					: 0px 0px 5px 2px;
+	padding					: 1px 2px;
+	position				: relative;
+	bottom					: 10px;
+	background			: #216778;
+	width						: 70px;
+}
+
+#WindowBox .button:hover {
+	background		: #FFA200;
+}
+
+#WindowBox p {
+	font-size			: 11px;
+	color			: #216778;
+}
+
+#WindowBox strong {
+	font-weight : bold;
+}
+
+#WindowBox input,
+#WindowBox textarea,
+#WindowBox select {
+	font-size		: 11px;
+	border			: 1px solid #216778;
+	color			: #216778;
+}
+
+#AlertDiv #TextDiv {
+	padding-top		:	30px;
+	position			:	relative;
+	text-align		: center;
+}
+
+#AlertDiv #ButtonsDiv {
+	position		:	relative;
+	padding-top	: 40px;
+	padding-bottom	: 5px;
+	text-align	: center;
+}
+
+#ConfirmDiv {
+	padding-top	:	10px;
+	text-align	: center;
+	position		: relative;
+}
+
+#ConfirmDiv #TextDiv {
+	padding-top		:	30px;
+	position			:	relative;
+	text-align		: center;
+}
+
+#ConfirmDiv #ButtonsDiv {
+	position		:	relative;
+	padding-top	: 40px;
+	padding-bottom	: 25px;
+	text-align	: center;
+}
+
+#ConfirmDiv #ButtonsDiv .button {
+	bottom			:	5px;
+}
+
+#ChangeImageDiv #ButtonsDiv{
+	position			: relative;
+	text-align	: center;
+	padding-top		:	25px;
+}
+
+#ChangeImageDiv #TextDiv{
+	padding-top		:	10px;
+	position			:	relative;
+	text-align		: center;
+}
+
+#ChangeImageDiv #ImageForm{
+	position			: relative;
+	text-align	: center;
+	padding-top		:	15px;
+}

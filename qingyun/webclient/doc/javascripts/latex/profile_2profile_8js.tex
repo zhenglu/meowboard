@@ -1,0 +1,164 @@
+\section{/home/www/ulysses/webclient/scripts/profile/profile.js File Reference}
+\label{profile_2profile_8js}\index{/home/www/ulysses/webclient/scripts/profile/profile.js@{/home/www/ulysses/webclient/scripts/profile/profile.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf PROFILE\_\-HandleVCardProfile} (XML)
+\item 
+function {\bf PROFILE\_\-HandleInfoProfile} (XML)
+\item 
+function {\bf PROFILE\_\-HandleRatings} (RatingNodes)
+\item 
+function {\bf PROFILE\_\-StartProfile} (Username)
+\item 
+function {\bf PROFILE\_\-RemoveProfile} (Username)
+\item 
+function {\bf PROFILE\_\-SaveMyProfile} ()
+\item 
+function {\bf PROFILE\_\-CreateProfile} ()
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{profile/profile.js@{profile/profile.js}!PROFILE\_\-CreateProfile@{PROFILE\_\-CreateProfile}}
+\index{PROFILE\_\-CreateProfile@{PROFILE\_\-CreateProfile}!profile/profile.js@{profile/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function PROFILE\_\-CreateProfile ()}\label{profile_2profile_8js_ac998595adfe76da94a965aee7b76503}
+
+
+Return a default message to create a basic profile \begin{Desc}
+\item[Returns:]XMPP set profile message \end{Desc}
+\begin{Desc}
+\item[Author:]Pedro \end{Desc}
+
+
+References MainData, and MESSAGE\_\-SetProfile().
+
+Referenced by PARSER\_\-ParseIqById().\index{profile/profile.js@{profile/profile.js}!PROFILE\_\-HandleInfoProfile@{PROFILE\_\-HandleInfoProfile}}
+\index{PROFILE\_\-HandleInfoProfile@{PROFILE\_\-HandleInfoProfile}!profile/profile.js@{profile/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function PROFILE\_\-HandleInfoProfile ( {\em XML})}\label{profile_2profile_8js_853546e8112fab89a1f1cc1e1736f6a3}
+
+
+Handle info profile user
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]is the xml that contais profile informations \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References MainData, and PROFILE\_\-HandleRatings().
+
+Referenced by PARSER\_\-ParseIq().\index{profile/profile.js@{profile/profile.js}!PROFILE\_\-HandleRatings@{PROFILE\_\-HandleRatings}}
+\index{PROFILE\_\-HandleRatings@{PROFILE\_\-HandleRatings}!profile/profile.js@{profile/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function PROFILE\_\-HandleRatings ( {\em RatingNodes})}\label{profile_2profile_8js_104385685036897b559e94a7f599c9f5}
+
+
+Create an array with ratings and return it
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em RatingNodes}]Array of ratings with data \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Array in format: each line is a rating type [1] lightning [2] blitz [3] Standard each column is a data [1] category [2] current rating [3] max rating [4] max rating date [5] number of games in category [6] number of wins [7] number of losses [8] numeber of draws \end{Desc}
+\begin{Desc}
+\item[See also:]CONTACT\_\-HandleInfo(XML); \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+
+
+References UTILS\_\-ConvertTimeStamp().
+
+Referenced by PROFILE\_\-HandleInfoProfile().\index{profile/profile.js@{profile/profile.js}!PROFILE\_\-HandleVCardProfile@{PROFILE\_\-HandleVCardProfile}}
+\index{PROFILE\_\-HandleVCardProfile@{PROFILE\_\-HandleVCardProfile}!profile/profile.js@{profile/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function PROFILE\_\-HandleVCardProfile ( {\em XML})}\label{profile_2profile_8js_a586925d93cc9cb8533756778acacce2}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Handle Jabber vCard User
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]is the xml that contais vCard information \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References INTERFACE\_\-SetUserImage(), MainData, and UTILS\_\-GetNodeText().
+
+Referenced by PARSER\_\-ParseIq().\index{profile/profile.js@{profile/profile.js}!PROFILE\_\-RemoveProfile@{PROFILE\_\-RemoveProfile}}
+\index{PROFILE\_\-RemoveProfile@{PROFILE\_\-RemoveProfile}!profile/profile.js@{profile/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function PROFILE\_\-RemoveProfile ( {\em Username})}\label{profile_2profile_8js_70701a1a004da0bac2f7336972f00aa1}
+
+
+Remove Profile from data struct
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]is the jabber username \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References MainData.
+
+Referenced by WINDOW\_\-Profile().\index{profile/profile.js@{profile/profile.js}!PROFILE\_\-SaveMyProfile@{PROFILE\_\-SaveMyProfile}}
+\index{PROFILE\_\-SaveMyProfile@{PROFILE\_\-SaveMyProfile}!profile/profile.js@{profile/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function PROFILE\_\-SaveMyProfile ()}\label{profile_2profile_8js_685d222531076f6d4b69e72299b5c8d9}
+
+
+Save changes of profile
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]is the jabber username \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MainData, MESSAGE\_\-GetProfile(), and MESSAGE\_\-SetProfile().
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{profile/profile.js@{profile/profile.js}!PROFILE\_\-StartProfile@{PROFILE\_\-StartProfile}}
+\index{PROFILE\_\-StartProfile@{PROFILE\_\-StartProfile}!profile/profile.js@{profile/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function PROFILE\_\-StartProfile ( {\em Username})}\label{profile_2profile_8js_f78b5d430fb82f23ddc58faaf7ad182d}
+
+
+Create profile in data Struct and show Profile window
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Username}]is the jabber username \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MainData, MESSAGE\_\-GetProfile(), MESSAGE\_\-InfoProfile(), and WINDOW\_\-Profile().
+
+Referenced by CONTACT\_\-ShowUserMenu(), and INTERFACE\_\-CreateUserBox().

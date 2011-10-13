@@ -1,0 +1,386 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.sf.net">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8895-1">
+<LINK REL="stylesheet" TYPE="text/css" HREF="css/Main.css">
+<TITLE>Interface WEB para Xadrez - Teste</TITLE>
+</HEAD><BODY BGCOLOR="white" TEXT="black">
+<P ALIGN="center"><CENTER><H1>Interface WEB para Xadrez - Teste</H1>
+<FONT SIZE="4">
+<I>Equipe de Implementação da interface Web - C3SL 2007</I><BR>
+Última atualização - Tue Jun  3 10:56:44 2008
+</FONT></CENTER>
+
+<HR NOSHADE SIZE=1>
+<P></P>
+<H1>1. Introdução</H1>
+<P>
+Esta página contém a documentação, explicações e esquemas que demonstram o que foi usado na implementação da interface Web para o projeto de Xadrez.
+</P>
+<P>
+Houve reuniões e discussões sobre como montar uma arquitetura geral para interagir com a interface e será dado uma explicação breve sobre a arquitetura geral de como tudo está interligado. Após essa apresentação será explicado o que cada componente da arquitetura faz.
+</P>
+<P>
+Por ultimo será explicado, tentando detalhar o máximo possível, a interface. Explicações de como foi implementado, os algoritmos, estrutura de dados, a organização dos diretórios, a arquitetura por trás de toda interface, os componentes dessa arquitetura, etc.
+</P>
+<HR NOSHADE SIZE=1>
+<H1>2. Arquitetura Geral</H1>
+<P>
+Nesse tópico será apresentado a arquitetura geral que foi escolhido para fazer a organização toda do Projeto de Xadrez - C3SL 2007.
+</P>
+ <center><IMG ALIGN="middle" SRC="imagem/arquitetura_geral.png" BORDER="0" ALT=""></center> 
+<H2>2.1. Servidor Jabber</H2>
+<P>
+Para facilitar a comunicação entre usuários da interface usamos o protocolo <B>Jabber</B> (baseado em <I>XMPP</I>, implementado pelo <I>eJabberd</I>) para troca de mensagens. Como pode ser observado no diagrama acima, utilizamos <B>AJAX</B> para as trocas de mensagens <I>XMPP</I> entre a interface e o servidor Jabber.
+</P>
+<H2>2.2. BOSH</H2>
+<P>
+É a sigla para <I>Bidirectional-streams Over Synchronous HTTP</I>. O AJAX não consegue falar diretamente como servidor Jabber. Logo, o <I>bosh</I> é um intermediário, que entrega as mensagens da interface para o Jabber.
+</P>
+<H2>2.3. Servidor de Xadrez</H2>
+<P>
+Este servidor foi dividido em diferentes <I>componentes</I>:
+</P>
+<UL>
+<LI>Desafios: Controla os desafios feitos pelos jogadores.
+</UL>
+
+<UL>
+<LI>Torneio: Gerencia os torneios no servidor.
+</UL>
+
+<UL>
+<LI>Jogos: Após os desafios serem resolvidos este componente controla tudo relacionado ao jogo.   
+</UL>
+
+<P>
+A comunicação entre a interface e o servidor também é baseada em troca de mensagens <I>XMPP</I>, e todas elas passam pelo servidor Jabber, que as redirecionam para a interface/servidor xadrez.
+</P>
+<HR NOSHADE SIZE=1>
+<H1>3. Interface Web</H1>
+<P>
+A Interface Web é a parte que interage com o usuário. É uma página baseada em requisitos levatados e design elaborados para usuários iniciantes com o objetivo de ensinar a jogar xadrez.
+</P>
+<P>
+A implementação foi feita utilizado a linguagem web <I>Javascript</I>. Como já tido anteriormente, a comunicação com as demais entidades é feito usando AJAX. Para mostrar os dados no navegador de forma elegante e amigável foi utilizado estilos CSS.
+</P>
+<H2>3.1. Arquitetura da Interface</H2>
+<P>
+A arquitetura da interface foi divido entre a interface propriamente dita, controladores, parser e o BOSH.
+</P>
+ <center><IMG ALIGN="middle" SRC="imagem/arquitetura_interface.png" BORDER="0" ALT=""></center> 
+<UL>
+<LI>Interface: Responsável por mostrar na tela, de forma amigável, todas as saídas do sistema e coletar as entradas de dados.
+</UL>
+
+<UL>
+<LI>Controladores: Servem como intemediário entre a interface e o parser (de jogos, notícias, torneio, conversa e etc). Eles recebem os dados dos servidores, organizam nas estruturas de dados, interna de cada controlador, e, caso necessário, mostram na interface as atualizações. Os seguintes controladores são usados:
+ <UL>
+ <LI>Jogo
+ <LI>Desafio
+ <LI>Conversa
+ <LI>Salas
+ <LI>Convites
+ <LI>Contatos
+ <LI>Notícias
+ </UL>
+</UL>
+
+<UL>
+<LI>Parser: Recebe as mensagens do BOSH, identifica qual é o tipo de mensagem e redireciona para o controlador correto. Por exemplo: uma mensagem de chat é enviado ao controlador de conversa. Um convite para adicionar usuário é redirecionado para o controlador de contatos.
+</UL>
+
+<UL>
+<LI>BOSH: Faz a comunicação entre a página Web com a rede Jabber, que encaminha os pedidos e informações para os servidores finais.
+</UL>
+
+<P>
+<B>OBS</B>: Não confundir Interface WEB com interface. A Interface WEB é toda a estrutura organizada para receber os dados do Jabber e mostrar no navegador. A interface é a parte responsável por mostrar os dados dentro da interface WEB.
+</P>
+<H2>3.2. Diretórios e Arquivos</H2>
+<P>
+A partir do diretório raíz, a estrutura de diretórios e arquivos fica da seguinte forma:
+</P>
+<UL>
+<LI>css
+  <UL>
+  <LI>Coleção de estilos <I>CSS</I>
+  </UL>
+<LI>doc
+ <UL>
+ <LI>Contém os arquivos fontes deste material
+ </UL>
+<LI>images
+ <UL>
+ <LI>Contém imagens utilizados na interface web
+ </UL>
+<LI>scripts
+ <UL>
+ <LI>chat
+  <UL>
+  <LI>chat.js
+  </UL>
+ <LI>connection
+  <UL>
+  <LI>connection.js
+  </UL>
+ <LI>contact
+  <UL>
+  <LI>contact.js
+  <LI>info.js
+  <LI>invite.js
+  <LI>search.js
+  <LI>status.js
+  </UL>
+ <LI>data
+  <UL>
+  <LI>conf.xml
+  <LI>consts.js
+  <LI>data.js
+  <LI>lang.xml
+  </UL>
+ <LI>game
+  <UL>
+  <LI>challenge.js
+  <LI>game.js
+  <LI>oldgame.js
+  </UL>
+ <LI>interface
+  <UL>
+  <LI>challenge.js
+  <LI>chat.js
+  <LI>contact.js
+  <LI>game.js
+  <LI>interface.js
+  <LI>left.js
+  <LI>load.js
+  <LI>login.js
+  <LI>oldgame.js
+  <LI>profile.js
+  <LI>room.js
+  <LI>top.js
+  <LI>welcome.js
+  <LI>window.js
+  </UL>
+ <LI>lang
+  <UL>
+  <LI>en_US.xml
+  <LI>pt_BR.xml
+  -	zh_CN.xml
+  </UL>
+ <LI>login
+  <UL>
+  <LI>load.js
+  <LI>login.js
+  </UL>
+ <LI>oldgame
+ <LI>parser
+  <UL>
+  <LI>parser_chat.js
+  <LI>parser_iq.js
+  <LI>parser.js
+  <LI>parser_presence.js
+  </UL>
+ <LI>profile
+  <UL>
+  <LI>profile.js		
+  </UL>
+ <LI>register
+  <UL>
+  <LI>register.js
+  </UL>
+ <LI>room
+  <UL>
+  <LI>room.js
+  </UL>
+ <LI>utils
+  <UL>
+  <LI>dragpiece.js
+  <LI>dragwindow.js
+  <LI>images.js
+  <LI>preloader.js
+  <LI>utils.js
+  </UL>
+ <LI>window
+  <UL>
+  <LI>window.js
+  </UL>
+ <LI>xmpp_messages
+  <UL>
+  <LI>messages.js
+  </UL>
+ </UL>
+<LI>index.html
+<LI>register.html
+</UL>
+
+<DL>
+<DT>css</DT><DD>
+  Contém todos os arquivos de estilos usados na interface
+<P></P>
+<DT>images</DT><DD>
+  Contém todos os arquivos de imagens usados na interface. Bordas dos divs, imagens de status dos jogadores, peças e casas do tabuleiro, imagens dos botões, etc.
+<P></P>
+<DT>scripts</DT><DD>
+  Contém todos os scripts usados na implementação da interface. Todos os códigos de conexão, parsers, controladores e códigos para mostrar os dados na página web estão localizados nesse diretório. Para uma melhor organização, o diretório foi divido em sub-diretórios.
+<P></P>
+<DT>doc </DT><DD>
+  Contém toda a documentação em feito em txt2tags, convertido para html.
+</DL>
+
+<P>
+A descrição das funções nos arquivos pode ser encontrada em ...
+</P>
+<HR NOSHADE SIZE=1>
+<H1>4. Conexão</H1>
+<UL>
+<LI><I>(scripts/connection/)</I>
+</UL>
+
+<P>
+Para obter acesso a todas as funcionalidades, uma conexão é feita com o servidor Jabber e em seguida uma presença é mandada para o servidor de xadrez. 
+Como já foi descrito, a página se comunica com o servidor Jabber através de um servidor intermediário, <I>BOSH</I>.
+</P>
+<P>
+A conexão com o servidor Jabber é feita de acordo com a especificação do protocolo XMPP, descrita em <A HREF="http://www.xmpp.org/rfcs/rfc3920.html">RFC3920</A>.
+As funções utilizadas para a conexão, com Jabber e o servidor de xadrez, estão em <I>scripts/connection/</I><B>connection.js</B>.
+</P>
+ <center><IMG ALIGN="middle" SRC="imagem/connection.png" BORDER="0" ALT=""></center> 
+<HR NOSHADE SIZE=1>
+<H1>5. Estrutura de dados</H1>
+ <UL>
+ <LI><I>(scripts/data/)</I> 
+ </UL>
+
+<P>
+A solução escolhida para manter todos os dados necessários foi uma estrutura de dados global, <B>DATA</B>. Ao carregar a interface ela é inicializada com constantes lidas do arquivo de configuração (em <I>/scripts/data/consts.js</I>) e também aloca todos os objetos usados para guardar os dados. 
+</P>
+<H2>5.1. Atributos da estrutura</H2>
+<P>
+Alguns dos atributos listados abaixos são também listas de objetos, contendo outros atributos.
+</P>
+<UL>
+<LI>Data.<B>UserList</B> <I>Lista dos contatos do usuário</I>
+  <UL>
+  <LI>Data.UserList[].<B>Username</B> <I>Nome do contato</I>
+  <LI>Data.UserList[].<B>Photo</B> <I>Foto do contato</I>
+  <LI>Data.UserList[].<B>Status</B> <I>Status do contato</I>
+  <LI>Data.UserList[].<B>Subs</B> <I>Subscription do contato (usado para controle do convite)</I>
+  <LI>Data.UserList[].<B>Type</B> <I>Tipo do contato</I>
+  <LI>Data.UserList[].<B>Rating</B> <I>Objeto contendo o rating em todas as categorias</I>
+  <P></P>
+  </UL>
+<LI>Data.<B>ChatList</B> <I>Lista de conversas abertas</I>
+  <UL>
+  <LI>Data.ChatList[].<B>Username</B> <I>Nome do outro participante da conversa</I>
+  <LI>Data.ChatList[].<B>Status</B> <I>Status do outro participante</I>
+  <LI>Data.ChatList[].<B>State</B> <I>Define se o chat esta visível ou minimizado</I>
+  </UL>
+</UL>
+
+<UL>
+<LI>Data.<B>RoomList</B> <I>Lista de salas que o usuário esta conectado</I>
+ <UL>
+ <LI>Data.RoomList[].<B>UserList</B> <I>Lista de usuários conectados na sala</I>
+ <LI>Data.RoomList[].<B>MsgTo</B> <I>Para onde a mensagem deverá ser enviada</I>
+ <LI>Data.RoomList[].<B>Role</B> <I>A posição administrativa temporária do usuário na sala</I>
+ <LI>Data.RoomList[].<B>Affiliation</B> <I>A posição administrativa do usuário na sala</I>
+ <LI>Data.RoomList[].<B>OrderBy</B> <I>Como os usuários são ordenados</I>
+  <UL>
+  <LI>'0' - <I>Ordem alfabetica crescente</I>
+  <LI>'1' - <I>Ordem alfabetica decrescente</I> 
+  <LI>'2' - <I>Por rating (escolhido previamente) decrescente</I>
+  </UL>
+ <LI>Data.RoomList[].<B>Room</B> <I>Objeto de sala, guarda os elementos da interface</I>
+ <P></P>
+ </UL>
+<LI>Data.<B>ChallengeList</B> <I>Lista dos desafios recebidos e enviados</I>
+  <UL>
+  <LI>Data.ChallengeList[].<B>Username</B> <I>Nome do usuário desafiante ou desafiado</I>
+  <LI>Data.ChallengeList[].<B>Id</B> <I>Identificador do desafio</I>
+  <LI>Data.ChallengeList[].<B>Challenger</B> <I>Nome do usuário que fez o desafio</I>
+  <P></P>
+  </UL>
+<LI>Data.<B>GameList</B> <I>Lista de jogos</I>
+  <UL>
+  <LI>Data.GameList[].<B>Id</B> <I>Identificador da partida</I>
+  <LI>Data.GameList[].<B>YourColor</B> <I>Cor do usuário na partida</I>
+  <LI>Data.GameList[].<B>BoardColor</B> <I>Cor do tabuleiro</I>
+  <LI>Data.GameList[].<B>PW</B> <I>Jogador das peças brancas</I>
+  <LI>Data.GameList[].<B>PB</B> <I>Jogador das peças pretas</I>
+  <LI>Data.GameList[].<B>WPhoto</B> <I>Foto do jogador das peças brancas</I>
+  <LI>Data.GameList[].<B>BPhoto</B> <I>Foto do jogador das peças pretas</I>
+  <LI>Data.GameList[].<B>Game</B> <I>Div do jogo</I>
+  <LI>Data.GameList[].<B>Finished</B> <I>Guarda se o jogo ainda esta em andamento</I>
+  <LI>Data.GameList[].<B>CurrentMove</B> <I>Última jogada realizada</I>
+  <LI>Data.GameList[].<B>Moves</B> <I>Lista de movimentos já feitos na partida</I>
+   <UL>
+   <LI>Data.GameList[].Moves.<B>Board</B> <I>Estado do tabuleiro antes do movimento</I>  							
+   <LI>Data.GameList[].Moves.<B>Move</B> <I>Estado final do tabuleiro após a jogada</I> 
+   <LI>Data.GameList[].Moves.<B>ShortMove</B> <I>Apenas a jogada realizada</I>
+   <LI>Data.GameList[].Moves.<B>PWTime</B> <I>Tempo das peças brancas</I> 
+   <LI>Data.GameList[].Moves.<B>PBTime</B> <I>Tempo das peças pretas</I> 
+   <LI>Data.GameList[].Moves.<B>Turn</B> <I>De quem foi a jogada</I> 
+   </UL>
+  <LI>Data.GameList[].<B>SetTurn</B> <I>De quem é a vez de jogar</I>
+  <LI>Data.GameList[].<B>AddMove</B> <I>Método para adicionar um movimento</I>
+  <P></P>
+  </UL>
+<LI>Data.<B>OldGameList</B> <I>Lista de jogos antigos</I>
+  <UL>
+  <LI>Data.OldGameList[].<B>Id</B> <I>Identificador da partida</I>
+  <LI>Data.OldGameList[].<B>YourColor</B> <I>Cor do usuário na partida</I>
+  <LI>Data.OldGameList[].<B>BoardColor</B> <I>Cor do tabuleiro</I>
+  <LI>Data.OldGameList[].<B>Moves</B> <I>Lista de movimentos já feitos na partida</I>
+   <UL>
+   <LI>Data.OldGameList[].Moves.<B>Board</B> <I>Estado do tabuleiro antes do movimento</I>  							
+   <LI>Data.OldGameList[].Moves.<B>Move</B> <I>Estado final do tabuleiro após a jogada</I> 
+   <LI>Data.OldGameList[].Moves.<B>ShortMove</B> <I>Apenas a jogada realizada</I>
+   <LI>Data.OldGameList[].Moves.<B>PWTime</B> <I>Tempo das peças brancas</I> 
+   <LI>Data.OldGameList[].Moves.<B>PBTime</B> <I>Tempo das peças pretas</I> 
+   <LI>Data.OldGameList[].Moves.<B>Turn</B> <I>De quem foi a jogada</I> 
+   </UL>
+  <LI>Data.OldGameList[].<B>PW</B> <I>Jogador das peças brancas</I>
+  <LI>Data.OldGameList[].<B>PB</B> <I>Jogador das peças pretas</I>
+  <LI>Data.OldGameList[].<B>WPhoto</B> <I>Foto do jogador das peças brancas</I>
+  <LI>Data.OldGameList[].<B>BPhoto</B> <I>Foto do jogador das peças pretas</I>
+  <LI>Data.OldGameList[].<B>Finished</B> <I>Guarda se o jogo ainda esta em andamento</I>
+  <LI>Data.OldGameList[].<B>CurrentMove</B> <I>Última jogada realizada</I>
+  <LI>Data.OldGameList[].<B>SetTurn</B> <I>De quem é a vez de jogar</I>
+  <LI>Data.OldGameList[].<B>AddMove</B> <I>Método para adicionar um movimento</I>
+  <P></P>
+  </UL>
+<LI>Data.<B>SearchGameInfoList</B> <I>Lista com o resultado de uma busca de jogos</I>
+  <UL>
+  <LI>Data.SearchGameInfoList[].<B>Id</B> <I>Identificação da busca</I>
+  <LI>Data.SearchGameInfoList[].<B>NGames</B> <I>Números de jogos encontrados</I>
+  <LI>Data.SearchGameInfoList[].<B>Offset</B> ////
+  <LI>Data.SearchGameInfoList[].<B>P1</B> <I>Nome do jogador buscado</I>
+  <LI>Data.SearchGameInfoList[].<B>P2</B> <I>Nome do adversário</I>
+  <LI>Data.SearchGameInfoList[].<B>Color</B> <I>Cor do jogador buscado</I>
+  <LI>Data.SearchGameInfoList[].<B>From</B> ////
+  <LI>Data.SearchGameInfoList[].<B>To</B> ////
+  <LI>Data.SearchGameInfoList[].<B>More</B> ////
+  <LI>Data.SearchGameInfoList[].<B>Elements</B> ////			
+  <P></P>
+  </UL>
+<LI>Data.<B>Windows</B> <I>Objeto com as janelas mostradas na interface</I>
+  <UL>
+  <LI>Data.Windows[].<B>Focus</B> <I>Aponta para a janela com foco no momento</I>
+  <LI>Data.Windows[].<B>WindowList</B> <I>Lista de janelas na interface</I>
+  </UL>
+</UL>
+
+<HR NOSHADE SIZE=5>
+<H1>6. Servidores</H1>
+<P>
+Aqui será apresentado os servidores, como eles fazem a comunicação com os servidores e os protocolos.
+</P>
+<H2>6.1. Servidor Jabber</H2>
+<H2>6.2. Servidor de Xadrez</H2>
+<H2>6.3. Servidor de Notícias</H2>
+
+<!-- html code generated by txt2tags 2.3 (http://txt2tags.sf.net) -->
+<!-- cmdline: txt2tags -o index.html interf_doc.t2t -->
+</BODY></HTML>

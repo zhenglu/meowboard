@@ -1,0 +1,810 @@
+\section{/home/www/ulysses/webclient/scripts/interface/game.js File Reference}
+\label{interface_2game_8js}\index{/home/www/ulysses/webclient/scripts/interface/game.js@{/home/www/ulysses/webclient/scripts/interface/game.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf INTERFACE\_\-GameBoardObj} (GameID, Player1, Player2, YourColor, PieceSize)
+\item 
+function {\bf INTERFACE\_\-CreateGame} ()
+\item 
+function {\bf INTERFACE\_\-ShowGame} (Div)
+\item 
+function {\bf INTERFACE\_\-HideGame} ()
+\item 
+function {\bf INTERFACE\_\-FinishGame} ()
+\item 
+function {\bf INTERFACE\_\-RemoveGame} ()
+\item 
+function {\bf INTERFACE\_\-ObserverMode} ()
+\item 
+function {\bf INTERFACE\_\-OldGameMode} ()
+\item 
+function {\bf INTERFACE\_\-ClearBoard} ()
+\item 
+function {\bf INTERFACE\_\-SetBoard} (BoardArray)
+\item 
+function {\bf INTERFACE\_\-InsertPiece} (Piece, Line, Col)
+\item 
+function {\bf INTERFACE\_\-RemovePiece} (Line, Col)
+\item 
+function {\bf INTERFACE\_\-UpdateBoard} (OldBoard, NewBoard)
+\item 
+function {\bf INTERFACE\_\-UndoMove} ()
+\item 
+function {\bf INTERFACE\_\-SetTurn} (Color)
+\item 
+function {\bf INTERFACE\_\-DecreaseTime} ()
+\item 
+function {\bf INTERFACE\_\-StartTimer} ()
+\item 
+function {\bf INTERFACE\_\-StopTimer} ()
+\item 
+function {\bf INTERFACE\_\-UpdateWTime} (NewTime)
+\item 
+function {\bf INTERFACE\_\-UpdateBTime} (NewTime)
+\item 
+function {\bf INTERFACE\_\-SetWTime} ()
+\item 
+function {\bf INTERFACE\_\-SetBTime} ()
+\item 
+function {\bf INTERFACE\_\-SetWPhoto} (Img)
+\item 
+function {\bf INTERFACE\_\-SetBPhoto} (Img)
+\item 
+function {\bf INTERFACE\_\-AddMove} (NumTurn, Move, ShortMove, WTime, BTime)
+\item 
+function {\bf INTERFACE\_\-RemoveMove} ()
+\item 
+function {\bf INTERFACE\_\-CreateBoard} (MyColor, PieceSize)
+\item 
+function {\bf INTERFACE\_\-CreateTimer} ()
+\item 
+function {\bf INTERFACE\_\-CreateGameOptions} (GameID)
+\item 
+function {\bf INTERFACE\_\-CreateMoveList} ()
+\item 
+function {\bf INTERFACE\_\-CreatePhoto} (WhitePlayer, BlackPlayer)
+\item 
+function {\bf INTERFACE\_\-CreateTab} (Div1, Div2)
+\item 
+function {\bf INTERFACE\_\-CreateVerticalIndex} (Color, Size)
+\item 
+function {\bf INTERFACE\_\-CreateHorizontalIndex} (Color, Size)
+\item 
+function {\bf INTERFACE\_\-NewPiece} (Piece, PlayerColor, Size)
+\item 
+function {\bf INTERFACE\_\-CreateOldGameMoveList} ()
+\item 
+function {\bf INTERFACE\_\-CreateOldGameTab} (DivMoves)
+\item 
+function {\bf INTERFACE\_\-LastMove} (Move)
+\item 
+function {\bf INTERFACE\_\-FindBlock} (id)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{interface/game.js@{interface/game.js}!INTERFACE\_\-AddMove@{INTERFACE\_\-AddMove}}
+\index{INTERFACE\_\-AddMove@{INTERFACE\_\-AddMove}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-AddMove ( {\em NumTurn}, \/   {\em Move}, \/   {\em ShortMove}, \/   {\em WTime}, \/   {\em BTime})}\label{interface_2game_8js_e189f8c155bbd7f0e25d31e5b76e420b}
+
+
+Show a new move in Move List
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em NumTurn}]is the turn number \item[{\em Move}]is the move done \item[{\em WTime}]is white time when move is done \item[{\em BTime}]is black time when move is done \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References MainData, OLDGAME\_\-GotoBoard(), UTILS\_\-AddListener(), and UTILS\_\-CreateElement().
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-ClearBoard@{INTERFACE\_\-ClearBoard}}
+\index{INTERFACE\_\-ClearBoard@{INTERFACE\_\-ClearBoard}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ClearBoard ()}\label{interface_2game_8js_1e1ba520dbd03800203aca5900c816a5}
+
+
+Clean all pieces of a board
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-CreateBoard@{INTERFACE\_\-CreateBoard}}
+\index{INTERFACE\_\-CreateBoard@{INTERFACE\_\-CreateBoard}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateBoard ( {\em MyColor}, \/   {\em PieceSize})}\label{interface_2game_8js_43303562409928ac89a807b07e1b7288}
+
+
+Create a board
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em MyColor}]is player color in the game \item[{\em PieceSize}]is the board piece size \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]board html div \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References UTILS\_\-CreateElement(), and UTILS\_\-HorizontalIndex().
+
+Referenced by INTERFACE\_\-CreateGame().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-CreateGame@{INTERFACE\_\-CreateGame}}
+\index{INTERFACE\_\-CreateGame@{INTERFACE\_\-CreateGame}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateGame ()}\label{interface_2game_8js_3856178a8b4ac22ab1fabb9fa82c0339}
+
+
+Creating game div and set all attributes
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References GAME\_\-RemoveGame(), INTERFACE\_\-CreateBoard(), INTERFACE\_\-CreateGameOptions(), INTERFACE\_\-CreateHorizontalIndex(), INTERFACE\_\-CreateMoveList(), INTERFACE\_\-CreatePhoto(), INTERFACE\_\-CreateTab(), INTERFACE\_\-CreateTimer(), INTERFACE\_\-CreateVerticalIndex(), and UTILS\_\-CreateElement().
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-CreateGameOptions@{INTERFACE\_\-CreateGameOptions}}
+\index{INTERFACE\_\-CreateGameOptions@{INTERFACE\_\-CreateGameOptions}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateGameOptions ( {\em GameID})}\label{interface_2game_8js_bc5c6d2b814ec76a4fe1813446471bcd}
+
+
+Create game options
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameId}]is game id string \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Options html div and Array of html elements \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References GAME\_\-SendAdjourn(), GAME\_\-SendCancel(), GAME\_\-SendDraw(), GAME\_\-SendResign(), UTILS\_\-AddListener(), UTILS\_\-CreateElement(), and UTILS\_\-GetText().
+
+Referenced by INTERFACE\_\-CreateGame().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-CreateHorizontalIndex@{INTERFACE\_\-CreateHorizontalIndex}}
+\index{INTERFACE\_\-CreateHorizontalIndex@{INTERFACE\_\-CreateHorizontalIndex}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateHorizontalIndex ( {\em Color}, \/   {\em Size})}\label{interface_2game_8js_cbdc49f0062e433a07b51d70f8f6173c}
+
+
+Create horizontal indexes of board
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Color}]is the board color \item[{\em Size}]is size of blocks of each block in board \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Horizontal index html list \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References UTILS\_\-CreateElement(), and UTILS\_\-HorizontalIndex().
+
+Referenced by INTERFACE\_\-CreateGame().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-CreateMoveList@{INTERFACE\_\-CreateMoveList}}
+\index{INTERFACE\_\-CreateMoveList@{INTERFACE\_\-CreateMoveList}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateMoveList ()}\label{interface_2game_8js_60b1ed03b0878cbeef6a41aae3ee2dfd}
+
+
+Create a move list
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]MoveListDiv html div and MoveList html list \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References UTILS\_\-CreateElement().
+
+Referenced by INTERFACE\_\-CreateGame(), and INTERFACE\_\-ObserverMode().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-CreateOldGameMoveList@{INTERFACE\_\-CreateOldGameMoveList}}
+\index{INTERFACE\_\-CreateOldGameMoveList@{INTERFACE\_\-CreateOldGameMoveList}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateOldGameMoveList ()}\label{interface_2game_8js_11713b286c609bca80ad9024e4a6f34d}
+
+
+Create OldGame move list with buttons to review all game moves
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]MoveListDiv html div and MoveList html list \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References OLDGAME\_\-FirstBoard(), OLDGAME\_\-LastBoard(), OLDGAME\_\-NextBoard(), OLDGAME\_\-PrevBoard(), UTILS\_\-CreateElement(), and UTILS\_\-GetText().
+
+Referenced by INTERFACE\_\-OldGameMode().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-CreateOldGameTab@{INTERFACE\_\-CreateOldGameTab}}
+\index{INTERFACE\_\-CreateOldGameTab@{INTERFACE\_\-CreateOldGameTab}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateOldGameTab ( {\em DivMoves})}\label{interface_2game_8js_c82f68620db8b3af9619086b0fe88504}
+
+
+Create tab with 1 div(this should be used in Observer and OldGame mode)
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Div1}]is first div in tab \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Tab html Div \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References UTILS\_\-CreateElement(), and UTILS\_\-GetText().
+
+Referenced by INTERFACE\_\-ObserverMode(), and INTERFACE\_\-OldGameMode().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-CreatePhoto@{INTERFACE\_\-CreatePhoto}}
+\index{INTERFACE\_\-CreatePhoto@{INTERFACE\_\-CreatePhoto}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreatePhoto ( {\em WhitePlayer}, \/   {\em BlackPlayer})}\label{interface_2game_8js_7abebff51fceb3d49d1c25e86d2610b0}
+
+
+Create photo images and names
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em WhitePlayer}]is White player name \item[{\em BlackPlayer}]is Black player name \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Photo html div, WPhoto html img, BPhoto html img, WName html span and BName html span \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References UTILS\_\-CreateElement(), and UTILS\_\-ShortString().
+
+Referenced by INTERFACE\_\-CreateGame().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-CreateTab@{INTERFACE\_\-CreateTab}}
+\index{INTERFACE\_\-CreateTab@{INTERFACE\_\-CreateTab}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateTab ( {\em Div1}, \/   {\em Div2})}\label{interface_2game_8js_77463ba04218899d75ab406ff4005a1c}
+
+
+Create tabs with 2 divs
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Div1}]is first div in tab \item[{\em Div2}]is second div in tab \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Tab html Div \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References UTILS\_\-AddListener(), UTILS\_\-CreateElement(), and UTILS\_\-GetText().
+
+Referenced by INTERFACE\_\-CreateGame().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-CreateTimer@{INTERFACE\_\-CreateTimer}}
+\index{INTERFACE\_\-CreateTimer@{INTERFACE\_\-CreateTimer}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateTimer ()}\label{interface_2game_8js_7850fec263e2277c36e5dd64a9006914}
+
+
+Create timer elements
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Timer html div, White Timer html span and Black Timer html span \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References UTILS\_\-CreateElement().
+
+Referenced by INTERFACE\_\-CreateGame().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-CreateVerticalIndex@{INTERFACE\_\-CreateVerticalIndex}}
+\index{INTERFACE\_\-CreateVerticalIndex@{INTERFACE\_\-CreateVerticalIndex}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateVerticalIndex ( {\em Color}, \/   {\em Size})}\label{interface_2game_8js_060fa6893327106724d040e9409472db}
+
+
+Create vertical indexes of board
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Color}]is the board color \item[{\em Size}]is size of blocks of each block in board \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Vertical index html list \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References UTILS\_\-CreateElement().
+
+Referenced by INTERFACE\_\-CreateGame().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-DecreaseTime@{INTERFACE\_\-DecreaseTime}}
+\index{INTERFACE\_\-DecreaseTime@{INTERFACE\_\-DecreaseTime}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-DecreaseTime ()}\label{interface_2game_8js_dd4b7e45bdc5dd4143f9b9160933e826}
+
+
+Decrease user time. Executed each second
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References MainData.
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-FindBlock@{INTERFACE\_\-FindBlock}}
+\index{INTERFACE\_\-FindBlock@{INTERFACE\_\-FindBlock}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-FindBlock ( {\em id})}\label{interface_2game_8js_b421c25367444ac002f030dd049ddb97}
+
+
+Find a block with parameter Identificator
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em id}]is the block identificator \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]null ou Block HTML div element \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-FinishGame@{INTERFACE\_\-FinishGame}}
+\index{INTERFACE\_\-FinishGame@{INTERFACE\_\-FinishGame}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-FinishGame ()}\label{interface_2game_8js_098eb8b58412b41f182325209a957d12}
+
+
+Disable options and drag pieces
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-GameBoardObj@{INTERFACE\_\-GameBoardObj}}
+\index{INTERFACE\_\-GameBoardObj@{INTERFACE\_\-GameBoardObj}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-GameBoardObj ( {\em GameID}, \/   {\em Player1}, \/   {\em Player2}, \/   {\em YourColor}, \/   {\em PieceSize})}\label{interface_2game_8js_66dab4826d8239a30743c89f822b0e83}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Interface functions that control game 
+
+References INTERFACE\_\-AddMove(), INTERFACE\_\-ClearBoard(), INTERFACE\_\-CreateGame(), INTERFACE\_\-DecreaseTime(), INTERFACE\_\-FindBlock(), INTERFACE\_\-FinishGame(), INTERFACE\_\-HideGame(), INTERFACE\_\-InsertPiece(), INTERFACE\_\-LastMove(), INTERFACE\_\-ObserverMode(), INTERFACE\_\-OldGameMode(), INTERFACE\_\-RemoveGame(), INTERFACE\_\-RemoveMove(), INTERFACE\_\-RemovePiece(), INTERFACE\_\-SetBoard(), INTERFACE\_\-SetBPhoto(), INTERFACE\_\-SetBTime(), INTERFACE\_\-SetTurn(), INTERFACE\_\-SetWPhoto(), INTERFACE\_\-SetWTime(), INTERFACE\_\-ShowGame(), INTERFACE\_\-StartTimer(), INTERFACE\_\-StopTimer(), INTERFACE\_\-UndoMove(), INTERFACE\_\-UpdateBoard(), INTERFACE\_\-UpdateBTime(), INTERFACE\_\-UpdateWTime(), and MainData.
+
+Referenced by GAME\_\-StartGame(), GAME\_\-StartObserverGame(), and OLDGAME\_\-StartOldGame().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-HideGame@{INTERFACE\_\-HideGame}}
+\index{INTERFACE\_\-HideGame@{INTERFACE\_\-HideGame}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-HideGame ()}\label{interface_2game_8js_a6c712507992971eb1e13566da78e64a}
+
+
+Hide this game in the interface
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-InsertPiece@{INTERFACE\_\-InsertPiece}}
+\index{INTERFACE\_\-InsertPiece@{INTERFACE\_\-InsertPiece}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-InsertPiece ( {\em Piece}, \/   {\em Line}, \/   {\em Col})}\label{interface_2game_8js_5da00627eeeb1f747bd96aae92ff412e}
+
+
+Display a piece in specified Line and Col of the board
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Piece}]is piece char \item[{\em Line}]is line where is the piece will be place \item[{\em Col}]is column where is the piece will be place \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References INTERFACE\_\-NewPiece(), and UTILS\_\-HorizontalIndex().
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-LastMove@{INTERFACE\_\-LastMove}}
+\index{INTERFACE\_\-LastMove@{INTERFACE\_\-LastMove}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-LastMove ( {\em Move})}\label{interface_2game_8js_bc3bce8361d3408e53c14848db12270e}
+
+
+Change board to last move done
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Move}]string (i.e: a2a3) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References UTILS\_\-HorizontalIndex().
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-NewPiece@{INTERFACE\_\-NewPiece}}
+\index{INTERFACE\_\-NewPiece@{INTERFACE\_\-NewPiece}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-NewPiece ( {\em Piece}, \/   {\em PlayerColor}, \/   {\em Size})}\label{interface_2game_8js_36d68b299621ca3eddd5bd87d3784029}
+
+
+Create a new piece, with drag listener in 'PLayerColor' pieces
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Piece}]is piece char \item[{\em PlayerColor}]is the current player color \item[{\em Size}]is size of blocks of each block in board \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Piece html img \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References MainData, UTILS\_\-CreateElement(), UTILS\_\-GetText(), and UTILS\_\-StartDragPiece().
+
+Referenced by INTERFACE\_\-InsertPiece().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-ObserverMode@{INTERFACE\_\-ObserverMode}}
+\index{INTERFACE\_\-ObserverMode@{INTERFACE\_\-ObserverMode}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ObserverMode ()}\label{interface_2game_8js_c1b1081bff6d65c4491e33d04943d304}
+
+
+
+
+References INTERFACE\_\-CreateMoveList(), and INTERFACE\_\-CreateOldGameTab().
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-OldGameMode@{INTERFACE\_\-OldGameMode}}
+\index{INTERFACE\_\-OldGameMode@{INTERFACE\_\-OldGameMode}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-OldGameMode ()}\label{interface_2game_8js_07f5f4ae5a8ce00cb7fcd6f69649092c}
+
+
+
+
+References INTERFACE\_\-CreateOldGameMoveList(), and INTERFACE\_\-CreateOldGameTab().
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-RemoveGame@{INTERFACE\_\-RemoveGame}}
+\index{INTERFACE\_\-RemoveGame@{INTERFACE\_\-RemoveGame}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-RemoveGame ()}\label{interface_2game_8js_5317b4a555409c7b6b24d294395c069a}
+
+
+Remove this game
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References MainData, UTILS\_\-GetText(), and WINDOW\_\-Alert().
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-RemoveMove@{INTERFACE\_\-RemoveMove}}
+\index{INTERFACE\_\-RemoveMove@{INTERFACE\_\-RemoveMove}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-RemoveMove ()}\label{interface_2game_8js_d6dab7ab9952d6f7444e54241251036b}
+
+
+Remove last move in Move List (this is should be used when players agree to return one move)
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-RemovePiece@{INTERFACE\_\-RemovePiece}}
+\index{INTERFACE\_\-RemovePiece@{INTERFACE\_\-RemovePiece}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-RemovePiece ( {\em Line}, \/   {\em Col})}\label{interface_2game_8js_da39321a30800e290630e200f02cf82c}
+
+
+Remove a piece from the board
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Line}]is line where the piece was placed \item[{\em Col}]is column where the piece was placed \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References UTILS\_\-HorizontalIndex().
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-SetBoard@{INTERFACE\_\-SetBoard}}
+\index{INTERFACE\_\-SetBoard@{INTERFACE\_\-SetBoard}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-SetBoard ( {\em BoardArray})}\label{interface_2game_8js_b5dee8d500721d212ef0851fc6da651b}
+
+
+Clean the board and show 'BoardArray' in the screen
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em BoardArray}]is board in array of array format \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-SetBPhoto@{INTERFACE\_\-SetBPhoto}}
+\index{INTERFACE\_\-SetBPhoto@{INTERFACE\_\-SetBPhoto}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-SetBPhoto ( {\em Img})}\label{interface_2game_8js_201dc6b8039e6a8e075a986b72a08291}
+
+
+Show black avatar image (in base64)
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em PhotoType}]is the image type (png/gif) \item[{\em PhotoStr}]is the image in base64 format string \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References IMAGE\_\-ImageDecode().
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-SetBTime@{INTERFACE\_\-SetBTime}}
+\index{INTERFACE\_\-SetBTime@{INTERFACE\_\-SetBTime}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-SetBTime ()}\label{interface_2game_8js_be79ed36e179df4bfd6a3e707bdc5ac9}
+
+
+Show black timer on interface
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-SetTurn@{INTERFACE\_\-SetTurn}}
+\index{INTERFACE\_\-SetTurn@{INTERFACE\_\-SetTurn}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-SetTurn ( {\em Color})}\label{interface_2game_8js_e93e7d2e78640bf855680726a0e43e1f}
+
+
+Show turn info to user
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Color}]is the player color \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-SetWPhoto@{INTERFACE\_\-SetWPhoto}}
+\index{INTERFACE\_\-SetWPhoto@{INTERFACE\_\-SetWPhoto}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-SetWPhoto ( {\em Img})}\label{interface_2game_8js_63352895de12e8ff975333d719fcb7f8}
+
+
+Show white avatar image (in base64)
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em PhotoType}]is the image type (png/gif) \item[{\em PhotoStr}]is the image in base64 format string \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References IMAGE\_\-ImageDecode().
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-SetWTime@{INTERFACE\_\-SetWTime}}
+\index{INTERFACE\_\-SetWTime@{INTERFACE\_\-SetWTime}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-SetWTime ()}\label{interface_2game_8js_b208e2e3fadd324f4b9982c35177bdb6}
+
+
+Show white timer on interface
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-ShowGame@{INTERFACE\_\-ShowGame}}
+\index{INTERFACE\_\-ShowGame@{INTERFACE\_\-ShowGame}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowGame ( {\em Div})}\label{interface_2game_8js_3559945c9398006a5cf281b0334882f8}
+
+
+Show this game in the interface
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]true if game is showed with sucess, else false \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-StartTimer@{INTERFACE\_\-StartTimer}}
+\index{INTERFACE\_\-StartTimer@{INTERFACE\_\-StartTimer}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-StartTimer ()}\label{interface_2game_8js_bf8fbf5f0c9b86c903f06b288998ea12}
+
+
+Start timer
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-StopTimer@{INTERFACE\_\-StopTimer}}
+\index{INTERFACE\_\-StopTimer@{INTERFACE\_\-StopTimer}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-StopTimer ()}\label{interface_2game_8js_d5e647125534a1da08c2d990cb60db7f}
+
+
+Stop timer
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-UndoMove@{INTERFACE\_\-UndoMove}}
+\index{INTERFACE\_\-UndoMove@{INTERFACE\_\-UndoMove}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-UndoMove ()}\label{interface_2game_8js_1557b455a56a2ef129e4adaf6ad16e7b}
+
+
+Undo the last move done by the user
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References MainData.
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-UpdateBoard@{INTERFACE\_\-UpdateBoard}}
+\index{INTERFACE\_\-UpdateBoard@{INTERFACE\_\-UpdateBoard}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-UpdateBoard ( {\em OldBoard}, \/   {\em NewBoard})}\label{interface_2game_8js_3b30f39254f70bb741745d4da7c43b9a}
+
+
+Update the board on the screen, where the pieces is diferrent
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em OldBoard}]is current Board \item[{\em NewBoard}]is new board that will be show \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-UpdateBTime@{INTERFACE\_\-UpdateBTime}}
+\index{INTERFACE\_\-UpdateBTime@{INTERFACE\_\-UpdateBTime}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-UpdateBTime ( {\em NewTime})}\label{interface_2game_8js_14d8b46e0643124a6cc918b9477fd052}
+
+
+Update black timer
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em NewTime}]is the new time to be update \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+Referenced by INTERFACE\_\-GameBoardObj().\index{interface/game.js@{interface/game.js}!INTERFACE\_\-UpdateWTime@{INTERFACE\_\-UpdateWTime}}
+\index{INTERFACE\_\-UpdateWTime@{INTERFACE\_\-UpdateWTime}!interface/game.js@{interface/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-UpdateWTime ( {\em NewTime})}\label{interface_2game_8js_c4dee69f9172156070d175a2da5e62ba}
+
+
+Update white timer
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em NewTime}]is the new time to be update \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+Referenced by INTERFACE\_\-GameBoardObj().

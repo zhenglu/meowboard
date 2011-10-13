@@ -1,0 +1,211 @@
+\section{/home/www/ulysses/webclient/scripts/interface/contact.js File Reference}
+\label{interface_2contact_8js}\index{/home/www/ulysses/webclient/scripts/interface/contact.js@{/home/www/ulysses/webclient/scripts/interface/contact.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf ContactObj} ()
+\item 
+function {\bf INTERFACE\_\-AddContactGroup} (GroupName)
+\item 
+function {\bf INTERFACE\_\-CreateGroup} (GroupName)
+\item 
+function {\bf INTERFACE\_\-RemoveContactGroup} (GroupName)
+\item 
+function {\bf INTERFACE\_\-FindContactGroup} (GroupName)
+\item 
+function {\bf INTERFACE\_\-GetContactGroup} (GroupName)
+\item 
+function {\bf INTERFACE\_\-FindContactUserGroup} (UserName)
+\item 
+function {\bf INTERFACE\_\-AddContactUser} (GroupName, UserName, Status, Rating, Type)
+\item 
+function {\bf INTERFACE\_\-RemoveContactUser} (UserName)
+\item 
+function {\bf INTERFACE\_\-UpdateContactUser} (UserName, Status, Rating, Type)
+\item 
+function {\bf INTERFACE\_\-ShowContactList} ()
+\item 
+function {\bf INTERFACE\_\-HideContactList} ()
+\item 
+function {\bf ContactOnlineObj} ()
+\item 
+function {\bf INTERFACE\_\-ShowOnlineList} ()
+\item 
+function {\bf INTERFACE\_\-HideOnlineList} ()
+\item 
+function {\bf INTERFACE\_\-SetUserType} (Username, NewType)
+\item 
+function {\bf INTERFACE\_\-ChangeGroupVisibility} (Obj, Id)
+\item 
+function {\bf INTERFACE\_\-CreateContact} ()
+\item 
+function {\bf INTERFACE\_\-CreateContactContent} ()
+\item 
+function {\bf INTERFACE\_\-CreateOnlineContent} ()
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{interface/contact.js@{interface/contact.js}!ContactObj@{ContactObj}}
+\index{ContactObj@{ContactObj}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ContactObj ()}\label{interface_2contact_8js_befba56b856674055a8dfddbbbb0e72c}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Control interface of contact list 
+
+References CONTACT\_\-SortUsersByNick(), CONTACT\_\-SortUsersByRating(), INTERFACE\_\-AddContactGroup(), INTERFACE\_\-AddContactUser(), INTERFACE\_\-CreateContactContent(), INTERFACE\_\-FindContactGroup(), INTERFACE\_\-FindContactUserGroup(), INTERFACE\_\-GetContactGroup(), INTERFACE\_\-HideContactList(), INTERFACE\_\-RemoveContactGroup(), INTERFACE\_\-RemoveContactUser(), INTERFACE\_\-ShowContactList(), INTERFACE\_\-UpdateContactUser(), and UserListObj().
+
+Referenced by CONTACT\_\-StartContact().\index{interface/contact.js@{interface/contact.js}!ContactOnlineObj@{ContactOnlineObj}}
+\index{ContactOnlineObj@{ContactOnlineObj}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function ContactOnlineObj ()}\label{interface_2contact_8js_8ecce5de98dc2f1b4dc46123cb05e381}
+
+
+
+
+References CONTACT\_\-OnlineSortUserByNick(), CONTACT\_\-OnlineSortUserByRating(), INTERFACE\_\-CreateOnlineContent(), INTERFACE\_\-HideOnlineList(), INTERFACE\_\-ShowOnlineList(), and UserListObj().
+
+Referenced by CONTACT\_\-StartContact().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-AddContactGroup@{INTERFACE\_\-AddContactGroup}}
+\index{INTERFACE\_\-AddContactGroup@{INTERFACE\_\-AddContactGroup}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-AddContactGroup ( {\em GroupName})}\label{interface_2contact_8js_6be0e69248e5f0d6357215497a88cf7b}
+
+
+
+
+References INTERFACE\_\-CreateGroup(), and UserListObj().
+
+Referenced by ContactObj().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-AddContactUser@{INTERFACE\_\-AddContactUser}}
+\index{INTERFACE\_\-AddContactUser@{INTERFACE\_\-AddContactUser}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-AddContactUser ( {\em GroupName}, \/   {\em UserName}, \/   {\em Status}, \/   {\em Rating}, \/   {\em Type})}\label{interface_2contact_8js_5b544f15b2ba98d7ea117c9a1a98967e}
+
+
+
+
+Referenced by ContactObj().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-ChangeGroupVisibility@{INTERFACE\_\-ChangeGroupVisibility}}
+\index{INTERFACE\_\-ChangeGroupVisibility@{INTERFACE\_\-ChangeGroupVisibility}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ChangeGroupVisibility ( {\em Obj}, \/   {\em Id})\hspace{0.3cm}{\tt  [private]}}\label{interface_2contact_8js_82de8f8952b342b44f73504bd21680e4}
+
+
+Change user's status Create a contact node
+
+\begin{Desc}
+\item[Returns:]DOM object Show user menu Hide user menu from screen Show or hide contact groups \end{Desc}
+\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-CreateContact@{INTERFACE\_\-CreateContact}}
+\index{INTERFACE\_\-CreateContact@{INTERFACE\_\-CreateContact}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateContact ()\hspace{0.3cm}{\tt  [private]}}\label{interface_2contact_8js_fc3a4302d4c9bf87f8f09296189d184e}
+
+
+Create contact list 
+
+References MainData, UTILS\_\-CreateElement(), and UTILS\_\-GetText().
+
+Referenced by INTERFACE\_\-CreateLeft().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-CreateContactContent@{INTERFACE\_\-CreateContactContent}}
+\index{INTERFACE\_\-CreateContactContent@{INTERFACE\_\-CreateContactContent}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateContactContent ()}\label{interface_2contact_8js_0fb5ab190b974eaf63e2a6a4dbb84b52}
+
+
+
+
+References UTILS\_\-AddListener(), UTILS\_\-CreateElement(), UTILS\_\-GetText(), and WINDOW\_\-SearchUser().
+
+Referenced by ContactObj().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-CreateGroup@{INTERFACE\_\-CreateGroup}}
+\index{INTERFACE\_\-CreateGroup@{INTERFACE\_\-CreateGroup}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateGroup ( {\em GroupName})}\label{interface_2contact_8js_fdd2bd640d3145fa915630d0f52d1a3a}
+
+
+
+
+References UTILS\_\-CreateElement().
+
+Referenced by INTERFACE\_\-AddContactGroup().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-CreateOnlineContent@{INTERFACE\_\-CreateOnlineContent}}
+\index{INTERFACE\_\-CreateOnlineContent@{INTERFACE\_\-CreateOnlineContent}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateOnlineContent ()\hspace{0.3cm}{\tt  [private]}}\label{interface_2contact_8js_2e4cc3991845152ed817c111ad649e8f}
+
+
+Create contact online list 
+
+References UTILS\_\-AddListener(), UTILS\_\-CreateElement(), UTILS\_\-GetText(), and WINDOW\_\-SearchUser().
+
+Referenced by ContactOnlineObj().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-FindContactGroup@{INTERFACE\_\-FindContactGroup}}
+\index{INTERFACE\_\-FindContactGroup@{INTERFACE\_\-FindContactGroup}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-FindContactGroup ( {\em GroupName})}\label{interface_2contact_8js_8bd72a027bb280b431364761ded00557}
+
+
+
+
+Referenced by ContactObj().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-FindContactUserGroup@{INTERFACE\_\-FindContactUserGroup}}
+\index{INTERFACE\_\-FindContactUserGroup@{INTERFACE\_\-FindContactUserGroup}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-FindContactUserGroup ( {\em UserName})}\label{interface_2contact_8js_99f836bd411fff8de8b729a674b731c4}
+
+
+
+
+Referenced by ContactObj().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-GetContactGroup@{INTERFACE\_\-GetContactGroup}}
+\index{INTERFACE\_\-GetContactGroup@{INTERFACE\_\-GetContactGroup}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-GetContactGroup ( {\em GroupName})}\label{interface_2contact_8js_aeea57571d9c593b9f92f20165ffb329}
+
+
+
+
+Referenced by ContactObj().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-HideContactList@{INTERFACE\_\-HideContactList}}
+\index{INTERFACE\_\-HideContactList@{INTERFACE\_\-HideContactList}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-HideContactList ()}\label{interface_2contact_8js_504d791d962108cf68f1e344b4e87b09}
+
+
+
+
+Referenced by ContactObj().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-HideOnlineList@{INTERFACE\_\-HideOnlineList}}
+\index{INTERFACE\_\-HideOnlineList@{INTERFACE\_\-HideOnlineList}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-HideOnlineList ()}\label{interface_2contact_8js_b3e0c5cba52482b37f8db37c546dfc28}
+
+
+
+
+Referenced by ContactOnlineObj().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-RemoveContactGroup@{INTERFACE\_\-RemoveContactGroup}}
+\index{INTERFACE\_\-RemoveContactGroup@{INTERFACE\_\-RemoveContactGroup}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-RemoveContactGroup ( {\em GroupName})}\label{interface_2contact_8js_f867adcdabbae80ec5d442264d8b16c8}
+
+
+
+
+Referenced by ContactObj().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-RemoveContactUser@{INTERFACE\_\-RemoveContactUser}}
+\index{INTERFACE\_\-RemoveContactUser@{INTERFACE\_\-RemoveContactUser}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-RemoveContactUser ( {\em UserName})}\label{interface_2contact_8js_b1e3ff34a9188b26fc35081d3608dc74}
+
+
+
+
+Referenced by ContactObj().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-SetUserType@{INTERFACE\_\-SetUserType}}
+\index{INTERFACE\_\-SetUserType@{INTERFACE\_\-SetUserType}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-SetUserType ( {\em Username}, \/   {\em NewType})}\label{interface_2contact_8js_d469caf03b9be7dbf01dd27c2b4c8509}
+
+
+Add user in contact list Remove user in contact list Set status of user in interface Set rating of user in interface Change current rating type showed in interface Set type of user in interface 
+
+References MainData.\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-ShowContactList@{INTERFACE\_\-ShowContactList}}
+\index{INTERFACE\_\-ShowContactList@{INTERFACE\_\-ShowContactList}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowContactList ()}\label{interface_2contact_8js_91c5d6feebd8eccac587290d5e74134c}
+
+
+
+
+Referenced by ContactObj().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-ShowOnlineList@{INTERFACE\_\-ShowOnlineList}}
+\index{INTERFACE\_\-ShowOnlineList@{INTERFACE\_\-ShowOnlineList}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowOnlineList ()}\label{interface_2contact_8js_25c673d2d7d179fdca8de7d03f205b17}
+
+
+
+
+Referenced by ContactOnlineObj().\index{interface/contact.js@{interface/contact.js}!INTERFACE\_\-UpdateContactUser@{INTERFACE\_\-UpdateContactUser}}
+\index{INTERFACE\_\-UpdateContactUser@{INTERFACE\_\-UpdateContactUser}!interface/contact.js@{interface/contact.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-UpdateContactUser ( {\em UserName}, \/   {\em Status}, \/   {\em Rating}, \/   {\em Type})}\label{interface_2contact_8js_f2eab82d0c214c7da4d76f5f05c1500a}
+
+
+
+
+Referenced by ContactObj().

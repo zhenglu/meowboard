@@ -1,0 +1,48 @@
+\section{/home/www/ulysses/webclient/scripts/interface/left.js File Reference}
+\label{left_8js}\index{/home/www/ulysses/webclient/scripts/interface/left.js@{/home/www/ulysses/webclient/scripts/interface/left.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf INTERFACE\_\-CreateLeft} ()
+\item 
+function {\bf INTERFACE\_\-CreateUserBox} ()
+\item 
+function {\bf INTERFACE\_\-SetUserImage} (Img)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{left.js@{left.js}!INTERFACE\_\-CreateLeft@{INTERFACE\_\-CreateLeft}}
+\index{INTERFACE\_\-CreateLeft@{INTERFACE\_\-CreateLeft}!left.js@{left.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateLeft ()}\label{left_8js_6773b1f1613b8bf92b8443e4451130d8}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Create elements of the left side of screen 
+
+References INTERFACE\_\-CreateContact(), INTERFACE\_\-CreateRooms(), INTERFACE\_\-CreateUserBox(), and UTILS\_\-CreateElement().
+
+Referenced by INTERFACE\_\-CreateInterface().\index{left.js@{left.js}!INTERFACE\_\-CreateUserBox@{INTERFACE\_\-CreateUserBox}}
+\index{INTERFACE\_\-CreateUserBox@{INTERFACE\_\-CreateUserBox}!left.js@{left.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateUserBox ()}\label{left_8js_3fd128c6f241195f38df059e275858e5}
+
+
+Create user box (left side of the screen) 
+
+References CONTACT\_\-ChangeStatus(), MainData, PROFILE\_\-StartProfile(), UTILS\_\-AddListener(), UTILS\_\-Capitalize(), UTILS\_\-CreateElement(), and UTILS\_\-GetText().
+
+Referenced by INTERFACE\_\-CreateLeft().\index{left.js@{left.js}!INTERFACE\_\-SetUserImage@{INTERFACE\_\-SetUserImage}}
+\index{INTERFACE\_\-SetUserImage@{INTERFACE\_\-SetUserImage}!left.js@{left.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-SetUserImage ( {\em Img})}\label{left_8js_21fc97ab34d09cf3c54dd41359a56574}
+
+
+Change user's image 
+
+References IMAGE\_\-ImageDecode().
+
+Referenced by PROFILE\_\-HandleVCardProfile().

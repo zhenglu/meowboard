@@ -1,0 +1,9 @@
+<xd>
+	<root name="query" type="query"/>
+	<type name="query">
+		<attribute name="xmlns" default="http://c3sl.ufpr.br/chessd#match" fixed="true"/>
+		<attribute name="action"/>
+		<any_children/>
+	</type>
+</xd>
+

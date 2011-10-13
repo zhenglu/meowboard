@@ -1,0 +1,184 @@
+#LoginDiv {
+	width			: 720px;
+	height			: 265px;
+	border			: 2px solid #FFA200;
+	position		: relative;
+	top				: 80px;
+	left 			: 50%;
+	margin-left		: -390px;
+	background		: url('../images/login/login_box_fundo.gif') repeat-x;
+	padding			: 20px 30px;
+	overflow		: hidden;
+}
+
+#LoginDiv #TextDiv a {
+	cursor			: pointer;
+}
+
+#LoginDiv #TextDiv {
+	width			: 450px;
+	float			: left;
+}
+
+#LoginDiv #FormDiv {
+	position		: relative;
+	top				: 80px;
+	width			: 250px;
+	float			: right;
+	text-align		: center;
+}
+
+#LoginDiv #FormDiv span {
+	font-size		: 13px;
+	font-weight		: bold;
+	color			: #216778;
+}
+
+#LoginDiv #FormDiv label {
+	font-size		: 10px;
+	color			: #216778;
+	margin-left		: 8px;
+}
+
+#LoginDiv #FormDiv input {
+	border			: 1px solid #216778;
+	font-size		: 11px;
+	padding			: 1px;
+}
+
+#LoginDiv #FormDiv td {
+	padding			: 3px;
+	vertical-align		: top;
+}
+
+#LoginDiv #FormDiv .checkbox {
+	margin-top		: 12px;
+}
+
+#LoginDiv #FormDiv .entrar {
+	margin-top		: 10px;
+	margin-bottom		: 24px;
+	background-image	: url("../images/login/login_botao_ok.png");
+	border			: 0px;
+	width			: 30px;
+	height			: 18px;
+	cursor			: pointer;
+}
+
+#LoginDiv #FormDiv .entrar:hover {
+	background-image	: url("../images/login/login_botao_ok_selec.png");
+}
+
+#LoginDiv #FormDiv .signin {
+	position		: absolute;
+	top			: -40px;
+	left			: 80px;
+}
+
+#LoginDiv #FormDiv .botao {
+	margin-top		: 10px;
+	padding			: 0 0 5px 0;
+	background		: url('../images/login/fundo_botao.png') no-repeat;
+	border			: 0px;
+	width			: 90px;
+	height			: 17px;
+	font-weight		: bold;
+	font-size		: 12px;
+	color			: #FFF;
+	cursor			: pointer;
+}
+
+#LoginDiv #FormDiv a {
+	display			: block;
+	margin-top		: 8px;
+	font-weight		: bold;
+	font-size		: 13px;
+	color			: #216778;
+	cursor			: pointer;
+}
+
+#LoginDiv #FormDiv a:hover {
+	text-decoration	: underline;
+}
+
+#LoginDiv .error_label {
+	color			: #F00 !important;
+}
+
+#LoginDiv h3 {
+	font-weight		: bold;
+	font-size		: 13px;
+	color			: #216778;
+	margin-bottom		: 20px;
+}
+
+#LoginDiv p {
+	font-size		: 12px;
+	color			: #216778;
+	margin-bottom		: 12px;
+}
+
+#LoginDiv a {
+	font-size		: 12px;
+	color			: #216778;
+	margin-bottom		: 4px;
+}
+#BannerLogin {
+	position		: relative;
+	left			: 50%;
+	margin-left		: -225px;
+	top			: 100px;
+}
+
+#version
+{
+	position		: absolute;
+	bottom			: 0mm;
+	right			: 1mm;
+	font-size		: 3mm;
+	color			: #D33300;
+	font-weight		: bold;
+}
+
+#LangDiv
+{
+	position		: relative;
+	left			: 50%;
+	margin-left		: -70px;
+	top			: 40px;
+	width			: 30%;
+}
+
+#LangDiv ul
+{
+	list-style		: none;
+	display			: table;
+	width			: 100%;
+}
+
+#LangDiv li
+{
+	cursor			: pointer;
+	float			: left;
+	margin-right		: 10px;
+	font-weight		: bold;
+	font-size		: 11px;
+	color			: #216778;
+}
+
+#LangDiv li span
+{
+	cursor			: pointer;
+}
+
+#LangDiv li:hover {
+	text-decoration		: underline;
+}
+
+/* LOADING TEXT */
+#ProgressText, #LoadingText
+{
+	margin			: 0px 10px;
+	font-size		: 12px;
+	color			: #216778;
+}

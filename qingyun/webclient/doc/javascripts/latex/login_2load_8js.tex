@@ -1,0 +1,103 @@
+\section{/home/www/ulysses/webclient/scripts/login/load.js File Reference}
+\label{login_2load_8js}\index{/home/www/ulysses/webclient/scripts/login/load.js@{/home/www/ulysses/webclient/scripts/login/load.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf LOGIN\_\-Load} ()
+\item 
+function {\bf LOGIN\_\-Load2} ()
+\item 
+function {\bf LOGIN\_\-Load3} ()
+\item 
+function {\bf LOGIN\_\-Load4} ()
+\item 
+function {\bf LOGIN\_\-EndLoad} ()
+\item 
+function {\bf LOGIN\_\-LoadScripts} ()
+\item 
+function {\bf LOGIN\_\-LoadCss} ()
+\item 
+function {\bf LOGIN\_\-LoadImages} ()
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{login/load.js@{login/load.js}!LOGIN\_\-EndLoad@{LOGIN\_\-EndLoad}}
+\index{LOGIN\_\-EndLoad@{LOGIN\_\-EndLoad}!login/load.js@{login/load.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function LOGIN\_\-EndLoad ()}\label{login_2load_8js_b75d7f62cdfa88a298172dc1569f273e}
+
+
+Remove load box from screen 
+
+References INTERFACE\_\-EndLoad().
+
+Referenced by LOGIN\_\-Interface().\index{login/load.js@{login/load.js}!LOGIN\_\-Load@{LOGIN\_\-Load}}
+\index{LOGIN\_\-Load@{LOGIN\_\-Load}!login/load.js@{login/load.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function LOGIN\_\-Load ()}\label{login_2load_8js_1dd88dc6efb8ed5b7c9e341669ebc8d5}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Load images, scripts and css used in the interface from server Show load screen to user, and begin to load scripts 
+
+References INTERFACE\_\-SetLoadPhrase(), INTERFACE\_\-StartLoad(), LOGIN\_\-EndLogin(), LOGIN\_\-LoadCss(), and UTILS\_\-GetText().
+
+Referenced by CONNECTION\_\-ReceiveConnection().\index{login/load.js@{login/load.js}!LOGIN\_\-Load2@{LOGIN\_\-Load2}}
+\index{LOGIN\_\-Load2@{LOGIN\_\-Load2}!login/load.js@{login/load.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function LOGIN\_\-Load2 ()}\label{login_2load_8js_ab13616c61cedc41a233a117bf4432c7}
+
+
+Start to load css files 
+
+References INTERFACE\_\-SetLoadPhrase(), LOGIN\_\-LoadScripts(), and UTILS\_\-GetText().
+
+Referenced by LOGIN\_\-LoadCss().\index{login/load.js@{login/load.js}!LOGIN\_\-Load3@{LOGIN\_\-Load3}}
+\index{LOGIN\_\-Load3@{LOGIN\_\-Load3}!login/load.js@{login/load.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function LOGIN\_\-Load3 ()}\label{login_2load_8js_cf1f3753731146f6b976d39c11812ca7}
+
+
+Start to load images 
+
+References INTERFACE\_\-SetLoadPhrase(), LOGIN\_\-LoadImages(), and UTILS\_\-GetText().
+
+Referenced by LOGIN\_\-LoadScripts().\index{login/load.js@{login/load.js}!LOGIN\_\-Load4@{LOGIN\_\-Load4}}
+\index{LOGIN\_\-Load4@{LOGIN\_\-Load4}!login/load.js@{login/load.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function LOGIN\_\-Load4 ()}\label{login_2load_8js_e7e0a7d2cb1d4c5f547244c150c6f5d5}
+
+
+Finish load process 
+
+References CONNECTION\_\-ConnectJabber(), INTERFACE\_\-SetLoadPhrase(), MainData, and UTILS\_\-GetText().
+
+Referenced by LOGIN\_\-LoadImages().\index{login/load.js@{login/load.js}!LOGIN\_\-LoadCss@{LOGIN\_\-LoadCss}}
+\index{LOGIN\_\-LoadCss@{LOGIN\_\-LoadCss}!login/load.js@{login/load.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function LOGIN\_\-LoadCss ()}\label{login_2load_8js_16cb7be89b1c1af1ce320778127d1b11}
+
+
+Load css files while interface is loading 
+
+References LOGIN\_\-Load2(), and MainData.
+
+Referenced by LOGIN\_\-Load().\index{login/load.js@{login/load.js}!LOGIN\_\-LoadImages@{LOGIN\_\-LoadImages}}
+\index{LOGIN\_\-LoadImages@{LOGIN\_\-LoadImages}!login/load.js@{login/load.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function LOGIN\_\-LoadImages ()}\label{login_2load_8js_12b76f037d9d5af6be0c544ebb182e90}
+
+
+Load images used in interface 
+
+References LOGIN\_\-Load4(), and Preloader().
+
+Referenced by LOGIN\_\-Load3().\index{login/load.js@{login/load.js}!LOGIN\_\-LoadScripts@{LOGIN\_\-LoadScripts}}
+\index{LOGIN\_\-LoadScripts@{LOGIN\_\-LoadScripts}!login/load.js@{login/load.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function LOGIN\_\-LoadScripts ()}\label{login_2load_8js_45331d23c96e1197a44eb08ebb8d6905}
+
+
+Load scripts files while interface is loading 
+
+References LOGIN\_\-Load3(), and Preloader().
+
+Referenced by LOGIN\_\-Load2().

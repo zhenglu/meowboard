@@ -1,0 +1,209 @@
+\section{/home/www/ulysses/webclient/scripts/interface/oldgame.js File Reference}
+\label{interface_2oldgame_8js}\index{/home/www/ulysses/webclient/scripts/interface/oldgame.js@{/home/www/ulysses/webclient/scripts/interface/oldgame.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf INTERFACE\_\-ShowOldGameWindow} (Id)
+\item 
+function {\bf INTERFACE\_\-AddOldGameResult} (White, Black, Date, GameType, WinType, Id)
+\item 
+function {\bf INTERFACE\_\-Player1Input} ()
+\item 
+function {\bf INTERFACE\_\-Player2Input} ()
+\item 
+function {\bf INTERFACE\_\-Color} ()
+\item 
+function {\bf INTERFACE\_\-FromInput} ()
+\item 
+function {\bf INTERFACE\_\-ToInput} ()
+\item 
+function {\bf INTERFACE\_\-OldGameSetResult} (Id, GameList, More)
+\item 
+function {\bf INTERFACE\_\-OldGameSetTable} (Id, GameList, More)
+\item 
+function {\bf INTERFACE\_\-SetPrevButton} (Node)
+\item 
+function {\bf INTERFACE\_\-SetNextButton} (Node)
+\item 
+function {\bf INTERFACE\_\-SetSearchButton} (Node)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{interface/oldgame.js@{interface/oldgame.js}!INTERFACE\_\-AddOldGameResult@{INTERFACE\_\-AddOldGameResult}}
+\index{INTERFACE\_\-AddOldGameResult@{INTERFACE\_\-AddOldGameResult}!interface/oldgame.js@{interface/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-AddOldGameResult ( {\em White}, \/   {\em Black}, \/   {\em Date}, \/   {\em GameType}, \/   {\em WinType}, \/   {\em Id})}\label{interface_2oldgame_8js_93bdd499c5365639c70d02430a5e926b}
+
+
+Set result table of old games search
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameList}]Array of old games \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\begin{Desc}
+\item[See also:]WINDOW\_\-SetResult(); \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Kiyoshi Simizu Yorinori \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MainData, MESSAGE\_\-FetchOldGame(), UTILS\_\-AddListener(), UTILS\_\-CreateElement(), UTILS\_\-GetText(), and WINDOW\_\-Alert().
+
+Referenced by INTERFACE\_\-OldGameSetTable().\index{interface/oldgame.js@{interface/oldgame.js}!INTERFACE\_\-Color@{INTERFACE\_\-Color}}
+\index{INTERFACE\_\-Color@{INTERFACE\_\-Color}!interface/oldgame.js@{interface/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-Color ()}\label{interface_2oldgame_8js_19a16e0d8e054d23db05d66deee0a32b}
+
+
+
+
+Referenced by INTERFACE\_\-ShowOldGameWindow().\index{interface/oldgame.js@{interface/oldgame.js}!INTERFACE\_\-FromInput@{INTERFACE\_\-FromInput}}
+\index{INTERFACE\_\-FromInput@{INTERFACE\_\-FromInput}!interface/oldgame.js@{interface/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-FromInput ()}\label{interface_2oldgame_8js_d15df74ca4d7b3b600e11b52b5b31290}
+
+
+
+
+Referenced by INTERFACE\_\-ShowOldGameWindow().\index{interface/oldgame.js@{interface/oldgame.js}!INTERFACE\_\-OldGameSetResult@{INTERFACE\_\-OldGameSetResult}}
+\index{INTERFACE\_\-OldGameSetResult@{INTERFACE\_\-OldGameSetResult}!interface/oldgame.js@{interface/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-OldGameSetResult ( {\em Id}, \/   {\em GameList}, \/   {\em More})}\label{interface_2oldgame_8js_45136c83e59105c2d2d5abb657abc414}
+
+
+Display result of a old game search
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameList}]Array of old games \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{OLDGAME\_\-HandleSearchOldGame()}{p.}{game_2oldgame_8js_d85ecf92f0db2f9e482b7ebe2fbd713b}; \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Kiyoshi Simizu Yorinori \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowOldGameWindow().\index{interface/oldgame.js@{interface/oldgame.js}!INTERFACE\_\-OldGameSetTable@{INTERFACE\_\-OldGameSetTable}}
+\index{INTERFACE\_\-OldGameSetTable@{INTERFACE\_\-OldGameSetTable}!interface/oldgame.js@{interface/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-OldGameSetTable ( {\em Id}, \/   {\em GameList}, \/   {\em More})}\label{interface_2oldgame_8js_5fafd266613fed9da77a40d99fee58cf}
+
+
+Set result table of old games search
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameList}]Array of old games \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\begin{Desc}
+\item[See also:]WINDOW\_\-SetResult(); \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Kiyoshi Simizu Yorinori \end{Desc}
+
+
+References INTERFACE\_\-AddOldGameResult(), and MainData.
+
+Referenced by INTERFACE\_\-ShowOldGameWindow().\index{interface/oldgame.js@{interface/oldgame.js}!INTERFACE\_\-Player1Input@{INTERFACE\_\-Player1Input}}
+\index{INTERFACE\_\-Player1Input@{INTERFACE\_\-Player1Input}!interface/oldgame.js@{interface/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-Player1Input ()}\label{interface_2oldgame_8js_9da192afae559c79dd6f87fe6bcbbb82}
+
+
+
+
+Referenced by INTERFACE\_\-ShowOldGameWindow().\index{interface/oldgame.js@{interface/oldgame.js}!INTERFACE\_\-Player2Input@{INTERFACE\_\-Player2Input}}
+\index{INTERFACE\_\-Player2Input@{INTERFACE\_\-Player2Input}!interface/oldgame.js@{interface/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-Player2Input ()}\label{interface_2oldgame_8js_87ed6e5a14bb0850aae188f8d1284dfd}
+
+
+
+
+Referenced by INTERFACE\_\-ShowOldGameWindow().\index{interface/oldgame.js@{interface/oldgame.js}!INTERFACE\_\-SetNextButton@{INTERFACE\_\-SetNextButton}}
+\index{INTERFACE\_\-SetNextButton@{INTERFACE\_\-SetNextButton}!interface/oldgame.js@{interface/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-SetNextButton ( {\em Node})}\label{interface_2oldgame_8js_6447e98ed7e93a48802afaedaa9f38a6}
+
+
+Set function associated to next button
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Node}]Oldgame object  \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Kiyoshi Simizu Yorinori \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MESSAGE\_\-GetOldGames(), and UTILS\_\-AddListener().
+
+Referenced by INTERFACE\_\-ShowOldGameWindow().\index{interface/oldgame.js@{interface/oldgame.js}!INTERFACE\_\-SetPrevButton@{INTERFACE\_\-SetPrevButton}}
+\index{INTERFACE\_\-SetPrevButton@{INTERFACE\_\-SetPrevButton}!interface/oldgame.js@{interface/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-SetPrevButton ( {\em Node})}\label{interface_2oldgame_8js_a8f6418142a118dc79d3d5af86278bb5}
+
+
+Set function associated to previous button
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Node}]Oldgame object  \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Kiyoshi Simizu Yorinori \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MESSAGE\_\-GetOldGames(), and UTILS\_\-AddListener().
+
+Referenced by INTERFACE\_\-ShowOldGameWindow().\index{interface/oldgame.js@{interface/oldgame.js}!INTERFACE\_\-SetSearchButton@{INTERFACE\_\-SetSearchButton}}
+\index{INTERFACE\_\-SetSearchButton@{INTERFACE\_\-SetSearchButton}!interface/oldgame.js@{interface/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-SetSearchButton ( {\em Node})}\label{interface_2oldgame_8js_03988ea330e8f11c6c121173a0740beb}
+
+
+Set function associated to search button
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Node}]Oldgame object  \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Kiyoshi Simizu Yorinori \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MESSAGE\_\-GetOldGames(), UTILS\_\-AddListener(), UTILS\_\-ConvertSearchDate(), UTILS\_\-GetText(), and WINDOW\_\-Alert().
+
+Referenced by INTERFACE\_\-ShowOldGameWindow().\index{interface/oldgame.js@{interface/oldgame.js}!INTERFACE\_\-ShowOldGameWindow@{INTERFACE\_\-ShowOldGameWindow}}
+\index{INTERFACE\_\-ShowOldGameWindow@{INTERFACE\_\-ShowOldGameWindow}!interface/oldgame.js@{interface/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowOldGameWindow ( {\em Id})}\label{interface_2oldgame_8js_76819c9d6f49ba597261de9b9d7a4833}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Create elements of search old games window and returns div
+
+\begin{Desc}
+\item[Returns:]Div; Array \end{Desc}
+\begin{Desc}
+\item[See also:]WINDOW\_\-OpeOldGameWindow(); \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Kiyoshi Simizu Yorinori \end{Desc}
+
+
+References INTERFACE\_\-Color(), INTERFACE\_\-FromInput(), INTERFACE\_\-OldGameSetResult(), INTERFACE\_\-OldGameSetTable(), INTERFACE\_\-Player1Input(), INTERFACE\_\-Player2Input(), INTERFACE\_\-SetNextButton(), INTERFACE\_\-SetPrevButton(), INTERFACE\_\-SetSearchButton(), INTERFACE\_\-ToInput(), MainData, UTILS\_\-AddListener(), UTILS\_\-CreateElement(), and UTILS\_\-GetText().
+
+Referenced by WINDOW\_\-OldGame().\index{interface/oldgame.js@{interface/oldgame.js}!INTERFACE\_\-ToInput@{INTERFACE\_\-ToInput}}
+\index{INTERFACE\_\-ToInput@{INTERFACE\_\-ToInput}!interface/oldgame.js@{interface/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ToInput ()}\label{interface_2oldgame_8js_b3211ad295d802d9b1fc4fe8645a3466}
+
+
+
+
+Referenced by INTERFACE\_\-ShowOldGameWindow().

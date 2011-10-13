@@ -1,0 +1,356 @@
+\section{/home/www/ulysses/webclient/scripts/game/oldgame.js File Reference}
+\label{game_2oldgame_8js}\index{/home/www/ulysses/webclient/scripts/game/oldgame.js@{/home/www/ulysses/webclient/scripts/game/oldgame.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf OLDGAME\_\-HandleSearchOldGame} (XML)
+\item 
+function {\bf OLDGAME\_\-StartOldGame} (OldGameId, P1, P2)
+\item 
+function {\bf OLDGAME\_\-FetchOldGame} (XML)
+\item 
+function {\bf OLDGAME\_\-LoadGameHistory} (GamePos, HistoryXml, Player1, Player2)
+\item 
+function {\bf OLDGAME\_\-UpdateBoard} (GamePos, BoardStr, Move, ShortMove, P1, P2, TurnColor)
+\item 
+function {\bf OLDGAME\_\-EndGame} (Id)
+\item 
+function {\bf OLDGAME\_\-HandleVCardPhoto} (XML)
+\item 
+function {\bf OLDGAME\_\-RemoveOldGame} (Index)
+\item 
+function {\bf OLDGAME\_\-FirstBoard} ()
+\item 
+function {\bf OLDGAME\_\-PrevBoard} ()
+\item 
+function {\bf OLDGAME\_\-NextBoard} ()
+\item 
+function {\bf OLDGAME\_\-LastBoard} ()
+\item 
+function {\bf OLDGAME\_\-GotoBoard} (NumBoard)
+\item 
+function {\bf OLDGAME\_\-OpenOldGameWindow} (User)
+\item 
+function {\bf OLDGAME\_\-CloseWindow} (Id)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{game/oldgame.js@{game/oldgame.js}!OLDGAME\_\-CloseWindow@{OLDGAME\_\-CloseWindow}}
+\index{OLDGAME\_\-CloseWindow@{OLDGAME\_\-CloseWindow}!game/oldgame.js@{game/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function OLDGAME\_\-CloseWindow ( {\em Id})}\label{game_2oldgame_8js_1452256e6b0246c087121d961fcfbdd7}
+
+
+Remove Search Game Info in data struct and set new old game window max id count
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Id}]Window's id \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo \end{Desc}
+
+
+References MainData.
+
+Referenced by WINDOW\_\-OldGame().\index{game/oldgame.js@{game/oldgame.js}!OLDGAME\_\-EndGame@{OLDGAME\_\-EndGame}}
+\index{OLDGAME\_\-EndGame@{OLDGAME\_\-EndGame}!game/oldgame.js@{game/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function OLDGAME\_\-EndGame ( {\em Id})}\label{game_2oldgame_8js_3660a9a27a6403d7fd38230d6343ffe1}
+
+
+Change board GameMode to OldGame Mode when game is over
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Id}]is Game ID \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{MainData}{p.}{start_8js_be4e3545ee0ac3ff17e7aecaff4fce1a} methods and Game Interface Object; \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References MainData, OLDGAME\_\-LastBoard(), and OLDGAME\_\-RemoveOldGame().
+
+Referenced by GAME\_\-End().\index{game/oldgame.js@{game/oldgame.js}!OLDGAME\_\-FetchOldGame@{OLDGAME\_\-FetchOldGame}}
+\index{OLDGAME\_\-FetchOldGame@{OLDGAME\_\-FetchOldGame}!game/oldgame.js@{game/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function OLDGAME\_\-FetchOldGame ( {\em XML})}\label{game_2oldgame_8js_fd8378f2a47a56d575a27cfca8811baa}
+
+
+Handle Game State It's a good ideia to read the server's documentation before reading the code above
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml that contains the game state \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses and Rubens \end{Desc}
+
+
+References OLDGAME\_\-LoadGameHistory(), and OLDGAME\_\-StartOldGame().
+
+Referenced by PARSER\_\-ParseIq().\index{game/oldgame.js@{game/oldgame.js}!OLDGAME\_\-FirstBoard@{OLDGAME\_\-FirstBoard}}
+\index{OLDGAME\_\-FirstBoard@{OLDGAME\_\-FirstBoard}!game/oldgame.js@{game/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function OLDGAME\_\-FirstBoard ()}\label{game_2oldgame_8js_dc9285d8e969bd059dd9e9a0b0630c3f}
+
+
+Change current board to first game board
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{MainData}{p.}{start_8js_be4e3545ee0ac3ff17e7aecaff4fce1a} methods and Game Interface Object; \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References MainData.
+
+Referenced by INTERFACE\_\-CreateOldGameMoveList(), and OLDGAME\_\-LoadGameHistory().\index{game/oldgame.js@{game/oldgame.js}!OLDGAME\_\-GotoBoard@{OLDGAME\_\-GotoBoard}}
+\index{OLDGAME\_\-GotoBoard@{OLDGAME\_\-GotoBoard}!game/oldgame.js@{game/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function OLDGAME\_\-GotoBoard ( {\em NumBoard})}\label{game_2oldgame_8js_f50ccb08b7d768f57eb08e16173dccb1}
+
+
+Change current board to some game board
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em NumBoard}]in Board Number \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{MainData}{p.}{start_8js_be4e3545ee0ac3ff17e7aecaff4fce1a} methods and Game Interface Object; \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References MainData.
+
+Referenced by INTERFACE\_\-AddMove().\index{game/oldgame.js@{game/oldgame.js}!OLDGAME\_\-HandleSearchOldGame@{OLDGAME\_\-HandleSearchOldGame}}
+\index{OLDGAME\_\-HandleSearchOldGame@{OLDGAME\_\-HandleSearchOldGame}!game/oldgame.js@{game/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function OLDGAME\_\-HandleSearchOldGame ( {\em XML})}\label{game_2oldgame_8js_d85ecf92f0db2f9e482b7ebe2fbd713b}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software This file contains OldGame Handle Search Old Games Messages
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml that contains the string 'search\_\-game' in xmlns attribute \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Buffer with the messages that must be send \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens; \end{Desc}
+
+
+References MainData, UTILS\_\-ConvertTimeStamp(), UTILS\_\-GetNodeText(), and UTILS\_\-GetText().
+
+Referenced by PARSER\_\-ParseIq().\index{game/oldgame.js@{game/oldgame.js}!OLDGAME\_\-HandleVCardPhoto@{OLDGAME\_\-HandleVCardPhoto}}
+\index{OLDGAME\_\-HandleVCardPhoto@{OLDGAME\_\-HandleVCardPhoto}!game/oldgame.js@{game/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function OLDGAME\_\-HandleVCardPhoto ( {\em XML})}\label{game_2oldgame_8js_8a52d904c785725832eed66d513aec72}
+
+
+Handle Game Players Photo
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml that contains vCard photo \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References MainData, and UTILS\_\-GetNodeText().
+
+Referenced by PARSER\_\-ParseIq().\index{game/oldgame.js@{game/oldgame.js}!OLDGAME\_\-LastBoard@{OLDGAME\_\-LastBoard}}
+\index{OLDGAME\_\-LastBoard@{OLDGAME\_\-LastBoard}!game/oldgame.js@{game/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function OLDGAME\_\-LastBoard ()}\label{game_2oldgame_8js_5527361bd1aa99eae49ce18c1aaac0b9}
+
+
+Change current board to last game board
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{MainData}{p.}{start_8js_be4e3545ee0ac3ff17e7aecaff4fce1a} methods and Game Interface Object; \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References MainData.
+
+Referenced by INTERFACE\_\-CreateOldGameMoveList(), and OLDGAME\_\-EndGame().\index{game/oldgame.js@{game/oldgame.js}!OLDGAME\_\-LoadGameHistory@{OLDGAME\_\-LoadGameHistory}}
+\index{OLDGAME\_\-LoadGameHistory@{OLDGAME\_\-LoadGameHistory}!game/oldgame.js@{game/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function OLDGAME\_\-LoadGameHistory ( {\em GamePos}, \/   {\em HistoryXml}, \/   {\em Player1}, \/   {\em Player2})}\label{game_2oldgame_8js_c0263783de3bcc256283bc6b4c64b473}
+
+
+Load all game history moves done in the game
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameId}]is the game identificator \item[{\em HistoryXml}]is a XML that contains all games states \item[{\em Player1}]= Player 1 Object (Name, Time, Color, Inc) \item[{\em Player2}]= Player 2 Object (Name, Time, Color, Inc) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References OLDGAME\_\-FirstBoard(), OLDGAME\_\-UpdateBoard(), UTILS\_\-GetText(), and WINDOW\_\-Alert().
+
+Referenced by OLDGAME\_\-FetchOldGame().\index{game/oldgame.js@{game/oldgame.js}!OLDGAME\_\-NextBoard@{OLDGAME\_\-NextBoard}}
+\index{OLDGAME\_\-NextBoard@{OLDGAME\_\-NextBoard}!game/oldgame.js@{game/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function OLDGAME\_\-NextBoard ()}\label{game_2oldgame_8js_c01934e66f901caec0bbfe1a5e0feaed}
+
+
+Change current board to next game board
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{MainData}{p.}{start_8js_be4e3545ee0ac3ff17e7aecaff4fce1a} methods and Game Interface Object; \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References MainData.
+
+Referenced by INTERFACE\_\-CreateOldGameMoveList().\index{game/oldgame.js@{game/oldgame.js}!OLDGAME\_\-OpenOldGameWindow@{OLDGAME\_\-OpenOldGameWindow}}
+\index{OLDGAME\_\-OpenOldGameWindow@{OLDGAME\_\-OpenOldGameWindow}!game/oldgame.js@{game/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function OLDGAME\_\-OpenOldGameWindow ( {\em User})}\label{game_2oldgame_8js_11ab38516c3f26ff369c6cc1dee32240}
+
+
+Create search game info in data Struct and send old game search message
+
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MainData, MESSAGE\_\-GetOldGames(), and WINDOW\_\-OldGame().
+
+Referenced by INTERFACE\_\-CreateTop(), and INTERFACE\_\-ShowProfileWindow().\index{game/oldgame.js@{game/oldgame.js}!OLDGAME\_\-PrevBoard@{OLDGAME\_\-PrevBoard}}
+\index{OLDGAME\_\-PrevBoard@{OLDGAME\_\-PrevBoard}!game/oldgame.js@{game/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function OLDGAME\_\-PrevBoard ()}\label{game_2oldgame_8js_f7a431246f6866b28af0333989808061}
+
+
+Change current board to previous game board
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em void}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{MainData}{p.}{start_8js_be4e3545ee0ac3ff17e7aecaff4fce1a} methods and Game Interface Object; \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References MainData.
+
+Referenced by INTERFACE\_\-CreateOldGameMoveList().\index{game/oldgame.js@{game/oldgame.js}!OLDGAME\_\-RemoveOldGame@{OLDGAME\_\-RemoveOldGame}}
+\index{OLDGAME\_\-RemoveOldGame@{OLDGAME\_\-RemoveOldGame}!game/oldgame.js@{game/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function OLDGAME\_\-RemoveOldGame ( {\em Index})}\label{game_2oldgame_8js_321e55e0386ac36320f74306b4b3cf73}
+
+
+Remove OldGame board from interface and OldGameList
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Index}]is array index of OldGame \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{MainData}{p.}{start_8js_be4e3545ee0ac3ff17e7aecaff4fce1a} methods and Game Interface Object; \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References MainData, and ROOM\_\-ExitRoom().
+
+Referenced by GAME\_\-StartObserverGame(), OLDGAME\_\-EndGame(), and OLDGAME\_\-StartOldGame().\index{game/oldgame.js@{game/oldgame.js}!OLDGAME\_\-StartOldGame@{OLDGAME\_\-StartOldGame}}
+\index{OLDGAME\_\-StartOldGame@{OLDGAME\_\-StartOldGame}!game/oldgame.js@{game/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function OLDGAME\_\-StartOldGame ( {\em OldGameId}, \/   {\em P1}, \/   {\em P2})}\label{game_2oldgame_8js_a3624314521dc1481ad6ce714687a3c1}
+
+
+Start Game in OldGame Mode
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em P1}]= Player 1 Object (Name, Time, Color, Inc) \item[{\em P2}]= Player 2 Object (Name, Time, Color, Inc) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{MainData}{p.}{start_8js_be4e3545ee0ac3ff17e7aecaff4fce1a} methods and Game Interface Object; \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References INTERFACE\_\-GameBoardObj(), INTERFACE\_\-RemoveWelcome(), MainData, MESSAGE\_\-GetProfile(), and OLDGAME\_\-RemoveOldGame().
+
+Referenced by OLDGAME\_\-FetchOldGame().\index{game/oldgame.js@{game/oldgame.js}!OLDGAME\_\-UpdateBoard@{OLDGAME\_\-UpdateBoard}}
+\index{OLDGAME\_\-UpdateBoard@{OLDGAME\_\-UpdateBoard}!game/oldgame.js@{game/oldgame.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function OLDGAME\_\-UpdateBoard ( {\em GamePos}, \/   {\em BoardStr}, \/   {\em Move}, \/   {\em ShortMove}, \/   {\em P1}, \/   {\em P2}, \/   {\em TurnColor})}\label{game_2oldgame_8js_67853a86a8abf9101599c0edaaf297ab}
+
+
+Update board in data struct and interface
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameId}]= Game number \item[{\em BoardStr}]= Board status in a string \item[{\em Move}]= Chess Move (Piece/Orig-Dest) \item[{\em P1}]= Player 1 Object (Name, Time, Color, Inc) \item[{\em P2}]= Player 2 Object (Name, Time, Color, Inc) \item[{\em TurnColor}]= color (\char`\"{}white\char`\"{}/\char`\"{}black\char`\"{}) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References MainData, and UTILS\_\-String2Board().
+
+Referenced by OLDGAME\_\-LoadGameHistory().

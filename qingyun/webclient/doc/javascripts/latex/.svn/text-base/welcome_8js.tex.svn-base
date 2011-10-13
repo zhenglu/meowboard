@@ -1,0 +1,29 @@
+\section{/home/www/ulysses/webclient/scripts/interface/welcome.js File Reference}
+\label{welcome_8js}\index{/home/www/ulysses/webclient/scripts/interface/welcome.js@{/home/www/ulysses/webclient/scripts/interface/welcome.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf INTERFACE\_\-CreateWelcome} ()
+\item 
+function {\bf INTERFACE\_\-RemoveWelcome} ()
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{welcome.js@{welcome.js}!INTERFACE\_\-CreateWelcome@{INTERFACE\_\-CreateWelcome}}
+\index{INTERFACE\_\-CreateWelcome@{INTERFACE\_\-CreateWelcome}!welcome.js@{welcome.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateWelcome ()}\label{welcome_8js_08edb81f74f4d70e8e9275afc4756181}
+
+
+
+
+References INTERFACE\_\-RemoveWelcome(), MainData, UTILS\_\-CreateElement(), UTILS\_\-GetNodeText(), and UTILS\_\-GetText().
+
+Referenced by INTERFACE\_\-CreateInterface().\index{welcome.js@{welcome.js}!INTERFACE\_\-RemoveWelcome@{INTERFACE\_\-RemoveWelcome}}
+\index{INTERFACE\_\-RemoveWelcome@{INTERFACE\_\-RemoveWelcome}!welcome.js@{welcome.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-RemoveWelcome ()}\label{welcome_8js_1fe27b085197d760c33b1a1db3f6c63e}
+
+
+
+
+Referenced by GAME\_\-StartGame(), GAME\_\-StartObserverGame(), INTERFACE\_\-CreateWelcome(), and OLDGAME\_\-StartOldGame().

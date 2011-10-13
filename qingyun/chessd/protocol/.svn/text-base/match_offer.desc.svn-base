@@ -1,0 +1,18 @@
+<xd>
+	<root name="query" type="query"/>
+	<type name="query">
+		<attribute name="xmlns" default="http://c3sl.ufpr.br/chessd#match" fixed="true"/>
+		<attribute name="action" default="offer" fixed="true"/>
+		<child name="match">
+			<attribute name="category"/>
+		</child>
+		<child name="player" type="player" max="unbounded"/>
+	</type>
+	<type name="player">
+		<attribute name="jid"/>
+		<attribute name="time" format="number"/>
+		<attribute name="inc" format="number"/>
+		<attribute name="color"/>
+	</type>
+</xd>
+

@@ -1,0 +1,431 @@
+\section{/home/www/ulysses/webclient/scripts/game/game.js File Reference}
+\label{game_2game_8js}\index{/home/www/ulysses/webclient/scripts/game/game.js@{/home/www/ulysses/webclient/scripts/game/game.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf GAME\_\-HandleGame} (XML)
+\item 
+function {\bf GAME\_\-Move} (XML)
+\item 
+function {\bf GAME\_\-State} (XML)
+\item 
+function {\bf GAME\_\-HandleDraw} (XML, Xmlns)
+\item 
+function {\bf GAME\_\-HandleCancel} (XML, Xmlns)
+\item 
+function {\bf GAME\_\-HandleAdjourn} (XML, Xmlns)
+\item 
+function {\bf GAME\_\-End} (XML)
+\item 
+function {\bf GAME\_\-HandleGameError} (XML)
+\item 
+function {\bf GAME\_\-StartGame} (GameId, P1, P2)
+\item 
+function {\bf GAME\_\-StartObserverGame} (GameId, P1, P2)
+\item 
+function {\bf GAME\_\-UpdateBoard} (GameId, BoardStr, Move, ShortMove, P1, P2, TurnColor)
+\item 
+function {\bf GAME\_\-RemoveGame} (GameID)
+\item 
+function {\bf GAME\_\-SendMove} (OldLine, OldCol, NewLine, NewCol)
+\item 
+function {\bf GAME\_\-SendDraw} (GameID)
+\item 
+function {\bf GAME\_\-SendCancel} (GameID)
+\item 
+function {\bf GAME\_\-SendAdjourn} (GameID)
+\item 
+function {\bf GAME\_\-SendResign} (GameID)
+\item 
+function {\bf GAME\_\-LoadGameHistory} (GameID, HistoryXml, Player1, Player2)
+\item 
+function {\bf GAME\_\-HandleVCardPhoto} (XML)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{game/game.js@{game/game.js}!GAME\_\-End@{GAME\_\-End}}
+\index{GAME\_\-End@{GAME\_\-End}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-End ( {\em XML})}\label{game_2game_8js_b24990adb7161202ebeea265a206ec05}
+
+
+Game Over
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml that contains the ending game message \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+References CONTACT\_\-ChangeStatus(), MainData, OLDGAME\_\-EndGame(), UTILS\_\-GetNodeText(), UTILS\_\-GetText(), and WINDOW\_\-Alert().
+
+Referenced by GAME\_\-HandleGame().\index{game/game.js@{game/game.js}!GAME\_\-HandleAdjourn@{GAME\_\-HandleAdjourn}}
+\index{GAME\_\-HandleAdjourn@{GAME\_\-HandleAdjourn}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-HandleAdjourn ( {\em XML}, \/   {\em Xmlns})}\label{game_2game_8js_90b065f83011d192e512558c12d68c00}
+
+
+Handle Adjourn Request
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml that contains the adjourn message \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The XML to accept or deny the adjourn request \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MainData, MESSAGE\_\-GameAdjournAccept(), MESSAGE\_\-GameAdjournDeny(), UTILS\_\-Capitalize(), UTILS\_\-GetText(), WINDOW\_\-Alert(), and WINDOW\_\-Confirm().
+
+Referenced by GAME\_\-HandleGame().\index{game/game.js@{game/game.js}!GAME\_\-HandleCancel@{GAME\_\-HandleCancel}}
+\index{GAME\_\-HandleCancel@{GAME\_\-HandleCancel}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-HandleCancel ( {\em XML}, \/   {\em Xmlns})}\label{game_2game_8js_b5fd476347e869125f280d74d4934c00}
+
+
+Handle Cancel Request
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml that contains the cancel message \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The XML to accept or deny the cancel request \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MainData, MESSAGE\_\-GameCancelAccept(), MESSAGE\_\-GameCancelDeny(), UTILS\_\-Capitalize(), UTILS\_\-GetText(), WINDOW\_\-Alert(), and WINDOW\_\-Confirm().
+
+Referenced by GAME\_\-HandleGame().\index{game/game.js@{game/game.js}!GAME\_\-HandleDraw@{GAME\_\-HandleDraw}}
+\index{GAME\_\-HandleDraw@{GAME\_\-HandleDraw}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-HandleDraw ( {\em XML}, \/   {\em Xmlns})}\label{game_2game_8js_9862068c1a46affdc4f753f33a750554}
+
+
+Handle Draw Request
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml that contains the draw message \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The message to accept or deny the draw request \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MainData, MESSAGE\_\-GameDrawAccept(), MESSAGE\_\-GameDrawDeny(), UTILS\_\-Capitalize(), UTILS\_\-GetText(), WINDOW\_\-Alert(), and WINDOW\_\-Confirm().
+
+Referenced by GAME\_\-HandleGame().\index{game/game.js@{game/game.js}!GAME\_\-HandleGame@{GAME\_\-HandleGame}}
+\index{GAME\_\-HandleGame@{GAME\_\-HandleGame}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-HandleGame ( {\em XML})}\label{game_2game_8js_d47fcc29b4d2240a47bd8bc183f88b72}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software This file will handle all kind of game massages Handle Game Messages
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml that contains the string 'match' in xmlns attribute \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Buffer with the messages that must be send \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+References GAME\_\-End(), GAME\_\-HandleAdjourn(), GAME\_\-HandleCancel(), GAME\_\-HandleDraw(), GAME\_\-Move(), and GAME\_\-State().
+
+Referenced by PARSER\_\-ParseIq().\index{game/game.js@{game/game.js}!GAME\_\-HandleGameError@{GAME\_\-HandleGameError}}
+\index{GAME\_\-HandleGameError@{GAME\_\-HandleGameError}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-HandleGameError ( {\em XML})}\label{game_2game_8js_865985a861a92d6c67604d55addd09ac}
+
+
+Handle Game Error
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml that contains the error message \item[{\em GameID}]- Id of the game that receives the message \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Pedro \end{Desc}
+
+
+References MainData.
+
+Referenced by PARSER\_\-ParseIq().\index{game/game.js@{game/game.js}!GAME\_\-HandleVCardPhoto@{GAME\_\-HandleVCardPhoto}}
+\index{GAME\_\-HandleVCardPhoto@{GAME\_\-HandleVCardPhoto}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-HandleVCardPhoto ( {\em XML})}\label{game_2game_8js_77a53c8ab241cb3beec3b1e2b7c2d009}
+
+
+Handle Game Players Photo
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml that contains vCard photo \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References MainData, and UTILS\_\-GetNodeText().
+
+Referenced by PARSER\_\-ParseIq().\index{game/game.js@{game/game.js}!GAME\_\-LoadGameHistory@{GAME\_\-LoadGameHistory}}
+\index{GAME\_\-LoadGameHistory@{GAME\_\-LoadGameHistory}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-LoadGameHistory ( {\em GameID}, \/   {\em HistoryXml}, \/   {\em Player1}, \/   {\em Player2})}\label{game_2game_8js_62aa80a6b39d1e8215c68e15949fe3c8}
+
+
+Load all game history moves done in the game
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameId}]is the game identificator \item[{\em HistoryXml}]is a XML that contains all games states \item[{\em Player1}]= Player 1 Object (Name, Time, Color, Inc) \item[{\em Player2}]= Player 2 Object (Name, Time, Color, Inc) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References GAME\_\-UpdateBoard().
+
+Referenced by GAME\_\-State().\index{game/game.js@{game/game.js}!GAME\_\-Move@{GAME\_\-Move}}
+\index{GAME\_\-Move@{GAME\_\-Move}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-Move ( {\em XML})}\label{game_2game_8js_b5ee71873dd8a6c90f56d6257f103cf1}
+
+
+Handle Game Move It's a good ideia to read the server's documentation before reading the code above
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml that contains the game move \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+References GAME\_\-StartGame(), GAME\_\-UpdateBoard(), and MainData.
+
+Referenced by GAME\_\-HandleGame(), and GAME\_\-State().\index{game/game.js@{game/game.js}!GAME\_\-RemoveGame@{GAME\_\-RemoveGame}}
+\index{GAME\_\-RemoveGame@{GAME\_\-RemoveGame}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-RemoveGame ( {\em GameID})}\label{game_2game_8js_abf7ae56d940ce6fef08a06c7a6b0c3d}
+
+
+Remove a game from data struct and interface \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameId}]is the game identificator \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Pedro \end{Desc}
+
+
+References MainData, ROOM\_\-ExitRoom(), UTILS\_\-GetText(), and WINDOW\_\-Alert().
+
+Referenced by GAME\_\-StartObserverGame(), and INTERFACE\_\-CreateGame().\index{game/game.js@{game/game.js}!GAME\_\-SendAdjourn@{GAME\_\-SendAdjourn}}
+\index{GAME\_\-SendAdjourn@{GAME\_\-SendAdjourn}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-SendAdjourn ( {\em GameID})}\label{game_2game_8js_c716297838a73de6d2b9e05276c5ebcf}
+
+
+Send a adjourn message to oponent
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameId}]is the game identificator \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Pedro \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), and MESSAGE\_\-GameRequestAdjourn().
+
+Referenced by INTERFACE\_\-CreateGameOptions().\index{game/game.js@{game/game.js}!GAME\_\-SendCancel@{GAME\_\-SendCancel}}
+\index{GAME\_\-SendCancel@{GAME\_\-SendCancel}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-SendCancel ( {\em GameID})}\label{game_2game_8js_bdbd4cd12806cbf1ac6a2af8c54c9c6e}
+
+
+Send a adjourn message to oponent
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameId}]is the game identificator \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Pedro \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), and MESSAGE\_\-GameRequestCancel().
+
+Referenced by INTERFACE\_\-CreateGameOptions().\index{game/game.js@{game/game.js}!GAME\_\-SendDraw@{GAME\_\-SendDraw}}
+\index{GAME\_\-SendDraw@{GAME\_\-SendDraw}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-SendDraw ( {\em GameID})}\label{game_2game_8js_7539e1d3e3935f44f0ef08cdf7f2956d}
+
+
+Send a draw message to oponent
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameId}]is the game identificator \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Pedro \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), and MESSAGE\_\-GameRequestDraw().
+
+Referenced by INTERFACE\_\-CreateGameOptions().\index{game/game.js@{game/game.js}!GAME\_\-SendMove@{GAME\_\-SendMove}}
+\index{GAME\_\-SendMove@{GAME\_\-SendMove}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-SendMove ( {\em OldLine}, \/   {\em OldCol}, \/   {\em NewLine}, \/   {\em NewCol})}\label{game_2game_8js_6c9721635c20c2b520a0b2c3fffb1aa8}
+
+
+Send a movement to server
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em OldLine}]is line of piece origin position \item[{\em OldCol}]is column of piece origin position \item[{\em NewLine}]is line of piece dest position \item[{\em NewCol}]is line of piece dest position \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Pedro \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MainData, MESSAGE\_\-GameMove(), and UTILS\_\-HorizontalIndex().
+
+Referenced by UTILS\_\-StartDragPiece().\index{game/game.js@{game/game.js}!GAME\_\-SendResign@{GAME\_\-SendResign}}
+\index{GAME\_\-SendResign@{GAME\_\-SendResign}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-SendResign ( {\em GameID})}\label{game_2game_8js_93e89b99f4dcbb84d118661b5208a64e}
+
+
+Send a resign message to oponent
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameId}]is the game identificator \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Pedro \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), MESSAGE\_\-GameResign(), UTILS\_\-GetText(), and WINDOW\_\-Confirm().
+
+Referenced by INTERFACE\_\-CreateGameOptions().\index{game/game.js@{game/game.js}!GAME\_\-StartGame@{GAME\_\-StartGame}}
+\index{GAME\_\-StartGame@{GAME\_\-StartGame}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-StartGame ( {\em GameId}, \/   {\em P1}, \/   {\em P2})}\label{game_2game_8js_4c24312a468dff77ec76873422def6d6}
+
+
+Start Game
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameId}]= Game number \item[{\em P1}]= Player 1 Object (Name, Time, Color, Inc) \item[{\em P2}]= Player 2 Object (Name, Time, Color, Inc) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References CONTACT\_\-ChangeStatus(), INTERFACE\_\-GameBoardObj(), INTERFACE\_\-RemoveWelcome(), MainData, MESSAGE\_\-GetProfile(), and MESSAGE\_\-Unavailable().
+
+Referenced by GAME\_\-Move(), GAME\_\-State(), and INTERFACE\_\-ShowGameRoomList().\index{game/game.js@{game/game.js}!GAME\_\-StartObserverGame@{GAME\_\-StartObserverGame}}
+\index{GAME\_\-StartObserverGame@{GAME\_\-StartObserverGame}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-StartObserverGame ( {\em GameId}, \/   {\em P1}, \/   {\em P2})}\label{game_2game_8js_4f0e773656189b3da2ed13b737bd4085}
+
+
+Start Game in Observer Mode
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameId}]= Game number \item[{\em PWName}]is player white name \item[{\em PBName}]is player black name \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), GAME\_\-RemoveGame(), INTERFACE\_\-GameBoardObj(), INTERFACE\_\-RemoveWelcome(), MainData, MESSAGE\_\-GetProfile(), OLDGAME\_\-RemoveOldGame(), and ROOM\_\-EnterRoomGame().
+
+Referenced by INTERFACE\_\-ShowGameRoomList().\index{game/game.js@{game/game.js}!GAME\_\-State@{GAME\_\-State}}
+\index{GAME\_\-State@{GAME\_\-State}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-State ( {\em XML})}\label{game_2game_8js_7f2a8e4b530ce5baa73ebb3079e9ca73}
+
+
+Handle Game State It's a good ideia to read the server's documentation before reading the code above
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em XML}]The xml that contains the game state \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses and Rubens \end{Desc}
+
+
+References GAME\_\-LoadGameHistory(), GAME\_\-Move(), GAME\_\-StartGame(), and MainData.
+
+Referenced by GAME\_\-HandleGame().\index{game/game.js@{game/game.js}!GAME\_\-UpdateBoard@{GAME\_\-UpdateBoard}}
+\index{GAME\_\-UpdateBoard@{GAME\_\-UpdateBoard}!game/game.js@{game/game.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-UpdateBoard ( {\em GameId}, \/   {\em BoardStr}, \/   {\em Move}, \/   {\em ShortMove}, \/   {\em P1}, \/   {\em P2}, \/   {\em TurnColor})}\label{game_2game_8js_551d1cb08ed611a572fb141a3bdfb9ef}
+
+
+Update board in data struct and interface
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em GameId}]= Game number \item[{\em BoardStr}]= Board status in a string \item[{\em Move}]= Chess Move (Piece/Orig-Dest) \item[{\em P1}]= Player 1 Object (Name, Time, Color, Inc) \item[{\em P2}]= Player 2 Object (Name, Time, Color, Inc) \item[{\em TurnColor}]= color (\char`\"{}white\char`\"{}/\char`\"{}black\char`\"{}) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References MainData, and UTILS\_\-String2Board().
+
+Referenced by GAME\_\-LoadGameHistory(), and GAME\_\-Move().

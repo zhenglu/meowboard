@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.sf.net">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="css/Main.css">
+<TITLE>Protocolo Interface-Servidor para o Xadrez C3SL - Teste</TITLE>
+</HEAD><BODY BGCOLOR="white" TEXT="black">
+<P ALIGN="center"><CENTER><H1>Protocolo Interface-Servidor para o Xadrez C3SL - Teste</H1>
+<FONT SIZE="4">
+<I>Equipe Xadrez - C3SL 2007</I><BR>
+Última atualização - Thu Aug 16 19:48:04 2007
+</FONT></CENTER>
+
+<HR NOSHADE SIZE=1>
+<P></P>
+<H1>Introdução</H1>
+<P>
+Esta página contém as definições do protocolo de comunicação entre a interface web e o Servidor de Xadrez usados no projeto de Xadrez do C3SL - UFPR.
+</P>
+<P>
+Toda parte de comunicação da nova interface web é feito utilizando o protocolo XMPP Jabber. Para as partidas de xadrez é utilizado um Servidor de Xadrez que faz as validações das jogadas, analisa quem ganhou e perdeu, registrar as partidas, controla as partidas, etc.
+</P>
+<P>
+Para o protocolo Jabber conseguir se comunicar com o Servidor de Xadrez é necessário criar um novo protocolo específico, para que seja possível jogar xadrez na nova implementação.
+</P>
+<P>
+Esse novo protocolo está descrito abaixo e é uma pequena versão teste.
+</P>
+<P>
+<B>Legendas</B>:
+</P>
+<PRE>
+  
+   - J1 e J2 = Jogadores;
+   - SX = Servidor de Xadrez;
+  
+</PRE>
+<P></P>
+<H1>1. Desafio</H1>
+<P>
+O desafio é feito enviando uma mensagem ao servidor (nas primeiras versões é enviado ao parser do Jabber p/ Chessd) e o servidor envia o desafio para o jogador desafiado.
+</P>
+<P>
+O jogador que for desafiado, recebe uma mensagem e pode aceitar ou recusar o convite de jogo. Se aceitar a partida é iniciada senão é enviado uma mensagem recusando a partida.
+</P>
+<P>
+Ao iniciar uma partida, os dois jogadores são adicionados em uma sala e recebe o <B>primeiro tabuleiro que chegar do servidor</B> (esse primeiro tabuleiro pode não ser o primeiro tabuleiro de uma partida, pois ).
+</P>
+<PRE>
+  
+  1.  J1 ---&gt; SX desafio;
+  
+  2.  J2 &lt;--- SX aceita desafio?;
+  
+  Sim.
+      J2 ---&gt; SX envia mensagem aceitando o desafio para o servidor;
+  
+      J1 &lt;--- SX \
+                       inicie jogo na interface;
+                       entra na sala do jogo e recebe o primeiro tabuleiro;
+      J2 &lt;--- SX /
+  
+  Não.
+      J2 ---&gt; SX envia uma mensagem recusando desafio;
+  
+      J1 &lt;--- SX \
+                       envia mensagem de que a partida foi recusada;
+      J2 &lt;--- SX /
+  
+  
+</PRE>
+<H2>1.1. Enviar desafio a um jogador</H2>
+<P>
+Mensagem enviada para desafiar um jogador (<B>action='match'</B>):
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='J1' to='SX' id='match'&gt;
+  	&lt;query xmlns='.../match' action='match'&gt;
+  		&lt;match category='standart'/&gt;
+  		&lt;player jid='J1' time='5' inc='1' color='w' /&gt;
+  		&lt;player jid='J2' time='5' inc='1' color='b' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Servidor manda um mensagem para o jogador desafiado:
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='SX' to='J2' id='match'&gt;
+  	&lt;query xmlns='.../match' action='match'&gt;
+  		&lt;match category='standart'/&gt;
+  		&lt;player jid='J1' time='5' inc='1' color='w' /&gt;
+  		&lt;player jid='J2' time='5' inc='1' color='b' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H2>1.2. Resposta para o desafio</H2>
+<P>
+Resposta aceitando o desafio (<B>action='match_accept'</B>):
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='J2' to='SX' id='match'&gt;
+  	&lt;query xmlns='.../match' action='match_accept'&gt;
+  		&lt;match category='standart'/&gt;
+  		&lt;player jid='J1' time='5' inc='1' color='w' /&gt;
+  		&lt;player jid='J2' time='5' inc='1' color='b' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Resposta recusando o desafio, diferença no atributo (<B>action='match_decline'</B>):
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='J2' to='SX' id='match'&gt;
+  	&lt;query xmlns='.../match' action='match_decline'&gt;
+  		&lt;match category='standart'/&gt;
+  		&lt;player jid='J1' time='5' inc='1' color='w' /&gt;
+  		&lt;player jid='J2' time='5' inc='1' color='b' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Resposta final do servidor para iniciar uma partida (<B>action='match_start'</B>):
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SX' to='J1' id='match'&gt;
+  	&lt;query xmlns='.../game' action='match_start'&gt;
+  		&lt;match category='standart'  game_id='2'/&gt;
+  		&lt;team&gt;
+  			&lt;player jid='J1' time='5' inc='1' color='w' /&gt;
+  		&lt;/team&gt;
+  		&lt;team&gt;
+  			&lt;player jid='J2' time='5' inc='1' color='b' /&gt;
+  		&lt;/team&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H1>2. Partida</H1>
+<P>
+Dentro de uma partida os jogadores podem mover as peças, pedir empate, desistir ou adjudicar o jogo.
+</P>
+<H2>2.1. Movimentos</H2>
+<P>
+Ao mover uma peça, o jogador move a peça de uma posição inicial XY para uma posição final xy no tabuleiro, onde X e x são linhas e Y e y são colunas. Em seguida o servidor manda uma resposta desse movimento para os jogadores e as pessoas que estão observando o jogo com o estado da partida.
+</P>
+<PRE>
+  
+  1.  J1 ---&gt; SX movimento(XYxy);
+  
+  2.  J1 &lt;--- SX \
+                  novo estado da partida
+      J2 &lt;--- SX /
+  
+</PRE>
+<P></P>
+<P>
+Jogador envia o movimento para o servidor:
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='J1' to='SX' id='game'&gt;
+  	&lt;query xmlns='.../game' action='move'&gt;
+  		&lt;match game_id='1'/&gt;
+  		&lt;player jid='J1' move='XYxy' time='' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P>
+Resposta do servidor para o movimento, sendo a primeira jogada de uma partida:
+<B>(VER ESTILO 12 DO CHESSD <A HREF="http://freechess.org/Help/HelpFiles/style12.html">estilo12</A> )</B>
+</P>
+<P>
+Mensagem do servidor de xadrez após o movimento:
+</P>
+<P>
+<B>&lt;12&gt; rnbqkbnr pppppppp -------- -------- -------- -------- PPPPPPPP RNBQKBNR W -1 1 1 1 1 0 2 GuestZEHS GuestGKGE -1 5 0 39 39 300 300 1 none (0:00) none 1 0 0</B>
+</P>
+<P>
+Mensagem convertida em XML:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SX' to='J1' id='game'&gt;
+  	&lt;query xmlns='.../game' action='move'&gt;
+  		&lt;match game_id='1'/&gt;
+  		&lt;board&gt;
+  			&lt;1&gt;rnbqkbnr&lt;/1&gt;
+  			&lt;2&gt;pppppppp&lt;/2&gt;
+  			&lt;3&gt;--------&lt;/3&gt;
+  			&lt;4&gt;--------&lt;/4&gt;
+  			&lt;5&gt;--------&lt;/5&gt;
+  			&lt;6&gt;--------&lt;/6&gt;
+  			&lt;7&gt;PPPPPPPP&lt;/7&gt;
+  			&lt;8&gt;RNBQKBNR&lt;/8&gt;
+  		&lt;/board&gt;
+  		&lt;turn&gt; W &lt;/turn&gt;
+  		&lt;cast_ws&gt; 1 &lt;/cast_ws&gt;
+  		&lt;cast_wl&gt; 1 &lt;/cast_wl&gt;
+  		&lt;cast_bs&gt; 1 &lt;/cast_bs&gt;
+  		&lt;cast_bl&gt; 1 &lt;/cast_bl&gt;
+  		&lt;irrev&gt; 0 &lt;/irrev&gt;
+  		&lt;game_id&gt; 1 &lt;/game_id&gt;
+  		&lt;playerw&gt; J1 &lt;playerw&gt;
+  		&lt;playerb&gt; J2 &lt;playerb&gt;
+  		&lt;relation&gt; 0 &lt;/relation&gt;
+  		&lt;time&gt; 5 &lt;/time&gt;
+  		&lt;inc&gt; 0 &lt;/inc&gt;
+  		&lt;strengthw&gt; 39 &lt;/strengthw&gt;
+  		&lt;strengthb&gt; 39 &lt;/strengthb&gt;
+  		&lt;timew&gt; 300 &lt;/timew&gt;
+  		&lt;timeb&gt; 300 &lt;/timeb&gt;
+  		&lt;numturn&gt; 0 &lt;/numturn&gt;
+  		&lt;lastmovev&gt; none &lt;/lastmovev&gt;
+  		&lt;timespend&gt; (0:00) &lt;/timespend&gt;
+  		&lt;lastmoves&gt; none &lt;/lastmoves&gt;
+  		&lt;boardside&gt; 0 &lt;/boardside&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+  
+</PRE>
+<P></P>
+<H2>2.2. Empate</H2>
+<P>
+O pedido de empate só é aceito quando os dois jogadores concordarem. Primeiro o jogador envia uma mensagem ao servidor de xadrez e o servidor de xadrez repassa para o adversário. Se o adversário aceitar manda uma mensagem ao servidor e encerra a partida, senão envia outra mensagem dizendo que não aceitou a mensagem.
+</P>
+<PRE>
+  
+  1.  J1 ---&gt; SX empate;
+  
+  2.  J2 &lt;--- SX aceita empate?;
+  
+  3.  J2 ---&gt; SX sim ou não.
+  
+  Sim.
+      J1 &lt;--- SX \
+                       encerrar partida com empate
+      J2 &lt;--- SX /
+  
+  Não.
+      J1 &lt;--- SX empate recusado.
+  
+</PRE>
+<P></P>
+<P>
+Jogador envia o movimento para o servidor:
+</P>
+<H3>2.2.1. Enviar um pedido de empate ao oponente</H3>
+<PRE>
+  
+  &lt;iq type='set' from='J1' to='SX' id='game'&gt;
+  	&lt;query xmlns='.../game' action='draw'&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Servidor responde:
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='SX' to='J2' id='game'&gt;
+  	&lt;query xmlns='.../game' action='draw'&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H3>2.2.2. Resposta para o pedido de empate</H3>
+<P>
+Resposta aceitando o empate:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='J2' to='SX' id='game'&gt;
+  	&lt;query xmlns='.../game' game_id='1' action='draw_accept'&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Servidor responde para empate aceito para os dois jogadores e termina o jogo:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SX' to='J1' id='game'&gt;
+  	&lt;query xmlns='.../game' action='draw_match'&gt;
+  		&lt;match game_id=''&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Resposta recusando o empate:
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='J2' to='SX' id='game'&gt;
+  	&lt;query xmlns='.../game' game_id='1' action='draw_decline'&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Servidor responde empate recusado para jogador que requisitou empate:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SX' to='J1' id='game'&gt;
+  	&lt;query xmlns='.../game' action='draw_decline'&gt;
+  		&lt;match game_id=''&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<HR NOSHADE SIZE=5>
+<H2>DAKI P/ BAIXO É VERSÃO ANTIGA</H2>
+<H2>2.3. Adjudicar</H2>
+<P>
+Os passos são os mesmo para o empate, modificando apenas o "draw" por "adjurn".
+</P>
+<H3>2.3.1. Enviar um pedido de adjudicamento ao oponente</H3>
+<PRE>
+  
+  &lt;iq type='set' from='J1' to='J2' id='X'&gt;
+  	&lt;query xmlns='.../game' action='adjurn'&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H3>2.3.2. Resposta para o pedido de adjuncamneto dos jogadores</H3>
+<P>
+Resposta aceitando o adjudicamento:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='J2' to='J1' id='X'&gt;
+  	&lt;query xmlns='.../game' action='adjurn_accept'&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Resposta recusando o adjudicamento:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='J2' to='J1' id='X'&gt;
+  	&lt;query xmlns='.../game' action='adjurn_decline'&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H3>2.3.3. Enviar mensagem para o servidor para o adjudicamento</H3>
+<P>
+Após os dois jogadores entrarem em um acordo,  é enviado a seguinte mensagem para o servidor:
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='J1 ou J2' to='Servidor' id='Y'&gt;
+  	&lt;query xmlns='.../game' action='adjurn'&gt;
+  		&lt;match game_id=''&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Servidor responde para os dois jogadores:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='Servidor' to='J1 e J2' id='Y'&gt;
+  	&lt;query xmlns='.../game' action='adjurn'&gt;
+  		&lt;match game_id=''&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H2>2.4. Desistir</H2>
+<P>
+Um jogador pode desistir do jogo enviando a seguinte mensagem ao servidor:
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='J1 ou J2' to='Servidor' id='Y'&gt;
+  	&lt;query xmlns='.../game' action='resign'&gt;
+  		&lt;match game_id=''/&gt;
+  		&lt;player jid='' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Servidor responde para os jogadores:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='Servidor' to='J1 e J2' id='Y'&gt;
+  	&lt;query xmlns='.../game' action='resign'&gt;
+  		&lt;match game_id=''/&gt;
+  		&lt;player jid='' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+
+<!-- html code generated by txt2tags 2.3 (http://txt2tags.sf.net) -->
+<!-- cmdline: txt2tags -i pagina.t2t -o index.html -->
+</BODY></HTML>

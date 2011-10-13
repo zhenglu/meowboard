@@ -1,0 +1,1164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.sf.net">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="css/Main.css">
+<TITLE>Protocolo Interface-Servidor para o Xadrez C3SL - Teste</TITLE>
+</HEAD><BODY BGCOLOR="white" TEXT="black">
+<P ALIGN="center"><CENTER><H1>Protocolo Interface-Servidor para o Xadrez C3SL - Teste</H1>
+<FONT SIZE="4">
+<I>Equipe Xadrez - C3SL 2007</I><BR>
+Última atualização - Mon Nov 12 14:36:12 2007
+</FONT></CENTER>
+
+<HR NOSHADE SIZE=1>
+<P></P>
+<H1>Introdução</H1>
+<P>
+Esta página contém as definições do protocolo de comunicação entre a interface web e o Servidor de Xadrez usados no projeto de Xadrez do C3SL - UFPR.
+</P>
+<P>
+Toda parte de comunicação da nova interface web é feito utilizando o protocolo XMPP Jabber. Para as partidas de xadrez é utilizado um Servidor de Xadrez que faz as validações das jogadas, analisa quem ganhou e perdeu, registrar as partidas, controla as partidas, etc.
+</P>
+<P>
+Para o protocolo Jabber conseguir se comunicar com o Servidor de Xadrez é necessário criar um novo protocolo específico, para que seja possível jogar xadrez na nova implementação.
+</P>
+<P>
+Esse novo protocolo está descrito abaixo e é uma pequena versão teste.
+</P>
+<P>
+<B>Legendas</B>:
+</P>
+<PRE>
+  
+   - J1, J2 e J3 = Jogadores;
+   - SX = Servidor de Xadrez;
+   - SJ = Sala do Jogo; (Sala onde acontece a partida) 
+   - SR = Servidor de Rating (obtém dados dos jogadores
+            acessando o banco de dados)
+   - SN = Servidor de notícias;
+</PRE>
+<P></P>
+<H1>1. Conexão e desconexão com o Servidor de Xadrez</H1>
+<P>
+Mensagem que um jogador envia informando que está logando no servidor de xadrez.
+</P>
+<PRE>
+  
+  &lt;iq from="J1" to="SX" type="set" id="connect" /&gt;
+  
+</PRE>
+<P>
+Mensagem que chega a um jogador informando que está logado no servidor de xadrez.
+</P>
+<PRE>
+  
+  &lt;iq from="SX" to="J1 "type="result" id="connect" /&gt;
+  
+</PRE>
+<P></P>
+<P>
+Mensagem que envia a um jogador informando que está deslogando no servidor de xadrez.
+</P>
+<PRE>
+  
+  &lt;iq from="J1" to="SX" type="set" id="disconnect" /&gt;
+  
+</PRE>
+<P></P>
+<P>
+Mensagem que é enviado para um jogador informando que está desconectado do servidor de xadrez.
+</P>
+<PRE>
+  
+  &lt;iq from="SX" to="J1" type="result" id="disconnect" /&gt;
+  
+</PRE>
+<P></P>
+<H1>2. Desafio</H1>
+<P>
+O desafio é feito enviando uma mensagem ao servidor (nas primeiras versões é enviado ao parser do Jabber p/ Chessd) e o servidor envia o desafio para o jogador desafiado.
+</P>
+<P>
+O jogador que for desafiado, recebe uma mensagem e pode aceitar ou recusar o convite de jogo. Se aceitar a partida é iniciada senão é enviado uma mensagem recusando a partida.
+</P>
+<P>
+Ao iniciar uma partida, os dois jogadores são adicionados em uma sala e recebe o <B>primeiro tabuleiro que chegar do servidor</B> (esse primeiro tabuleiro pode não ser o primeiro tabuleiro de uma partida, pois ).
+</P>
+<PRE>
+  
+  1.  J1 ---&gt; SX desafio;
+  
+  2.  J2 &lt;--- SX aceita desafio?;
+  
+  Sim.
+      J2 ---&gt; SX envia mensagem aceitando o desafio para o servidor;
+  
+      J1 &lt;--- SX \
+                       inicie jogo na interface;
+                       entra na sala do jogo e recebe o primeiro tabuleiro;
+      J2 &lt;--- SX /
+  
+      J1 ---&gt; SJ
+      J2 /
+  
+  Não.
+      J2 ---&gt; SX envia uma mensagem recusando desafio;
+  
+      J1 &lt;--- SX \
+                       envia mensagem de que a partida foi recusada;
+      J2 &lt;--- SX /
+  
+  
+</PRE>
+<P></P>
+<H2>2.1. Enviar desafio a um jogador</H2>
+<P>
+Mensagem enviada para desafiar um jogador (<B>action='match'</B>):
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='J1' to='SX' id='match'&gt;
+  	&lt;query xmlns='.../match' action='match'&gt;
+  		&lt;match category='std'/ rated='1'&gt;
+  		&lt;player jid='J1' time='5' inc='1' color='w' /&gt;
+  		&lt;player jid='J2' time='5' inc='1' color='b' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Servidor manda um mensagem para o jogador desafiado:
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='SX' to='J2' id='match'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/match' action='match' rated='1'&gt;
+  		&lt;match category='std'/&gt;
+  		&lt;player jid='J1' time='5' inc='1' color='w' /&gt;
+  		&lt;player jid='J2' time='5' inc='1' color='b' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H2>2.2. Resposta para o desafio</H2>
+<P>
+Resposta aceitando o desafio (<B>action='match_accept'</B>):
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='J2' to='SX' id='match'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/match' action='match_accept'&gt;
+  		&lt;match category='std'/&gt;
+  		&lt;player jid='J1' time='5' inc='1' color='w' /&gt;
+  		&lt;player jid='J2' time='5' inc='1' color='b' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<H3>2.2.1. Resposta do servidor</H3>
+<P>
+Resposta recusando o desafio, diferença no atributo (<B>action='match_decline'</B>):
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='J2' to='SX' id='match'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/match' action='match_decline'&gt;
+  		&lt;match category='std'/&gt;
+  		&lt;player jid='J1' /&gt;
+  		&lt;player jid='J2' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Resposta final do servidor(<B>type='result'</B>) para iniciar uma partida (<B>action='match_start'</B>):
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SX' to='J1' id='match'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='match_start'&gt;
+  		&lt;match category='std'  game_id='1' room='RoomName'/&gt;
+  		&lt;team&gt;
+  			&lt;player jid='J1' time='5' inc='1' color='w' /&gt;
+  		&lt;/team&gt;
+  		&lt;team&gt;
+  			&lt;player jid='J2' time='5' inc='1' color='b' /&gt;
+  		&lt;/team&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Resposta final do servidor(<B>type='result'</B>) recusando uma partida (<B>action='match_decline'</B>):
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SX' to='J1' id='match'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='match_decline'&gt;
+  		&lt;player jid='J1' /&gt;
+  		&lt;player jid='J2' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Resposta final do servidor(<B>type='result'</B>) recusando uma partida de um jogador iniciou uma jogo com outro jogador (<B>action='match_decline_playing'</B>):
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SX' to='J1' id='match'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='match_decline_playing'&gt;
+  		&lt;player jid='J2' /&gt;
+  		&lt;player jid='J3' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Atributos do XML:
+</P>
+<PRE>
+  
+  action = match, match_accept, match_decline, match_start
+  - match é usado para inicio de desafio
+  - match_accept é usado para finalizar um desafio e dizer ao servidor para iniciar uma partida
+  - match_decline é usado para finalizar um desafio e dizer ao servidor para recusar a partida
+  - match_start é usado para comecar uma partida
+  
+  jid = jabber id
+  time = tempo do jogador
+  inc = incremento de cada jogador
+  color = cor dos jogadores na partida a ser iniciada
+  
+</PRE>
+<P></P>
+<H1>3. Partida</H1>
+<P>
+Dentro de uma partida os jogadores podem mover as peças, pedir empate, desistir ou adjudicar o jogo.
+</P>
+<H2>3.1. Movimentos</H2>
+<P>
+Ao mover uma peça, o jogador move a peça de uma posição inicial XY para uma posição final xy no tabuleiro, onde X e x são linhas e Y e y são colunas.
+</P>
+<P>
+O jogador manda o movimento para sala, e a sala repassa para o servidor. Em seguida o servidor responde para a sala (para todos que estão na sala).
+</P>
+<PRE>
+  
+  1.  J1 ---&gt; SL ---&gt; SX    movimento(XYxy);
+  
+  2.  J1 &lt;--- \
+               SL &lt;-- SX   novo estado da partida;
+      J2 &lt;--- /
+  
+</PRE>
+<P></P>
+<P>
+Jogador envia o movimento para o servidor:
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='J1' to='SL' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='move'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1' move='XYxy' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P>
+Resposta do servidor para o movimento, sendo a primeira jogada de uma partida:
+<B>(VER ESTILO 12 DO CHESSD <A HREF="http://freechess.org/Help/HelpFiles/style12.html">estilo12</A> )</B>
+</P>
+<P>
+Mensagem do servidor de xadrez após o movimento:
+</P>
+<P>
+Partida normal:
+</P>
+<P>
+<B>&lt;12&gt; rnbqkbnr pppppppp -------- -------- -------- -------- PPPPPPPP RNBQKBNR W -1 1 1 1 1 0 2 J1 J2 -1 5 0 39 39 300 300 1 none (0:00) none 1 0 0</B>
+</P>
+<P>
+<A HREF="http://freechess.org/Help/HelpFiles/bughouse.html">BugHouse</A>  (após um jogador colocar a peça no tabuleiro):
+</P>
+<P>
+<B>&lt;12&gt; rnbqkbnr pppppppp --p----- -------- ------P- -------P PPPPPP-- RNBQKBNR W 0 1 1 1 1 0 9 J1 J2 -1 5 0 39 40 271 159 3 P/@@-c7 (2:20) P@c7 1 1 0</B>
+</P>
+<P>
+<B>&lt;b1&gt; game 9 white [] black []</B>
+</P>
+<P>
+Mensagem convertida em XMPP:
+</P>
+<PRE>
+  &lt;iq type='result' from='SL' to='J1' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='move'&gt;
+  		&lt;game game_id='1' turn_color='W' dbl='-1' rq='1111' rev='0' move='none' smove='none' turn_num='' board='rnbqkbnrpppppppp--------------------------------PPPPPPPPRNBQKBNR' /&gt;
+  
+  		&lt;player jid='J1' time='300' color='w' strength='39' [pieces='']/&gt;
+  		&lt;player jid='J2' time='300' color='b' strength='39' [pieces='']/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H1>VERSAO RAFAEL</H1>
+<P>
+Nessa versao, os boards foram colocador de forma que um jogador possa receber mais de um tabuleiro, caso esteja jogando bughouse e queira ver o tabuleiro do parceiro.
+</P>
+<P>
+Cada tag 'board' contém todas informações de cada tabuleiro e seus respectivos jogadores.
+</P>
+<PRE>
+  &lt;iq type='result' from='SL' to='J1' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='move'&gt;
+  		&lt;game game_id='1' category=''/&gt;
+  
+  		&lt;board state='rnbqkbnrpppppppp--------------------------------PPPPPPPPRNBQKBNR' turn='' rev='' (ver outros atributos do jogo)&gt;
+  			&lt;player jid='J1' time='300' inc='0' color='w' strength='39' [pieces='']/&gt;
+  			&lt;player jid='J2' time='300' inc='0' color='b' strength='39' [pieces='']/&gt;
+  			
+  		&lt;/board&gt;
+  
+  		&lt;board state=.....&gt;
+  		 .....
+  		&lt;/board&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P>
+<B>pieces</B> = lista de peças que o jogador pode colocar no tabuleiro. Usado no Bughouse. Esse atributo é opcional de acordo com a categoria de jogo.
+</P>
+<H2>3.2. Empate</H2>
+<P>
+O pedido de empate só é aceito quando os dois jogadores concordarem.
+</P>
+<P>
+O Jogador envia um pedido de empate p/ sala que é repassado para o servidor de Xadrez. O servidor de xadrez registra o pedido e envia o pedido para a sala. Se o adversário aceitar o empate, a partida é encerrada, senão continua com a partida.
+</P>
+<PRE>
+  
+  1.  J1 ---&gt; SX empate;
+  
+  2.  J2 &lt;--- SX aceita empate?;
+  
+  3.  J2 ---&gt; SX sim ou não;
+  
+  Sim.
+      J1 &lt;---\
+                  SL &lt;--- SX encerrar partida com empate;
+      J2 &lt;---/
+  
+  Não.
+      J1 &lt;---\
+                  SL &lt;--- SX  empate recusado;
+      J2 &lt;---/
+</PRE>
+<P></P>
+<P>
+Jogador envia o movimento para o servidor:
+</P>
+<H3>3.2.1. Enviar um pedido de empate ao oponente</H3>
+<PRE>
+  
+  &lt;iq type='set' from='J1' to='SX' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='draw'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Servidor responde:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SX' to='J2' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='draw'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H3>3.2.2. Resposta para o pedido de empate</H3>
+<H1>Resposta aceitando o empate</H1>
+<PRE>
+  
+  &lt;iq type='set' from='J2' to='SX' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' game_id='1' action='draw_accept'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Servidor responde para empate aceito para os dois jogadores e termina o jogo:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SL' to='J1' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='draw_accept'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H1>Resposta recusando o empate</H1>
+<PRE>
+  
+  &lt;iq type='set' from='J2' to='SX' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' game_id='1' action='draw_decline'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Servidor responde empate recusado para jogador que requisitou empate:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SL' to='J1' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='draw_decline'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<H2>3.3. Adjudicar</H2>
+<P>
+Os passos são os mesmo para o empate, modificando apenas o "draw" por "adjurn".
+</P>
+<PRE>
+  
+  1.  J1 ---&gt; SX adjudicamento;
+  
+  2.  J2 &lt;--- SX aceita adjudicamento?;
+  
+  3.  J2 ---&gt; SX sim ou não;
+  
+  Sim.
+      J1 &lt;---\
+                 	SL &lt;--- SX encerrar partida com adjudicamento;
+      J2 &lt;---/
+  
+  Não.
+      J1 &lt;---\
+                  SL &lt;--- SX  adjudicamento recusado;
+      J2 &lt;---/
+</PRE>
+<P></P>
+<H3>3.3.1. Enviar um pedido de adjudicamento ao oponente</H3>
+<PRE>
+  
+  &lt;iq type='set' from='J1' to='SX' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='adjurn'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Servidor responde:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SX' to='J2' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='adjurn'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H3>3.3.2. Resposta para o pedido de adjudicamento</H3>
+<H1>Resposta aceitando o adjudicamento</H1>
+<PRE>
+  
+  &lt;iq type='set' from='J2' to='SX' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' game_id='1' action='adjurn_accept'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Servidor responde para empate aceito para os dois jogadores e termina o jogo:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SX' to='J1' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='adjurn_accept'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H1>Resposta recusando o adjudicamento</H1>
+<PRE>
+  
+  &lt;iq type='set' from='J2' to='SX' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' game_id='1' action='adjurn_decline'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Servidor responde empate recusado para jogador que requisitou empate:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SX' to='J1' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='adjurn_decline'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H2>3.4. Desistir</H2>
+<PRE>
+  
+  1.  J1 ---&gt; SX desistência;
+  
+  2.  J2 &lt;--- SL &lt;--- SX termina o jogo por desistência;
+  
+</PRE>
+<P></P>
+<P>
+Um jogador pode desistir do jogo enviando a seguinte mensagem ao servidor:
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='J1' to='SL' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='resign'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Servidor responde para os jogadores:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SL' to='J2' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='resign'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H2>3.5. Fim de jogo</H2>
+<P>
+O servidor de Xadrez envia uma resposta de algum movimento ou ação de uma jogador dizendo que o jogo terminou por desistência, tempo, mate, empate ou adiamento.
+</P>
+<PRE>
+  
+  1. J1 &lt;--- SL &lt;--- SX fim de jogo;
+  	
+</PRE>
+<P></P>
+<P>
+Fim de jogo por mate:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SL' to='J1' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='end'&gt;
+  		&lt;game game_id='1' end="mate" /&gt;
+  		&lt;player jid='J1' result="winner"/&gt;
+  		&lt;player jid='J2' result="loser"/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Fim de jogo por desistência:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SL' to='J1' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='end'&gt;
+  		&lt;game game_id='1' end="resign" /&gt;
+  		&lt;player jid='J1' result="winner"/&gt;
+  		&lt;player jid='J2' result="loser"/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P>
+Fim de jogo por tempo:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='J1' to='SL' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='end'&gt;
+  		&lt;game game_id='1' end="time" /&gt;
+  		&lt;player jid='J1' result="winner"/&gt;
+  		&lt;player jid='J2' result="loser"/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P>
+Fim de jogo por empate:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SL' to='J1' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='end'&gt;
+  		&lt;game game_id='1' end="draw" /&gt;
+  		&lt;player jid='J1'/&gt;
+  		&lt;player jid='J2'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P>
+Fim de jogo por adiamento:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SL' to='J1' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='end'&gt;
+  		&lt;game game_id='1' end="adjurn" /&gt;
+  		&lt;player jid='J1'/&gt;
+  		&lt;player jid='J2'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H2>3.6. Turno inválido</H2>
+<P>
+O servidor responde um movimento inválido
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SL' to='J1' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='turn_invalid'&gt;
+  		&lt;game game_id='1' /&gt;
+  		&lt;player jid='J1'/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H2>3.7. Movimento inválido</H2>
+<P>
+O servidor responde um movimento inválido, caso o jogador tenha feito um movimento inválido.
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SL' to='J1' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='move_invalid'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H2>3.8. Enviar promoção de peão</H2>
+<P>
+Envia ao servidor de xadrez a nova peça a ser promovida pelo peão.
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='J1' to='SX' id='game'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='promotion'&gt;
+  		&lt;game game_id='1'/&gt;
+  		&lt;player jid='J1' piece='Q' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<HR NOSHADE SIZE=5>
+<H1>4. RATING</H1>
+<P>
+O usuário (ou jogador) manda uma requisição para obter rate de uma lista de jogadores através da categoria. O servidor responde a lista dos jogadores com seu respectivo rate.
+</P>
+<P>
+As mensagens utilizam "<B>type='get'</B>" e "<B>action='rating'</B>".
+</P>
+<PRE>
+  
+  1.  J1 ---&gt; SR requisição de rate de jogadores J1, J2, J3, etc;
+  
+  2.  J1 &lt;--- SR resposta com os rate;
+  
+</PRE>
+<P></P>
+<P>
+Envia mensagem para o Servidor de Rate requisitando os rate dos jogadores:
+</P>
+<PRE>
+  
+  &lt;iq type='get' from='J1' to='SR' id='rating'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='rating#blitz'&gt;
+  		&lt;rating jid='J1' /&gt;
+  		&lt;rating jid='J2' /&gt;
+  		&lt;rating jid='J3' /&gt;
+  		....
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Reposta do servidor para requisição de rate:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SR' to='J1' id='rating'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='rating#blitz'&gt;
+  		&lt;rating jid='J1' blitz='1500' bughouse='1500'/&gt;
+  		&lt;rating jid='J2' blitz='1500' bughouse='1500'/&gt;
+  		&lt;rating jid='J3' blitz='1500' bughouse='1500'/&gt;
+  		....
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+O atributo "<B>action</B>" pode mudar de acordo com o rating desejado.
+Por default, se for passado somente "<B>action='rating'</B>" todos os tipos de rate são retornados.
+</P>
+<P>
+A lista abaixo mostra os atributos específicos do action (<B>action="rating#Type"</B>), onde o valor do <B>Type</B> pode ser:
+</P>
+<UL>
+<LI>blitz;
+<LI>bughouse;
+<LI>std;
+</UL>
+
+<HR NOSHADE SIZE=5>
+<H1>5. PROFILE</H1>
+<H2>5.1. Obter Perfil</H2>
+<P>
+O usuário pode requisitar ao servidor de rating os dados de um jogador.
+Para isso ele precisa enviar um requisição de perfil e o servidor irá responder todos os dados do jogador (ratings, tempo on-line, descrição, números de jogos, etc).
+</P>
+<PRE>
+  
+  1.  J1 ---&gt; SR requisição de perfil do jogador J2;
+  
+  2.  J1 &lt;--- SR resposta com os dados do perfil;
+  
+</PRE>
+<P></P>
+<P>
+Enviando uma requisição:
+</P>
+<PRE>
+  
+  &lt;iq type='get' from='J1' to='SR' id='profile'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='profile'&gt;
+  		&lt;profile jid='J2' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Servidor de rating responde:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SR' to='J1' id='profile'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='profile'&gt;
+  		&lt;profile jid='J2' name='' nick='' desc='' time_total='' time_online='' level='' category='*' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+* averiguar um atributo para titulação (agora está como category)
+</P>
+<H2>5.2. Alterar Perfil</H2>
+<P>
+O usuário envia uma mensagem ao servidor modificando os dados e o servidor de rating responde confirmando ou negando a modificação.
+</P>
+<PRE>
+  
+  1.  J1 ---&gt; SR Envia dados a ser mudado no banco de dados;
+  
+  2.  J1 &lt;--- SR Ok ou não Ok
+  
+</PRE>
+<P>
+Enviando mensagem para modificar dados:
+</P>
+<PRE>
+  &lt;iq type='set' from='J1' to='SR' id='profile'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='changeprofile'&gt;
+  		&lt;profile jid='J1' name='' nick='' desc='' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Resposta se tudo ocorreu bem:
+</P>
+<PRE>
+  &lt;iq type='result' from='J1' to='SR' id='profile'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='changeprofile'&gt;
+  		&lt;profile changed='true' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Resposta se não foi possível modificar:
+</P>
+<PRE>
+  &lt;iq type='result' from='SR' to='J1' id='profile'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='changeprofile'&gt;
+  		&lt;profile changed='false' error=''/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<HR NOSHADE SIZE=5>
+<H1>6. JOGOS EM ANDAMENTO</H1>
+<H2>6.1. OBTER OS JOGOS EM ANDAMENTO</H2>
+<P>
+Esquema:
+</P>
+<PRE>
+  
+  1.  J1 ---&gt; SX requisição de jogos em andamento;
+  
+  2.  J1 &lt;--- SX resposta com os dados de todos os jogos em andamento;
+  
+</PRE>
+<P></P>
+<PRE>
+  
+  &lt;iq type='get' from='J1' to='SX' id='ongames'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='ongames'/&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P>
+Resposta do servidor:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='J1' to='SX' id='ongames'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='ongames'&gt;
+  		&lt;game gameid='' wname='' bname='' category='' roomname=''/&gt;
+  		&lt;game gameid='' wname='' bname='' category='' roomname=''/&gt;
+  		&lt;game gameid='' wname='' bname='' category='' roomname=''/&gt;
+  		&lt;game gameid='' wname='' bname='' category='' roomname=''/&gt;
+  		....
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<HR NOSHADE SIZE=5>
+<H1>7. JOGOS ANTIGOS</H1>
+<P>
+Nesta seção será descrito como fazer a busca de jogos antigos e de como fazer para observar esses jogos. A busca de jogos é feito pelos parametros especificados no projeto e pelo índice da página. Por trabalhar com páginas, foi feito um outro protocolo para obtenção do número máximo de páginas.
+</P>
+<H2>7.1. Requisitar o número máximo de páginas</H2>
+<PRE>
+  
+  1.  J1 ---&gt; SX requisição do número máximo de páginas;
+  
+  2.  J1 &lt;--- SX com o número máximo de páginas;
+  
+</PRE>
+<P></P>
+<P>
+Requisitando número máximo de páginas:
+</P>
+<PRE>
+  
+  &lt;iq type='get' from='J1' to='SX' id='oldgame'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='oldgamemaxindex'&gt;
+  		&lt;oldgame player1='' player2='' gametype='' datefrom='' dateto=''/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Resposta do servidor
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SX' to='J1' id='oldgame'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='oldgamemaxindex'&gt;
+  		&lt;oldgame maxindex=''/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H2>7.2. Buscar jogos antigos</H2>
+<P>
+Para ver jogos antigos, o jogador envia uma requisição ao servidor de xadrez com as especificações de busca de jogos antigos (através de jogadores, data e tipo de jogo e página-10-em-10).
+</P>
+<P>
+Devido a problemas de demora, ao buscar todos os jogos de uma vez, o protocolo foi modificado para requisitar de 10 em 10 jogos de cada vez para o servidor. Com isso a busca se torna mais rápida (o gargalho está no parser entre o Banco de dados e o Jabber), pelo menos para o usuário final. O parametro que especifica qual página é para ser buscada é o "pageindex" que é o índice da página. Ex: "pageindex=1", retorna os 10 primeiros jogos. Se "pageindex=1", retorna jogo 11 até o jogo 20... etc, onde "pageindex" varia de 1 a n.
+</P>
+<P>
+Esquema:
+</P>
+<PRE>
+  
+  1.  J1 ---&gt; SX requisição de partidas antigas com as
+              especificações;
+  
+  2.  J1 &lt;--- SX resposta do servidor com a primeira página
+              de todas as partidas que se encaixam no
+              especificado;
+  
+</PRE>
+<P></P>
+<P>
+Obter jogos antigos através da :
+</P>
+<PRE>
+  
+  &lt;iq type='get' from='J1' to='SX' id='oldgame'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='oldgame'&gt;
+  		&lt;oldgame player1='' player2='' gametype='' datefrom='' dateto='' pageindex=''/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Resposta do servidor com jogos antigos:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SX' to='J1' id='oldgame'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='oldgame'&gt;
+  		&lt;oldgamepars player1='' player2='' gametype='' datefrom='' dateto='' pageindex=''/&gt;
+  		&lt;oldgame gameid='' playerW='' playerB='' winner="" moves="" gametype='' date='' result=""/&gt;
+  		....
+  		....
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<H2>7.3. Requisição para obter um jogo antigo</H2>
+<P>
+Aqui será descrito como fazer uma requisição para obter os movimentos de um jogo antigo para observação.
+</P>
+<PRE>
+  
+  1.  J1 ---&gt; SX requisição para observar um jogo antigo;
+  
+  2.  J1 &lt;--- SX resposta com todos os tabuleiro e movimentos do jogo;
+  
+</PRE>
+<P></P>
+<P>
+Requisição para ver um jogo antigo:
+</P>
+<PRE>
+  
+  &lt;iq type='get' from='J1' to='SX' id='oldgame'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='viewoldgame'&gt;
+  		&lt;oldgame gameid=''/&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P>
+Resposta do servidor para alguém que quer ver jogos antigos:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SX' to='J1' id='oldgame'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='viewoldgame'&gt;
+  		&lt;oldgame gameid='' board='' turn='' move=''/&gt;
+  		...
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<HR NOSHADE SIZE=5>
+<H1>8. Notícias</H1>
+<P>
+As notícias que se encontram atualmente no banco dados contém tags HTML. Para fazer a transmissão nas tags "&lt;subject&gt;" e "&lt;content&gt;" é necessário usar o ![CDATA["TEXTO"]] no conteúdo. Esse comando diz ao servidor Jabber para não interpretar o conteúdo "TEXTO" para evitar a detecção de XML mal formados.
+</P>
+<P>
+Obter os títulos das ultimas N notícias:
+</P>
+<PRE>
+  
+  &lt;iq type='get' from='J1' to='SN' id='news'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='search_news'&gt;
+  		&lt;options max='N' keyword='' startdate='' enddate='' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Resposta do servidor para buscar notícias:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SN' to='J1' id='news'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='search_news'&gt;
+  		&lt;news id='' date='' /&gt;
+  			&lt;subject&gt;![CDATA[bla bla bla]]&lt;/subject&gt;
+  		&lt;/news&gt;
+  		&lt;news id='' date='' /&gt;
+  			&lt;subject&gt;![CDATA[ bla bla bla]]&lt;/subject&gt;
+  		&lt;/news&gt;
+  		...
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Pegar notícia do servidor:
+</P>
+<PRE>
+  
+  &lt;iq type='get' from='J1' to='SN' id='news'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='get_news'&gt;
+  		&lt;news id=''/&gt;
+  		...
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Resposta com a notícia:
+</P>
+<PRE>
+  
+  &lt;iq type='result' from='SN' to='J1' id='news'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='get_news'&gt;
+  		&lt;news id='' date=''&gt;
+  			&lt;subject&gt;![CDATA[ bla bla bla]]&lt;/subject&gt;
+  			&lt;content&gt;![CDATA[ bla bla bla]]&lt;/content&gt;
+  
+  		&lt;news id='' date=''&gt;
+  			&lt;subject&gt;![CDATA[ bla bla bla]]&lt;/subject&gt;
+  			&lt;content&gt;![CDATA[ bla bla bla]]&lt;/content&gt;
+  		&lt;/news&gt;
+  		...
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<HR NOSHADE SIZE=5>
+<H1>9. CADASTRAR USUÁRIOS</H1>
+<P>
+Esquema
+</P>
+<PRE>
+  
+  1.  J1 ---&gt; SReg requisição para cadastrar usuário;
+  
+  2.  J1 &lt;--- SReg reposta confimando ou não o cadastro;
+  
+</PRE>
+<P></P>
+<P>
+*COLOCAR MAIS PARAMETROS PARA O CADASTRAMENTO
+</P>
+<P>
+Requisição de cadastramento:
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='J1' to='SReg' id='register'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='register'&gt;
+  		&lt;register name='' nick='' email='' /&gt;
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Resposta do servidor Ok
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='SReg' to='J1' id='register'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='register'&gt;
+  		&lt;register nick='' status='true' /&gt;
+  		&lt;register nick='' status='true' /&gt;
+  		....
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+<P></P>
+<P>
+Resposta do servidor NÃO Ok
+</P>
+<PRE>
+  
+  &lt;iq type='set' from='SReg' to='J1' id='register'&gt;
+  	&lt;query xmlns='c3sl.ufpr.br/game' action='register'&gt;
+  		&lt;register nick='' status='false' error=''/&gt;
+  		&lt;register nick='' status='false' error=''/&gt;
+  		...
+  	&lt;/query&gt;
+  &lt;/iq&gt;
+  
+</PRE>
+
+<!-- html code generated by txt2tags 2.3 (http://txt2tags.sf.net) -->
+<!-- cmdline: txt2tags -i pagina.t2t -o index.html -->
+</BODY></HTML>

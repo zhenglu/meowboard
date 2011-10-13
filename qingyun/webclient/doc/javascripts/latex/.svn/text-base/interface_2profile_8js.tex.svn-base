@@ -1,0 +1,249 @@
+\section{/home/www/ulysses/webclient/scripts/interface/profile.js File Reference}
+\label{interface_2profile_8js}\index{/home/www/ulysses/webclient/scripts/interface/profile.js@{/home/www/ulysses/webclient/scripts/interface/profile.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf INTERFACE\_\-ShowProfileWindow} (Profile)
+\item 
+function {\bf INTERFACE\_\-ShowProfileConfirmWindow} ()
+\item 
+function {\bf INTERFACE\_\-ProfileSetUser} (Username)
+\item 
+function {\bf INTERFACE\_\-ProfileGetUser} ()
+\item 
+function {\bf INTERFACE\_\-ProfileSetUserImg} (Img)
+\item 
+function {\bf INTERFACE\_\-ProfileSetNick} (Nick)
+\item 
+function {\bf INTERFACE\_\-ProfileSetDesc} (Desc)
+\item 
+function {\bf INTERFACE\_\-ProfileGetDesc} ()
+\item 
+function {\bf INTERFACE\_\-ProfileSetRatings} (Ratings)
+\item 
+function {\bf INTERFACE\_\-ProfileSetTotalTime} (Time)
+\item 
+function {\bf INTERFACE\_\-ProfileSetOnlineTime} (Time)
+\item 
+function {\bf INTERFACE\_\-ProfileSetTitle} (Title)
+\item 
+function {\bf INTERFACE\_\-ProfileSetTitleImg} (NewSrc)
+\item 
+function {\bf INTERFACE\_\-ProfileSetGroup} (Group)
+\item 
+function {\bf INTERFACE\_\-ProfileSetImgType} (ImgType)
+\item 
+function {\bf INTERFACE\_\-ProfileGetImgType} ()
+\item 
+function {\bf INTERFACE\_\-ProfileSetImg64} (Img64)
+\item 
+function {\bf INTERFACE\_\-ProfileGetImg64} ()
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileGetDesc@{INTERFACE\_\-ProfileGetDesc}}
+\index{INTERFACE\_\-ProfileGetDesc@{INTERFACE\_\-ProfileGetDesc}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileGetDesc ()}\label{interface_2profile_8js_9c34539d6f4643cc9a7bfd8bfbaccff9}
+
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileGetImg64@{INTERFACE\_\-ProfileGetImg64}}
+\index{INTERFACE\_\-ProfileGetImg64@{INTERFACE\_\-ProfileGetImg64}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileGetImg64 ()}\label{interface_2profile_8js_08e7d39bebeaa2c4bffe01af29bd90b2}
+
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileGetImgType@{INTERFACE\_\-ProfileGetImgType}}
+\index{INTERFACE\_\-ProfileGetImgType@{INTERFACE\_\-ProfileGetImgType}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileGetImgType ()}\label{interface_2profile_8js_f35863a94fbbeee6b4b54157033e347c}
+
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileGetUser@{INTERFACE\_\-ProfileGetUser}}
+\index{INTERFACE\_\-ProfileGetUser@{INTERFACE\_\-ProfileGetUser}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileGetUser ()}\label{interface_2profile_8js_06452b888b14851d5910235f8b5ee1cc}
+
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileSetDesc@{INTERFACE\_\-ProfileSetDesc}}
+\index{INTERFACE\_\-ProfileSetDesc@{INTERFACE\_\-ProfileSetDesc}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileSetDesc ( {\em Desc})}\label{interface_2profile_8js_928c5495d445b247f4f2ec1ebdbc1dda}
+
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileSetGroup@{INTERFACE\_\-ProfileSetGroup}}
+\index{INTERFACE\_\-ProfileSetGroup@{INTERFACE\_\-ProfileSetGroup}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileSetGroup ( {\em Group})}\label{interface_2profile_8js_96a5021187eacbfde27022070f9e64ec}
+
+
+Set Group Label in Profile Window of user
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Group}]User's Group \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Yorinori \end{Desc}
+
+
+References UTILS\_\-GetText().
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileSetImg64@{INTERFACE\_\-ProfileSetImg64}}
+\index{INTERFACE\_\-ProfileSetImg64@{INTERFACE\_\-ProfileSetImg64}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileSetImg64 ( {\em Img64})}\label{interface_2profile_8js_590868b95f27b51d2248f0f09951f43d}
+
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileSetImgType@{INTERFACE\_\-ProfileSetImgType}}
+\index{INTERFACE\_\-ProfileSetImgType@{INTERFACE\_\-ProfileSetImgType}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileSetImgType ( {\em ImgType})}\label{interface_2profile_8js_e24b34fbc9c3b9c97dd770e232ad3a3c}
+
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileSetNick@{INTERFACE\_\-ProfileSetNick}}
+\index{INTERFACE\_\-ProfileSetNick@{INTERFACE\_\-ProfileSetNick}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileSetNick ( {\em Nick})}\label{interface_2profile_8js_5fad157e78ac3bcd7b0968673323d651}
+
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileSetOnlineTime@{INTERFACE\_\-ProfileSetOnlineTime}}
+\index{INTERFACE\_\-ProfileSetOnlineTime@{INTERFACE\_\-ProfileSetOnlineTime}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileSetOnlineTime ( {\em Time})}\label{interface_2profile_8js_061be28824caa202fa99a83acac18960}
+
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileSetRatings@{INTERFACE\_\-ProfileSetRatings}}
+\index{INTERFACE\_\-ProfileSetRatings@{INTERFACE\_\-ProfileSetRatings}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileSetRatings ( {\em Ratings})}\label{interface_2profile_8js_7d40432f40b3d4820f3e3ad445243330}
+
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References UTILS\_\-CreateElement().
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileSetTitle@{INTERFACE\_\-ProfileSetTitle}}
+\index{INTERFACE\_\-ProfileSetTitle@{INTERFACE\_\-ProfileSetTitle}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileSetTitle ( {\em Title})}\label{interface_2profile_8js_c8854410b1119eda81680443a8056115}
+
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileSetTitleImg@{INTERFACE\_\-ProfileSetTitleImg}}
+\index{INTERFACE\_\-ProfileSetTitleImg@{INTERFACE\_\-ProfileSetTitleImg}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileSetTitleImg ( {\em NewSrc})}\label{interface_2profile_8js_d23261f1a3a8001c3f0f101124b4e74d}
+
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileSetTotalTime@{INTERFACE\_\-ProfileSetTotalTime}}
+\index{INTERFACE\_\-ProfileSetTotalTime@{INTERFACE\_\-ProfileSetTotalTime}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileSetTotalTime ( {\em Time})}\label{interface_2profile_8js_fab52b05b10311ec070fc84d15095baa}
+
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileSetUser@{INTERFACE\_\-ProfileSetUser}}
+\index{INTERFACE\_\-ProfileSetUser@{INTERFACE\_\-ProfileSetUser}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileSetUser ( {\em Username})}\label{interface_2profile_8js_c028defccdf6ebdc7d245f9d21a9aaf1}
+
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ProfileSetUserImg@{INTERFACE\_\-ProfileSetUserImg}}
+\index{INTERFACE\_\-ProfileSetUserImg@{INTERFACE\_\-ProfileSetUserImg}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ProfileSetUserImg ( {\em Img})}\label{interface_2profile_8js_274c9156287406cf3a92514d6e6cf5a8}
+
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+References IMAGE\_\-ImageDecode().
+
+Referenced by INTERFACE\_\-ShowProfileWindow().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ShowProfileConfirmWindow@{INTERFACE\_\-ShowProfileConfirmWindow}}
+\index{INTERFACE\_\-ShowProfileConfirmWindow@{INTERFACE\_\-ShowProfileConfirmWindow}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowProfileConfirmWindow ()}\label{interface_2profile_8js_14d5b8a7777d1324b5449755699ea1c4}
+
+
+Create elements of confirm profile close window and returns div
+
+\begin{Desc}
+\item[Returns:]Div; Array \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{WINDOW\_\-ProfileConfirm()}{p.}{window_2window_8js_4372845882cf8427672379e1e923adef}; \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Kiyoshi Simizu Yorinori \end{Desc}
+
+
+References UTILS\_\-CreateElement(), and UTILS\_\-GetText().
+
+Referenced by WINDOW\_\-ProfileConfirm().\index{interface/profile.js@{interface/profile.js}!INTERFACE\_\-ShowProfileWindow@{INTERFACE\_\-ShowProfileWindow}}
+\index{INTERFACE\_\-ShowProfileWindow@{INTERFACE\_\-ShowProfileWindow}!interface/profile.js@{interface/profile.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowProfileWindow ( {\em Profile})}\label{interface_2profile_8js_1a4d48bca57236725141eade0f01867e}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Create elements to profile window
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Profile}]Object with profile data \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Div; Array \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{WINDOW\_\-Profile()}{p.}{window_2window_8js_200e97ff4969f4c9092c6ac314e06c1e}; \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Kiyoshi Simizu Yorinori \end{Desc}
+
+
+References INTERFACE\_\-ProfileGetDesc(), INTERFACE\_\-ProfileGetImg64(), INTERFACE\_\-ProfileGetImgType(), INTERFACE\_\-ProfileGetUser(), INTERFACE\_\-ProfileSetDesc(), INTERFACE\_\-ProfileSetGroup(), INTERFACE\_\-ProfileSetImg64(), INTERFACE\_\-ProfileSetImgType(), INTERFACE\_\-ProfileSetNick(), INTERFACE\_\-ProfileSetOnlineTime(), INTERFACE\_\-ProfileSetRatings(), INTERFACE\_\-ProfileSetTitle(), INTERFACE\_\-ProfileSetTitleImg(), INTERFACE\_\-ProfileSetTotalTime(), INTERFACE\_\-ProfileSetUser(), INTERFACE\_\-ProfileSetUserImg(), MainData, OLDGAME\_\-OpenOldGameWindow(), PROFILE\_\-SaveMyProfile(), UTILS\_\-CreateElement(), UTILS\_\-GetText(), and WINDOW\_\-ProfileImage().
+
+Referenced by WINDOW\_\-Profile().

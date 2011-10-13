@@ -1,0 +1,10 @@
+<xd>
+	<root name="query" type="query"/>
+	<type name="query">
+		<attribute name="xmlns" default="http://c3sl.ufpr.br/chessd#game" fixed="true"/>
+		<attribute name="action" default="move" fixed="true"/>
+		<child name="move">
+			<attribute name="long"/>
+		</child>
+	</type>
+</xd>

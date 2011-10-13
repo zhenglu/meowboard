@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+<meta http-equiv="Cache-Control" content="no-cache; must-revalidate" />
+
+<script type="text/javascript" src="initial_files.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/Main.css" />
+<link rel="stylesheet" type="text/css" href="css/Login.css" />
+<link rel="stylesheet" type="text/css" href="css/Load.css" />
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="css/LoadIE.css" />
+<![endif]-->
+
+</head>
+
+<body>
+<!-- Text about Xadrez Livre in portuguese and english-->
+<p style="display:none">Seja bem-vindo ao Xadrez Livre! O servidor mais moderno para jogos de xadrez online totalmente de graça!
+
+Aqui você pode jogar xadrez com outros usuários ou com robôs, além de interagir com os demais usuários através das salas de bate-papo. Para isso você não precisa instalar nenhum outro programa, basta fazer seu cadastro no link ao lado, entrar e jogar!
+
+Este servidor faz parte do projeto "Apoio Computacional ao Ensino de Xadrez nas Escolas". Para saber mais sobre o projeto acesse http://xadrezlivre.c3sl.ufpr.br/projeto
+
+Recomendamos o uso do navegador Firefox para garantir o melhor funcionamento do servidor. Se você não tem a versão mais nova clique aqui para baixá-la.
+Bom Divertimento!</p>
+
+<p style="display:none">Welcome to new Xadrez Livre Web Interface!
+
+Here you can play chess with other users or with robots, moreover you can interact with the users through the chat rooms. For that you don't need to install any other program, you just need to do your registration on the link, enter and play!
+
+This server is part of the project "Apoio Computacional ao Ensino de Xadrez nas Escolas". To learn more about this project, access http://xadrezlivre.c3sl.ufpr.br/projeto
+
+We recommend using the browser Firefox to ensure the better functioning of the server. You can download the latest version of the browser here.
+Have fun!</p>
+<!--Load initial script to avoid cache -->
+<script>INITIAL_LoadScripts()</script>
+</body>
+
+</html>

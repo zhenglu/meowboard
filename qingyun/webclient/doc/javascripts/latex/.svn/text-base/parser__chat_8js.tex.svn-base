@@ -1,0 +1,26 @@
+\section{/home/www/ulysses/webclient/scripts/parser/parser\_\-chat.js File Reference}
+\label{parser__chat_8js}\index{/home/www/ulysses/webclient/scripts/parser/parser\_\-chat.js@{/home/www/ulysses/webclient/scripts/parser/parser\_\-chat.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf PARSER\_\-ParseChat} (XML)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{parser\_\-chat.js@{parser\_\-chat.js}!PARSER\_\-ParseChat@{PARSER\_\-ParseChat}}
+\index{PARSER\_\-ParseChat@{PARSER\_\-ParseChat}!parser_chat.js@{parser\_\-chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function PARSER\_\-ParseChat ( {\em XML})}\label{parser__chat_8js_08b86d178b23f7e7184bbe27c0ab9a13}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Parse chat messages received from jabber 
+
+References CHAT\_\-HandleAnnounceMessage(), CHAT\_\-HandleMessage(), and ROOM\_\-HandleMessage().
+
+Referenced by PARSER\_\-ParseXml().

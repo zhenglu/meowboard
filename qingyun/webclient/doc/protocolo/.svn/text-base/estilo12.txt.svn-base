@@ -1,0 +1,507 @@
+/* Protocolo do Style 12
+* A string "<12>" identifica o style.
+* 8 campos representando as posições do tabuleiro. O primeiro é a 8a linha do branco (também a 1a linha do Preto), então 7a linha do Branco(e também 2a linha do Preto), etc, depende de que cor você está jogando.
+* cor de quem o turno pertence ("B" or "W")
+* -1 se o movimento anterior não foi um movimento duplo do peão, caso contrário 
+	board file  (numbered 0--7 for a--h) in which the double push was made
+* Branco pode fazer roque curto? (0=no, 1=yes)
+* Branco pode fazer roque longo?
+* Preto pode fazer roque curto?
+* Preto pode fazer roque longo?
+* número de movimentos feitos desde o último movimento irreversível. (0 se o último movimento foi irreversível. Se valor é >= 100, jogo pode ser declarado como empato devido a regra de 50 movimentos).
+* Número do jogo
+* Nome do branco
+* Nome do preto
+* minha relação com este jogo:
+	-3 isolated position, such as for "ref 3" or the "sposition" command
+	-2 Sou observador do jogo examinado
+	2 sou examinador deste jogo
+	-1 Estou jogando, vez do meu oponente
+	1 Estou jogando e está na minha vez
+	0 Estou observando um jogo em andamento
+* tempo inicial (em segundos) da partida
+* incremento (em segundos) da partida
+* força material do branco
+* força material do preto
+* Tempo restante do branco
+* Tempo restante do preto
+* número do movimento a ser feito (numeração padrão do xadrez -- Movimento inicial do branco e preto são 1 para ambos, etc)
+* notação verbose da coordenada no movimento anterior ("none" se for nenhum) [note que costuma ser quebrado em jogos examinados]
+* tempo gasto para fazer o movimento anterior "(min:seg)".
+* notação curta para movimento anterior ("none" se for nenhum)
+* girar campo para orientação do tabuleiro: 1 = Preto embaixo, 0 = Branco embaixo.
+* Controle de turno
+* 0
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct movement
+{
+	char *style;
+	char *line8;
+	char *line7;
+	char *line6;
+	char *line5;
+	char *line4;
+	char *line3;
+	char *line2;
+	char *line1;
+	char cor_turno;
+	int double_move; // -1 se movimento anterior nao foi movimento duplo do peao
+	int	w_rq_c; // roque curto branco;
+	int	w_rq_l; // roque longo branco;
+	int	b_rq_c; // roque curto preto;
+	int	b_rq_l; // roque longo preto;
+	int irrev; // numero de movimentos desde o ultimo movimento irreversivel
+	int num_game; // numero do jogo
+	char *w_player; // nome do branco
+	char *b_player; // nome do preto
+	int relation;
+	int time; // tempo inicial
+	int increment; // incremento
+	int w_strength; // força material branca
+	int b_strength; // força material preto
+	int w_time; // tempo branco
+	int b_time; // tempo preto
+	int turn; // turno atual
+	char *last_v_move; // ultimo movimento modo verbose
+	char *time_spend; // tempo gasto no ultimo movimento
+	char *last_s_move; // ultimo movimento modo short
+	int board_side; // 1 = preto embaixo, 0 = branco embaixo
+	int turn_control; // 0 = primeiro turno, 1 >= segundo turno em diante
+	int zero; // sempre zero
+	char *bug;
+	char *game;
+	int num_bug_game;
+	char *white;
+	char *w_pieces;
+	char *black;
+	char *b_pieces;
+} movement;
+
+int board_string_verify (char*);
+movement* split_movement (char*);
+void print_movement (movement*);
+
+#define BUG 0 // 0 normal 1 bughouse
+
+int main ()
+{
+	movement *dados;
+	char teste[]="<12> rnbqkbnr pppppppp -------- -------- -------- -------- PPPPPPPP RNBQKBNR W -1 1 1 1 1 0 7 GuestZQPE megakun -1 5 0 39 39 300 300 1 none (0:00) none 1 0 0\n";
+	char teste_bug[]="<12> rnbqkbnr pppppppp -------- -------- -------- -------- PPPPPPPP RNBQKBNR W -1 1 1 1 1 0 7 GuestZQPE megakun -1 5 0 39 39 300 300 1 none (0:00) none 1 0 0\n<b1> game 6 white [PNBBB] black [PNB]\n";
+
+	if (BUG==0)
+	{
+		if (board_string_verify(teste))
+		{
+			dados = split_movement (teste);
+			if (dados!=NULL)
+				// Funcao de debug
+				print_movement (dados);
+			else
+				printf ("String errada\n");
+		}
+		else
+			printf ("Nao eh style <12>\n");
+	}
+	else
+	{
+		if (board_string_verify(teste_bug))
+		{
+			dados = split_movement (teste_bug);
+			if (dados!=NULL)
+				//  funcao de debug
+				print_movement (dados);
+			else
+				printf ("String incompleta\n");
+		}
+		else
+			printf ("Nao eh style <12>\n");
+	}
+}
+
+int board_string_verify (char* string)
+{
+	int i;
+	char mark[]="<12> ";
+	for (i=0; i<5;i++)
+		if (mark[i] != string[i])
+			return 0;
+	return 1;
+//	printf ("%s\n", (strstr(string,"<12> ")));
+//	if (strcasestr(string,"<12> "))
+//		return 1;
+//	else
+//		return 0;
+}
+
+#if 1
+// Funcionando sem verificação de erros
+movement* split_movement (char *string)
+{
+	movement *dados;
+	dados = (movement*)malloc(sizeof(movement));
+//	printf ("Splitting %s\n",string);
+	dados->style =strtok (string," ");
+	dados->line8 =strtok(NULL," ");
+	dados->line7 =strtok(NULL," ");
+	dados->line6 =strtok(NULL," ");
+	dados->line5 =strtok(NULL," ");
+	dados->line4 =strtok(NULL," ");
+	dados->line3 =strtok(NULL," ");
+	dados->line2 =strtok(NULL," ");
+	dados->line1 =strtok(NULL," ");
+	dados->cor_turno =strtok(NULL," ")[0];
+	dados->double_move = atoi(strtok(NULL," "));
+	dados->w_rq_c = atoi(strtok(NULL," "));
+	dados->w_rq_l = atoi(strtok(NULL," "));
+	dados->b_rq_c = atoi(strtok(NULL," "));
+	dados->b_rq_l = atoi(strtok(NULL," "));
+	dados->irrev = atoi(strtok(NULL," "));
+	dados->num_game = atoi(strtok(NULL," "));
+	dados->w_player =strtok(NULL," ");
+	dados->b_player =strtok(NULL," ");
+	dados->relation = atoi(strtok(NULL," "));
+	dados->time = atoi(strtok(NULL," "));
+	dados->increment = atoi(strtok(NULL," "));
+	dados->w_strength = atoi(strtok(NULL," "));
+	dados->b_strength = atoi(strtok(NULL," "));
+	dados->w_time = atoi(strtok(NULL," "));
+	dados->b_time = atoi(strtok(NULL," "));
+	dados->turn = atoi(strtok(NULL," "));
+	dados->last_v_move =strtok(NULL," ");
+	dados->time_spend =strtok(NULL," ");
+	dados->last_s_move =strtok(NULL," ");
+	dados->board_side = atoi(strtok(NULL," "));
+	dados->turn_control = atoi(strtok(NULL," "));
+	dados->zero = atoi(strtok(NULL," \n"));
+
+	dados->bug = strtok(NULL," \n");
+	if (dados->bug==NULL)
+	{
+		dados->game = NULL;
+		dados->num_bug_game = 0;
+		dados->white = NULL;
+		dados->w_pieces = NULL;
+		dados->black = NULL;
+		dados->b_pieces = NULL;
+	}
+	else
+	{
+		dados->game = strtok(NULL," ");
+		dados->num_bug_game = atoi(strtok(NULL," "));
+		dados->white = strtok(NULL," ");
+		dados->w_pieces = strtok(NULL," ");
+		dados->black = strtok(NULL," ");
+		dados->b_pieces = strtok(NULL," \n");
+	}
+
+	return dados;
+}
+#endif
+
+void print_movement (movement *dados)
+{
+	printf ("Estilo: %s\n",dados->style);
+	printf ("Linha 8: %s\n",dados->line8);
+	printf ("Linha 7: %s\n",dados->line7);
+	printf ("Linha 6: %s\n",dados->line6);
+	printf ("Linha 5: %s\n",dados->line5);
+	printf ("Linha 4: %s\n",dados->line4);
+	printf ("Linha 3: %s\n",dados->line3);
+	printf ("Linha 2: %s\n",dados->line2);
+	printf ("Linha 1: %s\n",dados->line1);
+	printf ("Turno cor: %c\n", dados->cor_turno);
+	printf ("Moviment duplo: %d\n", dados->double_move);
+	printf ("Roque curto branco: %d\n",dados->w_rq_c);
+	printf ("Roque longo branco: %d\n",dados->w_rq_l);
+	printf ("Roque curto preto: %d\n",dados->b_rq_c);
+	printf ("Roque longo preto: %d\n",dados->b_rq_l);
+	printf ("Numero do jogo: %d\n",dados->num_game);
+	printf ("Nick do jogador branco: %s\n",dados->w_player);
+	printf ("Nick do jogador preto: %s\n",dados->b_player);
+	printf ("Relacao com o jogo: %d\n",dados->relation);
+	printf ("Tempo inicial: %d\n",dados->time);
+	printf ("Incremento: %d\n",dados->increment);
+	printf ("Força material branco: %d\n",dados->w_strength);
+	printf ("Força material preto: %d\n",dados->b_strength);
+	printf ("Tempo atual branco: %d\n",dados->w_time);
+	printf ("Tempo atual preto: %d\n",dados->b_time);
+	printf ("Turno atual:  %d\n",dados->turn);
+	printf ("Ultimo movimento completo: %s\n",dados->last_v_move);
+	printf ("Tempo gasto para movimento: %s\n",dados->time_spend);
+	printf ("Ultimo movimento curto: %s\n",dados->last_s_move);
+	printf ("Lado do tabuleiro: %d\n",dados->board_side);
+	printf ("Controle de turno: %d\n",dados->turn_control);
+	printf ("0: %d\n",dados->zero);
+	if (dados->bug!=NULL)
+	{
+		printf ("Bug house: %s\n",dados->bug);
+		printf ("%s\n",dados->game);
+		printf ("Num jogo: %d\n",dados->num_bug_game);
+		printf ("%s\n",dados->white);
+		printf ("Peças brancas: %s\n",dados->w_pieces);
+		printf ("%s\n",dados->black);
+		printf ("Peças pretas: %s\n",dados->b_pieces);
+	}
+
+	// Imprime msm string
+	printf ("%s ",dados->style);
+	printf ("%s ",dados->line8);
+	printf ("%s ",dados->line7);
+	printf ("%s",dados->line6);
+	printf ("%s",dados->line5);
+	printf ("%s ",dados->line4);
+	printf ("%s ",dados->line3);
+	printf ("%s ",dados->line2);
+	printf ("%s ",dados->line1);
+	printf ("%c ", dados->cor_turno);
+	printf ("%d ", dados->double_move);
+	printf ("%d ",dados->w_rq_c);
+	printf ("%d ",dados->w_rq_l);
+	printf ("%d ",dados->b_rq_c);
+	printf ("%d ",dados->b_rq_l);
+	printf ("%d ",dados->num_game);
+	printf ("%s ",dados->w_player);
+	printf ("%s ",dados->b_player);
+	printf ("%d ",dados->relation);
+	printf ("%d ",dados->time);
+	printf ("%d ",dados->increment);
+	printf ("%d ",dados->w_strength);
+	printf ("%d ",dados->b_strength);
+	printf ("%d ",dados->w_time);
+	printf ("%d ",dados->b_time);
+	printf ("%d ",dados->turn);
+	printf ("%s ",dados->last_v_move);
+	printf ("%s ",dados->time_spend);
+	printf ("%s ",dados->last_s_move);
+	printf ("%d ",dados->board_side);
+	printf ("%d ",dados->turn_control);
+	printf ("%d\n",dados->zero);
+	if (dados->bug!=NULL)
+	{
+		printf ("%s ",dados->bug);
+		printf ("%s ",dados->game);
+		printf ("%d ",dados->num_bug_game);
+		printf ("%s ",dados->white);
+		printf ("%s ",dados->w_pieces);
+		printf ("%s ",dados->black);
+		printf ("%s\n",dados->b_pieces);
+	}
+}
+
+#if 0
+// Com verificação de erro em cada item
+movement* split_movement (char *string)
+{
+	int i;
+	movement *dados;
+	char *tmp;
+	dados = (movement*)malloc(sizeof(movement));
+	printf ("Splitting %s\n",string);
+	tmp = strtok (string," ");
+	if (tmp!=NULL)
+		dados->style = tmp;
+	else
+		return NULL;
+
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->line8 = tmp; 
+	else
+		return NULL;
+
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->line7 = tmp;
+	else
+		return NULL;
+
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->line6 = tmp;
+	else
+		return NULL;
+
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->line5 = tmp;
+	else
+		return NULL;
+
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->line4 = tmp;
+	else
+		return NULL;
+
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->line3 = tmp;
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->line2 = tmp;
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->line1 = tmp;
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->cor_turno = tmp[0];
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->double_move = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->w_rq_c = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->w_rq_l = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->b_rq_c = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->b_rq_l = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->irrev = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->num_game = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->w_player = tmp;
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->b_player = tmp;
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->relation = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->time = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->increment = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->w_strength = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->b_strength = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->w_time = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->b_time = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->turn = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->last_v_move = tmp;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->time_spend = tmp;
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->last_s_move = tmp;
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->board_side = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->turn_control = atoi(tmp);
+	else
+		return NULL;
+	
+	tmp =strtok(NULL," ");
+	if (tmp!=NULL)
+		dados->zero = atoi(tmp);
+	else
+		return NULL;
+	
+	if (strtok(NULL," \n")==NULL)
+		return dados;
+	else
+		return NULL;
+}
+#endif

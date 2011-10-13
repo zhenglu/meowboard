@@ -1,0 +1,256 @@
+\section{/home/www/ulysses/webclient/scripts/register/register.js File Reference}
+\label{register_8js}\index{/home/www/ulysses/webclient/scripts/register/register.js@{/home/www/ulysses/webclient/scripts/register/register.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf REGISTER\_\-RegisterData} ()
+\item 
+function {\bf REGISTER\_\-MakeXMPP} (Msg)
+\item 
+function {\bf REGISTER\_\-Post} ()
+\item 
+function {\bf REGISTER\_\-GetError} (err)
+\item 
+function {\bf REGISTER\_\-DateValidate} (User, Mail, Pwd, ConfPW)
+\item 
+function {\bf REGISTER\_\-SendData} (Msg)
+\item 
+function {\bf REGISTER\_\-ReceiveXml} ()
+\item 
+function {\bf REGISTER\_\-ProcessMessage} (XmlDoc)
+\item 
+function {\bf REGISTER\_\-SucessMessage} ()
+\item 
+function {\bf REGISTER\_\-ParseError} (code)
+\item 
+function {\bf REGISTER\_\-GetLanguage} (URL)
+\item 
+function {\bf REGISTER\_\-GetHost} ()
+\item 
+function {\bf REGISTER\_\-Labels} ()
+\item 
+function {\bf REGISTER\_\-VerticalAlignMiddle} ()
+\begin{CompactList}\small\item\em Align main div in middle. \item\end{CompactList}\item 
+function {\bf REGISTER\_\-SendDataPHP} (User, Mail, Pwd)
+\item 
+function {\bf REGISTER\_\-ReceiveXmlPHP} ()
+\item 
+function {\bf REGISTER\_\-GetDatabaseError} (Msg)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+var {\bf HttpRequest}
+\item 
+var {\bf RegisterData}
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{register.js@{register.js}!REGISTER\_\-DateValidate@{REGISTER\_\-DateValidate}}
+\index{REGISTER\_\-DateValidate@{REGISTER\_\-DateValidate}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-DateValidate ( {\em User}, \/   {\em Mail}, \/   {\em Pwd}, \/   {\em ConfPW})}\label{register_8js_d13d62f6d4bc07251fde3160659eea8f}
+
+
+
+
+Referenced by REGISTER\_\-Post().\index{register.js@{register.js}!REGISTER\_\-GetDatabaseError@{REGISTER\_\-GetDatabaseError}}
+\index{REGISTER\_\-GetDatabaseError@{REGISTER\_\-GetDatabaseError}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-GetDatabaseError ( {\em Msg})}\label{register_8js_6f672d4c31ec61239d0c447e2d909d45}
+
+
+Show a alert with error \begin{Desc}
+\item[Returns:]none\end{Desc}
+\begin{Desc}
+\item[Author:]Fabiano \end{Desc}
+\begin{Desc}
+\item[{\bf Deprecated}]\end{Desc}
+
+
+References UTILS\_\-GetText().
+
+Referenced by REGISTER\_\-ReceiveXmlPHP().\index{register.js@{register.js}!REGISTER\_\-GetError@{REGISTER\_\-GetError}}
+\index{REGISTER\_\-GetError@{REGISTER\_\-GetError}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-GetError ( {\em err})}\label{register_8js_0f784aa2bb5cd6b876e736d01611a1fe}
+
+
+
+
+References REGISTER\_\-GetLanguage(), UTILS\_\-GetTag(), and UTILS\_\-OpenXMLFile().
+
+Referenced by REGISTER\_\-Post().\index{register.js@{register.js}!REGISTER\_\-GetHost@{REGISTER\_\-GetHost}}
+\index{REGISTER\_\-GetHost@{REGISTER\_\-GetHost}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-GetHost ()}\label{register_8js_60682a7fc707db31243bc09b0db76b40}
+
+
+
+
+References UTILS\_\-GetTag(), and UTILS\_\-OpenXMLFile().
+
+Referenced by REGISTER\_\-RegisterData().\index{register.js@{register.js}!REGISTER\_\-GetLanguage@{REGISTER\_\-GetLanguage}}
+\index{REGISTER\_\-GetLanguage@{REGISTER\_\-GetLanguage}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-GetLanguage ( {\em URL})}\label{register_8js_ccbe8a48655edc3a8b9bfc6fd8e71c12}
+
+
+
+
+Referenced by REGISTER\_\-GetError(), REGISTER\_\-Labels(), REGISTER\_\-ParseError(), and REGISTER\_\-SucessMessage().\index{register.js@{register.js}!REGISTER\_\-Labels@{REGISTER\_\-Labels}}
+\index{REGISTER\_\-Labels@{REGISTER\_\-Labels}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-Labels ()}\label{register_8js_c489703e14685fd464a2d071d7938d8b}
+
+
+
+
+References REGISTER\_\-GetLanguage(), UTILS\_\-GetTag(), and UTILS\_\-OpenXMLFile().\index{register.js@{register.js}!REGISTER\_\-MakeXMPP@{REGISTER\_\-MakeXMPP}}
+\index{REGISTER\_\-MakeXMPP@{REGISTER\_\-MakeXMPP}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-MakeXMPP ( {\em Msg})}\label{register_8js_7b297505aaea7ef445a5979ad8445a6c}
+
+
+
+
+References RegisterData.
+
+Referenced by REGISTER\_\-ProcessMessage().\index{register.js@{register.js}!REGISTER\_\-ParseError@{REGISTER\_\-ParseError}}
+\index{REGISTER\_\-ParseError@{REGISTER\_\-ParseError}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-ParseError ( {\em code})}\label{register_8js_a9961667728099b1c4c97a1c5ee778be}
+
+
+Show a alert box to error in register
+
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+\begin{Desc}
+\item[Author:]Fabiano \end{Desc}
+
+
+References REGISTER\_\-GetLanguage(), UTILS\_\-GetTag(), and UTILS\_\-OpenXMLFile().
+
+Referenced by REGISTER\_\-ProcessMessage().\index{register.js@{register.js}!REGISTER\_\-Post@{REGISTER\_\-Post}}
+\index{REGISTER\_\-Post@{REGISTER\_\-Post}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-Post ()}\label{register_8js_8d73a5840a1e6955fc6b61e824d60709}
+
+
+
+
+References REGISTER\_\-DateValidate(), REGISTER\_\-GetError(), REGISTER\_\-RegisterData(), REGISTER\_\-SendData(), and RegisterData.\index{register.js@{register.js}!REGISTER\_\-ProcessMessage@{REGISTER\_\-ProcessMessage}}
+\index{REGISTER\_\-ProcessMessage@{REGISTER\_\-ProcessMessage}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-ProcessMessage ( {\em XmlDoc})}\label{register_8js_071c2098a32807d7c980d9b42d35f2c8}
+
+
+Process the XMPP register response
+
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+\begin{Desc}
+\item[Author:]Fabiano \end{Desc}
+
+
+References REGISTER\_\-MakeXMPP(), REGISTER\_\-ParseError(), REGISTER\_\-SendData(), REGISTER\_\-SucessMessage(), and RegisterData.
+
+Referenced by REGISTER\_\-ReceiveXml().\index{register.js@{register.js}!REGISTER\_\-ReceiveXml@{REGISTER\_\-ReceiveXml}}
+\index{REGISTER\_\-ReceiveXml@{REGISTER\_\-ReceiveXml}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-ReceiveXml ()}\label{register_8js_529d8fd46e940d2c418616e7288a9bef}
+
+
+Check and parse the XMPP register response
+
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+\begin{Desc}
+\item[Author:]Fabiano \end{Desc}
+
+
+References HttpRequest, and REGISTER\_\-ProcessMessage().
+
+Referenced by REGISTER\_\-SendData().\index{register.js@{register.js}!REGISTER\_\-ReceiveXmlPHP@{REGISTER\_\-ReceiveXmlPHP}}
+\index{REGISTER\_\-ReceiveXmlPHP@{REGISTER\_\-ReceiveXmlPHP}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-ReceiveXmlPHP ()}\label{register_8js_05f0881d7603861b5b37ec98d0468d42}
+
+
+Receive response from PHP file \begin{Desc}
+\item[Returns:]none\end{Desc}
+\begin{Desc}
+\item[Author:]Fabiano \end{Desc}
+\begin{Desc}
+\item[{\bf Deprecated}]\end{Desc}
+
+
+References HttpRequest, and REGISTER\_\-GetDatabaseError().
+
+Referenced by REGISTER\_\-SendDataPHP().\index{register.js@{register.js}!REGISTER\_\-RegisterData@{REGISTER\_\-RegisterData}}
+\index{REGISTER\_\-RegisterData@{REGISTER\_\-RegisterData}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-RegisterData ()}\label{register_8js_387c9e547a2a2c6b8bb3daa4b82e5645}
+
+
+
+
+References REGISTER\_\-GetHost().
+
+Referenced by REGISTER\_\-Post().\index{register.js@{register.js}!REGISTER\_\-SendData@{REGISTER\_\-SendData}}
+\index{REGISTER\_\-SendData@{REGISTER\_\-SendData}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-SendData ( {\em Msg})}\label{register_8js_fcb0616848b3086105c609ff09fb56c2}
+
+
+
+
+References HttpRequest, REGISTER\_\-ReceiveXml(), and RegisterData.
+
+Referenced by REGISTER\_\-Post(), and REGISTER\_\-ProcessMessage().\index{register.js@{register.js}!REGISTER\_\-SendDataPHP@{REGISTER\_\-SendDataPHP}}
+\index{REGISTER\_\-SendDataPHP@{REGISTER\_\-SendDataPHP}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-SendDataPHP ( {\em User}, \/   {\em Mail}, \/   {\em Pwd})}\label{register_8js_6785efd4f9728ecdfca686884a471657}
+
+
+Send register data to a PHP file (used if jabber don't support user register) \begin{Desc}
+\item[Returns:]none\end{Desc}
+\begin{Desc}
+\item[Author:]Fabiano\end{Desc}
+\begin{Desc}
+\item[{\bf Deprecated}]\end{Desc}
+
+
+References HttpRequest, and REGISTER\_\-ReceiveXmlPHP().\index{register.js@{register.js}!REGISTER\_\-SucessMessage@{REGISTER\_\-SucessMessage}}
+\index{REGISTER\_\-SucessMessage@{REGISTER\_\-SucessMessage}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-SucessMessage ()}\label{register_8js_f16ca40e345d5c80f16a10b57e8b5707}
+
+
+Show a alert box to sucess register
+
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+\begin{Desc}
+\item[Author:]Fabiano \end{Desc}
+
+
+References REGISTER\_\-GetLanguage(), UTILS\_\-GetTag(), and UTILS\_\-OpenXMLFile().
+
+Referenced by REGISTER\_\-ProcessMessage().\index{register.js@{register.js}!REGISTER\_\-VerticalAlignMiddle@{REGISTER\_\-VerticalAlignMiddle}}
+\index{REGISTER\_\-VerticalAlignMiddle@{REGISTER\_\-VerticalAlignMiddle}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function REGISTER\_\-VerticalAlignMiddle ()}\label{register_8js_4862cc46ed6cf1f2ec985a1339f0e0ef}
+
+
+Align main div in middle. 
+
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+\subsection{Variable Documentation}
+\index{register.js@{register.js}!HttpRequest@{HttpRequest}}
+\index{HttpRequest@{HttpRequest}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}var {\bf HttpRequest}}\label{register_8js_7766c35e097d0534a3567286da65c2d2}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. Register window functions 
+
+Referenced by REGISTER\_\-ReceiveXml(), REGISTER\_\-ReceiveXmlPHP(), REGISTER\_\-SendData(), and REGISTER\_\-SendDataPHP().\index{register.js@{register.js}!RegisterData@{RegisterData}}
+\index{RegisterData@{RegisterData}!register.js@{register.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}var {\bf RegisterData}}\label{register_8js_4583a8d58cbb1b7308bdb36dc1ec5b56}
+
+
+
+
+Referenced by REGISTER\_\-MakeXMPP(), REGISTER\_\-Post(), REGISTER\_\-ProcessMessage(), and REGISTER\_\-SendData().

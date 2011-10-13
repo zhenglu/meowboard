@@ -1,0 +1,217 @@
+/*
+ * OLDGAME CSS
+ */
+
+/* HTML Elements */
+#OldGamesDiv img {
+	margin-right	: 11px;
+	margin-left		: 7px;
+}
+
+#OldGamesDiv p {
+	font-weight		: bold;
+	color			: #216778;
+}
+
+#OldGamesDiv span {
+	font-weight		: bold;
+	font-size		: 10px;
+	color			: #216778;
+	padding-right	:	4px;
+}
+
+#OldGamesDiv input {
+	margin-right	:	4px;
+	margin-top		:	11px;
+	padding-left	:	2px;
+}
+
+#OldGamesDiv input,
+#OldGamesDiv select {
+	border-color : #FFA200;
+}
+
+#OldGamesDiv input.button {
+	width : 80px;
+}
+
+#OldGamesDiv #L2RightDiv #FromDiv span,
+#OldGamesDiv #L2RightDiv #ToDiv span {
+	font-size : 11px;
+}
+
+#OldGamesDiv #ResultDiv p {
+	font-weight:	normal;
+} 
+
+#OldGamesDiv #ResultDiv table {
+	border: 1px solid #216678;
+	width : 480px;
+	text-align : center;
+}
+
+#OldGamesDiv thead td {
+	background-color: #DAF3F5;
+	font-size	:	12px;
+	border-bottom	: 1px solid #216778; 
+}
+
+#OldGamesDiv tbody,
+#OldGamesDiv table {
+	border-collapse	: collapse;
+	empty-cells		: show;
+	font-weight : bold;
+}
+
+#OldGamesDiv #ResultDiv hr {
+	color : #FFA200;
+	background-color : #FFA200;
+	margin : 0px 10px 10px;
+	height : 1px;
+	border : 0px;
+}
+
+#OldGamesDiv td {
+	font-size		: 10px;
+	color			: #216778;
+	background-color: #FFF;
+	height : 30px;
+	width : 76px;
+	font-weight		: bold;
+}
+
+/* Class */
+#OldGamesDiv .left_div {
+	float	:	left;
+	width	:	170px;
+}
+
+#OldGamesDiv .italic {
+	font-style		: italic;
+}
+
+#OldGamesDiv .radio {
+	border : 0px none;
+}
+
+#OldGamesDiv #L2RightDiv #FromDiv .format,
+#OldGamesDiv #L2RightDiv #ToDiv .format {
+	font-size : 8px;
+	font-weight: normal;
+}
+
+#OldGamesDiv #ResultDiv .result {
+	text-align	:	left;
+	margin-bottom	: 15px;
+	padding-left : 25px;
+}
+
+#OldGamesDiv #ResultDiv #TBodyDiv .resulttd, 
+#OldGamesDiv #ResultDiv #TBodyDiv .result_header {
+	width: 134px;
+}
+
+#OldGamesDiv #ResultDiv #TBodyDiv .header_examine,
+#OldGamesDiv #ResultDiv #TBodyDiv .examine {
+	width : 40px;
+}
+
+#OldGamesDiv #ResultDiv #TBodyDiv .examine_icon {
+	margin : 0px;
+	padding : 3px;
+	cursor: pointer;
+}
+
+#OldGamesDiv #ResultDiv .tfoot_td {
+	padding-bottom : 10px;
+}
+
+#OldGamesDiv #ResultDiv .page {
+	margin-left : 11px;
+	margin-right : 11px;
+	font-size: 9px;
+	font-weight: normal;
+}
+
+#OldGamesDiv #ResultDiv .button {
+	bottom: 0px;
+	font-size: 9px;
+	font-weight: normal;
+	margin: 0px;
+	width: 55px;
+	border-color : #DAF3F5;
+}
+
+#OldGamesDiv #ResultDiv .button_disabled {
+	border-color : #C0C0C0;
+	background-color: #C0C0C0;
+	font-size: 9px;
+	font-weight: normal;
+	margin: 0px;
+	width: 55px;
+}
+
+/* ID */
+#OldGamesDiv #FormDiv {
+	padding-top	: 22px;
+	height : 120px;
+	display : block;
+}
+
+#OldGamesDiv #Layer1Div {
+	margin-bottom	:	7px;
+	padding-left : 83px;
+}
+
+#OldGamesDiv #Layer2Div {
+	padding-left : 83px;
+}
+
+#OldGamesDiv #L2RightDiv #FromDiv {
+	float: left;
+	margin-right: 20px;
+}
+
+#OldGamesDiv #L2RightDiv #ToDiv {
+	float: left;
+}
+
+#OldGamesDiv #ButtonsDiv {
+	text-align : center;
+	position :relative;
+	display : block;
+	height : 20px;
+}
+
+#OldGamesDiv #ResultDiv {
+	display: block;
+	padding-bottom: 15px;
+}
+
+#OldGamesDiv #ResultDiv #NoResultDiv {
+	text-align : center;
+	height : 114px;
+	padding-top	:	56px;
+}
+
+#OldGamesDiv #ResultDiv #TableDiv {
+	text-align : center;
+	padding-left : 22px;
+}
+
+#OldGamesDiv #ResultDiv #TFootDiv {
+	height : 40px;
+	display : block;
+}
+
+#oldgame_loading, #oldgame_not_found{
+	width			: 464px;
+	border-style		: solid;
+	border-width		: 0px thin;
+	border-color		: #216778;
+}
+
+#OldGamesDiv #CloseDiv {
+	text-align: center;
+	padding-top: 15px;
+}

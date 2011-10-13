@@ -1,0 +1,91 @@
+#WindowBox #HelpDiv {
+	height : 410px;
+	padding : 10px;
+}
+
+#WindowBox #HelpDiv li {
+	margin-left : 30px;
+	padding-top : 4px;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+#WindowBox #HelpDiv li.unselected {
+	list-style-image: url('../images/arrow_down.png');
+	cursor : pointer;
+	color : #216778; 
+}
+
+#WindowBox #HelpDiv li.selected {
+	list-style-image: url('../images/arrow_up.png');
+	cursor : pointer;
+	color : #FFA200; 
+}
+
+#WindowBox #HelpDiv p.selected {
+	color : #FFA200; 
+	cursor : pointer;
+}
+
+#WindowBox #HelpDiv p.unselected {
+	color : #216778; 
+	cursor : pointer;
+}
+
+#WindowBox #HelpDiv .show_help {
+	display: block;
+	list-style: none;
+	clear: both;
+}
+
+#WindowBox #HelpDiv .hide_help {
+	display: none;
+	list-style: none;
+}
+
+#WindowBox #HelpDiv p {
+	font-weight : bold;
+}
+
+#WindowBox #HelpDiv #HowDiv {
+	height : 380px;
+	border-bottom : 1px solid #FFA200;
+	overflow: auto;
+}
+
+#WindowBox #HelpDiv #Explanation {
+	padding-top : 3px;
+	padding-bottom : 6px;
+}
+
+#WindowBox #HelpDiv #Explanation p {
+	font-weight : normal;
+}
+
+#WindowBox #HelpDiv #Explanation li {
+	font-weight : normal;
+	list-style: outside;
+	font-size : 11px;
+	color: #216778;
+	padding-top : 2px;
+}
+
+#WindowBox #HelpDiv #ButtonDiv {
+	text-align : center;
+	position:relative;
+	margin-top	:	20px;
+	margin-bottom	:	5px;
+}
+
+#WindowBox #HelpDiv #Explanation a {
+	cursor : pointer;
+}
+
+#WindowBox #HelpDiv #Explanation a:active,
+#WindowBox #HelpDiv #Explanation a:link {
+	color: #216678;
+}
+
+#WindowBox #HelpDiv #Explanation a:visited {
+	color: #FFA200;
+}

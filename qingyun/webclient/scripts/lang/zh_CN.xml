@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<language name="zh_CN">
+	<general>
+		<general_title>新田象棋网络客戶端 Xintian Xiangqi Web Client</general_title>
+	        <general_name>Xintian Xiangqi</general_name>
+	</general>
+	<utils>
+		<not_implemented_title> 尚未提供 </not_implemented_title>
+		<not_implemented> 现在尚未提供此功能 </not_implemented>
+		<server_offline_title>服务器离线</server_offline_title>
+		<server_offline>服务器离线,无法提供服务</server_offline>
+	</utils>
+	<window>
+	        <window_yes>是</window_yes>
+	        <window_no>否</window_no>
+	        <window_ok>确认</window_ok>
+	        <window_close>关闭</window_close>
+	        <window_save>保存</window_save>
+	        <window_accept>接受</window_accept>
+	        <window_cancel>取消</window_cancel>
+	        <window_decline>拒绝</window_decline>
+                <window_search>查找</window_search>	
+		<window_character>字符数: %s</window_character>
+	</window>
+	<login>
+		<login_title>欢迎进入新田象棋.</login_title>
+		<login_text1>这是一款有趣的网络联系方式,也是一款传统的游戏.</login_text1>
+		<login_text2>新田象棋通过不断改进的研发活动,为喜愛这款游戏的人群提供满意的社区式服务</login_text2>
+		<login_text3><![CDATA[推荐使用<a href='http://www.firefox.com'>Firefox 3</a> 或者Internet Explorer 8等浏览器运行此客戶端.]]></login_text3>
+		<login_footer>玩得开心！</login_footer>
+		<login_remember_pass>记住密码</login_remember_pass>
+		<login_signin>快速注册</login_signin>
+		<login_user>用户名</login_user>
+		<login_passwd>密码</login_passwd>
+		<login_server_down>服务器脱机，请稍后再试试。</login_server_down>
+		<login_connection_refused>服务器拒绝了此次连接，请稍后再试试。</login_connection_refused>
+		<login_invalid_user>用户名或密码不正确。</login_invalid_user>
+		<login_banned_user>该用户名被禁止。</login_banned_user>
+		<login_lost_connection>失去连接</login_lost_connection>
+		<login_load_wait>稍等...</login_load_wait>
+		<login_load_start>正在启动loader...</login_load_start>
+		<login_load_scripts>正在启动scripts...</login_load_scripts>
+		<login_load_css>正在启动css...</login_load_css>
+		<login_load_images>正在加载图像...</login_load_images>
+		<login_load_user_list>正在加载用户列表</login_load_user_list>
+		<login_validate_user>无效用户</login_validate_user>
+		<login_connection_closed>再试一次.</login_connection_closed>
+		<login_connection_start>正在连接...</login_connection_start>
+		<login_connection_user>验证用户...</login_connection_user>
+		<login_connection_passwd>验证密码...</login_connection_passwd>
+		<login_server_not_founded>找不到服务器.</login_server_not_founded>
+	</login>
+	<menu>
+		<menu_adjourn>延期</menu_adjourn>
+		<menu_search_game>查找对局</menu_search_game>
+		<menu_search_user>查找用户</menu_search_user>
+		<menu_news>新闻</menu_news>
+		<menu_preferences>设置</menu_preferences>
+		<menu_help>帮助</menu_help>
+		<menu_exit>退出</menu_exit>
+		<menu_current_games>正在进行的对局</menu_current_games>
+		<menu_challenges>挑战赛</menu_challenges>
+		<menu_tourneys>联赛</menu_tourneys>
+		<menu_rooms>房间</menu_rooms>
+		<menu_history>历史记录</menu_history>
+		<menu_loading>载入中...</menu_loading>
+		<menu_no_games>无进行中对局.</menu_no_games>
+	</menu>
+	<contact>
+		<contact_contacts>联系人</contact_contacts>
+		<contact_online>在线</contact_online>
+		<contact_offline>离线</contact_offline>
+		<contact_order_nick>昵称</contact_order_nick>
+		<contact_order_rating>等级分</contact_order_rating>
+		<contact_invite>添加好友</contact_invite>
+		<contact_invite_text>%s 添加你做好友, 你接受吗？</contact_invite_text>
+		<contact_remove_title>删除好友</contact_remove_title>
+		<contact_remove_text>你确认删除该好友？</contact_remove_text>
+		<contact_search_user>查找用户</contact_search_user>
+		<contact_search>查找</contact_search>
+		<contact_user_t>用户名</contact_user_t>
+		<contact_no_user_found>找不到该用户名</contact_no_user_found>
+		<contact_user_found>找到该用户名：</contact_user_found>
+		<contact_user>普通用户</contact_user>
+		<contact_teacher>老师</contact_teacher>
+		<contact_admin>管理员</contact_admin>
+		<contact_robot>机器人</contact_robot>
+		<contact_search_by>查找条件：</contact_search_by>
+		<contact_by_name>姓名</contact_by_name>
+		<contact_by_user>昵称</contact_by_user>
+		<contact_both>同时</contact_both>
+		<contact_change_profile>修改个人资料</contact_change_profile>
+		<contact_loading>载入联系人列表...</contact_loading>
+		<contact_online_loading>载入用户列表...</contact_online_loading>
+		<contact_default_group>好友</contact_default_group>
+	</contact>
+	<chat>
+		<chat_warning>提醒</chat_warning>
+		<chat_max_exceeded>最多可以打开%i对话</chat_max_exceeded>
+	</chat>
+	<room>
+		<room_default>通用</room_default>
+		<room_contacts>联系人</room_contacts>
+		<room_all>在线</room_all>
+		<room_order_nick>用户名</room_order_nick>
+		<room_order_rating>等级分</room_order_rating>
+		<room_create_room>创建房间</room_create_room>
+		<room_create_rooms>创建房间</room_create_rooms>
+		<room_cancel_room>取消房间</room_cancel_room>
+		<room_name>名称：</room_name>
+		<room_description>描述：</room_description>
+		<room_create>创建</room_create>
+		<room_cancel_text>确认取消创建这个房间？</room_cancel_text>
+		<room_error>创建房间错误</room_error>
+		<room_invalid_name>房间名称不符合要求</room_invalid_name>
+		<room_invalid_length>最长50个字符(25个汉字)</room_invalid_length>
+		<room_show_user_list>显示用戶列表</room_show_user_list>
+		<room_hide_user_list>隐藏用戶列表</room_hide_user_list>
+		<room_counter>字符数</room_counter>
+		<room_loading>载入房间...</room_loading>
+		<room_error_message_length>最大字符数超出(%s)</room_error_message_length>
+	</room>
+	<group>
+		<group_default>好友</group_default>
+	</group>
+	<status>
+		<status_offline>脱机</status_offline>
+		<status_available>联机</status_available>
+		<status_unavailable>隐身</status_unavailable>
+		<status_busy>忙碌</status_busy>
+		<status_away>离开</status_away>
+		<status_playing>对局中</status_playing>
+	</status>
+	<usermenu>
+		<usermenu_send_message>发送消息</usermenu_send_message>
+		<usermenu_send_offlinemessage>发送离线消息</usermenu_send_offlinemessage>
+		<usermenu_match>邀请对局</usermenu_match>
+		<usermenu_add_contact>添加联系人</usermenu_add_contact>
+		<usermenu_remove_contact>删除联系人</usermenu_remove_contact>
+		<usermenu_view_profile>查看资料</usermenu_view_profile>
+		<usermenu_disconnect_user>断开用户</usermenu_disconnect_user>
+		<usermenu_ban>禁止</usermenu_ban>
+		<usermenu_mute>静音</usermenu_mute>
+		<usermenu_abusive>垃圾</usermenu_abusive>
+	</usermenu>
+	<error>
+		<error_disconnected>与服务器失去联系，请重新连接。</error_disconnected>
+	</error>
+	<challenge>
+		<challenge_title_invite>邀请对局</challenge_title_invite>
+		<challenge_title_offer>邀请对局</challenge_title_offer>
+		<challenge_information>使用以下参数来邀请对局：</challenge_information>
+		<challenge_my_pieces>我的棋子：</challenge_my_pieces>
+		<challenge_op_pieces>对手棋子：</challenge_op_pieces>
+		<challenge_time_label>对局时间：</challenge_time_label>
+		<challenge_category>对局类型：</challenge_category>
+		<challenge_inc_label>加秒：</challenge_inc_label>
+		<challenge_time_label_min>分钟</challenge_time_label_min>
+		<challenge_inc_label_seg>秒</challenge_inc_label_seg>
+		<challenge_rating>记分</challenge_rating>
+		<challenge_private>私人比赛</challenge_private>
+		<challenge_invite>邀请</challenge_invite>
+		<challenge_chat>公开对话</challenge_chat>
+		<challenge_new_parameters>重新对局</challenge_new_parameters>
+		<challenge_no_time>不限时</challenge_no_time>
+		<challenge_color_auto>自动</challenge_color_auto>
+		<challenge_auto_flag>随机选择</challenge_auto_flag>
+		<challenge_menu_match_title>我的挑战</challenge_menu_match_title>
+		<challenge_menu_announce_title>挑战宣告</challenge_menu_announce_title>
+		<challenge_menu_announce>挑战宣告</challenge_menu_announce>
+		<challenge_menu_postpone_title>延后的对局</challenge_menu_postpone_title>
+		<challenge_menu_no_match>没有挑战.</challenge_menu_no_match>
+		<challenge_menu_no_announce>没有匹配的挑战宣告.</challenge_menu_no_announce>
+		<challenge_menu_no_postpone>没有延后的挑战.</challenge_menu_no_postpone>
+		<challenge_offer_user_offline>您已与服务器断开.请重新登陆</challenge_offer_user_offline>
+		<challenge_offer_opponent_offline>对手正在对局中,或者对手已离线.</challenge_offer_opponent_offline>
+		<challenge_error>错误的挑战</challenge_error>
+		<challenge_announce_match>挑战宣告</challenge_announce_match>
+		<challenge_menu_loading_announce>载入挑战宣告...</challenge_menu_loading_announce>
+	</challenge>
+	<announce>
+		<announce_title>挑战宣告</announce_title>
+		<announce_rating_interval>级别限制:</announce_rating_interval>
+		<announce_min_rating_example>Ex:1000</announce_min_rating_example>
+		<announce_max_rating_example>Ex:2300</announce_max_rating_example>
+		<announce_pieces>棋子:</announce_pieces>
+		<announce_error_title>错误的挑战宣告</announce_error_title>
+		<announce_invalid_min_rating>最低级别不正确. Ex: 0000</announce_invalid_min_rating>
+		<announce_invalid_min_rating>最高级别不正确. Ex: 2349</announce_invalid_min_rating>
+		<announce_invalid_interval>级别区间不正确. 最低值必须低于最大值.</announce_invalid_interval>
+		<announce_accept_error>接受挑战时发生错误</announce_accept_error>
+		<announce_non_exist>宣告已被取消,或者删除.</announce_non_exist>
+	</announce>
+	<game>
+		<game_draw>提和</game_draw>
+		<game_draw_text>%s提出和棋，你同意吗？</game_draw_text>
+		<game_draw_denied>%s拒绝和棋。</game_draw_denied>
+		<game_end_game>对局结束</game_end_game>
+		<game_resign_text>%s退出对局</game_resign_text>
+		<game_adjourn>延期</game_adjourn>
+		<game_adjourn_text>%s希望延期对局，你同意吗？</game_adjourn_text>
+		<game_adjourn_denied>%s拒绝延期。</game_adjourn_denied>
+		<game_abort>取消对局</game_abort>
+		<game_abort_text>%s希望取消对局，你同意吗？</game_abort_text>
+		<game_abort_denied>%s拒绝取消对局。</game_abort_denied>
+		<game_resign>退出对局</game_resign>
+		<game_resign_confirm>确认退出对局？</game_resign_confirm>
+		<game_checkmatew_text>恭喜！你因将死了 %s 而获胜。</game_checkmatew_text>
+		<game_checkmatel_text>你因被 %s 将死了而输棋。</game_checkmatel_text>
+		<game_timew_text>你因 %s 超时而获胜。</game_timew_text>
+		<game_timel_text>你因超时而被判负于 %s 。</game_timel_text>
+		<game_remove_game>你不能关闭一个正在进行的比赛</game_remove_game>
+		<game_remove_game_title>提醒</game_remove_game_title>
+
+		<game_canceled>对局被取消了。</game_canceled>
+
+		<game_options>选项</game_options>
+		<game_moves>移动</game_moves>
+		<game_send_draw>和棋</game_send_draw>
+		<game_send_resign>退出</game_send_resign>
+		<game_send_cancel>终止</game_send_cancel>
+		<game_send_adjourn>延期</game_send_adjourn>
+		<game_give_time>给对手加时</game_give_time>
+		<game_pawn_promotion>兵升变</game_pawn_promotion>
+		<game_promotion_queen>后</game_promotion_queen>
+		<game_promotion_rook>车</game_promotion_rook>
+		<game_promotion_bishop>象</game_promotion_bishop>
+		<game_promotion_knight>马</game_promotion_knight>
+
+		<game_observer_alert>你不能在对局中或观看某一对局时再观看新的对局。</game_observer_alert>
+		<game_observer_alert_title>提醒</game_observer_alert_title>
+
+		<game_white_pawn>红兵</game_white_pawn>
+		<game_white_rook>红车</game_white_rook>
+		<game_white_horse>红马</game_white_horse>
+		<game_white_elephant>红象</game_white_elephant>
+		<game_white_cannon>红炮</game_white_cannon>
+		<game_white_king>红帥</game_white_king>
+		<game_white_advisor>红仕</game_white_advisor>
+
+		<game_black_pawn>黑兵</game_black_pawn>
+		<game_black_rook>黑车</game_black_rook>
+		<game_black_horse>黑马</game_black_horse>
+		<game_black_elephant>黑象</game_black_elephant>
+		<game_black_cannon>黑炮</game_black_cannon>
+		<game_black_king>黑將</game_black_king>
+		<game_black_advisor>黑士</game_black_advisor>
+
+		<game_button_first>第一个</game_button_first>
+		<game_button_prev>前一个</game_button_prev>
+		<game_button_next>后一个</game_button_next>
+		<game_button_last>最后一个</game_button_last>
+		
+		<game_oldgame_alert>对局中或离开时无法查看历史对局。</game_oldgame_alert>
+		<game_result_white-timeover>红方超时</game_result_white-timeover>
+		<game_result_black-timeover>黑方超时</game_result_black-timeover>
+		<game_result_white-mated>红方赢得将军</game_result_white-mated>
+		<game_result_black-mated>黑方赢得将军</game_result_black-mated>
+		<game_result_white-resigned>红方放弃</game_result_white-resigned>
+		<game_result_black-resigned>黑方放弃</game_result_black-resigned>
+		<game_result_draw-agreement>双方协商的平局</game_result_draw-agreement>
+		<game_result_stalemate>僵局</game_result_stalemate>
+		<game_result_draw-repetition>位置重复的平局</game_result_draw-repetition>
+		<game_result_draw-fifty-moves>已经50步的平局</game_result_draw-fifty-moves>
+		<game_result_draw-impossible-mate>没有足够将军的棋子的平局</game_result_draw-impossible-mate>
+		<game_result_draw-timeover>双方都超时的平局</game_result_draw-timeover>
+		<game_result_canceled-agreement>双方协商取消对局</game_result_canceled-agreement>
+		<game_result_canceled-timed-out>不活动取消对局</game_result_canceled-timed-out>
+		<game_result_adjourned-agreement>红方推迟对局</game_result_adjourned-agreement>
+		<game_result_adjourned-shutdown>服务器关闭，推迟对局</game_result_adjourned-shutdown>
+		<game_result_white-wo>红方获胜</game_result_white-wo>
+		<game_result_black-wo>黑方获胜</game_result_black-wo>
+		<game_result_closed>游戏结束. 其结果没有显示出来.</game_result_closed>
+		<game_loading_move>载入棋步...</game_loading_move>
+		<game_white_player_leave>红方离开游戏. 如果他在几分钟内不回来，黑方将获胜.</game_white_player_leave>
+		<game_black_player_leave>黑方离开游戏. 如果他在几分钟内不回来，红方将获胜.</game_black_player_leave>
+		<game_type_lightning>闪电战</game_type_lightning>
+		<game_type_blitz>快棋</game_type_blitz>
+		<game_type_standard>正常时间</game_type_standard>
+		<game_type_untimed>不限時</game_type_untimed>
+	</game>
+	<profile>
+		<profile_window>个人资料与信息</profile_window>
+		<profile_name>用户名：</profile_name>
+		<profile_nick>昵称：</profile_nick>
+		<profile_whoami>我是谁：</profile_whoami>
+		<profile_level>水平：</profile_level>
+		<profile_group>组别：</profile_group>
+		<profile_type>类型：</profile_type>
+		<profile_online_time>在线时间：</profile_online_time>
+		<profile_total_time>合计时间：</profile_total_time>
+		<profile_category>类别</profile_category>
+		<profile_current_rating>现在积分</profile_current_rating>
+		<profile_best_rating>最高积分</profile_best_rating>
+		<profile_record_date>记录日期</profile_record_date>
+		<profile_games_number>对局数</profile_games_number>
+		<profile_win>胜</profile_win>
+		<profile_draw>和</profile_draw>
+		<profile_lose>负</profile_lose>
+		<profile_edit_photo>编辑照片</profile_edit_photo>
+		<profile_old_games1>我的对局</profile_old_games1>
+		<profile_old_games2>历史对局 </profile_old_games2>
+		<profile_save>保存资料</profile_save>
+		<profile_discard>不保存而直接关闭</profile_discard>
+		<profile_save_close>保存并关闭</profile_save_close>
+		<profile_confirm>你确认要不保存而直接关闭吗？</profile_confirm>
+		<profile_confirm_close>关闭确认</profile_confirm_close>
+		<profile_change_image>提供照片</profile_change_image>
+		<profile_change_image_title>更换照片</profile_change_image_title>
+		<profile_load_error>错误</profile_load_error>
+		<profile_load_error_title>无法上载照片</profile_load_error_title>
+		<profile_year>年</profile_year>
+		<profile_month>月</profile_month>
+		<profile_day>日</profile_day>
+		<profile_error>保存配置文件时出错</profile_error>
+		<profile_desc_limit>描述可长达200个字符.</profile_desc_limit>
+	</profile>
+	<register>
+		<register_inf>请填写以下的信息以完成注册</register_inf>
+		<register_title>注册</register_title>
+		<register_login>用户名</register_login>
+		<register_max_char>(最多14个字符)</register_max_char>
+		<register_user_inf>只能使用小写字母、数字、'-"、"."及"_"，不能含空格</register_user_inf>
+		<register_mail1>E-mail</register_mail1>
+		<register_mail2>(可选)</register_mail2>
+		<register_mail_inf>以便找回密码</register_mail_inf>
+		<register_passwd>密码:</register_passwd>
+		<register_passwd_confirm1></register_passwd_confirm1>
+		<register_passwd_confirm2>再输入一次密码</register_passwd_confirm2>
+		<register_bt_confirm>确认</register_bt_confirm>
+		<register_invalid_user_name>用户名无效！</register_invalid_user_name>
+		<register_invalid_user_name_len>用户名最多不能超过14个字符.</register_invalid_user_name_len>
+		<register_invalid_mail>E-mail无效</register_invalid_mail>
+		<register_invalid_password>密码无效</register_invalid_password>
+		<register_error_409>该用户名已被注册</register_error_409>
+		<register_sucess_message>注册成功</register_sucess_message>
+	</register>
+	<oldgame>
+		<oldgame_title>历史对局</oldgame_title>
+		<oldgame_my_games>我的历史对局</oldgame_my_games>
+		<oldgame_other_games>其他人的历史对局</oldgame_other_games>
+		<oldgame_player1>选手 1:</oldgame_player1>
+		<oldgame_pieces>棋子颜色：</oldgame_pieces>
+		<oldgame_both>同时</oldgame_both>
+		<oldgame_player2>选手 2:</oldgame_player2>
+		<oldgame_date_form>日期：</oldgame_date_form>
+		<oldgame_from>自：</oldgame_from>
+		<oldgame_to>至：</oldgame_to>
+		<oldgame_new_search>重新查找</oldgame_new_search>
+		<oldgame_search_result>查找结果：</oldgame_search_result>
+		<oldgame_no_result>查找不到</oldgame_no_result>
+		<oldgame_player1_hd>选手 1</oldgame_player1_hd>
+		<oldgame_player2_hd>选手 2</oldgame_player2_hd>
+		<oldgame_white_hd>红方</oldgame_white_hd>
+		<oldgame_black_hd>黑方</oldgame_black_hd>
+		<oldgame_category>类别</oldgame_category>
+		<oldgame_result>结果</oldgame_result>
+		<oldgame_date>日期</oldgame_date>
+		<oldgame_prev>前一个</oldgame_prev>
+		<oldgame_next>后一个</oldgame_next>
+		<oldgame_format>格式：日/月/年</oldgame_format>
+		<oldgame_no_moves>没动过子的对局</oldgame_no_moves>
+		<oldgame_invalid_begin>无效的开始日期</oldgame_invalid_begin>
+		<oldgame_invalid_end>无效的结束日期</oldgame_invalid_end>
+		<oldgame_invalid_interval>无效的范围</oldgame_invalid_interval>
+		<oldgame_invalid_date>无效的日期</oldgame_invalid_date>
+		<oldgame_loading>搜索老游戏...</oldgame_loading>
+		<oldgame_examine>研究对局</oldgame_examine>
+	</oldgame>
+	<welcome>
+		<welcome_title>热烈欢迎!</welcome_title>
+		<welcome_text1>希望您横刀立马,旗开得胜.</welcome_text1>
+		<welcome_text2>为获得更多的帮助,请点击帮助按钮或者访问新田象棋的社区网络.</welcome_text2>
+		<welcome_instruction>
+			<welcome_item><![CDATA[<b>开始对局:</b> 点击左侧在线人员名单,在弹出的菜单中选择"邀请对局".在"邀请对局"对话框中,设定对局参数,然后点击"邀请"按钮发出对局请求.请等待您的对手接受/拒绝此请求.当对手接受对局后,对局正式开始.]]></welcome_item>
+			<welcome_item><![CDATA[<b>添加好友</b> 点击左侧在线人员名单,在弹出的菜单中选择"添加联系人".请等待该用戶接受/拒绝此请求.当用戶接受请求后,此用戶将出现在您左侧联系人名单中.]]></welcome_item>
+		</welcome_instruction>
+	</welcome>
+	<admin>
+		<admin_kick_ok>你断开用户成功</admin_kick_ok>
+		<admin_ban_ok>你已成功禁止用户</admin_ban_ok>
+		<admin_unban_ok>你成功解除对用户的禁止</admin_unban_ok>
+		<admin_user_ban>您已被禁止.\n原因: </admin_user_ban>
+		<admin_user_kick>您已断开.\n原因: </admin_user_kick>
+
+	</admin>
+	<help>
+		<help_title>帮助</help_title>
+		<help_t_1>帮助</help_t_1>
+		<help_t_1_1>下棋</help_t_1_1>
+		<help_t_1_1_1>挑战具体对手</help_t_1_1_1>
+		<help_c_1_1_1><![CDATA[<p>邀请特定用户下棋:</p><ul><li>单击您想邀请的用户，然后点击“邀请对局“;</li><li>在对话框中设置匹配（颜色和时间等）的比赛条件。</li><li>点击“邀请“.</li></ul><br /><p>注：受邀请用户可以：</p><ul><li>接受您的邀请，并开始游戏;</li><li>更改对局条件,要求“重新对局";</li><li>或“拒绝“您的邀请.</li></ul>]]></help_c_1_1_1>
+		<help_t_1_1_2>接受对局邀请</help_t_1_1_2>
+		<help_c_1_1_2><![CDATA[<p>当你被邀请参加对局，邀请窗口此时已打开.</p><p><ul><li>点击“确定“开始进行已设定起始条件的对局.</li></ul><br /><p>注：如果你希望对对局条件进行更改，请更改所需的条件,然后单击“重新对局"。此时，新的条件将被发送到邀请你的用户,他可以接受或拒绝你的建议.</p>]]></help_c_1_1_2>
+		<help_t_1_1_3>挑战宣告</help_t_1_1_3>
+		<help_c_1_1_3><![CDATA[<p>在背景下点击"挑战赛",查看挑战宣告</p><ul><li>在背景下点击"挑战赛";</li><li>点击"挑战宣告";</li><li>在对话框中设置匹配（颜色和时间等）的比赛条件。</li><li>点击"宣告".</li></ul><br /><p> 注：这场比赛是宣告出去的比赛。因此，其他用户可以看到它，接受它。这些比赛只会显示在宣告所定义的级别范围内的用户的挑战赛上.</p>]]></help_c_1_1_3>
+		<help_t_1_2>搜索用户</help_t_1_2>
+		<help_c_1_2><![CDATA[<ul><li>点击“查找用户“的工具栏;</li><li>设置搜索条件;</li><li>点击“查找“.</li></ul>]]></help_c_1_2>
+		<help_t_1_3>用戶聊天</help_t_1_3>
+		<help_c_1_3><![CDATA[<p>为和一个特定的用户交谈</p><ul><li>单击想要聊天的用戶,然后点击“交谈“;</li></ul><p>将打开一个窗口，显示你们两人之间的对话.</p><ul><li>输入信息（在窗口底部的聊天场）;</li><li>敲“回车“发送信息.</li></ul>]]></help_c_1_3>
+		<help_t_1_4>在一个房间里多个用户聊天</help_t_1_4>
+		<help_c_1_4><![CDATA[<p>选择“房间”,在一个特定的房间或聊天室，参与多个用户聊天.</p><ul><li>输入消息（在窗口底部的聊天场）;</li><li>输入“回车“发送消息到另一个房间.</li></ul>]]></help_c_1_4>
+		<help_t_1_5>查看或隐藏在一个房间里的用户列表</help_t_1_5>
+		<help_c_1_5><![CDATA[<p>这个房间应该是开放的（见“- >“加入房间“）和活动的（其标题栏为橙色），看看它的用户列表:</p><ul><li>点击“查看房间的用户"，若用户的列表是隐藏则被显示，或;</li><li>点击“从房间隐藏用户“，若用户的清单是显示的则被隐藏.</li></ul>]]></help_c_1_5>
+		<help_t_1_6>检视个人资料和用户信息</help_t_1_6>
+		<help_c_1_6><![CDATA[<p>用户信息显示在专门对话框中</p><ul><li>单击用户，然后点击“查看个人资料和信息“.</li></ul>]]></help_c_1_6>
+		<help_t_1_7>添加用户到您的联系人名单</help_t_1_7>
+		<help_c_1_7><![CDATA[<p>要添加一个用户在你的联系人名单</p><ul><li>单击用户，然后点击“添加到联系人“.</li></ul>]]></help_c_1_7>
+		<help_t_1_8>从联系人名单中删除用户</help_t_1_8>
+		<help_c_1_8><![CDATA[<p>若要从您的联系人名单中删除用户</p><ul><li>点击客户端上的“联系人“将看到您的联系人;</li><li>单击您要删除的用户，然后点击“删除联系人“</li></ul>]]></help_c_1_8>
+		<help_t_1_9>更改我的状态</help_t_1_9>
+		<help_c_1_9><![CDATA[<p>当您连接到服务器时，您的状态是“可用“。状态在登录后显示在客户端左侧个人头像旁。<p/><p>要更改您的状态:</p><ul><li>点击头像旁边的当前状态;</li><li>点击所需的状态.</li></ul><br /><p>注：状态“对局中”，“旁观”和“联机“是由服务器自动测量。当用户已经在对局中（状态“对局中”）或“不可用“，它不能被邀请参加对局。如果是忙碌的状态，可以发言，但不能接受聊天。</p>]]></help_c_1_9>
+		<help_t_1_10>更改我的资料</help_t_1_10>
+		<help_c_1_10><![CDATA[<p>要更改您的个人资料:</p><ul><li>点击个人区域的“更改我的个人资料“.</li></ul>]]></help_c_1_10>
+		<help_t_1_11>走进一个房间</help_t_1_11>
+		<help_c_1_11><![CDATA[<ul><li>点击客户端右侧的“房间“条;</li><li>点击您想要进入的房间.</li></ul><br /><p>注意：您选择的房间将在屏幕左侧打开。</p>]]></help_c_1_11>
+		<help_t_1_12>创建房间</help_t_1_12>
+		<help_c_1_12><![CDATA[<ul><li>点击客户端右侧的“房间“条;</li><li>点击“创建房间“;</li><li>命名房间的名称;</li><li>点击“创建“.</li></ul><br /><p>注：房间创建后将显示在屏幕左侧.</p>]]></help_c_1_12>
+		<help_t_1_13>旁观一个游戏</help_t_1_13>
+		<help_c_1_13><![CDATA[<ul><li>点击客户端右侧的“进行中对局“;</li><li>点击进行中的对局，进行旁观.</li></ul>]]></help_c_1_13>
+		<help_t_1_14>搜索历史对局</help_t_1_14>
+		<help_c_1_14><![CDATA[<ul><li>点击“搜索匹配“的工具栏;</li><li>设置搜索条件;</li><li>点击“搜索“;</li></ul><br /><p>注意：所有赛事如果在多个窗口中显示, 请使用导航按钮“下一个“和“上一个“看其他比赛。</p>]]></help_c_1_14>
+		<help_t_1_15>研究历史对局</help_t_1_15>
+		<help_c_1_15><![CDATA[<ul><li>搜索匹配的对局 (见 “帮助 -> 搜索历史对局”);</li><li>点击你要研究的对局;</li><li>使用历史对局中的导航按钮来浏览对局步骤.</li></ul>]]></help_c_1_15>
+		<help_t_1_16>获得帮助</help_t_1_16>
+		<help_c_1_16><![CDATA[<p>如需帮助:</p><ul><li>点击“帮助“工具栏.</li></ul><br /><p>注：您可以通过两种方式获得帮助：使用本“帮助”，其中包含较详细的资料；或者到新田社区网络上咨询相关功能。</p>]]></help_c_1_16>
+	</help>
+</language>

@@ -1,0 +1,129 @@
+#Top {
+	display			: table;
+	width			: 100%;
+}
+
+#Top h1 {
+	float			: left;
+	width			: 213px;
+	height			: 95px;
+	background		: url('../images/logo.png') no-repeat;
+	text-indent		: -9999px;
+	overflow		: hidden;
+	margin			: 4px 4px 4px 35px;
+}
+
+#Top #TopMenu {
+	float			: right;
+	width			: 525px;
+}
+
+#Top ul {
+	display			: block;
+}
+
+#Top li {
+	float 			: left;
+	list-style		: none;
+	cursor			: pointer;
+}
+
+/* icons menu */
+#Top .icons {
+	position		: relative;
+	/*
+	height			: 15mm;
+	top			: 3mm;
+	*/
+	height			: 60px;
+	top			: 10px;
+	width			: 85%;
+	left			: 12%;
+}
+
+#Top .icons li {
+	overflow		: hidden;
+	width			: 35px;
+	height			: 35px;
+	/*margin		: 1mm 0mm 0mm 9mm;*/
+	margin			: 4px 0px 0px 35px;
+}
+
+#Top #ExitText
+{
+	text-align		: center;
+	font-weight		: bold;
+	font-size		: 11px;
+	/*font-size		: 2.8mm;*/
+	position		: relative;
+	margin-left		: 50%;
+	left			: -15px;
+	top			: -1px;
+}
+
+/* setting icons */
+#Top .icons .null {
+	cursor			: default;
+}
+
+#Top .icons .adjourn_game {
+	background		: url('../images/adjourn_game.png') no-repeat;
+}
+
+#Top .icons .search_game {
+	background		: url('../images/search_game.png') no-repeat;
+}
+
+#Top .icons .search_user {
+	background		: url('../images/search_user.png') no-repeat;
+}
+
+#Top .icons .news {
+	background		: url('../images/news.png') no-repeat;
+}
+
+#Top .icons .preferences {
+	background		: url('../images/preferences.png') no-repeat;
+}
+
+#Top .icons .help {
+	background		: url('../images/help.png') no-repeat;
+}
+
+#Top .icons .exit {
+	background		: url('../images/exit.png') no-repeat;
+	width			: 56px;
+	color			: #216778;
+	margin-top 		: 10px;
+}
+
+#Top .icons .exit:hover {
+	background		: url('../images/exit_selec.png') no-repeat;
+	color			: #FFF;
+}
+
+/* menu */
+#Top .menu {
+	position		: relative;
+	right			: 0mm;
+}
+
+#Top .menu li {
+	font-weight		: bold;
+	font-size		: 11px;
+	color			: #216778;
+	border-right		: 1px solid #216778;
+	width			: 115px;
+	text-align		: center;
+}
+
+#Top .menu li.currentGames {
+	width			: 175px;
+}
+
+#Top .menu li.rooms {
+	border-right		: 0px;
+}
+#Top .menu li:hover {
+	color			: #FFA200;
+}

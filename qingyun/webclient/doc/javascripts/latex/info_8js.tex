@@ -1,0 +1,70 @@
+\section{/home/www/ulysses/webclient/scripts/contact/info.js File Reference}
+\label{info_8js}\index{/home/www/ulysses/webclient/scripts/contact/info.js@{/home/www/ulysses/webclient/scripts/contact/info.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf CONTACT\_\-HandleInfo} (XML)
+\item 
+function {\bf CONTACT\_\-HandleRating} (NodeList)
+\item 
+function {\bf CONTACT\_\-HandleType} (NodeList)
+\item 
+function {\bf CONTACT\_\-SetUserType} (Username, NewType)
+\item 
+function {\bf CONTACT\_\-SetUserRating} (Username, Category, Rating)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{info.js@{info.js}!CONTACT\_\-HandleInfo@{CONTACT\_\-HandleInfo}}
+\index{CONTACT\_\-HandleInfo@{CONTACT\_\-HandleInfo}!info.js@{info.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-HandleInfo ( {\em XML})}\label{info_8js_40fd163b2a7192238e6339e6c353afce}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Control user information (rating an type) Receive a info message and set it in user list 
+
+References CONTACT\_\-HandleRating(), and CONTACT\_\-HandleType().
+
+Referenced by PARSER\_\-ParseIq().\index{info.js@{info.js}!CONTACT\_\-HandleRating@{CONTACT\_\-HandleRating}}
+\index{CONTACT\_\-HandleRating@{CONTACT\_\-HandleRating}!info.js@{info.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-HandleRating ( {\em NodeList})}\label{info_8js_8eed364d5c5d3be5d928ae50c6952823}
+
+
+Handle user rating, update the structure and interface 
+
+References CONTACT\_\-SetUserRating().
+
+Referenced by CONTACT\_\-HandleInfo().\index{info.js@{info.js}!CONTACT\_\-HandleType@{CONTACT\_\-HandleType}}
+\index{CONTACT\_\-HandleType@{CONTACT\_\-HandleType}!info.js@{info.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-HandleType ( {\em NodeList})}\label{info_8js_47b4166f6a379fd6415d47a9d777cca5}
+
+
+Handle user types, update the structure and interface 
+
+References CONTACT\_\-SetUserType().
+
+Referenced by CONTACT\_\-HandleInfo().\index{info.js@{info.js}!CONTACT\_\-SetUserRating@{CONTACT\_\-SetUserRating}}
+\index{CONTACT\_\-SetUserRating@{CONTACT\_\-SetUserRating}!info.js@{info.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-SetUserRating ( {\em Username}, \/   {\em Category}, \/   {\em Rating})}\label{info_8js_cfe04b0f835f6bf6c8e46a7bc6f7f688}
+
+
+Change rating of 'Username' in structure and interface 
+
+References MainData.
+
+Referenced by CONTACT\_\-HandleRating().\index{info.js@{info.js}!CONTACT\_\-SetUserType@{CONTACT\_\-SetUserType}}
+\index{CONTACT\_\-SetUserType@{CONTACT\_\-SetUserType}!info.js@{info.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CONTACT\_\-SetUserType ( {\em Username}, \/   {\em NewType})}\label{info_8js_4aa77385acda3e8efe17f6f033bd83a3}
+
+
+Change type of 'Username' in structure and interface 
+
+References MainData.
+
+Referenced by CONTACT\_\-HandleType().

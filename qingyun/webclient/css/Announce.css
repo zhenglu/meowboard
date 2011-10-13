@@ -1,0 +1,148 @@
+/**
+* Announce Window
+*/
+#AnnounceDiv #Layer1Div,
+#AnnounceDiv #Layer2Div,
+#AnnounceDiv #Layer3Div {
+	padding			: 0px 0px 0px 25px;
+}
+
+#AnnounceDiv #Layer1Div {
+	padding-top : 25px;
+}
+
+#AnnounceDiv #Layer1Div:after,
+#AnnounceDiv #Layer2Div:after,
+#AnnounceDiv #Layer3Div:after {
+	content:".";
+	display:block;
+	clear:both;
+	visibility:hidden;
+	height:0;
+	overflow:hidden;
+}
+
+#AnnounceDiv #L1RightDiv {
+	width : 110px;
+}
+
+#AnnounceDiv #Layer1Div {
+	margin-bottom	:	0px;
+}
+
+#AnnounceDiv #Layer1Div #L1RightDiv {
+	float : left;
+}
+
+#AnnounceDiv #Layer3Div {
+	display : block;
+}
+
+#AnnounceDiv .cx {
+	font-size	:	10px;
+	margin-right	:	3mm;
+	font-weight		: bold;
+}
+
+#AnnounceDiv h3 {
+	font-weight		: bold;
+	font-size		: 4mm;
+	color			: #216778;
+	text-align		: center;
+	padding-top		: 8px;
+}
+
+#AnnounceDiv .leftDiv {
+	float			: left;
+	width			: 150px;
+	margin-left	:	5px;
+}
+
+#AnnounceDiv p {
+	margin-top		: 0mm;
+	font-weight		: bold;
+	font-size		: 10px;
+	color			: #216778;
+}
+
+#AnnounceDiv img {
+	margin-right	: 7mm;
+	margin-left		: 2mm;
+}
+
+#AnnounceDiv .drop_select {
+	margin-top		: 1mm;
+	margin-right	: 2mm;
+}
+
+#AnnounceDiv .rating_radio {
+	margin-top		: 3mm;
+	margin-right	: 1.5mm;
+	border : 0px none;
+}
+
+#AnnounceDiv .italic {
+	font-style		: italic;
+}
+
+#AnnounceDiv #ButtonsDiv {
+	text-align		: center;
+	padding-top		: 12px;
+	margin-bottom	: 4px;
+}
+
+#AnnounceDiv .color {
+	padding-top	:	1mm;
+}
+
+#AnnounceDiv .radio {
+	margin-top	:	2mm;
+	border : 0px none;
+}
+
+#AnnounceDiv input,
+#AnnounceDiv textarea,
+#AnnounceDiv select {
+	font-size		: 11px;
+	border			: 1px solid #216778;
+	color			: #216778;
+}
+
+#AnnounceDiv span {
+	font-size		: 10px;
+	color			: #216778;
+}
+
+#AnnounceDiv #L3RightDiv .leftDiv {
+	float			: left;
+	width			: 70px;
+	margin-left	:	0px;
+}
+
+#AnnounceDiv #FromDiv,
+#AnnounceDiv #ToDiv {
+	padding-top : 5px;
+}
+
+#AnnounceDiv #L3RightDiv #FromDiv input,
+#AnnounceDiv #L3RightDiv #ToDiv input {
+	margin-left	:	2px;
+}
+
+#AnnounceDiv #FromDiv span.format {
+	padding-left : 16px;
+}
+
+#AnnounceDiv #ToDiv span.format {
+	padding-left : 11px;
+}
+
+#AnnounceDiv #L3RightDiv #FromDiv input.disabled,
+#AnnounceDiv #L3RightDiv #ToDiv input.disabled {
+	background-color : #C0C0C0;
+}
+
+#AnnounceDiv #L3RightDiv #FromDiv input.enabled,
+#AnnounceDiv #L3RightDiv #ToDiv input.enabled {
+	background-color : #FFF;
+}

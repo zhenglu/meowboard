@@ -1,0 +1,124 @@
+#Page #RoomMenuDiv,
+#Page #GameRoomMenuDiv {
+	position		: absolute;
+	/*right			: 25mm;*/
+	top 			: 10.3%;
+	border			: 1px solid #216778;
+	border-top		: 0px;
+	background-color: #FFF;
+	width			: 105px;
+	/*height			: 26mm;*/
+	height			: 200px;
+	padding			: 4px;
+	overflow-x	:	hidden;
+	overflow-y	:	auto;
+}
+
+/*
+#Page #ChallengeMenuDiv{
+	position		: absolute;
+	right			: 25mm;
+	top 			: 19.0mm;
+	top 			: 19.0mm;
+	border			: 1px solid #216778;
+	border-top		: 0px;
+	background-color: #FFF;
+	width			: 28.5mm;
+	height			: 26mm;
+	padding			: 1mm;
+}
+*/
+
+#Page #GameRoomMenuDiv {
+	/*width			: 13%;*/
+	width			: 166px;
+}
+
+#Page #RoomMenuDiv p,
+#Page #ChallengeMenuDiv p,
+#Page #GameRoomMenuDiv p {
+	font-style		: italic;
+	font-size		: 12px;
+	color			: #216778;
+	cursor			: pointer;
+}
+
+#Page #RoomMenuDiv p {
+	text-align :center;
+}
+
+#Page #RoomMenuDiv ul,
+#Page #ChallengeMenuDiv ul
+{
+	height			: 175px;
+	list-style		: none;
+	overflow		: auto;
+}
+
+#Page #RoomMenuDiv ul {
+	border-bottom	:	1px solid #FFA200;
+	margin-bottom : 5px;
+}
+
+#Page #RoomMenuDiv li,
+#Page #ChallengeMenuDiv li
+{
+	font-size		: 11px;
+	color			: #216778;
+	margin-top		: 3px;
+	cursor			: pointer;
+}
+
+#Page #RoomMenuDiv li:hover,
+#Page #RoomMenuDiv p:hover,
+#Page #RoomMenuDiv span:hover,
+#Page #ChallengeMenuDiv li:hover,
+#Page #ChallengeMenuDiv p:hover,
+#Page #GameRoomMenuDiv li:hover,
+#Page #GameRoomMenuDiv p:hover {
+	background-color: #DAF3F5;
+}
+
+#Page #RoomMenuDiv hr {
+	height			: 1px;
+	background-color	: #FFA200;
+	border			: 0px;
+	margin			:	5px 0px 5px 0px;
+}
+
+#Page #RoomMenuDiv #createRoom {
+	font-size : 10px;
+	border-bottom	:	1px solid #216778;
+	cursor			: pointer;
+}
+
+
+#Page #GameRoomMenuDiv ul
+{
+	font-style		: italic;
+	font-weight		: bold;
+	font-size		: 11px;
+	color			: #216778;
+	margin-top		: 3px;
+	cursor			: default;
+	list-style		: none;
+}
+
+#Page #GameRoomMenuDiv li
+{
+	font-size		: 10px;
+	color			: #216778;
+	cursor			: pointer;
+	text-align		: center;
+	margin-top:	3px;
+	margin-bottom:	3px;
+	font-weight		: normal;
+}
+
+#DivLoadBox, #DivNoGames
+{
+	position		: absolute;
+
+	color			: #216778;
+	font-size		: 11px;
+}

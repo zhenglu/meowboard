@@ -1,0 +1,312 @@
+10
+
+dir
+17
+file:///D:/qingyun/svn/svn/robot/src/tests
+file:///D:/qingyun/svn/svn
+
+
+
+2011-04-30T13:44:46.159145Z
+15
+z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+98df983f-bf6f-40a3-83df-fae829aa3a6f
+
+Makefile.in
+file
+
+
+
+
+2011-05-22T05:46:43.562500Z
+fb1a8cc70a0ff19f54b54aecf3d8076f
+2011-04-30T13:44:46.159145Z
+15
+z
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18365
+
+message
+dir
+
+nonsaslauthquery
+dir
+
+pubsubmanager
+dir
+
+inbandbytestream
+dir
+
+privacymanagerquery
+dir
+
+rostermanagerquery
+dir
+
+uniquemucroomunique
+dir
+
+zlib
+dir
+
+disco
+dir
+
+flexoffline
+dir
+
+dataformreported
+dir
+
+vcardupdate
+dir
+
+adhoccommandnote
+dir
+
+search
+dir
+
+lastactivityquery
+dir
+
+gpgsigned
+dir
+
+connectionbosh
+dir
+
+delayeddelivery
+dir
+
+amp
+dir
+
+subscription
+dir
+
+mucroommucuser
+dir
+
+mucroommuc
+dir
+
+capabilities
+dir
+
+receipt
+dir
+
+parser
+dir
+
+messageeventfilter
+dir
+
+vcard
+dir
+
+dataformfield
+dir
+
+simanagersi
+dir
+
+pubsubevent
+dir
+
+presence
+dir
+
+flexofflineoffline
+dir
+
+simanager
+dir
+
+inbandbytestreamibb
+dir
+
+rostermanager
+dir
+
+clientbase
+dir
+
+pubsubmanagerpubsub
+dir
+
+util
+dir
+
+client
+dir
+
+nickname
+dir
+
+md5
+dir
+
+stanzaextensionfactory
+dir
+
+error
+dir
+
+privatexml
+dir
+
+dataform
+dir
+
+discoitems
+dir
+
+amprule
+dir
+
+prep
+dir
+
+jid
+dir
+
+privacymanager
+dir
+
+tag
+dir
+
+adhoccommand
+dir
+
+discoinfo
+dir
+
+adhoc
+dir
+
+oob
+dir
+
+lastactivity
+dir
+
+base64
+dir
+
+xpath
+dir
+
+featureneg
+dir
+
+chatstatefilter
+dir
+
+searchquery
+dir
+
+gpgencrypted
+dir
+
+nonsaslauth
+dir
+
+mucroommucadmin
+dir
+
+tlsgnutls
+dir
+
+shim
+dir
+
+registrationquery
+dir
+
+mucroommucowner
+dir
+
+iq
+dir
+
+Makefile.am
+file
+
+
+
+
+2011-05-22T05:46:43.578125Z
+71f90d63332d619815adf6dca84dcae6
+2011-04-30T13:44:46.159145Z
+15
+z
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1575
+
+registration
+dir
+
+sha
+dir
+
+dataformitem
+dir
+

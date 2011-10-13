@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<conf>
+	<general>
+		<version>Alpha 0.8</version>
+		<cookie-validity>10</cookie-validity>
+		<room-default>general</room-default>
+		<max-rooms>100</max-rooms>
+		<max-chats>4</max-chats>
+		<emoticon-num>35</emoticon-num>
+		<default-lang>zh_CN</default-lang>
+		<default-php>php</default-php>
+		<max-chat-char>2000</max-chat-char>
+	</general>
+	<jabber>
+		<Xmlns>http://c3sl.ufpr.br</Xmlns>
+		<resource>ChessD</resource>
+		<search-component>vjud</search-component>
+		<server>chessd</server>
+		<match-component>chessd</match-component>
+		<conference-component>conference</conference-component>
+		<game-component>chessd</game-component>
+		<rating-component>chessd</rating-component>
+		<admin-component>chessd</admin-component>
+	</jabber>
+</conf>

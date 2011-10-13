@@ -1,0 +1,134 @@
+/**
+* Challenge Window
+*/
+#ChallengeDiv #Layer1Div,
+#ChallengeDiv #Layer2Div,
+#ChallengeDiv #Layer3Div, 
+#ChallengeDiv #ButtonsDiv {
+	padding			: 0px 28px;
+}
+
+#ChallengeDiv #Layer1Div:after,
+#ChallengeDiv #Layer2Div:after,
+#ChallengeDiv #Layer3Div:after {
+	content:".";
+	display:block;
+	clear:both;
+	visibility:hidden;
+	height:0;
+	overflow:hidden;
+}
+
+#ChallengeDiv #TopDiv {
+	padding-top		:	2mm;
+	margin-bottom	:	3mm;
+}
+
+#ChallengeDiv #Layer1Div {
+	margin-bottom	:	0px;
+}
+
+#ChallengeDiv #Layer1Div .radio {
+	border : 0px none;
+}
+
+#ChallengeDiv #Layer1Div #L1RightDiv {
+	float : left;
+}
+
+#ChallengeDiv #Layer3Div {
+	display : block;
+}
+
+#ChallengeDiv .cx {
+	font-size	:	10px;
+	margin-right	:	3mm;
+	font-weight		: bold;
+}
+
+#ChallengeDiv h3 {
+	font-weight		: bold;
+	font-size		: 4mm;
+	color			: #216778;
+	text-align		: center;
+	padding-top		: 8px;
+}
+
+#ChallengeDiv .leftDiv {
+	float			: left;
+	width			: 170px;
+	margin-left	:	13px;
+}
+
+#ChallengeDiv p {
+	margin-top		: 0mm;
+	font-weight		: bold;
+	font-size		: 10px;
+	color			: #216778;
+}
+
+#ChallengeDiv .rating {
+	margin-left		: 4mm;
+	font-size		: 10px;
+	font-weight	: normal;
+}
+
+#ChallengeDiv img {
+	margin-right	: 7mm;
+	margin-left		: 2mm;
+}
+
+#ChallengeDiv .label_information {
+	text-align		: center;
+	font-weight		: normal;
+	margin-top			: 1%;
+	font-size		: 2.6mm;
+	position		: relative;
+	width				:	102%;
+}
+
+#ChallengeDiv .drop_select {
+	margin-top		: 1mm;
+	margin-right	: 2mm;
+}
+
+#ChallengeDiv .rating_radio {
+	margin-top		: 3mm;
+	margin-right	: 1.5mm;
+	border : 0px none;
+}
+
+#ChallengeDiv .italic {
+	font-style		: italic;
+}
+
+#ChallengeDiv #ButtonsDiv {
+	text-align		: center;
+	padding-top		: 12px;
+	margin-bottom	: 4px;
+}
+
+#ChallengeDiv .color {
+	padding-top	:	1mm;
+}
+
+#ChallengeDiv .radio {
+	margin-top	:	2mm;
+}
+
+#ChallengeDiv input,
+#ChallengeDiv textarea,
+#ChallengeDiv select {
+	font-size		: 11px;
+	border			: 1px solid #216778;
+	color			: #216778;
+}
+
+#ChallengeDiv span {
+	font-size		: 10px;
+	color			: #216778;
+}
+
+#ChallengeDiv #ButtonsDiv .button {
+	width : 71px;
+}

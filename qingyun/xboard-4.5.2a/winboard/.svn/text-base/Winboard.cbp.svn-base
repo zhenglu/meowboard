@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Winboard" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="Winboard" prefix_auto="1" extension_auto="1" />
+				<Option object_output=".\objs" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="..\..\xboard-4.5.2a" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="..\..\xboard-4.5.2a" />
+				</ResourceCompiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-g" />
+			<Add option="-I.." />
+			<Add option="-I." />
+			<Add option="-I../.." />
+			<Add directory="..\..\xboard-4.5.2a" />
+		</Compiler>
+		<Linker>
+			<Add option="-fpic" />
+			<Add option="-mwindows" />
+			<Add library="wsock32" />
+			<Add library="winmm" />
+			<Add library="comctl32" />
+			<Add library="..\..\robot\libgloox.dll.a" />
+		</Linker>
+		<Unit filename="..\backend.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\book.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\engineoutput.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\evalgraph.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\gamelist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\history.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\lists.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\moves.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\parser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\pgntags.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\uci.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="examples\bitstronger.cpp" />
+		<Unit filename="examples\board.cpp" />
+		<Unit filename="examples\board.h" />
+		<Unit filename="examples\bosh_example.cpp" />
+		<Unit filename="examples\connboshms.cpp" />
+		<Unit filename="examples\connboshms.h" />
+		<Unit filename="examples\constant.h" />
+		<Unit filename="examples\evaluation.cpp" />
+		<Unit filename="examples\evaluation.h" />
+		<Unit filename="examples\hashnum.cpp" />
+		<Unit filename="examples\hashnum.h" />
+		<Unit filename="examples\movemaker.cpp" />
+		<Unit filename="examples\movemaker.h" />
+		<Unit filename="examples\movement.cpp" />
+		<Unit filename="examples\movement.h" />
+		<Unit filename="examples\openbook.cpp" />
+		<Unit filename="examples\openbook.h" />
+		<Unit filename="examples\searcher.cpp" />
+		<Unit filename="examples\searcher.h" />
+		<Unit filename="help.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wchat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wclipbrd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wedittags.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wengineoutput.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wevalgraph.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wgamelist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="whistory.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="winboard.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="winboard.rc">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wlayout.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="woptions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wsettings.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wsnap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wsockerr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\zippy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

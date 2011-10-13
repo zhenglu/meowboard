@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- root description --!>
+<xd>
+	<!--
+			Root tag.
+			- type field especify a type to be used.
+				If type is given, then the description must be empty.
+			There must be only root tag.
+	--!>
+	<root name="tag-name" type="type-name">
+		<!--
+			Tag's attribute.
+			- name field is the name of the attribute.
+			- use field specify wheter an attribute is optional or required, default is require.
+			- fixed field enforce a especific value to thata ttribute, default is not fixed.
+			- type field is the format of that value, it can be a string or a number, default is string.
+		--!>
+		<attribute name="" required="true/false" fixed="true/false" default="" type="string/number"/>
+		<!-- a tag child  --!>
+		<!--
+			- min and max especify the limits for the child's  ocurrences
+				default if 1. set max to "unbounded" if there is no limit
+		--!>
+		<child name="" type="" min="" max="">
+			<!-- more tags and attrbutes --!>
+		</child>
+		<!-- allow char data --!>
+		<cdata/>
+	</root>
+	<!-- type specify a tag type can be used on attribute type of a tag description --!>
+	<type name="type-name">
+		<!-- description of a type is the same way you describe a tag --!>
+	</type>
+	<!-- Any is used to indicate that the children is unspecified and can be of any form --!>
+	<any/>
+</xd>

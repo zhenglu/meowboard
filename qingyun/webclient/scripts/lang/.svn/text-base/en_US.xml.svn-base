@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language name="en_US">
+	<general>
+		<general_title>Web ChessD Client</general_title>
+	        <general_name>ChessD</general_name>
+	</general>
+	<utils>
+		<not_implemented_title>Not implemented</not_implemented_title>
+		<not_implemented>Feature not implemented on this version </not_implemented>
+	</utils>
+	<window>
+	        <window_yes>Yes</window_yes>
+	        <window_no>No</window_no>
+	        <window_ok>Ok</window_ok>
+	        <window_close>Close</window_close>
+	        <window_save>Save</window_save>
+	        <window_accept>Accept</window_accept>
+	        <window_cancel>Cancel</window_cancel>
+	        <window_decline>Decline</window_decline>
+                <window_search>Search</window_search>	
+	</window>
+	<login>
+		<login_title>Welcome to new Xadrez Livre Web Interface!</login_title>
+		<login_text1>Here you can play chess with other users or with robots, moreover you can interact with the users through the chat rooms. For that you don't need to install any other program, you just need to do your registration on the link, enter and play!</login_text1>
+		<login_text2>This server is part of the project "Apoio Computacional ao Ensino de Xadrez nas Escolas". To learn more about this project, access </login_text2>
+		<login_text3><![CDATA[We recommend using the browser <a href='http://www.firefox.com'>Firefox</a> to ensure the better functioning of the server. You can download the latest version of the browser <a href='http://www.firefox.com'>here</a>.]]></login_text3>
+
+
+		<login_footer>Have fun!</login_footer>
+		<login_remember_pass>Remember password</login_remember_pass>
+		<login_signin>Quick register</login_signin>
+		<login_user>User</login_user>
+		<login_passwd>Password</login_passwd>
+		<login_server_down>Server off-line. Try again later.</login_server_down>
+		<login_connection_refused>Jabber server off-line. Try again later.</login_connection_refused>
+		<login_invalid_user>User or password incorrect.</login_invalid_user>
+		<login_banned_user>Banned user</login_banned_user>
+		<login_lost_connection>Connection lost with the server.</login_lost_connection>
+		<login_load_wait>Wait...</login_load_wait>
+		<login_load_start>Starting loader...</login_load_start>
+		<login_load_scripts>Loading scripts...</login_load_scripts>
+		<login_load_css>Loading css...</login_load_css>
+		<login_load_images>Loading images...</login_load_images>
+		<login_load_user_list>Loading user list</login_load_user_list>
+		<login_validate_user>Invalid User</login_validate_user>
+	</login>
+	<menu>
+		<menu_adjourn>Adjourn</menu_adjourn>
+		<menu_search_game>Search game</menu_search_game>
+		<menu_search_user>Search user</menu_search_user>
+		<menu_news>News</menu_news>
+		<menu_preferences>Preferences</menu_preferences>
+		<menu_help>Help</menu_help>
+		<menu_exit>Exit</menu_exit>
+		<menu_current_games>Current games</menu_current_games>
+		<menu_challenges>Challenges</menu_challenges>
+		<menu_tourneys>Tourneys</menu_tourneys>
+		<menu_rooms>Rooms</menu_rooms>
+		<menu_history>History</menu_history>
+		<menu_loading>Loading...</menu_loading>
+		<menu_no_games>There are no matches in progress</menu_no_games>
+	</menu>
+	<contact>
+		<contact_contacts>Contacts</contact_contacts>
+		<contact_online>Online</contact_online>
+		<contact_offline>Offline</contact_offline>
+		<contact_order_nick>Nick</contact_order_nick>
+		<contact_order_rating>Rating</contact_order_rating>
+		<contact_invite>Add user</contact_invite>
+		<contact_invite_text>%s added you, do you accept?</contact_invite_text>
+		<contact_remove_title>Remove user</contact_remove_title>
+		<contact_remove_text>Are you really sure you want to remove the user?</contact_remove_text>
+		<contact_search_user>Search user</contact_search_user>
+		<contact_user_t>User:</contact_user_t>
+		<contact_no_user_found>No user found</contact_no_user_found>
+		<contact_user_found>Users found:</contact_user_found>
+		<contact_user>User</contact_user>
+		<contact_teacher>Teacher</contact_teacher>
+		<contact_admin>Admin</contact_admin>
+		<contact_robot>Robot</contact_robot>
+		<contact_search_by>Search by:</contact_search_by>
+		<contact_by_name>Name</contact_by_name>
+		<contact_by_user>Nick</contact_by_user>
+		<contact_both>Both</contact_both>
+		<contact_change_profile>Change my profile</contact_change_profile>
+		<contact_loading>Loading contacts list...</contact_loading>
+		<contact_online_loading>Loading online users list...</contact_online_loading>
+	</contact>
+	<chat>
+		<chat_warning>Warning</chat_warning>
+		<chat_max_exceeded>Maximum %i chats opens</chat_max_exceeded>
+	</chat>
+	<room>
+		<room_default>General</room_default>
+		<room_contacts>Contacts</room_contacts>
+		<room_all>Online</room_all>
+		<room_order_nick>Nick</room_order_nick>
+		<room_order_rating>Rating</room_order_rating>
+		<room_create_room>Create room</room_create_room>
+		<room_create_rooms>Create rooms</room_create_rooms>
+		<room_cancel_room>Cancel room</room_cancel_room>
+		<room_name>Name: </room_name>
+		<room_description>Description: </room_description>
+		<room_create>Create</room_create>
+		<room_cancel_text>Are you sure you want to cancel the creation of this room?</room_cancel_text>
+		<room_error>Error to open a room</room_error>
+		<room_invalid_name>Invalid room name</room_invalid_name>
+		<room_invalid_length>Maximum length of 30 characters</room_invalid_length>
+		<room_show_user_list>See users of the room</room_show_user_list>
+		<room_hide_user_list>Hide users of the room</room_hide_user_list>
+		<room_counter>caracter(s)</room_counter>
+		<room_loading>Loading room...</room_loading>
+	</room>
+	<group>
+		<group_default>Friends</group_default>
+	</group>
+	<status>
+		<status_offline>offline</status_offline>
+		<status_available>available</status_available>
+		<status_unavailable>unavailable</status_unavailable>
+		<status_busy>busy</status_busy>
+		<status_away>away</status_away>
+		<status_playing>playing</status_playing>
+	</status>
+	<usermenu>
+		<usermenu_send_message>Send Message</usermenu_send_message>
+		<usermenu_send_offlinemessage>Leave a message</usermenu_send_offlinemessage>
+		<usermenu_match>Invite to play</usermenu_match>
+		<usermenu_add_contact>Add contact</usermenu_add_contact>
+		<usermenu_remove_contact>Remove contact</usermenu_remove_contact>
+		<usermenu_view_profile>View profile</usermenu_view_profile>
+		<usermenu_disconnect_user>Disconnect user</usermenu_disconnect_user>
+		<usermenu_ban>Ban</usermenu_ban>
+		<usermenu_mute>Mute</usermenu_mute>
+		<usermenu_abusive>Abusive</usermenu_abusive>
+	</usermenu>
+	<error>
+		<error_disconnected>Lost contact with server. Please reconnect.</error_disconnected>
+	</error>
+	<challenge>
+		<challenge_title_invite>Invite to play</challenge_title_invite>
+		<challenge_title_offer>Invite to play</challenge_title_offer>
+		<challenge_information>invite to play a game with the following characteristics:</challenge_information>
+		<challenge_my_pieces>My pieces:</challenge_my_pieces>
+		<challenge_op_pieces>Your picies:</challenge_op_pieces>
+		<challenge_time_label>Game time:</challenge_time_label>
+		<challenge_category>Game category:</challenge_category>
+		<challenge_inc_label>Increment:</challenge_inc_label>
+		<challenge_time_label_min>min</challenge_time_label_min>
+		<challenge_inc_label_seg>seg</challenge_inc_label_seg>
+		<challenge_rating>Rated</challenge_rating>
+		<challenge_private>Private game</challenge_private>
+		<challenge_invite>Invite</challenge_invite>
+		<challenge_chat>Open chat</challenge_chat>
+		<challenge_new_parameters>Rematch</challenge_new_parameters>
+		<challenge_no_time>Without time</challenge_no_time>
+		<challenge_color_auto>Automatic</challenge_color_auto>
+		<challenge_auto_flag>Auto-flag</challenge_auto_flag>
+
+		<challenge_menu_match_title>My challenges</challenge_menu_match_title>
+		<challenge_menu_announce_title>Announced challenges</challenge_menu_announce_title>
+		<challenge_menu_announce>Announce challange</challenge_menu_announce>
+		<challenge_menu_postpone_title>Postpone games</challenge_menu_postpone_title>
+		<challenge_menu_no_match>There are no challenges made.</challenge_menu_no_match>
+		<challenge_menu_no_announce>There are no matches announced.</challenge_menu_no_announce>
+		<challenge_menu_no_postpone>There are no adjourned games.</challenge_menu_no_postpone>
+		<challenge_offer_user_offline>You are disconnected from the server. Try to connect again on the main page to go online</challenge_offer_user_offline>
+		<challenge_offer_opponent_offline>Your opponent is disconnected from the chess server.</challenge_offer_opponent_offline>
+		<challenge_error>Error in challenging</challenge_error>
+	</challenge>
+	<game>
+		<game_draw>Draw request</game_draw>
+		<game_draw_text>%s requested a draw, do you accept?</game_draw_text>
+		<game_draw_denied>%s declined your draw request.</game_draw_denied>
+		<game_end_game>Game over</game_end_game>
+		<game_resign_text>%s resigned the game.</game_resign_text>
+		<game_adjourn>Adjourn game</game_adjourn>
+		<game_adjourn_text>%s want to adjourn this game, do you accept?</game_adjourn_text>
+		<game_adjourn_denied>%s declined your adjourn request.</game_adjourn_denied>
+		<game_abort>Abort game</game_abort>
+		<game_abort_text>%s want to abort this game,do you accept?</game_abort_text>
+		<game_abort_denied>%s declined your abort request.</game_abort_denied>
+		<game_resign>Resign the game</game_resign>
+		<game_resign_confirm>Do you want to resign the game?</game_resign_confirm>
+		<game_checkmatew_text>Congratulations! You won %s by checkmate.</game_checkmatew_text>
+		<game_checkmatel_text>You lost to %s by checkmate.</game_checkmatel_text>
+		<game_timew_text>You won %s by time.</game_timew_text>
+		<game_timel_text>Your time is over. You have lost to %s.</game_timel_text>
+		<game_remove_game>You can't close a game in progress</game_remove_game>
+		<game_remove_game_title>Warning</game_remove_game_title>
+
+		<game_canceled>The game was canceled.</game_canceled>
+
+		<game_options>Options</game_options>
+		<game_moves>Moves</game_moves>
+		<game_send_draw>Draw</game_send_draw>
+		<game_send_resign>Resign</game_send_resign>
+		<game_send_terminate>Terminate</game_send_terminate>
+		<game_send_adjourn>Adjourn</game_send_adjourn>
+		<game_give_time>Give time to opponent</game_give_time>
+		<game_pawn_promotion>Pawn promotion</game_pawn_promotion>
+		<game_promotion_queen>Queen</game_promotion_queen>
+		<game_promotion_rook>Rook</game_promotion_rook>
+		<game_promotion_bishop>Bishop</game_promotion_bishop>
+		<game_promotion_knight>Knight</game_promotion_knight>
+		
+		<game_observer_alert>You can't observe a new game while you are still playing or observing a game.</game_observer_alert>
+		<game_observer_alert_title>Alert</game_observer_alert_title>
+
+		<game_white_pawn>Red Pawn</game_white_pawn>
+		<game_white_rook>Red Rook</game_white_rook>
+		<game_white_horse>Red Horse</game_white_horse>
+		<game_white_elephant>Red Elephant</game_white_elephant>
+		<game_white_cannon>Red Cannon</game_white_cannon>
+		<game_white_king>Red King</game_white_king>
+		<game_white_advisor>Red Advisor</game_white_advisor>
+
+		<game_black_pawn>Black Pawn</game_black_pawn>
+		<game_black_rook>Black Rook</game_black_rook>
+		<game_black_horse>Black Knight</game_black_horse>
+		<game_black_elephant>Black Bishop</game_black_elephant>
+		<game_black_cannon>Black Queen</game_black_cannon>
+		<game_black_king>Black King</game_black_king>
+		<game_black_advisor>Black Advisor</game_black_advisor>
+
+		<game_button_first>First</game_button_first>
+		<game_button_prev>Previous</game_button_prev>
+		<game_button_next>Next</game_button_next>
+		<game_button_last>Last</game_button_last>
+		
+		<game_oldgame_alert>You can't watch a game while you are still playing or watching another game</game_oldgame_alert>
+
+		<game_result_white-timeover>White's time is over</game_result_white-timeover>
+		<game_result_black-timeover>Black's time is over</game_result_black-timeover>
+		<game_result_white-mated>White has won by checkmate</game_result_white-mated>
+		<game_result_black-mated>Black has won by checkmate</game_result_black-mated>
+		<game_result_white-resigned>White has resigned</game_result_white-resigned>
+		<game_result_black-resigned>Black has resigned</game_result_black-resigned>
+		<game_result_draw-agreement>The players agreed on a draw</game_result_draw-agreement>
+		<game_result_stalemate>Draw by stalemate</game_result_stalemate>
+		<game_result_draw-repetition>Draw by three fold repetition rule</game_result_draw-repetition>
+		<game_result_draw-fifty-moves>Draw by fifty move rule</game_result_draw-fifty-moves>
+		<game_result_draw-impossible-mate>Draw by impossibility of checkmate</game_result_draw-impossible-mate>
+		<game_result_draw-timeover>The time of both players has ended</game_result_draw-timeover>
+		<game_result_canceled-agreement>The players agreed in cancel the game</game_result_canceled-agreement>
+		<game_result_canceled-timed-out>The game was canceled by inactivity</game_result_canceled-timed-out>
+		<game_result_adjourned-agreement>The players agreed in adjourning the game</game_result_adjourned-agreement>
+		<game_result_adjourned-shutdown>The game was adjourned because the server will shut down</game_result_adjourned-shutdown>
+		<game_result_white-wo>White has won by W.O.</game_result_white-wo>
+		<game_result_black-wo>Black has won by W.O.</game_result_black-wo>
+		<game_result_closed>The game is over. However the result was not shown on screen.</game_result_closed>
+		<game_loading_move>Loading move...</game_loading_move>
+		<game_white_player_leave>White has left the room. If he doesn't return in a few minutes the Black player will win.</game_white_player_leave>
+		<game_black_player_leave>Black has left the room. If he doesn't return in a few minutes the White player will win.</game_black_player_leave>
+	</game>
+	<profile>
+		<profile_window>Profile and informations</profile_window>
+		<profile_name>Name: </profile_name>
+		<profile_nick>Nick: </profile_nick>
+		<profile_whoami>Who am I: </profile_whoami>
+		<profile_level>User level: </profile_level>
+		<profile_group>Group: </profile_group>
+		<profile_type>Type: </profile_type>
+		<profile_online_time>Online time: </profile_online_time>
+		<profile_total_time>Total time: </profile_total_time>
+		<profile_category>Category</profile_category>
+		<profile_current_rating>Current rating</profile_current_rating>
+		<profile_best_rating>Best rating</profile_best_rating>
+		<profile_record_date>Record date</profile_record_date>
+		<profile_games_number>Number of games</profile_games_number>
+		<profile_win>Wins</profile_win>
+		<profile_draw>Draws</profile_draw>
+		<profile_lose>Loses</profile_lose>
+		<profile_edit_photo>Edit Photo</profile_edit_photo>
+		<profile_old_games1>My games</profile_old_games1>
+		<profile_old_games2>Games of </profile_old_games2>
+		<profile_save>Save Profile</profile_save>
+		<profile_discard>Close without saving</profile_discard>
+		<profile_save_close>Close and Save</profile_save_close>
+		<profile_confirm>Are you sure you want to close without saving the profile?</profile_confirm>
+		<profile_confirm_close>Close confirm</profile_confirm_close>
+		<profile_change_image>Pick the photo</profile_change_image>
+		<profile_change_image_title>Change photo</profile_change_image_title>
+		<profile_load_error>Error</profile_load_error>
+		<profile_load_error_title>It wasn't possible upload the photo</profile_load_error_title>
+		<profile_year>y</profile_year>
+		<profile_month>m</profile_month>
+		<profile_day>d</profile_day>
+		<profile_error>Error while saving profile</profile_error>
+		<profile_desc_limit>The description must have at most 200 characters.</profile_desc_limit>
+	</profile>
+	<register>
+		<register_inf>Please fill out the information below to create your Xadrez Livre account</register_inf>
+		<register_title>Register</register_title>
+		<register_login>Login </register_login>
+		<register_max_char>(max. 14 characters)</register_max_char>
+		<register_user_inf>Use just lowercase characters, numbers, without spaces, '-', '.' and '_'</register_user_inf>
+		<register_mail1>E-mail </register_mail1>
+		<register_mail2>(optional)</register_mail2>
+		<register_mail_inf>Allow to recover your lost password.</register_mail_inf>
+		<register_passwd>Password:</register_passwd>
+		<register_passwd_confirm1>Password</register_passwd_confirm1>
+		<register_passwd_confirm2>(Confirmation)</register_passwd_confirm2>
+		<register_bt_confirm>Confirm</register_bt_confirm>
+		<register_invalid_user_name>Invalid username</register_invalid_user_name>
+		<register_invalid_user_name_len>Your login must have at most 14 characters</register_invalid_user_name_len>
+		<register_invalid_mail>Invalid email</register_invalid_mail>
+		<register_invalid_password>Invalid password</register_invalid_password>
+		<register_error_409>User already exists</register_error_409>
+		<register_sucess_message>User registered successfully</register_sucess_message>
+	</register>
+	<oldgame>
+		<oldgame_title>Old games</oldgame_title>
+		<oldgame_my_games>My games</oldgame_my_games>
+		<oldgame_other_games>Another user's games</oldgame_other_games>
+		<oldgame_player1>Player 1:</oldgame_player1>
+		<oldgame_pieces>Pieces:</oldgame_pieces>
+		<oldgame_both>Any</oldgame_both>
+		<oldgame_player2>Player 2:</oldgame_player2>
+		<oldgame_date_form>Data:</oldgame_date_form>
+		<oldgame_from>from:</oldgame_from>
+		<oldgame_to>to:</oldgame_to>
+		<oldgame_new_search>New search</oldgame_new_search>
+		<oldgame_search_result>Finded:</oldgame_search_result>
+		<oldgame_no_result>No old game founded.</oldgame_no_result>
+		<oldgame_player1_hd>Player 1</oldgame_player1_hd>
+		<oldgame_player2_hd>Player 2</oldgame_player2_hd>
+		<oldgame_white_hd>White</oldgame_white_hd>
+		<oldgame_black_hd>Black</oldgame_black_hd>
+		<oldgame_category>Category</oldgame_category>
+		<oldgame_result>Result</oldgame_result>
+		<oldgame_date>Date</oldgame_date>
+		<oldgame_prev>Previous</oldgame_prev>
+		<oldgame_next>Next</oldgame_next>
+		<oldgame_format>Format: dd/mm/yyyy</oldgame_format>
+		<oldgame_no_moves>Game without moves</oldgame_no_moves>
+		<oldgame_invalid_begin>Invalid begining data!</oldgame_invalid_begin>
+		<oldgame_invalid_end>Invalid ending data!</oldgame_invalid_end>
+		<oldgame_invalid_interval>Invalid interval!</oldgame_invalid_interval>
+		<oldgame_invalid_date>Invalid data!</oldgame_invalid_date>
+		<oldgame_loading>Searching old games...</oldgame_loading>
+	</oldgame>
+	<welcome>
+		<welcome_title>Welcome!</welcome_title>
+		<welcome_text1>This is the environment of game/interaction of Xadrez Livre. Here, among other possibilities, you can:</welcome_text1>
+		<welcome_text2>For further information about the use of the environment, see the "Help" on the top menu.</welcome_text2>
+		<welcome_instruction>
+			<welcome_item><![CDATA[<b>Start a game:</b> click on a user of the environment and choose "Invite to play". All online users of the environment are shown in the room "General". Window found at the bottom left of the environment.]]></welcome_item>
+			<welcome_item><![CDATA[<b>Start a game:</b> your list of contacts is in the top left of the environment. To add new contacts click on a user in the room General and choose "Add contact". The user will be in your list of contacts, if he authorizes that..]]></welcome_item>
+		</welcome_instruction>
+	</welcome>
+	<admin>
+		<admin_kick_ok>You kicked the user successfully</admin_kick_ok>
+		<admin_ban_ok>You banned the user successfully</admin_ban_ok>
+		<admin_unban_ok>You unbanned the user successfully</admin_unban_ok>
+		<admin_user_ban>You were banned. \nReason: </admin_user_ban>
+		<admin_user_kick>You were kicked. \nReason: </admin_user_kick>
+
+	</admin>
+</language>

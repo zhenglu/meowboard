@@ -1,0 +1,92 @@
+\section{/home/www/ulysses/webclient/scripts/chat/chat.js File Reference}
+\label{chat_2chat_8js}\index{/home/www/ulysses/webclient/scripts/chat/chat.js@{/home/www/ulysses/webclient/scripts/chat/chat.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf CHAT\_\-HandleMessage} (XML)
+\item 
+function {\bf CHAT\_\-HandleAnnounceMessage} (XML)
+\item 
+function {\bf CHAT\_\-OpenChat} (Username)
+\item 
+function {\bf CHAT\_\-CloseChat} (Username)
+\item 
+function {\bf CHAT\_\-ChangeChatState} (Username, Obj1, Obj2)
+\item 
+function {\bf CHAT\_\-SendMessage} (Username, Message)
+\item 
+function {\bf CHAT\_\-ReceiveMessage} (Username, Message)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{chat/chat.js@{chat/chat.js}!CHAT\_\-ChangeChatState@{CHAT\_\-ChangeChatState}}
+\index{CHAT\_\-ChangeChatState@{CHAT\_\-ChangeChatState}!chat/chat.js@{chat/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CHAT\_\-ChangeChatState ( {\em Username}, \/   {\em Obj1}, \/   {\em Obj2})}\label{chat_2chat_8js_5378e4be2e6578320879a903cabc1ec8}
+
+
+Change visibility of chat window 
+
+References INTERFACE\_\-HideChat(), INTERFACE\_\-ShowChat(), INTERFACE\_\-UnfocusChat(), and MainData.
+
+Referenced by INTERFACE\_\-CreateChat().\index{chat/chat.js@{chat/chat.js}!CHAT\_\-CloseChat@{CHAT\_\-CloseChat}}
+\index{CHAT\_\-CloseChat@{CHAT\_\-CloseChat}!chat/chat.js@{chat/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CHAT\_\-CloseChat ( {\em Username})}\label{chat_2chat_8js_c9f7e14cbc16fc2651af090c9897cd14}
+
+
+Close a chat 
+
+References INTERFACE\_\-CloseChat(), and MainData.
+
+Referenced by INTERFACE\_\-CreateChat().\index{chat/chat.js@{chat/chat.js}!CHAT\_\-HandleAnnounceMessage@{CHAT\_\-HandleAnnounceMessage}}
+\index{CHAT\_\-HandleAnnounceMessage@{CHAT\_\-HandleAnnounceMessage}!chat/chat.js@{chat/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CHAT\_\-HandleAnnounceMessage ( {\em XML})}\label{chat_2chat_8js_615cd2e1ca89c4ebdf2708271d41f68d}
+
+
+Show announcement users messages 
+
+References MainData, UTILS\_\-GetNodeText(), and WINDOW\_\-Alert().
+
+Referenced by PARSER\_\-ParseChat().\index{chat/chat.js@{chat/chat.js}!CHAT\_\-HandleMessage@{CHAT\_\-HandleMessage}}
+\index{CHAT\_\-HandleMessage@{CHAT\_\-HandleMessage}!chat/chat.js@{chat/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CHAT\_\-HandleMessage ( {\em XML})}\label{chat_2chat_8js_1aabd0a9c0e5dd585f17ef11a3fa91ab}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Control chat messages Show ordinary users messages 
+
+References CHAT\_\-ReceiveMessage(), UTILS\_\-ConvertChatString(), and UTILS\_\-GetNodeText().
+
+Referenced by PARSER\_\-ParseChat().\index{chat/chat.js@{chat/chat.js}!CHAT\_\-OpenChat@{CHAT\_\-OpenChat}}
+\index{CHAT\_\-OpenChat@{CHAT\_\-OpenChat}!chat/chat.js@{chat/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CHAT\_\-OpenChat ( {\em Username})}\label{chat_2chat_8js_9750e8d94926a232f70cfac576e96850}
+
+
+Open a chat 
+
+References INTERFACE\_\-OpenChat(), MainData, UTILS\_\-GetText(), and WINDOW\_\-Alert().
+
+Referenced by CHAT\_\-ReceiveMessage(), CONTACT\_\-ShowUserMenu(), and INTERFACE\_\-ShowChallengeWindow().\index{chat/chat.js@{chat/chat.js}!CHAT\_\-ReceiveMessage@{CHAT\_\-ReceiveMessage}}
+\index{CHAT\_\-ReceiveMessage@{CHAT\_\-ReceiveMessage}!chat/chat.js@{chat/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CHAT\_\-ReceiveMessage ( {\em Username}, \/   {\em Message})}\label{chat_2chat_8js_7f659442a1884818e52eb2d1a23022dd}
+
+
+Show a message received on interface 
+
+References CHAT\_\-OpenChat(), INTERFACE\_\-FocusChat(), INTERFACE\_\-ShowChatMessage(), and MainData.
+
+Referenced by CHAT\_\-HandleMessage().\index{chat/chat.js@{chat/chat.js}!CHAT\_\-SendMessage@{CHAT\_\-SendMessage}}
+\index{CHAT\_\-SendMessage@{CHAT\_\-SendMessage}!chat/chat.js@{chat/chat.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function CHAT\_\-SendMessage ( {\em Username}, \/   {\em Message})}\label{chat_2chat_8js_ca2bf1915cb3b4cd64d41f6e8f229982}
+
+
+Send a chat message 
+
+References CONNECTION\_\-SendJabber(), INTERFACE\_\-ShowChatMessage(), MESSAGE\_\-Chat(), and UTILS\_\-ConvertChatString().
+
+Referenced by INTERFACE\_\-CreateChat().

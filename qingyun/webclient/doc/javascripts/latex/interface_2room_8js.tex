@@ -1,0 +1,282 @@
+\section{/home/www/ulysses/webclient/scripts/interface/room.js File Reference}
+\label{interface_2room_8js}\index{/home/www/ulysses/webclient/scripts/interface/room.js@{/home/www/ulysses/webclient/scripts/interface/room.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf RoomObj} (Roomname)
+\item 
+function {\bf INTERFACE\_\-CreateRoom} (RoomName)
+\item 
+function {\bf INTERFACE\_\-ShowRoom} ()
+\item 
+function {\bf INTERFACE\_\-HideRoom} ()
+\item 
+function {\bf INTERFACE\_\-RemoveRoom} ()
+\item 
+function {\bf INTERFACE\_\-AddMsgInRoom} (Username, Msg, Timestamp)
+\item 
+function {\bf INTERFACE\_\-RefreshOccupantsNumber} (RoomName)
+\item 
+function {\bf INTERFACE\_\-ShowRoomList} (Rooms)
+\item 
+function {\bf INTERFACE\_\-HideRoomList} ()
+\item 
+function {\bf INTERFACE\_\-HideGameRoomList} ()
+\item 
+function {\bf INTERFACE\_\-ShowGameRoomList} (GameId, GameName, P1, P2, GameType)
+\item 
+function {\bf INTERFACE\_\-ChangeRoomListVisibility} ()
+\item 
+function {\bf INTERFACE\_\-RemoveRoomFromList} (Room)
+\item 
+function {\bf INTERFACE\_\-ShowEmoticonList} (RName)
+\item 
+function {\bf INTERFACE\_\-HideEmoticonList} ()
+\item 
+function {\bf INTERFACE\_\-FocusRoom} (RoomName)
+\item 
+function {\bf INTERFACE\_\-CreateRoomInBar} (RoomName)
+\item 
+function {\bf INTERFACE\_\-CloseRoom} ()
+\item 
+function {\bf INTERFACE\_\-CreateRooms} ()
+\item 
+function {\bf INTERFACE\_\-ShowCreateRoomWindow} ()
+\item 
+function {\bf INTERFACE\_\-ShowCancelRoomWindow} ()
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{interface/room.js@{interface/room.js}!INTERFACE\_\-AddMsgInRoom@{INTERFACE\_\-AddMsgInRoom}}
+\index{INTERFACE\_\-AddMsgInRoom@{INTERFACE\_\-AddMsgInRoom}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-AddMsgInRoom ( {\em Username}, \/   {\em Msg}, \/   {\em Timestamp})}\label{interface_2room_8js_8f0d85613c3af49445eeb0333b141bd8}
+
+
+
+
+Referenced by RoomObj().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-ChangeRoomListVisibility@{INTERFACE\_\-ChangeRoomListVisibility}}
+\index{INTERFACE\_\-ChangeRoomListVisibility@{INTERFACE\_\-ChangeRoomListVisibility}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ChangeRoomListVisibility ()}\label{interface_2room_8js_733bcde6f623c3ff341c361fa74822eb}
+
+
+Show or hide list of user's rooms 
+
+References MainData, ROOM\_\-FocusRoom(), UTILS\_\-CreateElement(), and UTILS\_\-GetText().
+
+Referenced by INTERFACE\_\-CreateRooms().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-CloseRoom@{INTERFACE\_\-CloseRoom}}
+\index{INTERFACE\_\-CloseRoom@{INTERFACE\_\-CloseRoom}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CloseRoom ()}\label{interface_2room_8js_05549f1cd90d5f2b27785c2477609722}
+
+
+Close the room that are displayed as a secondary room 
+
+Referenced by ROOM\_\-RemoveRoom().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-CreateRoom@{INTERFACE\_\-CreateRoom}}
+\index{INTERFACE\_\-CreateRoom@{INTERFACE\_\-CreateRoom}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateRoom ( {\em RoomName})\hspace{0.3cm}{\tt  [private]}}\label{interface_2room_8js_4e15072c0943283dbe9f7dd5963d4fe9}
+
+
+Create a room
+
+Room name; \begin{Desc}
+\item[Returns:]RoomDiv, User list and Message list in this room  Pedro and Rubens \end{Desc}
+
+
+References INTERFACE\_\-ShowEmoticonList(), ROOM\_\-SendMessage(), UTILS\_\-CreateElement(), and UTILS\_\-ReturnKeyCode().
+
+Referenced by RoomObj().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-CreateRoomInBar@{INTERFACE\_\-CreateRoomInBar}}
+\index{INTERFACE\_\-CreateRoomInBar@{INTERFACE\_\-CreateRoomInBar}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateRoomInBar ( {\em RoomName})}\label{interface_2room_8js_fa5942e2185bd0acb1c743c2bce8de5d}
+
+
+
+
+References MainData, ROOM\_\-ExitRoom(), ROOM\_\-FocusRoom(), UTILS\_\-CreateElement(), and UTILS\_\-GetText().
+
+Referenced by ROOM\_\-CreateRoom(), and ROOM\_\-RemoveRoom().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-CreateRooms@{INTERFACE\_\-CreateRooms}}
+\index{INTERFACE\_\-CreateRooms@{INTERFACE\_\-CreateRooms}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateRooms ()\hspace{0.3cm}{\tt  [private]}}\label{interface_2room_8js_dee63dc8964eefa2e3ed624c2b85f383}
+
+
+Create rooms div 
+
+References INTERFACE\_\-ChangeRoomListVisibility(), UTILS\_\-CreateElement(), and UTILS\_\-GetText().
+
+Referenced by INTERFACE\_\-CreateLeft().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-FocusRoom@{INTERFACE\_\-FocusRoom}}
+\index{INTERFACE\_\-FocusRoom@{INTERFACE\_\-FocusRoom}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-FocusRoom ( {\em RoomName})}\label{interface_2room_8js_5cd8c4276d71be1d724d9910d90f9e33}
+
+
+Give focus to a room in change room bar 
+
+References MainData, and ROOM\_\-FocusRoom().
+
+Referenced by ROOM\_\-FocusRoom().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-HideEmoticonList@{INTERFACE\_\-HideEmoticonList}}
+\index{INTERFACE\_\-HideEmoticonList@{INTERFACE\_\-HideEmoticonList}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-HideEmoticonList ()}\label{interface_2room_8js_2f6400d74a7e3c77a7f71bd0383214dc}
+
+
+Hide emoticon list 
+
+Referenced by INTERFACE\_\-ShowEmoticonList().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-HideGameRoomList@{INTERFACE\_\-HideGameRoomList}}
+\index{INTERFACE\_\-HideGameRoomList@{INTERFACE\_\-HideGameRoomList}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-HideGameRoomList ()}\label{interface_2room_8js_d06e3e3f5ee3cdbcc1a2e3ac10cb66b7}
+
+
+Hide game room list menu
+
+\begin{Desc}
+\item[Returns:]bool \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowGameRoomMenu().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-HideRoom@{INTERFACE\_\-HideRoom}}
+\index{INTERFACE\_\-HideRoom@{INTERFACE\_\-HideRoom}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-HideRoom ()}\label{interface_2room_8js_e95fbd752274b2f11b8eb48ee14a1817}
+
+
+
+
+Referenced by RoomObj().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-HideRoomList@{INTERFACE\_\-HideRoomList}}
+\index{INTERFACE\_\-HideRoomList@{INTERFACE\_\-HideRoomList}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-HideRoomList ()}\label{interface_2room_8js_14cf0e8828bcdecc29566a60c66c363e}
+
+
+Hide room list menu
+
+void \begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Pedro \end{Desc}
+
+
+Referenced by INTERFACE\_\-ShowRoomMenu().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-RefreshOccupantsNumber@{INTERFACE\_\-RefreshOccupantsNumber}}
+\index{INTERFACE\_\-RefreshOccupantsNumber@{INTERFACE\_\-RefreshOccupantsNumber}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-RefreshOccupantsNumber ( {\em RoomName})}\label{interface_2room_8js_a18058276a9ab31dd0a0a9b815c7fac4}
+
+
+
+
+References MainData.
+
+Referenced by ROOM\_\-HandleRoomPresence(), and ROOM\_\-RemoveRoom().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-RemoveRoom@{INTERFACE\_\-RemoveRoom}}
+\index{INTERFACE\_\-RemoveRoom@{INTERFACE\_\-RemoveRoom}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-RemoveRoom ()}\label{interface_2room_8js_47f84928892a736838cf8b2079f8b35e}
+
+
+
+
+Referenced by RoomObj().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-RemoveRoomFromList@{INTERFACE\_\-RemoveRoomFromList}}
+\index{INTERFACE\_\-RemoveRoomFromList@{INTERFACE\_\-RemoveRoomFromList}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-RemoveRoomFromList ( {\em Room})}\label{interface_2room_8js_0a1741a708c70681622723c5ebc69b7c}
+
+
+Remove a room from room list if RoomListMenu is opened
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Room}]name that will be removed from list \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens \end{Desc}
+
+
+Referenced by ROOM\_\-RemoveRoom().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-ShowCancelRoomWindow@{INTERFACE\_\-ShowCancelRoomWindow}}
+\index{INTERFACE\_\-ShowCancelRoomWindow@{INTERFACE\_\-ShowCancelRoomWindow}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowCancelRoomWindow ()}\label{interface_2room_8js_a93c183ab581a78e6789d6b97edb6099}
+
+
+Create elements to cancel room creation window and return divs and array of buttons
+
+\begin{Desc}
+\item[Returns:]Div, Array \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{WINDOW\_\-CancelRoom()}{p.}{window_2window_8js_03cf2ff49b3e97f239cdb0eb00189f75}; \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Kiyoshi Simizu Yorinori \end{Desc}
+
+
+References UTILS\_\-CreateElement(), and UTILS\_\-GetText().
+
+Referenced by WINDOW\_\-CancelRoom().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-ShowCreateRoomWindow@{INTERFACE\_\-ShowCreateRoomWindow}}
+\index{INTERFACE\_\-ShowCreateRoomWindow@{INTERFACE\_\-ShowCreateRoomWindow}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowCreateRoomWindow ()}\label{interface_2room_8js_a13e52f505d91a99e4479e80ea80a158}
+
+
+Create elements to create room window and return divs and array of buttons
+
+@ return Div, Array @ see \doxyref{WINDOW\_\-CreateRoom()}{p.}{window_2window_8js_b4a012d4090056d8eb763793e32bc5b5}; @ author Danilo Kiyoshi Simizu Yorinori 
+
+References CONNECTION\_\-SendJabber(), MainData, MESSAGE\_\-Presence(), UTILS\_\-CreateElement(), UTILS\_\-GetText(), and WINDOW\_\-Alert().
+
+Referenced by WINDOW\_\-CreateRoom().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-ShowEmoticonList@{INTERFACE\_\-ShowEmoticonList}}
+\index{INTERFACE\_\-ShowEmoticonList@{INTERFACE\_\-ShowEmoticonList}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowEmoticonList ( {\em RName})}\label{interface_2room_8js_c558dfb1daccdbaef90a9d34ade804ac}
+
+
+Show emoticon list 
+
+References INTERFACE\_\-HideEmoticonList(), MainData, UTILS\_\-AddListener(), UTILS\_\-CreateElement(), and UTILS\_\-RemoveListener().
+
+Referenced by INTERFACE\_\-CreateRoom().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-ShowGameRoomList@{INTERFACE\_\-ShowGameRoomList}}
+\index{INTERFACE\_\-ShowGameRoomList@{INTERFACE\_\-ShowGameRoomList}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowGameRoomList ( {\em GameId}, \/   {\em GameName}, \/   {\em P1}, \/   {\em P2}, \/   {\em GameType})}\label{interface_2room_8js_8709625a3b2fee1010e28d3cccd45cf8}
+
+
+Show game room list in the room menu
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Rooms}]An Array with game rooms \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]bool \end{Desc}
+\begin{Desc}
+\item[Author:]Ulysses \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), GAME\_\-StartGame(), GAME\_\-StartObserverGame(), MainData, MESSAGE\_\-Presence(), UTILS\_\-Capitalize(), UTILS\_\-CreateElement(), UTILS\_\-GetText(), and WINDOW\_\-Alert().
+
+Referenced by ROOM\_\-HandleGameRoomInfoList().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-ShowRoom@{INTERFACE\_\-ShowRoom}}
+\index{INTERFACE\_\-ShowRoom@{INTERFACE\_\-ShowRoom}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowRoom ()}\label{interface_2room_8js_395f246d642e095be6b66c788517eda4}
+
+
+
+
+Referenced by RoomObj().\index{interface/room.js@{interface/room.js}!INTERFACE\_\-ShowRoomList@{INTERFACE\_\-ShowRoomList}}
+\index{INTERFACE\_\-ShowRoomList@{INTERFACE\_\-ShowRoomList}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowRoomList ( {\em Rooms})}\label{interface_2room_8js_d1f3fcb2bec18937d436bcf7c3b8f1f4}
+
+
+Show room list in the room menu, if it exists
+
+Array of room names \begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Pedro \end{Desc}
+
+
+References ROOM\_\-EnterRoom(), and UTILS\_\-CreateElement().
+
+Referenced by ROOM\_\-HandleRoomList().\index{interface/room.js@{interface/room.js}!RoomObj@{RoomObj}}
+\index{RoomObj@{RoomObj}!interface/room.js@{interface/room.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function RoomObj ( {\em Roomname})}\label{interface_2room_8js_b3369ac44f3bfa132844928c36db7ee0}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Control rooms interface 
+
+References INTERFACE\_\-AddMsgInRoom(), INTERFACE\_\-CreateRoom(), INTERFACE\_\-HideRoom(), INTERFACE\_\-RemoveRoom(), INTERFACE\_\-ShowRoom(), ROOM\_\-SortUsersByNick(), ROOM\_\-SortUsersByRating(), and UserListObj().
+
+Referenced by DATA\_\-AddRoom(), and ROOM\_\-CreateRoom().

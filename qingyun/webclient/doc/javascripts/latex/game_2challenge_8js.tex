@@ -1,0 +1,123 @@
+\section{/home/www/ulysses/webclient/scripts/game/challenge.js File Reference}
+\label{game_2challenge_8js}\index{/home/www/ulysses/webclient/scripts/game/challenge.js@{/home/www/ulysses/webclient/scripts/game/challenge.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf GAME\_\-HandleChallenge} (XML)
+\item 
+function {\bf GAME\_\-HandleOffer} (XML)
+\item 
+function {\bf GAME\_\-HandleAccept} (XML)
+\item 
+function {\bf GAME\_\-HandleDecline} (XML)
+\item 
+function {\bf GAME\_\-ChallengeError} (XML)
+\item 
+function {\bf GAME\_\-SendChallenge} (Oponent, Color, Time, Inc, Category, Rated, GameID)
+\item 
+function {\bf GAME\_\-AcceptChallenge} (MatchID)
+\item 
+function {\bf GAME\_\-DeclineChallenge} (MatchID)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{game/challenge.js@{game/challenge.js}!GAME\_\-AcceptChallenge@{GAME\_\-AcceptChallenge}}
+\index{GAME\_\-AcceptChallenge@{GAME\_\-AcceptChallenge}!game/challenge.js@{game/challenge.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-AcceptChallenge ( {\em MatchID})}\label{game_2challenge_8js_b70be1fff0f97f347ffa5bf4110df841}
+
+
+Accept the challenge with the specified MatchID
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em MatchID}]Id of the match to be accepted \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Pedro \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), and MESSAGE\_\-ChallengeAccept().
+
+Referenced by INTERFACE\_\-ShowChallengeWindow().\index{game/challenge.js@{game/challenge.js}!GAME\_\-ChallengeError@{GAME\_\-ChallengeError}}
+\index{GAME\_\-ChallengeError@{GAME\_\-ChallengeError}!game/challenge.js@{game/challenge.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-ChallengeError ( {\em XML})}\label{game_2challenge_8js_99f68584c83e4e4ab4157c56dac795fc}
+
+
+Handle errors on challenge 
+
+Referenced by GAME\_\-HandleOffer().\index{game/challenge.js@{game/challenge.js}!GAME\_\-DeclineChallenge@{GAME\_\-DeclineChallenge}}
+\index{GAME\_\-DeclineChallenge@{GAME\_\-DeclineChallenge}!game/challenge.js@{game/challenge.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-DeclineChallenge ( {\em MatchID})}\label{game_2challenge_8js_735a1628b1be9ee92f59ff05facf16b3}
+
+
+Decline the challenge with the specified MatchID
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em MatchID}]Id of the match to be declined \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\begin{Desc}
+\item[Author:]Pedro \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), and MESSAGE\_\-ChallengeDecline().
+
+Referenced by INTERFACE\_\-ShowChallengeWindow(), and WINDOW\_\-Challenge().\index{game/challenge.js@{game/challenge.js}!GAME\_\-HandleAccept@{GAME\_\-HandleAccept}}
+\index{GAME\_\-HandleAccept@{GAME\_\-HandleAccept}!game/challenge.js@{game/challenge.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-HandleAccept ( {\em XML})}\label{game_2challenge_8js_90318c630f099f5ab58ed85592ab90ae}
+
+
+Handle Accept 
+
+References MainData, and MESSAGE\_\-ChangeStatus().
+
+Referenced by GAME\_\-HandleChallenge().\index{game/challenge.js@{game/challenge.js}!GAME\_\-HandleChallenge@{GAME\_\-HandleChallenge}}
+\index{GAME\_\-HandleChallenge@{GAME\_\-HandleChallenge}!game/challenge.js@{game/challenge.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-HandleChallenge ( {\em XML})}\label{game_2challenge_8js_bbb5eb541104b1e497b1f1431d1e928a}
+
+
+3C CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Handle Challenge 
+
+References GAME\_\-HandleAccept(), GAME\_\-HandleDecline(), and GAME\_\-HandleOffer().
+
+Referenced by PARSER\_\-ParseIq().\index{game/challenge.js@{game/challenge.js}!GAME\_\-HandleDecline@{GAME\_\-HandleDecline}}
+\index{GAME\_\-HandleDecline@{GAME\_\-HandleDecline}!game/challenge.js@{game/challenge.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-HandleDecline ( {\em XML})}\label{game_2challenge_8js_a06650da741443de15313a13b407c0d2}
+
+
+Handle Decline 
+
+References MainData, WINDOW\_\-RemoveWindow(), and WindowObj().
+
+Referenced by GAME\_\-HandleChallenge().\index{game/challenge.js@{game/challenge.js}!GAME\_\-HandleOffer@{GAME\_\-HandleOffer}}
+\index{GAME\_\-HandleOffer@{GAME\_\-HandleOffer}!game/challenge.js@{game/challenge.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-HandleOffer ( {\em XML})}\label{game_2challenge_8js_ed65a9f90c7c33bb525cf32fc59a52e5}
+
+
+Handle Offer 
+
+References GAME\_\-ChallengeError(), MainData, and WINDOW\_\-Challenge().
+
+Referenced by GAME\_\-HandleChallenge().\index{game/challenge.js@{game/challenge.js}!GAME\_\-SendChallenge@{GAME\_\-SendChallenge}}
+\index{GAME\_\-SendChallenge@{GAME\_\-SendChallenge}!game/challenge.js@{game/challenge.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function GAME\_\-SendChallenge ( {\em Oponent}, \/   {\em Color}, \/   {\em Time}, \/   {\em Inc}, \/   {\em Category}, \/   {\em Rated}, \/   {\em GameID})}\label{game_2challenge_8js_f5587530ce95c526640284de3a7c3b60}
+
+
+Send a challenge message to 'Username' 
+
+References CONNECTION\_\-SendJabber(), MainData, and MESSAGE\_\-Challenge().
+
+Referenced by INTERFACE\_\-ShowChallengeWindow().

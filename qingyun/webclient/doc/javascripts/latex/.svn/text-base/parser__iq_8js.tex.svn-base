@@ -1,0 +1,43 @@
+\section{/home/www/ulysses/webclient/scripts/parser/parser\_\-iq.js File Reference}
+\label{parser__iq_8js}\index{/home/www/ulysses/webclient/scripts/parser/parser\_\-iq.js@{/home/www/ulysses/webclient/scripts/parser/parser\_\-iq.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf PARSER\_\-ParseIq} (XML)
+\item 
+function {\bf PARSER\_\-ParseIqById} (XML)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{parser\_\-iq.js@{parser\_\-iq.js}!PARSER\_\-ParseIq@{PARSER\_\-ParseIq}}
+\index{PARSER\_\-ParseIq@{PARSER\_\-ParseIq}!parser_iq.js@{parser\_\-iq.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function PARSER\_\-ParseIq ( {\em XML})}\label{parser__iq_8js_3a156ad4fae8f7ebe3f282b4c8d2ba01}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. Parse Iq's received from jabber
+
+\begin{Desc}
+\item[Returns:]string \end{Desc}
+
+
+References ADMIN\_\-HandleRoomAdmin(), ADMIN\_\-HandleUserNotification(), CONTACT\_\-HandleInfo(), CONTACT\_\-HandleSearchUser(), CONTACT\_\-HandleUserList(), GAME\_\-HandleChallenge(), GAME\_\-HandleGame(), GAME\_\-HandleGameError(), GAME\_\-HandleVCardPhoto(), MainData, OLDGAME\_\-FetchOldGame(), OLDGAME\_\-HandleSearchOldGame(), OLDGAME\_\-HandleVCardPhoto(), PARSER\_\-ParseIqById(), PROFILE\_\-HandleInfoProfile(), PROFILE\_\-HandleVCardProfile(), ROOM\_\-HandleGameRoomInfoList(), ROOM\_\-HandleInfo(), and ROOM\_\-HandleRoomList().
+
+Referenced by PARSER\_\-ParseXml().\index{parser\_\-iq.js@{parser\_\-iq.js}!PARSER\_\-ParseIqById@{PARSER\_\-ParseIqById}}
+\index{PARSER\_\-ParseIqById@{PARSER\_\-ParseIqById}!parser_iq.js@{parser\_\-iq.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function PARSER\_\-ParseIqById ( {\em XML})}\label{parser__iq_8js_f710f19fad9238f2a58badaa67831c5f}
+
+
+Parse Iq's received from jabber by iq id
+
+\begin{Desc}
+\item[Returns:]string \end{Desc}
+
+
+References MainData, and PROFILE\_\-CreateProfile().
+
+Referenced by PARSER\_\-ParseIq().

@@ -1,0 +1,95 @@
+Bosh means gloox BOSH client,
+1 BOSH: sending  <body hold='1' rid='247123' to='www.xiaxiaqi.com' ver='1.6' wait='10' xml:lang='en' xmlns='http://jabber.org/protocol/httpbind'/>
+
+2 Bosh recving: HTTP/1.1 200 OK
+Content-type: text/xml; charset=utf-8
+Content-Length: 87
+
+<body sid='2474491558767453926' ver='1.6' xmlns='http://jabber.org/protocol/httpbind'/>
+
+2.1 (spoofed message) Client received XML: <stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' version='1.0' from='www.xiaxiaqi.com' id='2474491558767453926' xml:lang='en'/>
+
+3 BOSH: sending <body rid='247124' sid='1337721548308975272' xmlns='http://jabber.org/protocol/httpbind'><iq xml:lang='zh-cn' type='get' id='auth_1' to='www.xiaxiaqi.com'><query xmlns='jabber:iq:auth'><username>mywww</username></query></iq></body>
+
+4 Bosh recving:
+ <body xmlns='http://jabber.org/protocol/httpbind'><iq type='result' from='www.xiaxiaqi.com' xml:lang='zh-cn' id='auth_1'><query xmlns='jabber:iq:auth'><username>mywww</username><password/><digest/><resource/></query></iq></body>
+
+5 Bosh sending <body rid='247125' sid='1337721548308975272' xmlns='http://jabber.org/protocol/httpbind'><iq xml:lang='zh-cn' type='set' id='auth_2' to='www.xiaxiaqi.com' ><query xmlns='jabber:iq:auth'><username>mywww</username><password>mywww</password><resource>ChessD</resource></query></iq></body>
+
+6 Bosh recving:
+<body xmlns='http://jabber.org/protocol/httpbind'><iq type='result' from='www.xiaxiaqi.com' xml:lang='zh-cn' id='auth_2'/></body>
+
+7 Bosh sending
+<body rid='247127' sid='1337721548308975272' xmlns='http://jabber.org/protocol/httpbind'><iq xml:lang='zh-cn' type='get' id='GetUserList'><query xmlns='jabber:iq:roster'/></iq><presence xml:lang='zh-cn' from='mywww@www.xiaxiaqi.com' to='chessd.www.xiaxiaqi.com' ></presence><iq xml:lang='zh-cn' type='get' to='mywww@www.xiaxiaqi.com' id='GetMyProfile'><vCard xmlns='vcard-temp' prodid='-//HandGen//NONSGML vGen v1.0//EN' version='2.0' /></iq><presence xml:lang='zh-cn' from='mywww@www.xiaxiaqi.com' ></presence><presence xml:lang='zh-cn' from='mywww@www.xiaxiaqi.com' to='general@conference.www.xiaxiaqi.com/mywww' ></presence></body>
+------after message 7, the robottest will be in present---------------
+8 Bosh recving:
+ <body xmlns='http://jabber.org/protocol/httpbind'><iq from='mywww@www.xiaxiaqi.com' to='mywww@www.xiaxiaqi.com/ChessD' id='GetUserList' type='result'><query xmlns='jabber:iq:roster'/></iq></body>
+
+9 bosh sending:
+ <body rid='247128' sid='1337721548308975272' xmlns='http://jabber.org/protocol/httpbind'><iq type='get' to='chessd.www.xiaxiaqi.com' id='SearchCurrentGame'><search xmlns='http://c3sl.ufpr.br/chessd#game'><game><player jid='mywww@www.xiaxiaqi.com/ChessD'/></game></search></iq></body>
+
+10 bosh recving:
+ <body xmlns='http://jabber.org/protocol/httpbind'><iq from='mywww@www.xiaxiaqi.com' to='mywww@www.xiaxiaqi.com/ChessD' id='GetMyProfile' type='result'/></body>
+
+11 bosh sending:
+ <body rid='247129' sid='1337721548308975272' xmlns='http://jabber.org/protocol/httpbind'><iq xml:lang='zh-cn' type='get' from='mywww@www.xiaxiaqi.com/ChessD' to='chessd.www.xiaxiaqi.com' id='GetRating'><query xmlns='http://c3sl.ufpr.br/chessd#info'><rating jid='mywww@www.xiaxiaqi.com' /><type jid='mywww@www.xiaxiaqi.com' /></query></iq></body>
+
+12 bosh recving:
+ <body xmlns='http://jabber.org/protocol/httpbind'><presence from='mywww@www.xiaxiaqi.com/ChessD' to='mywww@www.xiaxiaqi.com/ChessD' xml:lang='zh-cn'/><presence from='general@conference.www.xiaxiaqi.com/mywww' to='mywww@www.xiaxiaqi.com/ChessD' xml:lang='zh-cn'><x xmlns='http://jabber.org/protocol/muc#user'><item jid='mywww@www.xiaxiaqi.com/ChessD' affiliation='owner' role='moderator'/><status code='201'/></x></presence></body>
+
+
+13 bosh recving:
+<body xmlns='http://jabber.org/protocol/httpbind'><iq from='chessd.www.xiaxiaqi.com' to='robottest@www.xiaxiaqi.com/ChessD' id='0' type='set'><query xmlns='http://c3sl.ufpr.br/chessd#match#offer'><match category='standard' id='0' rated='true'><player inc='0' jid='mywww@www.xiaxiaqi.com/ChessD' time='660'/><player inc='0' jid='robottest@www.xiaxiaqi.com/ChessD' time='660'/></match></query></iq></body>
+
+14 bosh sending:
+<body rid='247138' sid='1337721548308975272' xmlns='http://jabber.org/protocol/httpbind'><iq xml:lang='zh-cn' type='set' to='chessd.www.xiaxiaqi.com' id='Challenge'><query xmlns='http://c3sl.ufpr.br/chessd#match#accept'><match id='0'></match></query></iq></body>
+
+15 bosh recving:
+<body xmlns='http://jabber.org/protocol/httpbind'><iq from='chessd.www.xiaxiaqi.com' to='robottest@www.xiaxiaqi.com/ChessD' id='Challenge' type='result'/></body> 
+
+16 bosh recving:
+<body xmlns='http://jabber.org/protocol/httpbind'><iq from='chessd.www.xiaxiaqi.com' to='robottest@www.xiaxiaqi.com/ChessD' id='86' type='set'><query xmlns='http://c3sl.ufpr.br/chessd#match#accept'><match id='1' room='game_8@chessd.www.xiaxiaqi.com'/></query></iq></body>
+
+17 bosh sending:
+ <body rid='397718' sid='2490478199461196056' xmlns='http://jabber.org/protocol/httpbind'><presence xml:lang='zh-cn' to='game_2@chessd.www.xiaxiaqi.com/mywww' ><show>playing</show></presence></body>
+
+18 bosh recving:
+<body xmlns='http://jabber.org/protocol/httpbind'><presence from='game_14@chessd.www.xiaxiaqi.com/mywww' to='robottest@www.xiaxiaqi.com/ChessD' xml:lang='zh-cn'><show>playing</show><x xmlns='http://jabber.org/protocol/muc#user'><item affiliation='member' role='participant'/></x></presence></body>
+<body xmlns='http://jabber.org/protocol/httpbind'><presence from='general@conference.www.xiaxiaqi.com/mywww' to='robottest@www.xiaxiaqi.com/ChessD' xml:lang='zh-cn'><show>playing</show><x xmlns='http://jabber.org/protocol/muc#user'><item affiliation='owner' role='moderator'/></x></presence><iq from='game_14@chessd.www.xiaxiaqi.com' to='robottest@www.xiaxiaqi.com/ChessD' id='1' type='set'><query xmlns='http://c3sl.ufpr.br/chessd#game#state'><state category='standard'><board castle='-' enpassant='-' fullmoves='1' halfmoves='0' state='rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR' turn='white'/><player color='white' jid='mywww@www.xiaxiaqi.com/ChessD' time='660'/><player color='black' jid='robottest@www.xiaxiaqi.com/ChessD' time='660'/></state><history category='standard'><player color='white' inc='0' jid='mywww@www.xiaxiaqi.com/ChessD' time='660' time_left='660'/><player color='black' inc='0' jid='robottest@www.xiaxiaqi.com/ChessD' time='660' time_left='660'/><state board='rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR' move='' short='' time='660' turn='white'/></history></query></iq><presence from='game_14@chessd.www.xiaxiaqi.com/robottest' to='robottest@www.xiaxiaqi.com/ChessD' xml:lang='en'><show>playing</show><x xmlns='http://jabber.org/protocol/muc#user'><item affiliation='member' role='participant'/></x></presence></body>
+
+18 bosh sending:
+<body rid='303516' sid='4953568083603484169' xmlns='http://jabber.org/protocol/httpbind'><iq xml:lang='zh-cn' type='set' to='game_1@chessd.www.xiaxiaqi.com' id='GameMove'><query xmlns='http://c3sl.ufpr.br/chessd#game#move'><move long='b2e2'></move></query></iq></body>
+
+19 bosh recving:
+<body xmlns='http://jabber.org/protocol/httpbind'><iq from='game_23@chessd.www.xiaxiaqi.com' to='robottest@www.xiaxiaqi.com/ChessD' id='5' type='set'><query xmlns='http://c3sl.ufpr.br/chessd#game#move'><move long='h7e7' short='Ce8'/><state category='standard'><board castle='-' enpassant='-' fullmoves='2' halfmoves='0' state='rheakaehr/9/1c2c4/p1p1p1p1p/9/9/P1P1P1P1P/1C2E2C1/9/RH1AKAEHR' turn='white'/><player color='white' jid='robottest@www.xiaxiaqi.com/ChessD' time='659'/><player color='black' jid='mywww@www.xiaxiaqi.com/ChessD' time='660'/></state></query></iq></body>
+
+20 bosh sending:
+(same to 18)
+
+
+webclient register process:
+reg_0: webclient sending:
+httpbind
+reg_0_1: webclient recving:
+httpbind
+
+reg_1: webclient sending:
+<body rid='540118831' sid='7098622885495363302' xmlns='http://jabber.org/protocol/httpbind'><iq type='get' id='reg1' to='www.xiaxiaqi.com'><query xmlns='jabber:iq:register'/></iq></body>
+
+reg_2: webclient recving:
+ <body xmlns='http://jabber.org/protocol/httpbind'><iq from='www.xiaxiaqi.com' id='reg1' type='result'><query xmlns='jabber:iq:register'><instructions>Choose a username and password to register with this server</instructions><username/><password/></query></iq></body>
+
+reg_3: webclient sending:
+<body rid='540118832' sid='7098622885495363302' xmlns='http://jabber.org/protocol/httpbind'><iq type='set' id='reg2'><query xmlns='jabber:iq:register'><username>zhuzhenglu</username><password>zhuzhenglu</password></query></iq></body>
+
+reg_4: webclient recving:
+<body xmlns='http://jabber.org/protocol/httpbind'><iq from='www.xiaxiaqi.com' id='reg2' type='result'><query xmlns='jabber:iq:register'><username>zhuzhenglu</username><password>zhuzhenglu</password></query></iq></body>
+
+webclient register process ( here the username has been registered):
+reg_pre5 (same as reg_0 and reg_0_1)
+reg_5 (same as reg_1)
+reg_6 (same as reg_2)
+reg_7 (same as reg_3)
+reg_8: webclient recving:
+<body xmlns='http://jabber.org/protocol/httpbind'><iq from='www.xiaxiaqi.com' id='reg2' type='error'><query xmlns='jabber:iq:register'><username>zhuzhenglu</username><password>zhuzhenglu</password></query><error code='409' type='cancel'><conflict xmlns='urn:ietf:params:xml:ns:xmpp-stanzas'/></error></iq></body>
+

@@ -1,0 +1,44 @@
+\section{/home/www/ulysses/webclient/scripts/interface/load.js File Reference}
+\label{interface_2load_8js}\index{/home/www/ulysses/webclient/scripts/interface/load.js@{/home/www/ulysses/webclient/scripts/interface/load.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf INTERFACE\_\-StartLoad} ()
+\item 
+function {\bf INTERFACE\_\-EndLoad} ()
+\item 
+function {\bf INTERFACE\_\-SetLoadPhrase} (Phrase, Num)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{interface/load.js@{interface/load.js}!INTERFACE\_\-EndLoad@{INTERFACE\_\-EndLoad}}
+\index{INTERFACE\_\-EndLoad@{INTERFACE\_\-EndLoad}!interface/load.js@{interface/load.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-EndLoad ()}\label{interface_2load_8js_9fd52b1b8c058912ffd1501cad73e19a}
+
+
+Remove load screen 
+
+Referenced by LOGIN\_\-EndLoad().\index{interface/load.js@{interface/load.js}!INTERFACE\_\-SetLoadPhrase@{INTERFACE\_\-SetLoadPhrase}}
+\index{INTERFACE\_\-SetLoadPhrase@{INTERFACE\_\-SetLoadPhrase}!interface/load.js@{interface/load.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-SetLoadPhrase ( {\em Phrase}, \/   {\em Num})}\label{interface_2load_8js_17ce560a74b87126a2c00d369eb42597}
+
+
+Show phrase in the load box and paint next ball 
+
+Referenced by INTERFACE\_\-StartLoad(), LOGIN\_\-Load(), LOGIN\_\-Load2(), LOGIN\_\-Load3(), and LOGIN\_\-Load4().\index{interface/load.js@{interface/load.js}!INTERFACE\_\-StartLoad@{INTERFACE\_\-StartLoad}}
+\index{INTERFACE\_\-StartLoad@{INTERFACE\_\-StartLoad}!interface/load.js@{interface/load.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-StartLoad ()}\label{interface_2load_8js_a24aa832435532fae0fa3c9b2a8c1ac1}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Shows load screen to user 
+
+References INTERFACE\_\-SetLoadPhrase(), UTILS\_\-CreateElement(), and UTILS\_\-GetText().
+
+Referenced by LOGIN\_\-Load().

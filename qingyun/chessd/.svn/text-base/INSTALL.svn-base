@@ -1,0 +1,137 @@
+--- Chessd ---
+
+This is a implementation of a chess server, it was designed to replace the old
+chessd. Hopefully the new one is more robust and more effcient.  Note that is is
+still in development and it is unstable, use it at your own risk.
+
+Suggestion, bug reports and contributions are all welcome.
+
+----------------
+
+To compile this code you need the following libraries:
+
+- Boost >= 1.34
+- Boost-date-time >= 1.34
+- iksemel >= 1.2 (recommended >= 1.3)
+- lpthread
+- libpqxx
+
+It is recommended iksemel 1.3 due to bug fixes and It's mandatory for 64bit
+systems due to compatibility issues.
+
+Here follows a detailed explanation on how to install the server, it's is a
+prety long, so be pacient.
+
+--- Setting up PostgreSQL ---
+
+First thing to do is to setup the database. Currently the server only work with
+PostgreSQL, but we plan to support MySQL in the future. So you must install
+PostgreSQL if you don't have it already. I won't cover on how to install
+postgres, there is a lot of documents explaining this on the internet or it
+shoud be as easy as intalling a package of your distribution.
+
+Next you have to create a user and a database for the server. You should use
+createuser and createdb commands to do it, remember to pass -P to createuser so
+it will prompt for a password for the user. Then you have to load up the
+database schema into the database, the schema is located in the datebase
+directory. Just type:
+
+$ psql -U <user-you-created> <database-you-created> < database/pgsql.sql
+
+--- Setting up ejabberd ---
+
+Next step is to setup the ejabberd server, same thing as before I'll let this
+task to you. I believe that any version of ejabberd will do the job, but some
+admin tools of the chess server will not work on versions prior to 2.0.
+
+First of all you sould choose a name for your jabber server, I will use the name
+localhost on the examples but it can be something else, although it should be an
+address to the jabber server. To modify the server name edit a line in the
+ejabberd.cfg, this file is in /etc/ejabberd in some distros. Look for a line the
+looks like the line bellow and modify the string localhost to the server name
+you want. Some other names mentioned bellow use the server name as part of it,
+if you chose a different server name, you must replace all ocurrences of
+localhost in the examples.
+
+{hosts, ["localhost"]}.
+
+Then you have to add an entry in the config to allow chessd to connect to the
+jabber server as a component. To do this look for something that look like
+this:
+
+  {listen,
+    [
+
+Then add the following lines after it:
+
+  {<port>, ejabberd_service, [{ip, {127, 0, 0, 1}},
+          {access, all},
+          {host, "chessd.localhost", [{password, "<secret>"}]}]},
+
+Here port <port> is the port that the ejabberd will listen to connect with the
+chessd server, pick any unused port, <secret> is password required to connect.
+
+The web interface use the in-band mechanism for registration, then you must
+allow it. Look up for a line that looks like this:
+
+{access, register, [{deny, all}]}.
+
+And replace it with:
+
+{access, register, [{allow, all}]}.
+
+In order to enable some of the admin features, you have to give admin
+privilegies to the server component. To do so you just have to add the following
+line to the ejabberd config file:
+
+{acl, admin, {user, "", "chessd.localhost"}}.
+
+Here, the "chessd.localhost" string must be the same one you chose for the
+component configuration.
+
+Then just restart ejabberd if it was already running.
+
+--- Setting up chessd ---
+
+Finally, let's setup the server. You have to set the parameters for the
+component and for the database server.
+
+<server>
+    <xmpp-component
+        server_name="localhost"
+        server_address="localhost"
+        component_port="<port>"
+        component_password="<secret>"
+        component_name="chessd.localhost"
+    />
+    <database
+        host="localhost"
+        port="5432"
+        db_name="chessd-dev"
+        user="chessd"
+        password="chessd"
+        max_connections="50"
+    />
+    <log
+        filename="log/chessd.log"
+    />
+</server>
+
+The server_address is the address of the jabber server, it is not necessarily
+the name of the server, it is just an address to the jabber server though there
+should be the same. The server_name attribute is the name of your jabber server.
+The component_port, component_password and component_name are the component
+parameters you chose in the jabber config file.  to the same values you put in
+the ejabberd config file. Next, edit the database information. And, finally, the
+log file can be changed to something else if you like, but this log file isn't
+much useful yet, it just serves the purpose of development and debugging,
+basically the log file consists of all the traffic the gos in and out of the
+server.  Then just run the server. It will look the PWD directory for the config
+file, if it is somewhere else you can pass the name as paramenter like this:
+
+$ ./chessd somewhere-else/config.xml
+
+Now we are done, the server should be working now. Now we need an interface to
+play, check out the related project chessd webclient and the bosh implementation
+that tunnels the jabber communication through a web server.  The ejabberd has a
+bosh implementation too, it should work too but it was not tested.

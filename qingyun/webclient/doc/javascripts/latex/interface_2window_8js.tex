@@ -1,0 +1,201 @@
+\section{/home/www/ulysses/webclient/scripts/interface/window.js File Reference}
+\label{interface_2window_8js}\index{/home/www/ulysses/webclient/scripts/interface/window.js@{/home/www/ulysses/webclient/scripts/interface/window.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf WindowObj} (Height, Width, Div, Title, CloseCommands)
+\item 
+function {\bf WINDOW\_\-ShowWindow} (Element)
+\item 
+function {\bf WINDOW\_\-CloseWindow} ()
+\item 
+function {\bf WINDOW\_\-SetId} (Id)
+\item 
+function {\bf WINDOW\_\-SetSize} (Width, Height)
+\item 
+function {\bf WINDOW\_\-SetTitle} (Title)
+\item 
+function {\bf WINDOW\_\-SetFocus} ()
+\item 
+function {\bf WINDOW\_\-SetBlur} ()
+\item 
+function {\bf WINDOW\_\-SetZIndex} (Index)
+\item 
+function {\bf WINDOW\_\-GetZIndex} ()
+\item 
+function {\bf WINDOW\_\-ConcatEventButtons} (ButtonsList)
+\item 
+function {\bf WINDOW\_\-CreateWindow} (Height, Width, Div, Title)
+\item 
+function {\bf WINDOW\_\-CreateAlert} (Text)
+\item 
+function {\bf WINDOW\_\-CreateConfirm} (Text, Button1, Button2)
+\item 
+function {\bf WINDOW\_\-CreateImageSend} ()
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{interface/window.js@{interface/window.js}!WINDOW\_\-CloseWindow@{WINDOW\_\-CloseWindow}}
+\index{WINDOW\_\-CloseWindow@{WINDOW\_\-CloseWindow}!interface/window.js@{interface/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-CloseWindow ()}\label{interface_2window_8js_d726111180999a683e0d0221232e00e7}
+
+
+
+
+Referenced by WindowObj().\index{interface/window.js@{interface/window.js}!WINDOW\_\-ConcatEventButtons@{WINDOW\_\-ConcatEventButtons}}
+\index{WINDOW\_\-ConcatEventButtons@{WINDOW\_\-ConcatEventButtons}!interface/window.js@{interface/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-ConcatEventButtons ( {\em ButtonsList})}\label{interface_2window_8js_ebf492c25ddf7b9d070a392554a90597}
+
+
+
+
+Referenced by WindowObj().\index{interface/window.js@{interface/window.js}!WINDOW\_\-CreateAlert@{WINDOW\_\-CreateAlert}}
+\index{WINDOW\_\-CreateAlert@{WINDOW\_\-CreateAlert}!interface/window.js@{interface/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-CreateAlert ( {\em Text})}\label{interface_2window_8js_e280c7f7f557d7c7197b90c4e8439fc6}
+
+
+Create elements of game alert window and returns div
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Text}]Text to display in confirm box \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Div; Array \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{WINDOW\_\-Alert()}{p.}{window_2window_8js_a1b10eccd2c596a7a41b95bc3a55c851}; \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Kiyoshi Simizu Yorinori \end{Desc}
+
+
+References UTILS\_\-CreateElement().
+
+Referenced by WINDOW\_\-Alert().\index{interface/window.js@{interface/window.js}!WINDOW\_\-CreateConfirm@{WINDOW\_\-CreateConfirm}}
+\index{WINDOW\_\-CreateConfirm@{WINDOW\_\-CreateConfirm}!interface/window.js@{interface/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-CreateConfirm ( {\em Text}, \/   {\em Button1}, \/   {\em Button2})}\label{interface_2window_8js_da35e4e0d8cecdec6708f24a1f355219}
+
+
+Create elements of confirm request window and returns div
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Text}]Text to display in confirm box \item[{\em Button1}]Value and Fuction of Button1 \item[{\em Button2}]Value and Fuction of Button2 \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Div; Array \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{WINDOW\_\-Confirm()}{p.}{window_2window_8js_cf8bd95031baaa8a5b88de2cc0848015}; \end{Desc}
+\begin{Desc}
+\item[Author:]Danilo Kiyoshi Simizu Yorinori \end{Desc}
+
+
+References UTILS\_\-AddListener(), and UTILS\_\-CreateElement().
+
+Referenced by WINDOW\_\-Confirm().\index{interface/window.js@{interface/window.js}!WINDOW\_\-CreateImageSend@{WINDOW\_\-CreateImageSend}}
+\index{WINDOW\_\-CreateImageSend@{WINDOW\_\-CreateImageSend}!interface/window.js@{interface/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-CreateImageSend ()}\label{interface_2window_8js_1b5bafbe29a35ebfa2a6a2468c3f577b}
+
+
+Create elements of send user image
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Text}]Text to display in confirm box \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Div; Array \end{Desc}
+\begin{Desc}
+\item[See also:]\doxyref{WINDOW\_\-Confirm()}{p.}{window_2window_8js_cf8bd95031baaa8a5b88de2cc0848015}; \end{Desc}
+\begin{Desc}
+\item[Author:]Rubens and Fabiano \end{Desc}
+
+
+References IMAGE\_\-CreateFormToEncode(), IMAGE\_\-ImageEncode(), UTILS\_\-CreateElement(), and UTILS\_\-GetText().
+
+Referenced by WINDOW\_\-ProfileImage().\index{interface/window.js@{interface/window.js}!WINDOW\_\-CreateWindow@{WINDOW\_\-CreateWindow}}
+\index{WINDOW\_\-CreateWindow@{WINDOW\_\-CreateWindow}!interface/window.js@{interface/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-CreateWindow ( {\em Height}, \/   {\em Width}, \/   {\em Div}, \/   {\em Title})}\label{interface_2window_8js_15bd13f5524432c2fbafa162880cb333}
+
+
+
+
+References UTILS\_\-AddListener(), and UTILS\_\-StartDragWindow().
+
+Referenced by WindowObj().\index{interface/window.js@{interface/window.js}!WINDOW\_\-GetZIndex@{WINDOW\_\-GetZIndex}}
+\index{WINDOW\_\-GetZIndex@{WINDOW\_\-GetZIndex}!interface/window.js@{interface/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-GetZIndex ()}\label{interface_2window_8js_842387dcdc94e1be4c16832ba8aa28cb}
+
+
+
+
+Referenced by WindowObj().\index{interface/window.js@{interface/window.js}!WINDOW\_\-SetBlur@{WINDOW\_\-SetBlur}}
+\index{WINDOW\_\-SetBlur@{WINDOW\_\-SetBlur}!interface/window.js@{interface/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-SetBlur ()}\label{interface_2window_8js_3f624b43a73abcdb32fc681a2db1ce4b}
+
+
+
+
+Referenced by WindowObj().\index{interface/window.js@{interface/window.js}!WINDOW\_\-SetFocus@{WINDOW\_\-SetFocus}}
+\index{WINDOW\_\-SetFocus@{WINDOW\_\-SetFocus}!interface/window.js@{interface/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-SetFocus ()}\label{interface_2window_8js_d01388b48491acf406607377ca2eb8dd}
+
+
+
+
+Referenced by WindowObj().\index{interface/window.js@{interface/window.js}!WINDOW\_\-SetId@{WINDOW\_\-SetId}}
+\index{WINDOW\_\-SetId@{WINDOW\_\-SetId}!interface/window.js@{interface/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-SetId ( {\em Id})}\label{interface_2window_8js_8c7f83fba8412f242ac038538231ad28}
+
+
+
+
+Referenced by WindowObj().\index{interface/window.js@{interface/window.js}!WINDOW\_\-SetSize@{WINDOW\_\-SetSize}}
+\index{WINDOW\_\-SetSize@{WINDOW\_\-SetSize}!interface/window.js@{interface/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-SetSize ( {\em Width}, \/   {\em Height})}\label{interface_2window_8js_866e9f50bfd738259fdb10e2602737a9}
+
+
+
+
+Referenced by WindowObj().\index{interface/window.js@{interface/window.js}!WINDOW\_\-SetTitle@{WINDOW\_\-SetTitle}}
+\index{WINDOW\_\-SetTitle@{WINDOW\_\-SetTitle}!interface/window.js@{interface/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-SetTitle ( {\em Title})}\label{interface_2window_8js_c642ad84b93b311ff6c5bdaa63e21900}
+
+
+
+
+Referenced by WindowObj().\index{interface/window.js@{interface/window.js}!WINDOW\_\-SetZIndex@{WINDOW\_\-SetZIndex}}
+\index{WINDOW\_\-SetZIndex@{WINDOW\_\-SetZIndex}!interface/window.js@{interface/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-SetZIndex ( {\em Index})}\label{interface_2window_8js_8233f18f8b63e688b8ffb4f646b642a0}
+
+
+
+
+Referenced by WindowObj().\index{interface/window.js@{interface/window.js}!WINDOW\_\-ShowWindow@{WINDOW\_\-ShowWindow}}
+\index{WINDOW\_\-ShowWindow@{WINDOW\_\-ShowWindow}!interface/window.js@{interface/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WINDOW\_\-ShowWindow ( {\em Element})}\label{interface_2window_8js_d0db0f64041637346e327f8cb98c758e}
+
+
+
+
+References MainData.
+
+Referenced by WindowObj().\index{interface/window.js@{interface/window.js}!WindowObj@{WindowObj}}
+\index{WindowObj@{WindowObj}!interface/window.js@{interface/window.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function WindowObj ( {\em Height}, \/   {\em Width}, \/   {\em Div}, \/   {\em Title}, \/   {\em CloseCommands})}\label{interface_2window_8js_8ed16935cb9507bd3179a7bc0dff6de5}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Window Interface Object 
+
+References WINDOW\_\-CloseWindow(), WINDOW\_\-ConcatEventButtons(), WINDOW\_\-CreateWindow(), WINDOW\_\-GetZIndex(), WINDOW\_\-SetBlur(), WINDOW\_\-SetFocus(), WINDOW\_\-SetId(), WINDOW\_\-SetSize(), WINDOW\_\-SetTitle(), WINDOW\_\-SetZIndex(), and WINDOW\_\-ShowWindow().
+
+Referenced by DATA\_\-AddChallengeWindow(), DATA\_\-AddWindow(), DATA\_\-ChangeWindowFocus(), DATA\_\-FindWindow(), DATA\_\-RemoveWindow(), GAME\_\-HandleDecline(), WINDOW\_\-Alert(), WINDOW\_\-BanUser(), WINDOW\_\-CancelRoom(), WINDOW\_\-Challenge(), WINDOW\_\-ChangeFocus(), WINDOW\_\-Confirm(), WINDOW\_\-CreateRoom(), WINDOW\_\-Invite(), WINDOW\_\-KickUser(), WINDOW\_\-NewWindow(), WINDOW\_\-OldGame(), WINDOW\_\-OldGameSearch(), WINDOW\_\-Profile(), WINDOW\_\-ProfileConfirm(), WINDOW\_\-ProfileImage(), WINDOW\_\-RemoveWindow(), WINDOW\_\-SearchUser(), WINDOW\_\-SearchUserResult(), and WINDOW\_\-UnbanUser().

@@ -1,0 +1,967 @@
+## WinBoard language file
+##
+## VIETNAMESE / TIÊìNG VIÊòT
+## v1.0 beta 1
+##
+## Translation by Nguyen Pham (27 Jan 2011)
+## NgıõÌi diòch: Phaòm HôÌng Nguyên (27/01/2011)
+## xqfan.com
+##
+
+## Notes for translators (can be deleted from he file after translation):
+##   Just write the translations between the second pair of quotes
+##   Things like %s, %d and %c must be preserved in the original order
+##   Empty translated strings will be ignored, so there is no reason
+##   to delete those for which you don't know a translation,
+##   and you can start testing everything immediately.
+##   Simply rename this file to LANGUAGE.lng, and WinBoard should see it,
+##   and allow you to use the option /language=LANGUAGE.
+##   You are encouraged to call up the corresponding WinBoard dialog while
+##   working on the translation, to see in which context the strings are used.
+##   This is why the strings below are sorted by dialog
+##
+##   Of duplicats, only the first occurrence will be used, even if it was in
+##   a different dialog! For this reason you will only see an 'OK' in the
+##   About Box. After you translated it there, this translation will be used
+##   for all other dialogs as well.
+## o Use ## for comments, to make iteasy to find them scattered throughout the translation
+## o Careful with temptation of direct translation, by example 'movimiento' for 'move' when 'jugada' is better.
+## o Try to use short phrases, more text doesn't imply more clearness.
+## o Check that your translation is right, does it mean what it does?
+## o Test your translation, check every dialog.
+## o For standard chess names check Wikipedia for confirmation.
+## o For menus, assign shortcuts (character &) until you finish the translation.
+##   preferably it should be unique in the applicable menu, so it depends on translation of other items!
+
+winboard.rc
+
+MENUS:
+## Pleace keep the accelerator-key indications on the menu items, and keep 
+## the keystrokes the same (for now). (Alt, Ctrl and Shift can be translated.)
+
+"&New Game\tCtrl-N" === "Ván Mõìi\tCtrl-N"
+"New Sh&uffle Game..." === "Tráo Bên..."
+"New &Variant...\tAlt+Shift+V" === "Biêìn Mõìi...\tAlt+Shift+&V"
+"&Load Game...\tCtrl-O" === "TaÒi Ván CõÌ...\tCtr&l-O"
+"&Save Game...\tCtrl-S" === "Lıu Ván CõÌ...\tCtrl-&S"
+"L&oad Position...\tCtrl+Shift+O" === "TaÒi Thêì CõÌ...\tCtrl+Shift+&O"
+"S&ave Position...\tCtrl+Shift+S" === "Lıu Thêì CõÌ...\tCtrl+Shift+S"
+"Save as &Diagram..." === "Lıu Thành BiêÒu ĞôÌ..."
+"&Quit" === "Thoát"
+## Next six currently not used
+"Load &Next Game\tAlt+PgDn" === "TaÒi Vá&n Tiêìp\tAlt+PgDn"
+"Load &Previous Game\tAlt+PgUp" === "TaÒi Ván Trıõìc"
+"&Reload Same Game" === "TaÒi Laòi Ván CõÌ"
+"Load N&ext Position\tAlt+Shift+PgDn" === "TaÒi Thêì CõÌ Tiêìp"
+"Load Pre&vious Position\tAlt+Shift+PgUp" === "TaÒi Thêì CõÌ Trıõìc"
+"Reload Sa&me Position" === "TaÒi Laòi Thêì CõÌ"
+
+"&Copy Game To Clipboard\tCtrl+C" === "&Chép Ván CõÌ Vào Clipboard\tCtrl+C"
+"C&opy Position To Clipboard\tCtrl+Shift+C" === "Chép Thêì CõÌ Vào Clipb&oard\tCtrl+Shift+C"
+"Copy Game List to Clipboard" === "Copy Danh Sách Các Ván CõÌ Vào Clipboard"
+"&Paste Game From Clipboard\tCtrl+V" === "Dán Ván CõÌ TıÌ Clipboard\tCtrl+V"
+"P&aste Position From Clipboard\tCtrl+Shift+V" === "Dán Thêì CõÌ TıÌ Clipbo&ard\tCtrl+Shift+V"
+"&Edit Game\tCtrl+E" === "Soaòn Ván CõÌ\tCtrl+&E"
+"E&dit Position\tCtrl+Shift+E" === "Soaòn Thêì CõÌ\tCtrl+Shift+E"
+"Edit Ta&gs..." === "Soaòn Các TheÒ..."
+"Edit Co&mment..." === "Soaòn BiÌnh Chú..."
+"Enter &Username..." === "Nhâòp &Username..."
+"&Revert\tHome" === "Ngıõòc Laòi\tHome"
+"&Annotate" === "Chú GiaÒi"
+"&Truncate Game\tEnd" === "Cãì&t Ngãìn Ván CõÌ\tEnd"
+"&Backward\tAlt+Left" === "Quay TrõÒ Laòi\tAlt+Left"
+"&Forward\tAlt+Right" === "Ği Tiêìp\tAlt+Right"
+"Back to &Start\tAlt+Home" === "Quay Laòi Ğêìn ĞâÌu\tAlt+Home"
+"For&ward to End\tAlt+End" === "Ği Tiêìp Tõìi Cuôìi\tAlt+End"
+
+"Flip &View\tF2" === "Xoay Ngıõòc Bàn CõÌ\tF2"
+"&Swap Clocks" === "ĞôÒi ĞôÌng HôÌ"
+"Engine &Output\tAlt+Shift+O" === "Thông Tin In Ra CuÒa Chıõng TriÌnh CõÌ\tAlt+Shift+&O"
+"Move &History\tAlt+Shift+H" === "Các Nıõìc Ği\tAlt+Shift+&H"
+"Evaluation &Graph\tAlt+Shift+E" === "ĞôÌ Thiò Lıõòng &Giá\tAlt+Shift+E"
+"Game &List\tAlt+Shift+G" === "Danh Sách Các Ván CõÌ\tA&lt+Shift+G"
+"Open &New Chat Window" === "MõÒ CıÒa SôÒ Ğôìi Thoaòi Mõìi"
+"Type In &Move...\tAlt+I" === "BiÌnh Chú Cho Nıõìc ği...\tAlt+I"
+"&Tags" === "Các TheÒ"
+"&Comments" === "BiÌnh &Chú"
+"&Game List Tags..." === "Các TheÒ cuÒa Danh Sách Ván CõÌ"
+"&Board..." === "&Bàn CõÌ..."
+"&Fonts..." === "Các &Fonts..."
+
+"Machine &White\tCtrl+W" === "Máy Chõi Bên Trãìng\tCtrl+&W"
+"Machine &Black\tCtrl+B" === "Máy Chõi &Bên Ğen\tCtrl+B"
+"&Two Machines\tCtrl+T" === "Máy Chõi CaÒ Hai Bên\tCtrl+&T"
+"Machine Both" === "Máy Chõi CaÒ Hai Bên"
+"&Analysis Mode\tCtrl+A" === "Chêì Ğôò Phân Tích\tCtrl+&A"
+"Analyze &File\tCtrl+F" === "Phân Tích &File\tCtrl+F"
+"&Edit Game\tCtrl+E" === "Soaòn ThaÒo Ván CõÌ\tCtrl+&E"
+"E&dit Position\tCtrl+Shift+E" === "Soaòn ThaÒo Thêì CõÌ\tCtrl+Shift+E"
+"Trai&ning" === "Ğa&ng Dâòy Máy"
+"&ICS Client" === "Kêìt Nôìi Chõi Võìi Máy ChuÒ &ICS"
+"&Machine Match" === "Trâòn Ğâìu Võìi &Máy"
+"&Pause\tPause" === "Taòm DıÌng\t&Pause"
+
+"&Accept\tF3" === "Châìp Nhâòn\tF3"
+"D&ecline\tF4" === "TıÌ Chôìi\tF4"
+"Re&match\tF12" === "Chõi Ván NıŞa\tF12"
+"Call &Flag\tF5" === "Ğãòt CõÌ\t&F5"
+"&Draw\tF6" === "ĞêÌ nghiò hoÌa\tF6"
+"Ad&journ\tF7" === "Xin hoaŞn\tF7"
+"A&bort\tF8" === "BoÒ\tF8"
+"&Resign\tF9" === "Nhâòn Thua\tF9"
+"Stop &Observing\tF10" === "NgıÌng Xem"
+"Stop E&xamining\tF11" === "NgıÌng ThıÒ"
+"&Upload to Examine" === "TaÒi ĞêÒ "
+"Adjudicate to &White" === "Phân XıÒ Trãìng Thãìng"
+"Adjudicate to &Black" === "Phân XıÒ Ğen Thãìng"
+"Adjudicate &Draw" === "Phân XıÒ HoÌa"
+
+"Install 1st..." === "Cài Ğãòt Chıõng TriÌnh #1..."
+"Install 2nd..." === "Cài Ğãòt Chıõng TriÌnh #2..."
+"Engine #&1 Settings..." === "Ğãòt Tham Sôì Chıõng TriÌnh #1..."
+"Engine #&2 Settings..." === "Ğãòt Tham Sôì Chıõng TriÌnh #2..."
+"&Hint..." === "Gõòi Yì..."
+"&Book..." === "CâÒm Nang Khai Cuôòc..."
+"&Move Now\tCtrl+M" === "PhaÒi Ği Ngay\tCtrl+M"
+"&Retract Move\tCtrl+X" === "HoaŞn Nıõìc Ği VıÌa RôÌi\tCtrl+X"
+
+"&Mute all Sounds" === "NgıÌng Phát Âm Thanh"
+"&General..." === "Chung..."
+"&Time Control...\tAlt+Shift+T" === "Ğãòt ThõÌi Gian...\tAlt+Shift+T"
+"Common &Engine...\tAlt+Shift+U" === "Chung Cho Caìc Chıõng TriÌnh CõÌ...\tAlt+Shift+U"
+"Ad&judications...\tAlt+Shift+J" === "Phân XıÒ Kêìt QuaÒ...\tAlt+Shift+J"
+"&Load Game...\tAlt+Shift+L" === "TaÒi Ván CõÌ...\tAlt+Shift+L"
+"&Save Game...\tAlt+Shift+S" === "Lıu Ván CõÌ...\tAlt+Shift+S"
+"G&ame List..." === "Danh Sách Ván CõÌ"
+"Soun&ds..." === "Âm Thanh"
+"&ICS..." === "&ICS..."
+"Add ICS..." === "Thêm ICS..."
+"Comm&unications..." === "Kêìt Nôìi...."
+"Save Settings &Now" === "Lıu Các Tham Sôì &Ngay Bây GiõÌ"
+"Save Settings on E&xit" === "Lıu Các Tham Sôì Khi Kêìt Thúc"
+
+"Help &Contents\tF1" === "Nôòi Dung Hıõìng DâŞn"
+"Help &Index" === "Hıõìng DâŞn"
+"How to &Use Help" === "SıÒ Duòng Hıõìng DâŞn"
+"&About WinBoard" === "Thông Tin VêÌ WinBoard"
+
+"White" === "Trãìng"
+"Promote" === "Phong Câìp"
+"Pawn" === "Tôìt"
+"Knight" === "MaŞ"
+"Bishop" === "Tıõòng"
+"Rook" === "Xe"
+"Queen" === "Hâòu (SiŞ cõÌ tıõìng)"
+"King" === "Vua"
+## The next 2 are pieces for Capablanca Chess. Use the names from the Wikipedia entry for this,
+## rather than litteral translations of the English names!
+"Archbishop" === "SiŞ"
+"Chancellor" === "Xe"
+## Next 2 Xiangqi (Chinese Chess) pieces. Google for 'Xiangqi' in the target language to get the standard translation.
+"Elephant" === "Tıõòng"
+"Cannon" === "Pháo"
+"Empty Square" === "Ô Trôìng"
+"Black" === "Ğen"
+"Demote" === "Giaìng câìp"
+"Clear Board    " === "Xóa Bàn CõÌ"
+## Next 3: Shogi pieces.
+"Gold" === "Vàng"
+"Silver" === "Baòc"
+"Lance" === "Giaìo"
+
+"Drop" === "Ğıìt maòng"
+
+"Cop&y and Paste" === "Chép và Dán"
+"&Copy" === "Chép"
+"&Paste" === "Dán"
+
+"&Undo" === "Laòi Nhı Trıõìc"
+"Cu&t" === "Cãìt"
+"&Copy" === "Chép"
+"&Paste" === "Dán"
+"Select &All" === "Choòn Tâìt CaÒ"
+
+DIALOGS:
+
+ABOUTBOX
+
+## Pehaps copyright notices best left untranslated?
+"About WinBoard" === "Thông Tin VêÌ WinBoard"
+"OK" === "Xong"
+"Chessboard for Windows" === "Bàn CõÌ Cho Windows"
+"Copyright 1991 Digital Equipment Corporation" === "BaÒn QuyêÌn 1991 cuÒa Digital Equipment Corporation"
+"Enhancements Copyright 1992-2010  Free Software Foundation" === "Thêm BaÒn quyêÌn 1992-2010 cho Free Software Foundation"
+"Enhancements Copyright 2005\r\nAlessandro Scotti" === "Thêm BaÒn quyêÌn 2005"
+## What happened with H.G.Muller? [He sold his copyrights to FSF for $1]
+## The following string of 6 spaces can be translated to an acknowledgement of the translator,
+## like "Traduccin por scar Toledo G.".
+"      " === ""
+"WinBoard 0.0.0" === "WinBoard 0.0.0"
+
+ABOUTBOX2
+
+## Weird, it is needed? [Normally not. It is a built-in 'Easter Egg' joke.]
+"galactic" === ""
+
+TIME CONTROL DIALOG
+
+"Time Control" === "ThõÌi gian chõi"
+"Conventional chess clock" === "ĞôÌng hôÌ qui chuâÒn"
+"Incremental clock" === "ĞôÌng hôÌ tãng tiêìn"
+"Cancel" === "BoÒ"
+
+## Next is there really only for the benefit of blind users of the JAWS version...
+"Use arrow keys to specify which clock setting type, then press tab to alter values." === "Dùng các phím muŞi tên ğêÒ choòn kiêÒu ğôÌng hôÌ mong muôìn, rôÌi bâìm phím tab ğêÒ thay ğôÒi giá triò."
+"Fixed time per move" === "ThõÌi gian côì ğiònh cho môŞi nıõìc ği"
+"Number of moves:" === "Sôì nıõìc ği:"
+"Within number of minutes:" === "Trong sôì phút:"
+"Initial number of minutes:" === "KhõÒi ğâÌu võìi sôì phút:"
+"Plus number of seconds per move:" === "Sôì giây thêm cho môŞi nıõìc:"
+"Maximum seconds per move:" === "Sôì giây cıòc ğaòi cho môŞi nıõìc:"
+"Time-Odds Factors:" === "Hêò sôì thõÌi gian leÒ:"
+"Engine #1:" === "Chıõng triÌnh cõÌ 1:"
+"Engine #2:" === "Chıõng triÌnh cõÌ 2:"
+
+LOAD OPTIONS DIALOG
+
+"Load Game Options" === "Các Lıòa Choòn TaÒi Ván CõÌ"
+"Load games with automatic stepping" === "TaÒi các ván cõÌ và tıò ğôòng ği quân"
+"seconds per move" === "sôì giây môŞi nıõìc"
+
+SAVE OPTIONS DIALOG
+
+"Save Game Options" === "Các Lıòa Choòn Lıu Ván CõÌ"
+"Save As: " === "KiêÒu Lıu"
+"Save games automatically" === "Lıu tıò ğôòng các ván cõÌ"
+"Prompt for filename" === "Nhãìc tên file"
+"To file:" === "Ra file:"
+"PGN" === "PGN"
+"Old" === "CuŞ"
+"Browse..." === "Xem"
+"Save out of book info in PGN" === "Lıu thông tin khi hêìt câÒm nang khai cuôòc vào PGN"
+
+1536
+## This dialog is only used in some older Windows versions, so you might not be ableto test it.
+
+"Open" === "MõÒ"
+"File &Name:" === "Tê&n File:"
+"&Directories:" === "Thı Muòc:"
+"List Files of &Type:" === "Danh Sách File Võìi KiêÒu:"
+"Dri&ves:" === "ÔÒ ĞiŞa:"
+"&Help" === "&Hıõìng DâŞn"
+
+"&Index number:" === "ChiÒ Muòc:"
+
+COMMPORT
+## Always disabled if you are not actually using an ICS through a comport, so difficult to test.
+
+"Communication Port Settings" === "Thiêìt lâòp côÒng truyêÌn tin"
+"Net&work..." === "Maòng..."
+"&Port:" === "CôÒng:"
+"Data &Rate:" === ""
+"Data &Bits:" === ""
+"P&arity:" === ""
+"&Stop Bits:" === ""
+"F&low:" === ""
+
+EDIT COMMENT
+
+"Edit Comment" === "Soaòn BiÌnh Chú"
+"&Clear" === "Xóa"
+"&Edit" === "Soaòn"
+
+PROMOTION POPUP
+
+"Promote to:" === "Phong câìp thành:"
+## next used in Shogi as promotion-popup header
+"Promote?" === "Phong câìp?"
+"Promotion" === "Phong câìp"
+"&Queen" === "Hoàng Hâòu"
+"&Rook" === "Xe"
+"&Bishop" === "Tıõòng"
+"K&night" === "MaŞ"
+"&King" === "Vua"
+"&Cancel" === "BoÒ"
+
+"Chance&llor" === "Xe"
+"&Archbishop" === "SiŞ"
+"YES" === "ĞôÌng Yì"
+"NO" === "Không"
+"C&entaur" === "MaŞ"
+
+GAME LIST
+
+"Game List" === "Danh Sách Ván CõÌ"
+"&Load" === "TaÒi"
+"&Prev" === "Trıõìc"
+"&Next" === "Tiêìp"
+"&Close" === "Ğóng"
+"Filter" === "Loòc"
+
+EDIT TAGS
+
+"Edit Tags" === "Soaòn các theÒ"
+
+ERROR
+
+"ICS Interaction" === "Tıõng taìc ICS"
+"Dialog" === "Hôòp thoaòi"
+"Error" === "LôŞi"
+## I don't think the next will really appear ever.
+"Sorry Charlie" === "Xin lôŞi Charlie"
+
+COLORIZE
+
+"I C S Interaction Colors" === "Caìc mâÌu tıõng taìc I C S"
+"Interaction Colors" === "Caìc mâÌu tıõng taìc"
+"Premove" === "Nıõìc trıõìc"
+"Alarm" === "CaÒnh baìo"
+"Colors" === "MâÌu"
+"&Choose Color..." === "&Choòn MâÌu..."
+"&Bold" === "Ğâòm"
+"&Italic" === "Nghiêng"
+"&Underline" === "Gaòch chân"
+"&Strikeout" === "MâÌu viêÌn"
+
+QUESTION
+
+## next one seems only a placeholder, and never appears? [might also be just a programmer's joke...]
+"Enter a chess engine command or just type something stupid that will completely screw things up." === ""
+"Question" === "Câu hoÒi"
+"Enter" === "Nhâòp"
+
+STARTUP DIALOG
+
+"WinBoard Startup" === "WinBoard Ğang KhõÒi Ğôòng"
+"What would you like to do?" === "Baòn Muôìn Làm GiÌ?"
+"&Play against a chess engine or match two engines" === "Chõi võìi môòt chıõng triÌnh cõÌ hoãòc cho hai chıõng triÌnh ğâìu võìi nhau"
+"&Use an Internet Chess Server" === "Kêìt nôìi và chõi võìi môòt máy chuÒ cõÌ"
+"Just &view or edit game files" === "ChiÒ xem hoãòc soaòn thaÒo các file ván cõÌ"
+"Specify Chess &Engines:" === "Choòn TriÌnh CõÌ:"
+"Specify Chess &Server:" === "Choòn Máy ChuÒ Chõi CõÌ"
+"&Additional options" === "Các lıòa choòn thêm"
+
+INDEX (IN FILE-BROWSE DIALOG)
+
+"Inde&x number:" === "Sôì chiÒ muòc"
+
+MOVE TYPE-IN
+
+"Type in a move" === "Nhâòp vaÌo môòt nıõìc ği"
+
+USER-NAME TYPE-IN
+
+"Type in your name" === "Nhâòp vaÌo tên baòn"
+
+SOUND DIALOG
+
+"Sounds" === "Âm thanh"
+
+"&Event:" === "Sıò kiêòn:"
+"&No sound" === "Không âm thanh"
+"&Default beep" === "Tiêìng tút ngâÌm ğiònh"
+"&Built-in sound:" === "Âm thanh có sãŞn"
+"&WAV file:" === "File âm thanh WAV"
+
+"B&rowse..." === "Xem..."
+"&Play" === "Chõi"
+"&Defaults" === "NgâÌm ğiònh"
+
+GENERAL OPTIONS DIALOG
+## pleace keep the indication of the accelerator keys for the same keystroke
+## Note: finely tuned spaces to align keys at right
+
+"General Options" === "Các Lıòa Choòn Chung"
+"Always on &Top" === "Luôn NôÒi Lên Trên"
+"Always &Queen            Ctrl+Shift+Q" === "Luôn Là Hoàng Hâòu           Ctrl+Shift+&Q"
+"Animate &Dragging" === "Khi Keìo Thâìy Quân Ği Theo"
+"&Animate Moving         Ctrl+Shift+A" === "Thâìy Quân Chaòy Khi Ği        Ctrl+Shift+&A"
+"Auto &Flag                   Ctrl+Shift+F" === "Tıò Ğôòng Ğãòt CõÌ           Ctrl+Shift+&F"
+"Auto Flip &View" === "Tıò Ğôòng Xoay Bàn CõÌ"
+"Auto &Raise Board" === "Tıò Ğôòng Hiêòn Bàn CõÌ"
+"&Blindfold" === "CõÌ Mù"
+"Highlight Dra&gging" === "Ğánh Dâìu Khi Ğang Kéo Quân CõÌ"
+"Highlight Last &Move" === "Ğánh Dâìu Nıõìc Cuôìi"
+"Periodic &Updates" === "Câòp Nhâòt Theo Chu KyÌ"
+"Ponder &Next Move  Ctrl+Shift+P" === "Tiêìp Tuòc Tính Trıõìc"
+"&Popup Exit Message" === "Bâòt CıÒa SôÒ Thoát Chıõng triÌnh"
+"Popup Move &Errors" === "Bâòt CıÒa SôÒ LôŞi Nıõìc Ği"
+"Show Butt&on Bar" === "Hiêòn Thanh Nút Bâìm"
+"Show &Coordinates" === "Hiêòn Toòa Ğôò"
+"&Show Thinking" === "Hiêòn Tính Toán"
+"Test &Legality            Ctrl+Shift+L" === "KiêÒm Tra Hõòp &Lêò"
+"&Hide Thinking          Ctrl+Shift+H" === "ÂÒn Suy NghiŞ"
+"&Info in Move History   Ctrl+Shift+I" === "Thông Tin trong Nıõìc Ği"
+"&Send Engine Think" === "Lêònh Cho Chıõng TriÌnh Suy NghiŞ"
+"E&xtended PGN Info    Ctrl+Shift+X" === "Thông Tin MõÒ rôòng Trong PGN"
+"Highlight with Arro&w" === "Ğánh Dâìu Võìi MuŞi Tên"
+"Displa&y Logos" === "Hiêòn Logo"
+"One-Click Move" === "Ği Quân Võìi ChiÒ Môòt Bâìm"
+
+ICS OPTIONS
+
+"ICS Options" === "Caìc lıa chon cho ICS"
+"&Auto Comment" === "Tıò ğôòng chuì thiìch"
+"Auto &Observe" === "Tıò ğôòng xem"
+"&Get Move List" === "Lâìy caìc nıõìc ği"
+"&Local Line Editing" === ""
+"&Quiet Play" === "Chõi trong im lãòng"
+"&Premove" === ""
+"&White first move" === "Nıõìc ğâÌu cuÒa Trãìng"
+"&Black first move" === "Nıõìc ğâÌu cuÒa Ğen"
+"&Sound alarm at" === "Âm thanh caÒnh baìo taòi"
+"seconds" === "thıì nhiÌ"
+"Choose..." === "Choòn..."
+"Do &not colorize messages" === "ĞıÌng maÌu meÌ cho thông baìo"
+"&Auto Kibitz" === "Tıò ğôòng maìch nıõìc"
+"Auto Kibit&z" === "Tıò ğôòng maìch nıõìc"
+"See&k Graph" === "TiÌm ğôò thiò"
+"auto-&Refresh" === "tıò ğôòng-laÌm tıõi"
+"Bckgnd Obser&ve" === "NêÌn xem"
+"&Dual Board" === "Hai baÌn cõÌ"
+"One-Click &Move" === "Ği bãÌng 1-bâìm"
+"Background..." === "NêÌn..."
+"&Defaults..." === "Caìc ngâÌm ğiònh..."
+"Startup &Chat Boxes:" === "Bâòt caìc hôòp chaìt:"
+"General" === "Chung"
+
+BOARD OPTIONS
+## (NOTE: AllWhite uses the white (outline-style) piece bitmaps for both sides
+##        FlipBlack draws the black pieces upside down)
+
+"Board Options" === "Caìc lıòa choòn baÌn cõÌ"
+"Defaults" === "Caìc ngâÌm ğiònh"
+"Light Squares" === "Ô Trãìng"
+"Dark Squares" === "Ô Ğen"
+"White Pieces" === "Quân Trãìng"
+"Black Pieces" === "Quân Ğen"
+"Square Highlights" === "Ğaình Dâìu Ô"
+"Premove Highlights" === "Ğaình Dâìu Nıõìc VıÌa Ği"
+"Monochrome" === "Ğõn sãìc"
+"All White" === "Tâìt CaÒ Trãìng"
+"Flip Black" === "ĞôÒi Ğen"
+"Size" === "Kiìch Thıõìc"
+
+BOARD SIZES (translate as number?)
+## Don't put numbers, or nobody will translate them. [True. But do we really want them translated?]
+## This is a space for imagination!
+"&Tiny" === "Cıòc nhoÒ"
+"T&eeny" === "NhoÒ xiìu"
+"&Dinky" === "NhoÒ tiì"
+"&Petite" === "NhoÒ nıŞa"
+"Sl&im" === "NhoÒ hõn"
+"&Small" === "NhoÒ"
+"Medi&ocre" === "GâÌn nhoÒ"
+"&Middling" === "Trung biÌnh nhoÒ"
+"&Average" === "TâÌm tâÌm"
+"Mode&rate" === "Nhõ nhõŞ"
+"Medi&um" === "Trung biÌnh"
+"Bul&ky" === "Trung biÌnh lõìn"
+"&Large" === "Lõìn"
+"&Big" === "Thâòt lõìn"
+"&Huge" === "GâÌn khôÒng lôÌ"
+"&Giant" === "KhôÒng lôÌ"
+"&Colossal" === "Râìt khôÒng lôÌ"
+"Tita&nic" === "ViŞ ğaòi"
+
+FONTS
+
+"Fonts" === ""
+"Current Board Size" === "Kiìch Thıõìc BaÌn CõÌ Hiêòn Taòi"
+"All Board Sizes" === "CõŞ BaÌn CõÌ"
+"&Revert to Defaults" === "Khôi phuòc nhı ngâÌm ğiònh"
+"Clocks" === "ĞôÌng HôÌ"
+"Messages" === "Thông Baìo"
+"Coordinates" === "Toòa ğôò"
+"Tags" === "TheÒ"
+"Comments" === "Caìc Chuì Thiìch"
+"I C S Interaction" === "I C S tıõng taìc"
+
+"&Color..." === "MâÌu..."
+"Move History, Engine Output" === "Nıõìc ği, TriÌnh cõÌ in ra"
+
+ADJUDICATIONS DIALOG
+
+"Adjudications" === "Phân xıÒ"
+"Ponder Next Move" === "VâŞn Tiình (NghiŞ) Khi Ğôìi Phıõng Ğêìn Lıõòt"
+"Enable and Show Thinking (recommended)" === "Cho Thâìy Maìy NghiŞ (Nên Choòn)"
+"Hide Thinking when Playing against Human" === "ÂÒn Maìy NghiŞ khi chõi võìi NgıõÌi"
+"Periodic Updates (for Analysis Mode)" === "Câòp Nhâòt theo chu kyÌ (õÒ chêì ğôò phân tiìch)"
+"Adjudications in non-ICS games" === "Phân xıÒ võìi vaìn cõÌ không ICS"
+"Adjudicate draw after:" === "Phân xıÒ hoÌa sau:"
+"moves" === "nıõìc ği"
+"Win/loss adjudication threshold:" === "NgıõŞng phân xıÒ thãìng/thua:"
+"centipawns" === "phâÌn trãm Tôìt"
+"&Verify Engine Claims" === "KiêÒm Tra Caìc Tuyên Bôì cuÒa Maìy"
+"Detect &Mates" === "Phaìt Hiêòn Chiêìu Hêìt"
+"Draw if &Insufficient Material" === "HoÌa Nêìu Không ĞuÒ Quân/Châìt"
+"Adjudicate &Trivial Draws" === "Phân XıÒ Võìi HoÌa HiêÒn Nhiên"
+"Apply" === "Aìp Duòng võìi"
+## next 2 are suffixed to a text-edit containing a number (50 or 3)
+"-move rule" === "-luâòt nıõìc"
+"-fold repeats" === "-lâÌn lãòp"
+"Engine #1 Score is Absolute" === "ĞiêÒm cuÒa TriÌnh #1 laÌ Tuyêòt ğôìi"
+"Engine #2 Score is Absolute" === "ĞiêÒm cuÒa TriÌnh #2 laÌ Tuyêòt ğôìi"
+
+COMMON ENGINE DIALOG
+
+"Common Engine Settings" === "Tham Sôì Chung Cho TriÌnh CõÌ"
+"Polyglot Directory:" === "Thı Muòc cuÒa Polyglot:"
+"Hash Size (MB):" === "Kiìch thıõìc Hash (MB):"
+"EGTB Path:" === "Thı muòc EGTB (taÌn cuôòc)"
+"EGTB Size (MB):" === "Kiìch Thıõìc EGTB (MB)"
+"Use Book:" === "DuÌng CâÒm Nang Khai Cuôòc:"
+"Max nr of CPUs:" === "Sôì loŞi cıòc ğaòi"
+"First has Own Book" === "TriÌnh 1 coì câÒm nang riêng"
+"Second has Own Book" === "TriÌnh 2 coì câÒm nang riêng"
+"Book Depth:" === "Ğôò sâu câÒm nang:"
+"Book Variation:" === "Biêìn CâÒm Nang:"
+"Default Match Games:" === "Sôì Trâòn NgâÌm Ğiònh:"
+
+NEW-VARIANT DIALOG
+## (NOTE: the 'holdings' are the pieces standing next to the board ('in hand')
+
+"Variants" === "Caìc Biêìn"
+"Variant" === "Biêìn"
+"Board size:" === "Kiìch thıõìc baÌn cõÌ:"
+"ranks" === "doÌng"
+"files" === "côòt"
+"Holdings with room for:" === ""
+"pieces" === "quân"
+"('-1' means defaults for selected variant)" === "('-1' nghiŞa laÌ ngâÌm ğiònh cho biêìn choòn)"
+
+VARIANT NAMES: 
+"&normal" === "biÌnh thıõÌng"
+"&FRC" === ""
+"&wildcastle" === ""
+"&nocastle" === ""
+"&losers" === ""
+"&giveaway" === ""
+"s&uicide" === ""
+"&3Check" === ""
+"&twokings" === ""
+"&atomic" === ""
+"cra&zyhouse" === ""
+"&bughouse" === ""
+"&Twilight" === ""
+"&shogi" === ""
+"su&per" === ""
+"&knightmate" === ""
+"&Berolina" === ""
+"c&ylinder" === ""
+"&fairy" === ""
+"&makruk" === ""
+"&gothic" === ""
+"&capablanca" === ""
+"&Janus" === ""
+"&CRC" === ""
+"&Falcon" === ""
+"cou&rier" === ""
+"&Great" === ""
+"&Shatranj" === ""
+"&xiangqi" === "cõÌ tıõìng"
+
+NEW SHUFFLE GAME
+
+"New Shuffle Game" === ""
+"&Start Position Number:" === "Bãìt ĞâÌu Võìi Sôì cuÒa Thêì CõÌ:"
+"Random" === "NgâŞu Nghiên"
+
+GAME-LIST OPTIONS DIALOG
+
+"Game List Options" === "Lıòa Choòn Danh Saìch Vaìn CõÌ"
+"PGN &Tags:" === "Caìc &theÒ PGN"
+"&Up" === "Lên"
+"&Down" === "Xuôìng"
+"Default" === "NgâÌm Ğiònh"
+"Factory" === "Theo nhaÌ saÒn xuâìt"
+"Restore to:" === "Khôi phuòc:"
+
+MOVE HISTORY WINDOW
+
+"Move History" === "Caìc Nıõìc Ği"
+
+EVALUATION GRAPH
+
+"Evaluation Graph" === "ĞôÌ Thiò Lıõòng Giaì"
+
+ENGINE OUTPUT WINDOW
+
+"Engine output" === "TriÌnh cõÌ in ra"
+"Engine #1" === "Chıõng triÌnh #1"
+"NPS" === "Tôìc ğôò"
+"Engine #2" === "Chıõng triÌnh #2"
+
+CHAT BOXES
+
+"Chat Window" === "CıÒa SôÒ Chaìt"
+"Chat partner:" === "Baòn chaìt:"
+"Clear" === "Xoìa"
+"Send" === "GıÒi"
+
+winboard.c
+
+"&File" === ""
+"&Edit" === "Soaòn"
+"&View" === "Xem"
+"&Mode" === "Chêì Ğôò"
+"&Action" === "HaÌnh Ğôòng"
+"&Step" === "Bıõìc"
+"E&ngine" === "TriÌ&nh cõÌ"
+"&Options" === "Lıòa Choòn"
+"&Help" === "&Hıõìng DâŞn"
+"You can only start a match from the initial position" === "Baòn chiÒ coì thêÒ bãìt ğâÌu vaìn cõÌ tıÌ thêì cõÌ khõÒi ğâÌu"
+"Font name too long:" === "Tên font quaì daÌi:"
+"Font point size missing:" === "Kiìch cõŞ font biò thiêìu:"
+"Can't parse color name %s" === "Không thêÒ lâìy ğıõòc tên mâÌu %s"
+"Unrecognized board size value" === "Không nhâòn ra giaì triò kiìch thıõìc baÌn cõÌ"
+"Unrecognized argument" === "Không nhâòn ra tham sôì"
+"No value provided for argument" === "Tham sôì coÌn thiêìu giaì triò"
+"Incomplete \\ escape in value for" === "CoÌn thiêìu kyì hiêòu escape \\ trong giaì triò cuÒa"
+"Failed to open indirection file" === "Không mõÒ ğıõòc file giaìn tiêìp"
+"Unrecognized boolean argument value" === "Không nhâòn ra giaì triò tham sôì ğuìng/sai"
+"Unrecognized argument" === "Không nhâòn ra tham sôì"
+"Too many colors" === "Quaì nhiêÌu mâÌu"
+"&Minimize\tCtrl+F4" === "Thu nhoÒ\tCtrl+F4"
+"White: %s" === "Trãìng: %s"
+"We only care about the height here" === "Chuìng tôi chiÒ câÌn ğôò cao õÒ ğây"
+"Cannot build game list" === "Không thêÒ taòo ra danh saìch vaìn cõÌ"
+"Load Game from File" === "TaÒi Vaìn cõÌ tıÌ File"
+"Load Position from File" === "TaÒi Thêì cõÌ tıÌ File"
+"Save Game to File" === "Lıu Vaìn cõÌ tıÌ File"
+"Save Diagram to File" === "Lıu BiêÒu ĞôÌ tıÌ File"
+"Save Position to File" === "Lıu Thêì cõÌ ra File"
+"%s does not support analysis" === "%s không duÌng ğêÒ phân tiìch ğıõòc"
+"Analyze Game from File" === "Phân tiìch Vaìn cõÌ lâìy tıÌ File"
+"Unable to activate help" === "Không thêÒ kiìch hoaòt hıõìng dâŞn"
+"Send to chess program:" === "GıÒi ğêìn chıõng triÌnh cõÌ:"
+"Send to second chess program:" === "GıÒi ğêìn chıõng triÌnh cõÌ thıì hai:"
+"Direct Command" === "Lêònh trıòc tiêìp"
+"Error loading sound %s" === "LôŞi naòp âm thanh %s"
+"Error playing sound %s" === "LôŞi chõi âm thanh %s"
+"File open failed" === "Không mõÒ ğıõòc file"
+"Internal error in file dialog box" === ""
+"Option Error" === "Lıòa choòn LôŞi"
+"Choose an option, or cancel to exit" === ""
+"Unable to activate help" === "Không thêÒ kiìch hoaòt hıõìng dâŞn"
+"Displayed move is not current" === ""
+"Could not parse move" === "Không thêÒ phân tiìch ğıõòc nıõìc ği"
+"%s:\nError code %d" === "%s:\nMaŞ lôŞi %d"
+"Error" === "LôŞi"
+"Fatal Error" === "LôŞi nghiêm troòng"
+"Exiting" === "Ğang thoaìt"
+"%s:\nError code %d" === ""
+"Note" === "Lıu yì"
+"Error writing to chess program" === "LôŞi ghi ra cho chıõng triÌnh cõÌ"
+"User" === "NgıõÌi duÌng"
+"Unknown" === "Không hiêÒu"
+"White" === "Trãìng"
+"Black" === "Ğen"
+"Save Game to File" === "Lıu Vaìn cõÌ ra File"
+"Not implemented" === "Chıìc nãng chıa thıòc hiêòn"
+
+"Shout Text" === ""
+"SShout/CShout" === ""
+"Channel 1 Text" === ""
+"Channel Text" === ""
+"Kibitz Text" === ""
+"Tell Text" === ""
+"Challenge Text" === ""
+"Request Text" === ""
+"Seek Text" === ""
+"Normal Text" === ""
+"None" === "Không"
+"Pawn" === "Tôìt"
+"Knight" === "MaŞ"
+"Bishop" === "Tıõòng"
+"Rook" === "Xe"
+"Queen" === "Hâòu"
+"Information" === "Thông tin"
+
+wclipbrd.c
+
+"Unable to convert position to FEN." === "Không thêÒ chuyêÒn thêì cõÌ thaÌnh FEN."
+"Unable to copy FEN to clipboard." === "Không thêÒ copy FEN vaÌo clipboard."
+"Cannot create temporary file name." === "Không thêÒ taòo tên file taòm."
+"Cannot open temporary file." === "Không thêÒ mõÒ file taòm."
+"Cannot write to temporary file." === "Không thêÒ lıu ra file taòm."
+"Cannot reopen temporary file." === "Không thêÒ mõÒ laòi file taòm."
+"Cannot determine size of file." === "Không thêÒ xaìc ğiònh kiìch thıõìc cuÒa file."
+"Cannot allocate clipboard buffer." === "Không thêÒ câìp phaìt bôò nhõì ğêòm cuÒa clipboard."
+"Cannot read from temporary file." === "Không thêÒ ğoòc tıÌ file taòm."
+"Error reading from temporary file." === "LôŞi khi ğoòc file taòm."
+"Cannot copy text to clipboard" === "Không thêÒ copy ğoaòn vãn baÒn vaÌo clipboard"
+"Unable to allocate memory for clipboard." === "Không thêÒ câìp phaìt bôò nhõì cho clipboard."
+"Unable to lock clipboard memory." === "Không thêÒ khoìa bôò nhõì cuÒa clipboard."
+"Cannot unlock clipboard memory." === "Không thêÒ mõÒ khoìa bôò nhõì cuÒa clipboard."
+"Cannot open clipboard." === "Không thêÒ mõÒ bôò nhõì cuÒa clipboard."
+"Cannot empty clipboard." === "Không thêÒ xoìa clipboard."
+"Cannot copy text to clipboard." === "Không thêÒ copy vãn baÒn vaÌo clipboard."
+"Cannot close clipboard." === "Không thêÒ ğoìng clipboard."
+"Unable to paste FEN from clipboard." === "Không thêÒ daìn FEN tıÌ clipboard."
+"Unable to create temporary file." === "Không thêÒ taòo file taòm."
+"Error writing to temporary file." === "LôŞi viêìt ra file taòm."
+"Unable to open clipboard." === "Không thêÒ mõÒ clipboard."
+"No text in clipboard." === "Không coì vãn baÒn trong clipboard."
+"Unable to lock clipboard memory." === "Không thêÒ khoìa bôò nhõì cuÒa clipboard."
+"Unable to allocate memory for text string." === "Không thêÒ câìp phaìt bôò nhõì cho xâu vãn baÒn."
+"Unable to unlock clipboard memory." === "Không thêÒ mõÒ khoìa bôò nhõì cuÒa clipboard."
+"Unable to close clipboard." === "Không thêÒ ğoìng nhõì cuÒa clipboard."
+
+woptions.c
+
+## For now, do NOT translate sound names, because WinBoard will no longer recognize them
+"Move" === ""
+"Bell" === ""
+"ICS Alarm" === ""
+"ICS Win" === ""
+"ICS Loss" === ""
+"ICS Draw" === ""
+"ICS Unfinished" === ""
+"Shout" === ""
+"SShout/CShout" === ""
+"Channel 1" === ""
+"Channel" === ""
+"Kibitz" === ""
+"Tell" === ""
+"Challenge" === ""
+"Request" === ""
+"Seek" === ""
+## end of sound names
+
+"Browse for Sound File" === "Xem caìc file âm thanh"
+"Can't parse com port settings" === "Không thêÒ phân tiìch ğıõòc thông sôì vêÌ côÒng"
+"Option Error" === "LôŞi lıòa choòn"
+"Invalid data rate" === "TyÒ lêò dıŞ liêòu không hõòp lêò"
+"Option Error" === "LôŞi lıòa choòn"
+"Failed to set comm port state;\r\ninvalid options?" === "Không ğãòt ğıõòc traòng thaìi cho côÒng truyêÌn tin;\n\nlıòa choòn không hõòp lêò?"
+"Failed to set comm port state" === "Không ğãòt ğıõòc traòng thaìi cho côÒng truyêÌn tin"
+"Invalid load game step rate" === "TyÒ lêò sôì bıõìc taÒi vaìn cõÌ không hõòp lêò"
+"Invalid save game file name" === "Tên file ghi ra không hõòp lêò"
+"Browse for Auto Save File" === "Hiêòn file ğêÒ tıò ğôòng ghi ra"
+"Invalid moves per time control" === "Không hõòp lêò: sôì nıõìc cho kiêÒu tiình giõÌ naÌy"
+"Invalid minutes per time control" === "Không hõòp lêò: sôì phuìt cho môŞi nıõìc"
+"Invalid increment" === "Tãng tiêìn không hõòp lêò"
+"Invalid initial time" === "ThõÌi gian khõÒi ğâÌu không hõòp lêò"
+"Changing time control during a game is not implemented" === "Chıa cho pheìp thay ğôÒi kiêÒu tiình giõÌ giıŞa vaìn chõi"
+
+"Variant %s not supported by %s" === "Biêìn %s không thêÒ suy tıÌ %s"
+"Warning: second engine (%s) does not support this!" === "CaÒnh baìo: triÌnh cõÌ 2 (%s) không cho duÌng chıìc nãng naÌy"
+"Invalid ICS Alarm Time" === "CaÒnh baìo thõÌi gian cuÒa ICS không hõòp lêò"
+"Invalid max time per move" === "Không hõòp lêò: ThõÌi gian cıòc ğaòi cho môŞi nıõìc ği"
+"Invalid time-odds factor" === "Không hõòp lêò: hêò sôì thõÌi gian leÒ"
+"Choose Folder" === "Choòn Thı muòc"
+"Choose Book" === "Choòn câÒm nang khai cuôòc"
+"Choose Polyglot Directory" === "Choòn Thı Muòc Ngôn NgıŞ"
+"Choose EGTB Directory:" === "Choòn Thı Muòc CâÒm Nang TaÌn Cuôòc"
+"Polyglot was not found in the specified folder!" === "Không coì caìc file ngôn ngıŞ trong thı muòc naÌy!"
+
+wgamelist.c
+
+"No game selected" === "Không vaìn cõÌ naÌo ğıõòc choòn"
+"Can't go forward any further" === "Không thêÒ ği tiêìp thêm ğıõòc nıŞa"
+"Can't back up any further" === "Không thêÒ ği laòi thêm ğıõòc nıŞa"
+"No game list" === "Không coì danh saìch vaìn cõÌ"
+"Game List" === "Danh saìch vaìn cõÌ"
+"Game list not loaded or empty" === "Danh saìch vaìn cõÌ không ğıõòc naòp hoãòc trôìng"
+"%s - %d/%d games" === "%s - %d/%d vaìn cõÌ"
+
+wedittags.c
+
+"Edit Tags" === "Soaòn caìc theÒ"
+"Tags" === "TheÒ"
+"Error replacing tags." === "LôŞi thay thêì caìc theÒ."
+
+wsettings.c
+
+"%s Engine Settings (%s)" === "Thiêìt Lâòp CuÒa TriÌnh CõÌ %s (%s)"
+"OK" === "Xong"
+"Cancel" === "BoÒ"
+
+backend.c
+
+"bad timeControl option %s" === "lıòa choòn sai cho ThõÌi gian ĞiêÌu khiêÒn %s"
+"bad searchTime option %s" === "lıòa choòn sai cho thõÌi gian tiÌm kiêìm %s"
+## following to will appear in combinationslike "first engine" 
+"first" === "thıì nhâìt"
+"second" === "thıì nhiÌ"
+"protocol version %d not supported" === "không cho pheìp phiên baÒn %s giao thıìc (protocol)"
+"Variant %s supported only in ICS mode" === "Biêìn cõÌ %s chiÒ duÌng ğıõòc võìi ICS"
+"Unknown variant name %s" === "Không hiêÒu tên biêìn cõÌ %s"
+"Starting chess program" === "KhõÒi ğôòng triÌnh cõÌ"
+"Could not open comm port %s" === "Không mõÒ ğıõòc côÒng truyêÌn tin %s"
+"Could not connect to host %s, port %s" === "Không thêÒ kêìt nôìi ğıõòc ğêìn maìy chuÒ %s, côÒng %s"
+"Unknown initialMode %s" === "Không biêìt vêÌ %s"
+"Can't have a match with no chess programs" === "Không thêÒ ğâìu cõÌ khi không coì triÌnh cõÌ naÌo"
+"Bad game file" === "File vaìn cõÌ không ğuìng"
+"Bad position file" === "File thêì cõÌ không ğuìng"
+"AnalyzeFile mode requires a game file" === "Chêì ğôò Phân tiìch File yêu câÌu coì file"
+"Analysis mode requires a chess engine" === "Chêì ğôò Phân tiìch câÌn chaòy võìi môòt triÌnh cõÌ"
+"Analysis mode does not work with ICS mode" === "Chêì ğôò Phân tiìch không laÌm viêòc ğıõòc võìi ICS"
+"MachineWhite mode requires a chess engine" === "Chêì ğôò Maìy chõi bên Trãìng câÌn coì môòt triÌnh cõÌ"
+"MachineWhite mode does not work with ICS mode" === "Chêì ğôò Maìy chõi bên Trãìng không laÌm viêòc ğıõòc võìi ICS"
+"MachineBlack mode requires a chess engine" === "Chêì ğôò Maìy chõi bên Ğen câÌn coì môòt triÌnh cõÌ"
+"MachineBlack mode does not work with ICS mode" === "Chêì ğôò Maìy chõi bên Ğen không laÌm viêòc ğıõòc võìi ICS"
+"TwoMachines mode does not work with ICS mode" === "Chêì ğôò Maìy Chõi CaÒ Hai Bên không laÌm viêòc ğıõòc võìi ICS"
+"TwoMachines mode requires a chess engine" === "Chêì ğôò Maìy Chõi CaÒ Hai Bên câÌn coì môòt triÌnh cõÌ"
+"Training mode requires a game file" === "Chêì ğôò Ğang Dâòy Maìy câÌn coì môòt file vaìn cõÌ"
+"Error writing to ICS" === "LôŞi viêìt ra cho ICS"
+"Error reading from keyboard" === "LôŞi ğoòc baÌn phiìm"
+"Got end of file from keyboard" === "Coì Hêìt File tıÌ baÌn phiìm"
+"Error writing to ICS" === "LôŞi viêìt ra cho ICS"
+"Error writing to display" === "LôŞi viêìt ra ğêÒ hiêòn thiò"
+"Error gathering move list: two headers" === "LôŞi khi lâìy danh saìch nıõìc ği: coì hai tiêu ğêÌ"
+"Error gathering move list: nested" === "LôŞi khi lâìy danh saìch nıõìc ği: lôÌng nhau"
+"Connection closed by ICS" === "Kêìt nôìi biò ICS cãìt"
+"Error reading from ICS" === "LôŞi ğoòc tıÌ ICS"
+"Failed to parse board string:\n\"%s\"" === "Không phân tiìch ğıõòc xâu thêì cõÌ"
+"Game too long; increase MAX_MOVES and recompile" === "Vaìn cõÌ quaì daÌi; tãng MAX_MOVES vaÌ diòch laòi"
+"Error gathering move list: extra board" === "LôŞi khi lâìy danh saìch nıõìc ği: coì thıÌa thêì cõÌ"
+"Illegal move \"%s\" from ICS" === "Nıõìc không hõòp lêò  \"%s\" võìi ICS"
+"Couldn't parse move \"%s\" from ICS" === "Không thêÒ phân tiìch ğıõòc nıõìc \"%s\" tıÌ ICS"
+## The leading 'say' is used as ICS command here, and should NOT be translated. Only the message behind it.
+"say Internal error; bad moveType %d (%d,%d-%d,%d)" === "lôŞi nôòi bôò; kiêÒu nıõìc sai %d (%d,%d-%d,%d)"
+"You are playing Black" === "Baòn ğang chõi bên Ğen"
+"You are playing White" === "Baòn ğang chõi bên Trãìng"
+"It is White's turn" === "Lıõòt ği laÌ Trãìng"
+"It is Black's turn" === "Lıõòt ği laÌ Ğen"
+"Displayed position is not current" === "Thêì cõÌ ğang hiêòn không phaÒi laÌ thêì cõÌ ğang chõi"
+"Illegal move" === "Nıõìc ği không hõòp lêò"
+"End of game" === "Kêìt thuìc vaìn cõÌ"
+"Incorrect move" === "Nıõìc ği sai"
+## next 6: Second (first 3) or first (other) '%s' will be substituted for 'first' or 'second'.
+"Illegal move \"%s\" from %s machine" === "Nıõìc ği không hõòp lêò \"%s\" tıÌ triÌnh cõÌ %s"
+"Illegal move \"%s\" (rejected by %s chess program)" === "Nıõìc ği không hõòp lêò \"%s\" (tıÌ chôìi bõÒi triÌnh cõÌ %s)"
+"Failed to start %s chess program %s on %s: %s\n" === "Không khõÒi %s ğıõòc triÌnh cõÌ %s trên %s: %s\n"
+"Error writing to %s chess program" === "LôŞi ghi ra cho triÌnh cõÌ %s"
+"Error: %s chess program (%s) exited unexpectedly" === "LôŞi: triÌnh cõÌ %s (%s) thoaìt bâìt ngõÌ"
+"Error reading from %s chess program (%s)" === "LôŞi ğoòc tıÌ triÌnh cõÌ %s (%s)"
+"Forfeit due to illegal move" === "XıÒ thua do ği sai luâòt"
+"%s does not support analysis" === "%s không duÌng ğêÒ phân tiìch ğıõòc"
+"Hint: %s" === "Gõòi yì: %s"
+"Machine accepts your draw offer" === "Maìy châìp nhâòn ğêÌ nghiò hoÌa cuÒa baòn"
+"Machine offers a draw\nSelect Action / Draw to agree" === "TriÌnh cõÌ ğêÌ nghiò hoÌa\nChoòn HaÌnh ğôòng / HoÌa nêìu ğôÌng yì"
+"%s (only move)" === "%s (nıõìc ği)"
+"Ambiguous move in ICS output: \"%s\"" === "Nıõìc nhâòp nhãÌng tıÌ ICS: \"%s\""
+"Illegal move in ICS output: \"%s\"" === "Nıõìc không hõòp lêò tıÌ ICS: \"%s\""
+"Gap in move list" === "Thiêìu nıõìc"
+"Game too long; increase MAX_MOVES and recompile" === "Vaìn cõÌ quaì daÌi; tãng MAX_MOVES vaÌ diòch laòi"
+"Variant %s not supported by %s" === "Biêìn cõÌ %s không duÌng ğıõòc võìi %s"
+"Startup failure on '%s'" === "Không khõÒi ğôòng ğıõòc võìi '%s'"
+"Waiting for first chess program" === "Ğõòi triÌnh cõÌ 1"
+"Waiting for second chess program" === "Ğõòi triÌnh cõÌ 2"
+"Match %s vs. %s: final score %d-%d-%d" === "Vaìn ğâìu %s chôìng %s: kêìt quaÒ cuôìi cuÌng %d-%d-%d"
+"Stalemate" === "Hêìt nıõìc ği"
+"Illegal move: %d.%s%s" === "Nıõìc không hõòp lêò: %d.%s%s"
+"Ambiguous move: %d.%s%s" === "Nıõìc nhâòp nhãÌng: %d.%s%s"
+"Can't open \"%s\"" === "Không mõÒ ğıõòc \"%s\""
+"Cannot build game list" === "Không taòo ğıõòc danh saìch vaìn cõÌ"
+"No more games in this message" === "Không coÌn vaìn cõÌ naìo nıŞa trong thông baìo naÌy"
+"No game has been loaded yet" === "Không naòp ğıõòc vaìn naÌo"
+"Can't back up any further" === "Không thêÒ lıu dıò phoÌng thêm nıŞa"
+"Game number out of range" === "Sôì cuÒa vaìn cõÌ nãÌm ngoaÌi phaòm vi"
+"Can't seek on game file" === "Không thêÒ tiÌm-naòp file vaìn cõÌ"
+"Game not found in file" === "File không coì vaìn cõÌ"
+"Bad FEN position in file" === "File chıìa thêì cõÌ FEN sai"
+"No moves in game" === "Vaìn cõÌ không coì nıõìc ği"
+"No position has been loaded yet" === "Không naòp ğıõòc thêì cõÌ naÌo"
+"Can't back up any further" === "Không thêÒ lıu dıò phoÌng thêm nıŞa"
+"Can't open \"%s\"" === "Không thêÒ mõÒ \"%s\""
+"Can't seek on position file" === "Không thêÒ tiÌm naòp trong file vaìn cõÌ"
+"Position not found in file" === "File không coì thêì cõÌ naÌo"
+"Bad FEN position in file" === "File chıìa thêì cõÌ FEN sai"
+"Black to play" === "Ğen ği"
+"White to play" === "Trãìng ği"
+"Can't open \"%s\"" === "Không thêÒ mõÒ \"%s\""
+"You have edited the game history.\nUse Reload Same Game and make your move again." === "Baòn ğaŞ soaòn vaìn cõÌ.\nDuÌng chıìc nãng Naòp Laòi Vaìn cõÌ vaÌ ği laòi caìc nıõìc."
+"You have entered too many moves.\nBack up to the correct position and try again." === "Baòn nhâòp quaì nhiêÌu nıõìc ği.\Lıu dıò phoÌng ğêìn thêì cõÌ ğuìng vaÌ thıÒ laòi lâÌn nıŞa."
+"Displayed position is not current.\nStep forward to the correct position and try again." === "Thêì cõÌ ğang hiêòn không phaÒi laÌ thêì ğêìn lıõòt ği.\nBıõìc tiêìp cho ğêìn thêì ğuìng vaÌ thıÒ lâÌn nıŞa."
+"You have not made a move yet" === "Baòn coÌn chıa ği"
+"The cmail message is not loaded.\nUse Reload CMail Message and make your move again." === "Cmail coÌn chıa naòp.\nDuÌng chıìc nãng Naòp Laòi Thông Baìo CMail vaÌ tiêìp tuòc ği nıõìc cuÒa baòn"
+"No unfinished games" === "Không coÌn vaìn cõÌ naÌo chıa kêìt thuìc"
+"You have already mailed a move.\nWait until a move arrives from your opponent.\nTo resend the same move, type\n\"cmail -remail -game %s\"\non the command line." === ""
+"Failed to invoke cmail" === "Không thêÒ bâòt ğıõòc cmail"
+"Waiting for reply from opponent\n" === "Ğang ğõòi traÒ lõÌi tıÌ ğôìi thuÒ\n"
+"Still need to make move for game\n" === "VâŞn câÌn thıòc hiêòn nıõìc ği cho vaìn cõÌ\n"
+"Still need to make moves for both games\n" === "VâŞn câÌn thıòc hiêòn nıõìc ği cho caÒ hai vaìn cõÌ\n"
+"Still need to make moves for all %d games\n" === "VâŞn câÌn thıòc hiêòn nıõìc ği cho tâìt caÒ laÌ %d vaìn cõÌ\n"
+"Still need to make a move for game %s\n" === "VâŞn câÌn thıòc hiêòn nıõìc ği cho caìc vaìn cõÌ %s\n"
+"No unfinished games\n" === "Không coÌn vaìn cõÌ chıa kêìt thuìc naÌo\n"
+"Ready to send mail\n" === "SãŞn saÌng gıÒi thı\n"
+"Still need to make moves for games %s\n" === "VâŞn câÌn thıòc hiêòn nıõìc ği cho caìc vaìn cõÌ %s\n"
+"Edit comment" === "Soaòn biÌnh chuì"
+"Edit comment on %d.%s%s" === "Soaòn biÌnh chuì taòi %d.%s%s"
+"Starting analysis mode...\nIf this message stays up, your chess program does not support analysis." === "KhõÒi ğôòng chêì ğôò phân tiìch...\nNêìu thông baìo naÌy maŞi không mâìt ği, triÌnh cõÌ cuÒa baòn không duÌng phân tiìch ğıõòc."
+"It is not White's turn" === "Không phaÒi lıõòt ği cuÒa Trãìng"
+"It is not Black's turn" === "Không phaÒi lıõòt ği cuÒa Ğen"
+"Wait until your turn,\nor select Move Now" === "Ğõòi tõìi lıõòt cuÒa baòn,\nhoãòc choòn Ği Ngay"
+"Starting second chess program" === "KhõÒi ğôòng triÌnh cõÌ thıì 2"
+"Training mode off" === "Chêì ğôò hoòc tãìt"
+"Training mode on" === "Chêì ğôò hoòc bâòt"
+"Already at end of game" === "ĞaŞ ğêìn cuôìi vaìn cõÌ"
+"Warning: You are still playing a game" === "CaÒnh baìo: Baòn vâŞn ğang chõi cõÌ"
+"Warning: You are still observing a game" === "CaÒnh baìo: Baòn vâŞn ğang xem môòt vaìn cõÌ"
+"Warning: You are still examining a game" === "CaÒnh baìo: Baòn vâŞn ğang giaìm saìt môòt vaìn cõÌ"
+"It is Black's turn" === "Lıõòt ği cuÒa Ğen"
+"It is White's turn" === "Lıõòt ği cuÒa Trãìng"
+"That square is occupied" === "Ô naÌy ğang coì quân"
+"There is no pending offer on this move" === "Không coì ğêÌ nghiò dıÌng cõÌ taòi nıõìc naÌy"
+"Your opponent is not out of time" === "Ğôìi thuÒ cuÒa baòn chıa hêìt thõÌi gian"
+"Black offers a draw" === "Ğen ğêÌ nghiò hoÌa"
+"White offers a draw" === "Trãìng ğêÌ nghiò hoÌa"
+"You must make your move before offering a draw" === "Baòn phaÒi ği ğaŞ trıõìc khi ğêÌ nghiò hoÌa"
+"You are not examining a game" === "Baòn không giaìm saìt môòt vaìn cõÌ"
+"You can't revert while pausing" === "Baòn không thêÒ ği ngıõòc trong khi ğang taòm dıÌng"
+"Wait until your turn,\nor select Move Now" === "Ğõòi ğêìn lıõòt ği cuÒa baòn,\nhoãòc choòn nıõìc ği bây giõÌ"
+"It is your turn" === "Baòn ğang ğêìn lıõòt ği"
+"Wait until your turn" === "Ğõòi ğêìn lıõòt ği cuÒa baòn"
+"No hint available" === "Không coì gõòi yì naÌo"
+"Analysis (%s)" === "Phân tiìch (%s)"
+"Comment" === "Chuì thiìch"
+"Comment on %d.%s%s" === "Chuì thiìch taòi %d.%s%s"
+"Both flags fell" === "CaÒ hai cõÌ cuÌng rõi"
+"White's flag fell" === "CõÌ Trãìng rõi"
+"Black's flag fell" === "CõÌ Ğen rõi"
+"Bad FEN position in clipboard" === "Thêì cõÌ FEN trong clipboard sai"
+"No response from ICS" === "ICS không traÒ lõÌi"
+"You cannot do this while you are playing or observing" === "Baòn không laÌm ğıõòc ğiêÌu naÌy khi ğang chõi hoãòc ğang xem"
+"Click in holdings to choose piece" === "Bâìm giıŞ ğêÒ choòn quân"
+
+END-OF-GAME MESSAGES (should they be translated?)
+## I think that only for visualization and not for PGN, as PGN files are shared all around the world
+## [OK, I adapted the source that way. So please translate.]
+
+"Game aborted" === "Ván cõÌ biò boÒ dõÒ"
+"White wins on time" === "Trãìng thãìng thõÌi gian"
+"Black wins on time" === "Ğen thãìng thõÌi gian"
+"Both players ran out of time" === "CaÒ hai bên hêìt thõÌi gian"
+"White resigns" === "Trãìng Xin Thua"
+"Black resigns" === "Ğen Xin Thua"
+"White mates" === "Trãìng Chiêìu Hêìt"
+"Black mates" === "Ğen Chiêìu Hêìt"
+"Draw" === "HoÌa"
+"Draw agreed" === "ĞôÌng yì hoÌa"
+"Xboard adjudication: King destroyed" === "Xboard phân xıÒ: Vua biò diêòt"
+"Xboard adjudication: Bare king" === "Xboard phân xıÒ: Vua lôòt trâÌn"
+"Xboard adjudication: 3rd check" === "Xboard phân xıÒ: Bên thıì 3 chiêìu hêìt"
+"Xboard adjudication: Stalemate" === "Xboard phân xıÒ: Không coÌn nıõìc ği"
+"Xboard adjudication: Checkmate" === "Xboard phân xıÒ: Chiêìu hêìt"
+"Xboard adjudication: Insufficient mating material" === "Xboard phân xıÒ: Không ğuÒ quân ğêÒ thãìng"
+"Xboard adjudication: Trivial draw" === "Xboard phân xıÒ: hoÌa hiêÒn nhiên"
+"XBoard adjudication: repetition draw" === "Xboard phân xıÒ: HoÌa do ği lãòp"
+"Xboard adjudication: perpetual checking" === "Xboard phân xıÒ: trıõÌng chiêìu"
+"Xboard adjudication: perpetual chasing" === "Xboard phân xıÒ: trıõÌng troìc"
+"Xboard adjudication: 50-move rule" === "Xboard phân xıÒ: luâòt 50 nıõìc"
+"Draw claim: 50-move rule" === "Tuyên bôì hoÌa: luâòt 50 nıõìc"
+"Draw claim: 3-fold repetition" === "Tuyên bôì hoÌa: lãòp laòi 3 lâÌn"
+"Draw claim: insufficient mating material" === "Tuyên bôì hoÌa: không ğuÒ quân ğêÒ thãìng"
+"Xboard adjudication: long game" === "Xboard phân xıÒ: vaìn cõÌ daÌi"
+"Xboard: Forfeit due to invalid move: %s (%c%c%c%c) res=%d" === "Xboard: xıÒ thua do nıõìc ği không hõòp lêò: %s (%c%c%c%c) res=%d"
+"Xboard: Forfeit due to illegal move: %s (%c%c%c%c)%c" === "Xboard: xıÒ thua do nıõìc ği không hõòp lêò: %s (%c%c%c%c)%c"
+"Xboard adjudication" === "Xboard phân xıÒ"
+"User adjudication" === "NgıõÌi duÌng phân xıÒ"
+"False win claim: '%s'" === "Sai khi tuyên bôì thãìng: '%s'"
+"False draw claim: '%s'" === "Sai khi tuyên bôì hoÌa: '%s'"
+"xboard exit" === "xboard thoaìt"
+
+

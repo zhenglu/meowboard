@@ -1,0 +1,44 @@
+\section{/home/www/ulysses/webclient/scripts/interface/interface.js File Reference}
+\label{interface_8js}\index{/home/www/ulysses/webclient/scripts/interface/interface.js@{/home/www/ulysses/webclient/scripts/interface/interface.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf INTERFACE\_\-CreateInterface} ()
+\item 
+function {\bf INTERFACE\_\-ShowInterface} (Tree)
+\item 
+function {\bf INTERFACE\_\-StopInterface} ()
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{interface.js@{interface.js}!INTERFACE\_\-CreateInterface@{INTERFACE\_\-CreateInterface}}
+\index{INTERFACE\_\-CreateInterface@{INTERFACE\_\-CreateInterface}!interface.js@{interface.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-CreateInterface ()}\label{interface_8js_ecaef5274c46c0a69d1f326629fcd66a}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Control interface DOM objects Create all object needed to start interface 
+
+References INTERFACE\_\-CreateChatList(), INTERFACE\_\-CreateLeft(), INTERFACE\_\-CreateTop(), INTERFACE\_\-CreateWelcome(), and UTILS\_\-CreateElement().
+
+Referenced by LOGIN\_\-Interface().\index{interface.js@{interface.js}!INTERFACE\_\-ShowInterface@{INTERFACE\_\-ShowInterface}}
+\index{INTERFACE\_\-ShowInterface@{INTERFACE\_\-ShowInterface}!interface.js@{interface.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-ShowInterface ( {\em Tree})}\label{interface_8js_e3cc5b666e93acdd2f85cee061a5ed65}
+
+
+Show interface in the user screen 
+
+Referenced by LOGIN\_\-Interface().\index{interface.js@{interface.js}!INTERFACE\_\-StopInterface@{INTERFACE\_\-StopInterface}}
+\index{INTERFACE\_\-StopInterface@{INTERFACE\_\-StopInterface}!interface.js@{interface.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function INTERFACE\_\-StopInterface ()}\label{interface_8js_9140670d04ba65dc1eeba2dd11979e04}
+
+
+Remove interface in the user screen 
+
+Referenced by LOGIN\_\-Disconnected(), and LOGIN\_\-Logout().

@@ -1,0 +1,269 @@
+/**
+* ProfileDiv
+*/
+/* CSS ProfileDiv Window */
+
+#ProfileDiv {
+	padding	:	10px 1px 10px 0px;
+}
+
+#ProfileDiv #TopDiv {
+	display		:	block;
+	padding-left : 30px;
+	padding-bottom : 1px;
+	margin-bottom : 1px;
+}
+
+#ProfileDiv #ProfPhotoDiv {
+	float				:	left;
+	text-align	:	center;
+	width				:	80px;
+}
+
+#ProfileDiv #ProfPhotoDiv img{
+	width		: 50px;
+	height		: 60px;
+	padding-bottom: 2px;
+}
+
+#ProfileDiv #TopRightDiv {
+	display : block;
+}
+
+#ProfileDiv #TopRightDiv #TopRight_LeftDiv {
+	width			: 60px;
+	float			:	left;
+	padding-left	:	20px;
+}
+
+#ProfileDiv #TopRightDiv #TopRight_RightDiv {
+	padding-top		:	1px;
+	float			:	left;
+	margin-bottom : 25px;
+}
+
+#ProfileDiv #ProfPhotoDiv:after,
+#ProfileDiv #TopRightDiv:after, 
+#ProfileDiv #TopRightDiv #TopRight_RightDiv:after,
+#ProfileDiv #WhoDiv:after,
+#ProfileDiv #BottomDiv:after, 
+#ProfileDiv #TopDiv:after,
+#ProfileDiv #TimeDiv:after {
+	content:".";
+	display:block;
+	clear:both;
+	visibility:hidden;
+	height:0;
+	overflow:hidden;
+}
+
+#ProfileDiv #RatingDiv {
+	padding-left	: 15px;
+	padding-bottom : 10px;
+}
+
+#ProfileDiv #WhoDiv {
+	display	: block;
+	margin-left:	25px;
+}
+
+#ProfileDiv #WhoDiv #WhoLeftDiv {
+	width			: 70px;
+	float			:	left;
+}
+
+#ProfileDiv #WhoDiv #WhoRightDiv {
+	padding-left	: 5px; 
+	padding-top	: 2px;
+	float			:	left;
+}
+
+#ProfileDiv #WhoDiv #CounterDiv {
+	margin-top : 3px;
+}
+
+#ProfileDiv #WhoDiv #CounterDiv span {
+	font-size : 9px;
+	font-style : italic;
+	color : #216778;
+	padding-left : 3px;
+}
+
+#ProfileDiv .counter_input {
+	text-align : right;
+	color : #216778;
+}
+
+#ProfileDiv #TimeDiv,
+#ProfileDiv #BottomDiv {
+	display	:	block;
+	padding-left : 15px;
+}
+
+#ProfileDiv #TimeDiv {
+	padding-top : 4px;
+}
+
+#ProfileDiv #BottomDiv #BottomLeftDiv {
+	float	: left;
+	width	:	150px;
+}
+
+#ProfileDiv #BottomDiv #BottomRightDiv {
+	text-align	: center;
+	padding-top	:	20px;
+	margin-left	:	50px;
+}
+
+#ProfileDiv #TimeDiv #TimeLeftDiv {
+	float	: left;
+	width	:	170px;
+}
+
+#ProfileDiv #TimeDiv #TimeRightDiv {
+	margin-left	:	20px;
+}
+
+#ProfileDiv #OldGameDiv {
+	margin-top	:	20px;
+	padding-left : 15px;
+	display : block;
+}
+
+#ProfileDiv #ButtonsDiv {
+	margin-top	:	10mm;
+	text-align	: center;
+}
+
+/* Style */
+#ProfileDiv table {
+	display			: block;
+	width			: 370px; 
+	position		: relative;
+	margin-top		: 6mm;
+	border-collapse	: collapse;
+	empty-cells		: show;
+}
+
+#ProfileDiv td {
+	width			: 44px;
+	border			: 1px solid #216778;
+	font-size		: 9px;
+	color			: #216778;
+	background-color: #FFF;
+	text-align		: center;
+	padding : 1px;
+}
+
+#ProfileConfirmDiv p,
+#ProfileDiv p {
+	font-weight		: bold;
+/*	font-size		: 12px;*/
+	color			: #216778;
+	margin-top		: 3mm;
+}
+/* Class */
+
+#ProfileDiv .edit_photo {
+	cursor		:	pointer;
+	font-size		: 9px;
+	font-style: italic;
+	color			: #216778;
+	border-bottom		:	1px solid #216778;
+}
+
+#ProfileDiv .edit_photo:hover {
+	color			: #FFA200;
+	border-color:	#FFA200;
+}
+
+#ProfileDiv .inf,
+#ProfileDiv .inf_whoami {
+	display			: block;
+	font-size		: 11px;
+	color			: #216778;
+	margin-top		: 10px;
+	width			: 150px;
+	padding-left : 5px;
+}
+
+#ProfileDiv .inf_whoami {
+	max-height		: 80px;
+	overflow	: auto;
+	width			: 255px;
+}
+
+#ProfileDiv .value {
+	font-size		: 11px;
+	font-weight		: normal;
+	padding-left	:	5px;
+}
+
+#ProfileDiv .header {
+	background-color: #DAF3F5;
+	font-weight		: bold;
+}
+
+#ProfileDiv .oldgames {
+	font-size		: 12px;
+	font-style	:	italic;
+	color			: #216778;
+	border-bottom		:	1px solid #216778;
+	cursor			: pointer;
+}
+
+#ProfileDiv .oldgames:hover {
+	color			: #FFA200;
+	border-bottom		:	1px solid #FFA200;
+}
+
+#WindowBox .button_big {
+	padding-bottom		: 5px;
+	border			: 0px;
+	font-weight		: bold;
+	font-size		: 10px;
+	color						: #FFF;
+	cursor					: pointer;
+	margin					: 0px 0px 5px 2px;
+	padding					: 1px 2px;
+	position				: relative;
+	bottom					: 10px;
+	background			: #216778;
+	width						: 120px;
+}
+
+#WindowBox .button_big:hover {
+	background-color: #FFA200;
+}
+
+#ProfileConfirmDiv {
+	padding-top	:	10px;
+	text-align	: center;
+	position		: relative;
+}
+
+#ProfileConfirmDiv #TextDiv {
+	padding-top		:	20px;
+	padding-left	:	38px;
+	position			:	relative;
+	text-align		: center;
+	width					:	300px;
+}
+
+#ProfileConfirmDiv #ButtonsDiv {
+	position		:	relative;
+	padding-top	: 40px;
+	padding-bottom	: 20px;
+	text-align	: center;
+}
+
+#ProfileConfirmDiv #ButtonsDiv .button_big {
+	bottom			:	5px;
+}
+
+#ProfileConfirmDiv p {
+	font-weight		: bold;
+	font-size		: 14px;
+	color			: #216778;
+	margin-top		: 3mm;
+}

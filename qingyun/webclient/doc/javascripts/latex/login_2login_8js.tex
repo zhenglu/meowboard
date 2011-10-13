@@ -1,0 +1,105 @@
+\section{/home/www/ulysses/webclient/scripts/login/login.js File Reference}
+\label{login_2login_8js}\index{/home/www/ulysses/webclient/scripts/login/login.js@{/home/www/ulysses/webclient/scripts/login/login.js}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+function {\bf LOGIN\_\-Login} (Username, Passwd, RememberPass)
+\item 
+function {\bf LOGIN\_\-Logout} ()
+\item 
+function {\bf LOGIN\_\-Disconnected} ()
+\item 
+function {\bf LOGIN\_\-EndLogin} ()
+\item 
+function {\bf LOGIN\_\-Interface} ()
+\item 
+function {\bf LOGIN\_\-LoginFailed} (Code)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{login/login.js@{login/login.js}!LOGIN\_\-Disconnected@{LOGIN\_\-Disconnected}}
+\index{LOGIN\_\-Disconnected@{LOGIN\_\-Disconnected}!login/login.js@{login/login.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function LOGIN\_\-Disconnected ()}\label{login_2login_8js_3eb7f5e1dac7fc523bbecca5a20df215}
+
+
+Make logout
+
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+
+
+References INTERFACE\_\-StopInterface(), and MainData.
+
+Referenced by PARSER\_\-ParseXml().\index{login/login.js@{login/login.js}!LOGIN\_\-EndLogin@{LOGIN\_\-EndLogin}}
+\index{LOGIN\_\-EndLogin@{LOGIN\_\-EndLogin}!login/login.js@{login/login.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function LOGIN\_\-EndLogin ()}\label{login_2login_8js_0652e6ee839eb57fe5c2e5428b5be667}
+
+
+Clear Login window and start interface
+
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+
+
+References INTERFACE\_\-EndLogin().
+
+Referenced by LOGIN\_\-Load().\index{login/login.js@{login/login.js}!LOGIN\_\-Interface@{LOGIN\_\-Interface}}
+\index{LOGIN\_\-Interface@{LOGIN\_\-Interface}!login/login.js@{login/login.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function LOGIN\_\-Interface ()}\label{login_2login_8js_cb562b964b2ab10a402111cd1e7c1d9f}
+
+
+Clear Login window and start interface
+
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+
+
+References CONTACT\_\-LoadUserContactList(), CONTACT\_\-StartContact(), INTERFACE\_\-CreateInterface(), INTERFACE\_\-ShowInterface(), and LOGIN\_\-EndLoad().
+
+Referenced by CONNECTION\_\-ConnectJabber().\index{login/login.js@{login/login.js}!LOGIN\_\-Login@{LOGIN\_\-Login}}
+\index{LOGIN\_\-Login@{LOGIN\_\-Login}!login/login.js@{login/login.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function LOGIN\_\-Login ( {\em Username}, \/   {\em Passwd}, \/   {\em RememberPass})}\label{login_2login_8js_73ab8ff3845c2f8dde38108edf013078}
+
+
+CHESSD - WebClient
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+C3SL - Center for Scientific Computing and Free Software Make login on Jabber Server
+
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+
+
+References CONNECTION\_\-ConnectJabber(), MainData, UTILS\_\-CreateCookie(), UTILS\_\-DeleteCookie(), UTILS\_\-GetText(), and UTILS\_\-ValidateUsername().
+
+Referenced by INTERFACE\_\-StartLogin().\index{login/login.js@{login/login.js}!LOGIN\_\-LoginFailed@{LOGIN\_\-LoginFailed}}
+\index{LOGIN\_\-LoginFailed@{LOGIN\_\-LoginFailed}!login/login.js@{login/login.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function LOGIN\_\-LoginFailed ( {\em Code})}\label{login_2login_8js_1591a7d0a9422689275ecbea07995dc5}
+
+
+Show a error message on login
+
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+
+
+References MainData, and UTILS\_\-GetText().
+
+Referenced by CONNECTION\_\-ReceiveConnection().\index{login/login.js@{login/login.js}!LOGIN\_\-Logout@{LOGIN\_\-Logout}}
+\index{LOGIN\_\-Logout@{LOGIN\_\-Logout}!login/login.js@{login/login.js}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}function LOGIN\_\-Logout ()}\label{login_2login_8js_99309ad6248506daca001f0118fc922f}
+
+
+Make logout
+
+\begin{Desc}
+\item[Returns:]none \end{Desc}
+
+
+References CONNECTION\_\-SendJabber(), INTERFACE\_\-StopInterface(), MainData, MESSAGE\_\-EndConnection(), and START\_\-StartPage().
+
+Referenced by INTERFACE\_\-CreateTop().

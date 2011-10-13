@@ -1,0 +1,20 @@
+<server>
+	<xmpp-component
+        server_name="shiva"
+		server_address="localhost"
+		component_port="5560"
+		component_password="secret"
+        component_name="chessd.shiva"
+	/>
+    <database
+        host="localhost"
+        port="5432"
+        db_name=""
+        user=""
+        password=""
+        max_connections="50"
+    />
+    <log
+        filename="log/chessd.log"
+    />
+</server>
