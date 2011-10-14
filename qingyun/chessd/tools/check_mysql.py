@@ -13,7 +13,7 @@
 ########################################################################
 db_name="elgg"
 db_user="root"
-db_pass="godroot"
+db_pass="password"
 db_host="localhost"
 db_table="elgg_users_entity"
 db_username_field="username"
